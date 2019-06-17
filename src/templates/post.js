@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import './post.css'
 
 export default function Post ({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   console.log(frontmatter.length)
   return (  
