@@ -50,10 +50,9 @@ export default function Post ({ data }) {
       <Helmet>
         <title>{frontmatter.title}</title>
         <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:type" content="text.article" />
         <meta property="og:description" content={frontmatter.description}/>
         <meta property="og:url" content={`http://iamnabil.me/blog${frontmatter.path}`} />
-        <meta property="og:image" content={`/${frontmatter.ogImageName}.${frontmatter.ogImageExtension}`}/>
+        <meta property="og:image:url" content={`http://iamnabil.me/blog/${frontmatter.ogImageName}.${frontmatter.ogImageExtension}`}/>
         <meta property="og:site_name" content="Nabil Tharwat - Blog"/>
       </Helmet>
       <article>
