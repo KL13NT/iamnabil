@@ -615,8 +615,91 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
+article{
+  width: 700px; 
+  margin: 4rem auto
+}
+
+/*
+  MEDIA QUERIES
+*/
+
+@media only screen and (max-width: 991px){
+  html{
+    font-size: 100% !important;
+  }
+  ul{
+    width: 80%;
+    margin: 3rem auto;
+  }
+  article{
+    width: 75%;
+  }
+  header h1{
+    font-size: 4rem !important;
   }
 }
+@media only screen and (max-width: 767px){
+  html{
+    font-size: 85% !important;
+  }
+  header p, header h1{
+    display: none;
+  }
+  header{
+    height: 1rem
+  }
+  ul{
+    width: 90% !important;
+    margin: 3rem auto;
+  }
+  article{
+    width: 80%;
+    text-align: justify;
+  }
+}
+@media only screen and (max-width: 479px){
+  html{
+    font-size: 70% !important;
+  }
+  header p, header h1{
+    display: none;
+  }
+  header{
+    height: 1rem
+  }
+  ul{
+    width: 80%;
+    margin: 3rem auto;
+  }
+  article{
+    width: 90%;
+    text-align: initial;
+  }
+  p{
+    line-height: auto;
+  }
+}
+@media only screen and (max-width: 250px){
+  html{
+    font-size: 60% !important;
+  }
+  header p, header h1{
+    display: none;
+  }
+  header{
+    height: 1rem
+  }
+  ul{
+    width: 80%;
+    margin: 3rem auto;
+  }
+  article{
+    width: 90%;
+    text-align: initial;
+  }
+  p{
+    line-height: auto;
+  }
+}
+/* 479px */

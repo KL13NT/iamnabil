@@ -31,6 +31,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               description
               author
               length
+              lang
+              ogImageName
+              ogImageExtension
             }
           }
         }

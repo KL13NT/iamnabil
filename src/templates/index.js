@@ -13,18 +13,23 @@ export default ({ pageContext: {edges} }) => {
   <Layout>
     <SEO title="Nabil Tharwat - Blog" description="Welcome to my blog! I post technically helpful stuff!" lang="en-gb"/>
     <header>
+      <p>FRONT-END DEVELOPER</p>
+      <p>PERFORMANCE ADDICT</p>
+      <p>PERFORMANCE ADDICT</p>
       <h1>NABIL THARWAT</h1>
-      <p>I really like JavaScript.</p>
-      <p>Find some lovely blog posts about it and programming in general below!</p>
-      <hr style={{width: '30%', margin: '3rem auto 5rem auto'}}/>
+      <p>FRONT-END DEVELOPER</p>
     </header>
     <ul>
-      {edges.map( node =>
-        <>
-        {console.log(node)}
-          <li><Link to={node.node.frontmatter.path}><h1>{node.node.frontmatter.title}</h1></Link></li>
-          <p>{node.node.frontmatter.description}</p>
-        </>
+      {edges.map( node =>{
+        let languageClass = node.node.frontmatter.lang === 'ar'? 'rightToLeft': null
+        return(
+          <>
+            <li className={languageClass}>
+              <Link to={node.node.frontmatter.path}>{node.node.frontmatter.title}</Link>
+              <p className={languageClass}>{node.node.frontmatter.description}</p>
+            </li>
+          </>
+        )}
       )}
     </ul>
   </Layout>

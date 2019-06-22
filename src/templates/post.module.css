@@ -1,0 +1,127 @@
+*{
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Cambria, Georgia, Times New Roman, Sans;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.articleTitle{
+  line-height: 1.25;
+  font-weight: 400;
+  color: #000;
+  font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.articleTime{
+  color: rgba(0,0,0,.5);
+  font-family: inherit;
+  text-transform: lowercase;
+}
+
+.blog-post-content{
+  margin: 2rem auto;
+}
+
+h5{
+  color: rgba(0,0,0,0.8);
+}
+
+h5 p{
+  color: rgba(0,0,0,0.5);
+  font-family: inherit;
+}
+
+img{
+  margin: 0 auto;
+  display: block;
+}
+
+p{
+  letter-spacing: 0.9;
+  font-weight: 400;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  padding: 6px 0;
+  color: #555
+}
+*::selection{
+  background: #ffca00;
+}
+
+blockquote{
+  padding: 15px;
+  position: relative;
+}
+
+blockquote > p >span{
+  --x-height-multiplier: 0.342;
+  --baseline-multiplier: 0.22;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.48;
+  letter-spacing: -.012em;
+  background: rgba(12,242,143,.2);
+  position: relative;
+  font-size: 2rem;
+}
+
+blockquote::before{
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: #999;
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  font-size: 4rem;
+}
+
+section > p > span{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin: 6px;
+  color: rgba(0,0,0,.5)
+}
+
+.rightToLeft{
+  direction: rtl;
+  text-align: right;
+}
+.rightToLeft blockquote::before{
+    font-family: Arial, Georgia, serif;
+    right: -5px;
+}
+
+.rightToLeft blockquote span{
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Cambria, Georgia, 'Times New Roman', Sans;
+}
+
+
+.articleDescription{
+  color: rgba(0,0,0,.8);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.frontmatterBreak{
+  padding: 0;
+  margin: 2rem auto;
+  background: rgba(0,0,0,.2);
+  border: none;
+  height: 1px;
+  width: 40%;
+  
+}

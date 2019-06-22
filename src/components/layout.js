@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <main>{children}</main>
+        {children}
       </>
     )}
   />
