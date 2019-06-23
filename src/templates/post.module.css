@@ -123,5 +123,89 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   height: 1px;
   width: 40%;
-  
+}
+
+.styleControl{
+  position: fixed;
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  right: 76%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.styleControl > div:nth-child(1) > button{
+  background: unset;
+  border: unset;
+  width: min-content;
+  height: min-content;
+  padding: 20px;
+}
+
+.styleControl > div:nth-child(1) > button > svg{
+  height: 20px;
+  width: 20px;
+}
+
+
+.styleControl > div:nth-child(1) > button {
+  /* padding: 1rem; */
+  padding: 0;
+  margin: 0;
+}
+
+.styleControl > div:nth-child(1) > button:hover  svg{
+  fill: #ffca00;
+}
+
+.styleControl > div:nth-child(3){
+  display: flex;
+  justify-content: space-evenly
+}
+
+.styleControl > hr:nth-child(2) {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.styleControl > div:nth-child(1) {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.night-mode-check {
+  margin: 0 7px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1360px){
+  .styleControl{
+    left: 5px;
+    right: unset;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .styleControl{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50px;
+  }
+  .styleControl > div:nth-child(3) {
+    width: 40%;
+    display: none;
+  }
+  .styleControl > div:nth-child(1) {
+    align-items: center;
+  }
+  .styleControl > hr:nth-child(2) {
+    display: none;
+  }
 }

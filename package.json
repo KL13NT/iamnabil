@@ -5,8 +5,10 @@
   "version": "0.1.0",
   "author": "Nabil Tharwat",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "gatsby": "^2.9.4",
     "gatsby-image": "^2.1.4",
+    "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sharp": "^2.1.5",
     "gatsby-source-filesystem": "^2.0.39",
     "gatsby-transformer-remark": "^2.4.0",

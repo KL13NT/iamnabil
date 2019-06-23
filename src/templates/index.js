@@ -7,8 +7,6 @@ import SEO from "../components/seo"
 import './index.css'
 
 export default ({ pageContext: {edges} }) => {
-  // console.log(edges)
-  // console.log(node)
   return (
   <Layout>
     <SEO title="Nabil Tharwat - Blog" description="Welcome to my blog! I post technically helpful stuff!" lang="en-gb"/>

@@ -45,8 +45,8 @@ header {
   margin: 0 0 4rem 0;
 }
 
-body{
-  margin: 0 0 30% 0;
+article{
+  padding-top: 10%;
 }
 
 header h1 {

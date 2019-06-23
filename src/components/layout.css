@@ -617,7 +617,8 @@ pre tt:after {
 }
 article{
   width: 700px; 
-  margin: 4rem auto
+  margin: 0 auto;
+  padding-top: 4rem;
 }
 
 /*
@@ -626,7 +627,7 @@ article{
 
 @media only screen and (max-width: 991px){
   html{
-    font-size: 100% !important;
+    font-size: 100%;
   }
   ul{
     width: 80%;
@@ -641,7 +642,7 @@ article{
 }
 @media only screen and (max-width: 767px){
   html{
-    font-size: 85% !important;
+    font-size: 85%;
   }
   header p, header h1{
     display: none;
@@ -660,7 +661,7 @@ article{
 }
 @media only screen and (max-width: 479px){
   html{
-    font-size: 70% !important;
+    font-size: 70%;
   }
   header p, header h1{
     display: none;
@@ -682,7 +683,7 @@ article{
 }
 @media only screen and (max-width: 250px){
   html{
-    font-size: 60% !important;
+    font-size: 60%;
   }
   header p, header h1{
     display: none;
