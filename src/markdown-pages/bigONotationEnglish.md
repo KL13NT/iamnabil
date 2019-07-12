@@ -5,7 +5,7 @@ title: "Algorithm complexity and the Big Bang(n)"
 description: "Ever wondered what O(n) means? I'll take you through a tiny journey to learn more about algorithm complexity and the Big O Notation."
 image: bigONotation.jpg
 author: "Nabil Tharwat"
-length: 2700
+length: 560
 lang: "en"
 ogImageName: "bigONotation"
 ogImageExtension: "jpg"

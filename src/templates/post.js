@@ -20,14 +20,14 @@ export default class Post extends React.Component {
     console.log(frontmatter.author) 
     //ISSUE: FRONTMATTER PRESERVES CHANGE, SO `BY AUTHOR` BECOMES `BY BY AUTHOR`. USE `REPLACE` AS A QUICK FIX`
     frontmatter.author = `by ${frontmatter.author}`
-    frontmatter.length = `${Math.floor(parseInt(frontmatter.length)/350)} min read`
+    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/350)} min read`
     this.setState({frontmatter})
   }
 
   frontmatterToArabic = (frontmatter)=>{
     frontmatter.date = this.convertEnglishDate(frontmatter.date)
     frontmatter.author = `كتبه: ${frontmatter.author} في`
-    frontmatter.length = `${Math.floor(parseInt(frontmatter.length)/350)} دقائق من القراءة`
+    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/350)} دقائق من القراءة`
     this.setState({frontmatter})
   }
   
