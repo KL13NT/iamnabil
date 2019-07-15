@@ -13,11 +13,11 @@
 /blog/static/2b8e9fd9a449e52c05af784694bd64ce/2513a/Promises.png 1440w" src="/blog/static/2b8e9fd9a449e52c05af784694bd64ce/4ca57/Promises.png" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><h1 class="post-module--articleTitle--8IQwn undefined">JavaScript Promises</h1><h5 class="post-module--articleDescription--2LehS undefined">July 15, 2019 Nabil Tharwat<br/><p class="post-module--articleTime--2yH15">460</p></h5><hr class="post-module--frontmatterBreak--1H2B9"/><section class="blog-post-content undefined"><p>Promises can cause a lot of confusion for newbies, just like it did to me when I first encountered them. Their names may not be the most descriptive but let's get over that. </p>
 <h1>Definition</h1>
 <p>A promise is an asynchronous object that has three states: </p>
-<ul>
+<ol>
 <li>pending</li>
 <li>fulfilled</li>
 <li>rejected</li>
-</ul>
+</ol>
 <p>Each of these states represent a condition that the promise takes. It'll take on <em>pending</em> if it's neither fulfilled nor rejected, will take <em>fulfilled</em> when a positive value has been returned or <em>rejected</em> when an error occurred. </p>
 <p>Let's think of promises as messenger pigeons: you tie a message to their feet and send them to their destination. This is the <em>pending</em> state in which the asynchronous code has been started on another thread and your program continues normally just like you would continue your chores after sending the pigeon. </p>
 <p>Then the pigeon arrives with a response message tied to its feet, if that message is positive or allowing you to do something then it's purpose has been <em>fulfilled</em> and you can easily <em>then</em> handle the <em>resolved</em> (returned) message. If the message is negative though, then it's purpose is not fulfilled but rather <em>rejected</em> in which case there will be some kind of error that you will have to <em>catch</em> and handle. </p>
