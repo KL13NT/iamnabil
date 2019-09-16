@@ -2,12 +2,16 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  border: 6px solid #e8b700;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f3f7f9;
+  padding: 40px;
 }
+
+
 article,
 aside,
 details,
@@ -511,12 +515,6 @@ th {
 li {
   margin-bottom: calc(1.45rem / 2);
 }
-ol li {
-  padding-left: 0;
-}
-ul li {
-  padding-left: 0;
-}
 li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
@@ -621,10 +619,10 @@ article{
   padding-top: 4rem;
 }
 
-/*
+/* 
   MEDIA QUERIES
 */
-
+/* 
 @media only screen and (max-width: 991px){
   html{
     font-size: 100%;
@@ -703,4 +701,4 @@ article{
     line-height: auto;
   }
 }
-/* 479px */
+479px */

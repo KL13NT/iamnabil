@@ -1,5 +1,5 @@
 ﻿---
-path: "/post/history-of-javascript/"
+path: "/blog/history-of-javascript/"
 date: "2019-07-11"
 title: "History of JavaScript"
 description: "JavaScript is one of the most popular languages to exist, but what put it in such a place?"
@@ -9,6 +9,7 @@ length: 460
 lang: "en"
 ogImageName: "HistoryofJavaScript"
 ogImageExtension: "png"
+tags: ["JavaScript", "Front-End"]
 ---
 
 

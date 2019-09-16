@@ -1,0 +1,54 @@
+//this includes all layout containers, objects, prefixed -o or -l for layout, layout stuff
+@import './settings.styl'
+
+
+.o-body 
+  overflow-y hidden
+
+.o-header
+  position: relative 
+  text-align center
+  margin-top 1rem
+
+  h1, h2, h3
+    font-family 'Playfair Display', serif
+  h1
+    font-size 3rem
+  h3 
+    font-size 1.8rem
+    margin-bottom 1rem
+
+  p
+    text-align justify
+
+    
+.o-socialContainer
+  display flex 
+  justify-content space-evenly
+  height 2rem
+  max-width 60%
+  margin 1rem auto
+
+
+.o-tagsContainer
+  list-style none
+  display flex
+  margin 1rem 0
+  padding 0
+  > li 
+    height 3rem
+    border-bottom solid 2px #e8b700
+    display block 
+    margin 0 10px 0 0
+    padding 5px
+  > li > a
+    height 100% 
+    font-size 1rem
+    color #555
+  > li > a::before
+    content '#'
+  > li:hover 
+    box-shadow unset
+    transform unset
+
+

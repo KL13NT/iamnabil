@@ -1,26 +1,16 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 const fs = require('fs')
 const path = require('path')
 
-exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  // const allPosts = JSON.parse(fs.readFileSync('posts.json', 'utf8'))
-  // console.log(allPosts)
-  // Create a page that lists all Pokémon.
+exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => {
   
+  const blogPostTemplate = path.resolve('src/templates/post.js')
+  const tagPageTemplate = path.resolve('src/templates/tags.js')
 
-  // Create a page for each Pokémon.
-  const blogPostTemplate = path.resolve(`src/templates/post.js`)
-
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        limit: 2000
       ) {
         edges {
           node {
@@ -34,28 +24,48 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               lang
               ogImageName
               ogImageExtension
+              tags
             }
           }
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+  `)
 
+  if (result.errors) {
+    reporter.panicOnBuild('Error while running GraphQL query.')
+    return
+  }
+
+  const posts = result.data.allMarkdownRemark.edges
+
+  createPage({
+    path: '/',
+    component: require.resolve('./src/templates/index.js'),
+    context: result.data.allMarkdownRemark
+  })
+
+  posts.forEach(({ node }) => {
     createPage({
-      path: `/`,
-      component: require.resolve("./src/templates/index.js"),
-      context: result.data.allMarkdownRemark
+      path: node.frontmatter.path,
+      component: blogPostTemplate,
+      context: {} // additional data can be passed via context
     })
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
-      })
-      
+  })
+
+  const tags = new Set([])
+
+  posts.forEach(({ node }) => {
+    if(node.frontmatter.tags) node.frontmatter.tags.forEach(tag=>tags.add(tag))
+  })
+
+  tags.forEach(tag=>{
+    createPage({
+      path: `/tags/${tag}/`,
+      component: tagPageTemplate,
+      context: {
+        tag: tag
+      }
     })
   })
 }

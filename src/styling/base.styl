@@ -1,0 +1,48 @@
+//This file includes all base elements [resets], unmodified and scalable across the page
+@import './settings.styl'
+
+body, html, *
+	box-sizing border-box
+	padding 0
+	margin 0
+	font-display swap
+
+body 
+	max-width: 800px;
+	margin 0 auto
+	font 112.5%/1.55 'Roboto',sans-serif
+	font-weight 400
+	color rgb(34, 36, 38)
+	background #f3f7f9
+	padding 40px
+	min-height 100vh
+
+html 
+	font-size 16px
+	border solid 6px #e8b700
+
+header, footer 
+	width 100%
+	height 100vh
+
+
+nav{
+  display flex
+  flex-direction row
+  align-items center
+  position absolute 
+  top 2rem
+  right 2rem
+}
+
+a,button,button, a:active,button:active,button:active{
+	text-decoration: none
+	outline none
+  border none
+  background transparent
+  text-decoration none
+  color $base
+} 
+
+form
+	text-align left

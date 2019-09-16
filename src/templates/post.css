@@ -43,22 +43,42 @@
 }
 
 .nightmode--pitchblack{
-  background-color: black;
+  background-color: black !important;
 }
 
 .nightmode--dark{
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20) !important;
 }
 
 .nightmode--dark div[content="styleControl"]{
   background: white;
 }
 
-.nightmode--dark p, .nightmode--dark h1,.nightmode--dark h2,.nightmode--dark h3,.nightmode--dark h4,.nightmode--dark h5,.nightmode--dark h6, .nightmode--dark .image-description{
+.nightmode--dark p, 
+.nightmode--dark h1,
+.nightmode--dark h2,
+.nightmode--dark h3,
+.nightmode--dark h4,
+.nightmode--dark h5,
+.nightmode--dark h6, 
+.nightmode--dark .image-description,
+.nightmode--dark ol,
+.nightmode--dark ul,
+.nightmode--dark code{
   color: rgba(219,219,219,1) !important;
 }
 
-.nightmode--pitchblack p, .nightmode--pitchblack h1,.nightmode--pitchblack h2,.nightmode--pitchblack h3,.nightmode--pitchblack h4,.nightmode--pitchblack h5,.nightmode--pitchblack h6, .nightmode--pitchblack .image-description{
+.nightmode--pitchblack p, 
+.nightmode--pitchblack h1,
+.nightmode--pitchblack h2,
+.nightmode--pitchblack h3,
+.nightmode--pitchblack h4,
+.nightmode--pitchblack h5,
+.nightmode--pitchblack h6, 
+.nightmode--pitchblack .image-description,
+.nightmode--pitchblack ol,
+.nightmode--pitchblack ul,
+.nightmode--pitchblack code{
   color: white !important;
 }
 .nightmode--pitchblack .night-mode-check, .nightmode--dark .night-mode-check{

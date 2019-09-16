@@ -1,0 +1,58 @@
+//this includes all components, prefixed -c, reusable pieces, css stuff
+@import './settings.styl'
+
+.c-hr-break
+  width 90%
+  margin: 1rem auto;
+  background transparent
+  border-radius 5rem
+  color transparent
+
+.c-social
+  height 100%
+  > img 
+    height 100% 
+    width auto
+    
+
+.c-section 
+  margin: 2rem 0;
+  text-align left
+  h2, h3
+    font-weight 700
+    font-size 1.2rem
+
+.c-sectionHeader
+  color black
+  font-weight 300
+  margin 0 0 2rem 0
+
+.c-postList{
+  margin: 0 auto;
+  font-family: 'Lato', Arial, sans-serif;
+  width: 100%;
+  list-style: none;
+}
+
+.c-postList li{
+  margin: 30px 0 0 0;
+  background: white;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03);
+  transition: transform 0.5s;
+  font-size: 1.5rem;
+  color: black;
+  text-align: left
+}
+
+.c-postList li p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+
+.c-postList li:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+}

@@ -1,5 +1,5 @@
 ---
-path: "/post/tutorial-purgatory/"
+path: "/blog/tutorial-purgatory/"
 date: "2019-07-11"
 title: "Tutorial Purgatory"
 description: "Tutorial Purgatory is a curse that haunts every newbie developer, here's how to escape it."
@@ -9,6 +9,7 @@ length: 650
 lang: "en"
 ogImageName: "TutorialPurgatory"
 ogImageExtension: "jpg"
+tags: ["Self Development", "Tutorials"]
 ---
 
 

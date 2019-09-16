@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  pathPrefix: "/blog",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Nabil's Blog`,
     description: `Kick off your next, great project with a curated list of helpful blog posts.`,
@@ -18,6 +18,7 @@ module.exports = {
     // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-stylus`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
@@ -45,6 +46,6 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`,
-  ],
+    `gatsby-transformer-remark`
+  ]
 }

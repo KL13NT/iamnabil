@@ -45,13 +45,21 @@ img{
   display: block;
 }
 
-p{
+p, ol{
   letter-spacing: 0.9;
   font-weight: 400;
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
   padding: 6px 0;
   color: #555
 }
+
+ul{
+  letter-spacing: 0.9;
+  font-weight: 400;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  color: #555
+}
+
 *::selection{
   background: #ffca00;
 }
@@ -70,7 +78,7 @@ blockquote > p >span{
   letter-spacing: -.012em;
   background: rgba(12,242,143,.2);
   position: relative;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 blockquote::before{
@@ -94,8 +102,14 @@ section > p > span{
 
 .rightToLeft{
   direction: rtl;
-  text-align: right;
+  text-align: right;  
 }
+
+.rightToLeft p{
+  letter-spacing: 0.3px;
+  line-height: 31px;
+}
+
 .rightToLeft blockquote::before{
     font-family: Arial, Georgia, serif;
     right: -5px;

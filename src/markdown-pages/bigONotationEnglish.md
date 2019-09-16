@@ -1,5 +1,5 @@
 ---
-path: "/post/algorithm-complexity-big-bang/"
+path: "/blog/algorithm-complexity-big-bang/"
 date: "2019-06-17"
 title: "Algorithm complexity and the Big Bang(n)"
 description: "Ever wondered what O(n) means? I'll take you through a tiny journey to learn more about algorithm complexity and the Big O Notation."
@@ -9,6 +9,7 @@ length: 560
 lang: "en"
 ogImageName: "bigONotation"
 ogImageExtension: "jpg"
+tags: ["Algorithms", "Performance"]
 ---
 
 Big O notation is used in Computer Science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm. I'll cover some complexities that are widely seen.

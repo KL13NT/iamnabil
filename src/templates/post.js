@@ -17,17 +17,16 @@ export default class Post extends React.Component {
   }
 
   frontmatterToEnglish = (frontmatter)=>{
-    console.log(frontmatter.author) 
     //ISSUE: FRONTMATTER PRESERVES CHANGE, SO `BY AUTHOR` BECOMES `BY BY AUTHOR`. USE `REPLACE` AS A QUICK FIX`
     frontmatter.author = `by ${frontmatter.author}`
-    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/350)} min read`
+    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/150)} min read`
     this.setState({frontmatter})
   }
 
   frontmatterToArabic = (frontmatter)=>{
     frontmatter.date = this.convertEnglishDate(frontmatter.date)
     frontmatter.author = `كتبه: ${frontmatter.author} في`
-    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/350)} دقائق من القراءة`
+    frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/150)} دقائق من القراءة`
     this.setState({frontmatter})
   }
   
@@ -50,15 +49,18 @@ export default class Post extends React.Component {
     if(this.state.activeTheme == dataTheme){
       this.setState({activeTheme: null})
       e.currentTarget.classList.remove('button-active')
+      document.querySelector('body').style.background = '#f3f7f9'
       if(dataTheme === 'nightmode--pitchblack') this.setState({isBlackTheme: null})
       else this.setState({isDarkTheme: null})
     }
     else{
       this.setState({activeTheme: dataTheme})
       if(dataTheme === 'nightmode--pitchblack'){
+        document.querySelector('body').style.background = 'black'
         this.setState({activeTheme: dataTheme, isBlackTheme: 'button-active', isDarkTheme: null})
       }
       else if(dataTheme === 'nightmode--dark'){
+        document.querySelector('body').style.background = 'rgb(20, 20, 20)'
         this.setState({activeTheme: dataTheme, isBlackTheme: null, isDarkTheme: 'button-active'})
       }
     }
@@ -66,7 +68,6 @@ export default class Post extends React.Component {
   
   manageFontSize = (e)=>{
     e.stopPropagation()
-    console.log(e.currentTarget, e.target)
     let html = document.querySelector('html')
 
     var fontSize = html.dataset.fontsize
@@ -112,8 +113,7 @@ export default class Post extends React.Component {
     let fontSize = parseInt(window.getComputedStyle(html, null).getPropertyValue('font-size'))
     html.dataset.fontsize = fontSize
     html.dataset.originalfontsize = fontSize
-
-    if(this.languageClass === 'rightToLeft') this.frontmatterToArabic(this.state.frontmatter)
+    if(this.state.languageClass === 'rightToLeft') this.frontmatterToArabic(this.state.frontmatter)
     else this.frontmatterToEnglish (this.state.frontmatter)
   }
   
@@ -126,8 +126,10 @@ export default class Post extends React.Component {
           <title>{this.state.frontmatter.title}</title>
           <meta property="og:title" content={this.state.frontmatter.title} />
           <meta property="og:description" content={this.state.frontmatter.description}/>
-          <meta property="og:url" content={`http://iamnabil.me/blog${this.state.frontmatter.path}`} />
-          <meta property="og:image:url" content={`http://iamnabil.me/blog/${this.state.frontmatter.ogImageName}.${this.state.frontmatter.ogImageExtension}`}/>
+          <meta property="og:url" content={`https://kl13nt.github.io/blog${this.state.frontmatter.path}`} />
+          <meta property="og:image:url" content={`https://kl13nt.github.io/blog/${this.state.frontmatter.ogImageName}.${this.state.frontmatter.ogImageExtension}`}/>
+          <meta property="og:image" content={`https://kl13nt.github.io/blog/${this.state.frontmatter.ogImageName}.${this.state.frontmatter.ogImageExtension}`}/>
+
           <meta property="og:site_name" content="Nabil Tharwat - Blog"/>
         </Helmet>
         <div className={this.state.activeTheme}>
@@ -136,7 +138,7 @@ export default class Post extends React.Component {
               <div>
                 <button onClick={this.manageFontSize} data-fontfunction="decrease">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-      viewBox="0 0 42 42" style={{'enable-background':'new 0 0 42 42'}}>
+      viewBox="0 0 42 42" style={{'enableBackground':'new 0 0 42 42'}}>
     <path d="M37.059,16H26H16H4.941C2.224,16,0,18.282,0,21s2.224,5,4.941,5H16h10h11.059C39.776,26,42,23.718,42,21
       S39.776,16,37.059,16z"/>
     </svg>
@@ -144,7 +146,7 @@ export default class Post extends React.Component {
                 </button>
                 <button onClick={this.manageFontSize} data-fontfunction="reset">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-      width="475.082px" height="475.082px" viewBox="0 0 475.082 475.082" style={{'enable-background':'new 0 0 475.082 475.082'}}>
+      width="475.082px" height="475.082px" viewBox="0 0 475.082 475.082" style={{'enableBackground':'new 0 0 475.082 475.082'}}>
     <g>
       <path d="M473.371,433.11c-10.657-3.997-20.458-6.563-29.407-7.706c-8.945-0.767-15.516-2.95-19.701-6.567
         c-2.475-1.529-5.808-6.95-9.996-16.279c-7.806-15.604-13.989-29.786-18.555-42.537c-7.427-20.181-13.617-35.789-18.565-46.829
@@ -168,7 +170,7 @@ export default class Post extends React.Component {
                 <button onClick={this.manageFontSize} data-fontfunction="increase">
                 
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                viewBox="0 0 42 42" style={{'enable-background':'new 0 0 42 42'}}>
+                viewBox="0 0 42 42" style={{'enableBackground':'new 0 0 42 42'}}>
               <path d="M37.059,16H26V4.941C26,2.224,23.718,0,21,0s-5,2.224-5,4.941V16H4.941C2.224,16,0,18.282,0,21s2.224,5,4.941,5H16v11.059
                 C16,39.776,18.282,42,21,42s5-2.224,5-4.941V26h11.059C39.776,26,42,23.718,42,21S39.776,16,37.059,16z"/>
               </svg>
@@ -182,7 +184,7 @@ export default class Post extends React.Component {
               </div>
           </div>
             <Img fluid={this.state.frontmatter.image.childImageSharp.fluid}/>
-            <h1 className={`${styles.articleTitle} ${styles[this.state.languageClass]}`}>{this.state.frontmatter.title}</h1>
+            <h1 className={`${styles.articleTitle} ${styles[this.state.languageClass]}`} style={{'textAlign': 'center'}}>{this.state.frontmatter.title}</h1>
             <h5 className={`${styles.articleDescription} ${styles[this.state.languageClass]}`}>
               {
                 this.state.languageClass==='rightToLeft'? `${this.state.frontmatter.author} ${this.state.frontmatter.date}`: `${this.state.frontmatter.date} ${this.state.frontmatter.author}`
@@ -221,6 +223,7 @@ export const pageQuery = graphql`
         lang
         ogImageName
         ogImageExtension
+        tags
         image {
           childImageSharp {
             fluid(maxWidth: 786) {

@@ -1,5 +1,5 @@
 ﻿---
-path: "/post/algorithm-complexity-big-bang-arabic/"
+path: "/blog/algorithm-complexity-big-bang-arabic/"
 date: "2019-06-17"
 title: "كل ما تريد معرفته عن الـ Big O Notation"
 description: "هل تساءلت يومًا ما يعني O (n)؟ سأقلك خلال رحلة صغيرة لمعرفة المزيد عن تعقيد الخوارزمية وتدوين Big O."
@@ -9,6 +9,7 @@ length: 2700
 lang: "ar"
 ogImageName: "bigONotation"
 ogImageExtension: "jpg"
+tags: ["Algorithms", "Performance", "Arabic"]
 ---
 
 تدوين الـ O الكبير `Big O Notation` دي طريقة للتعبير عن قد ايه خوارزمية معينة معقدة و بتوصف اسوأ اداء للخوارزميات و ممكن كمان نوصف بيها الوقت المطلوب او المساحة (سواء في الميموري او الهارد) اللي الخوارزمية محتاجاه لحد ما تخلص. و منها انواع كتير و هحاول اتكلم عن اشهرهم بشكل مبسط.

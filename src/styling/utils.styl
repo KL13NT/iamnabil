@@ -1,0 +1,52 @@
+.u-opacity-zero
+  opacity 0
+
+.u-display-none
+  visibility: hidden
+  opacity 0
+
+.u-clearfix
+  clear both
+
+.u-width-2
+  width 2rem 
+
+.u-color-base
+  color $base
+
+.u-color-trueblack
+  color black
+
+.u-text-bold
+  font-weight 600
+
+.u-center-h
+  margin 0 auto
+
+.u-fadeinto-left
+  transform translateX(40px)
+
+$animation-fadeInto-direction
+  opacity 0 
+  transition opacity 1s, transform 1s
+
+.u-animation-fadeInto-left
+  @extend $animation-fadeInto-direction
+  transform translateX(80px)
+
+.u-animation-fadeInto-right
+  @extend $animation-fadeInto-direction
+  transform translateX(-80px)
+
+.u-animation-fadeInto-top
+  @extend $animation-fadeInto-direction
+  transform translateY(100px)
+
+.u-animation-fadeInto-direction--isActive
+  opacity 1
+  transform translate(0, 0)
+
+.u-noAnimation-fallback
+  .u-animation-fadeInto-left, .u-animation-fadeInto-right, .u-animation-fadeInto-top, .c-skill-progress::after
+    transform translate(0,0)
+    opacity 1

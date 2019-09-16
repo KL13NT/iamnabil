@@ -1,0 +1,24 @@
+//This file includes all settings [variables, functions, etc] and utilities [reusable modifiers]
+generateGradient(angle, color1, color2)
+  linear-gradient(angle, color1 0%, color2 100%)
+
+$overlayImgsPosition = absolute
+//FONTS
+$headerFont = bold 3rem Arial
+$btnFont = 1.0rem Arial
+$txtUpper = uppercase
+$txtLower = lowercase
+//colors
+$base = #4F4F4F
+$pink = #FF1053 
+$redyellow =  #FF4F0F
+$progress = #D0D0D0
+$white = #FFFFFF
+$blue = #14BADC
+$purple = #6D4DD9
+$buttonGradientAngle = 45deg
+$resetGradientAngle = 0
+$redGradient = generateGradient($buttonGradientAngle,  $pink, $redyellow)
+$blueGradientProgress =generateGradient(-90deg, $purple, $blue)
+$blueGradient = generateGradient($resetGradientAngle , $purple, $blue)
+$grey = #444444
