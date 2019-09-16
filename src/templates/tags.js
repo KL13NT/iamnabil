@@ -15,7 +15,6 @@ const Tags = ({ pageContext, data }) => {
       <div>
         <h1>{tagHeader}</h1>
         <PostList edges={edges}/>
-        <Link to="/tags">All tags</Link>
       </div>
     </Layout>
   );
