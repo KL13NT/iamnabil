@@ -27,10 +27,11 @@ module.exports = {
         short_name: 'Nabil',
         start_url: '/',
         background_color: '#FFE600',
-        theme_color: 'yellow',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
         display: 'standalone',
-        crossOrigin: 'use-credentials'
+        crossOrigin: 'use-credentials',
+        orientation: 'portrait',
+        theme_color: '#2F3BA2'
       }
     },
     'gatsby-plugin-offline',
