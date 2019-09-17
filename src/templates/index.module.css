@@ -1,43 +1,4 @@
 
-.indexUl{
-  margin: 0 auto;
-  font-family: 'Lato', Arial, sans-serif;
-  width: 100%;
-  list-style: none;
-}
-
-.indexUl li{
-  margin: 30px 0 0 0;
-  background: white;
-  padding: 40px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.02),1px 1px 15px 0 rgba(0,0,0,.03);
-  transition: transform 0.5s;
-  font-size: 1.5rem;
-  color: black;
-  text-align: left
-}
-
-.indexUl li p {
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-
-/* Inline #1 | https://iamnabil.me/blog/ */
-
-.indexUl li:hover {
-  transform: translateY(-5px);
-  box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
-}
-
-/* Element | https://iamnabil.me/blog/ */
-
-.header {
-  text-align: center;
-  max-width: 600px;
-  margin: 10rem auto 4rem;
-}
 
 
 .header > p:nth-child(2) {

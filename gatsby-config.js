@@ -1,14 +1,15 @@
 const path = require('path')
 
 module.exports = {
-  pathPrefix: "/",
+  pathPrefix: '/',
   siteMetadata: {
-    title: `Nabil's Blog`,
-    description: `Kick off your next, great project with a curated list of helpful blog posts.`,
-    author: `@Nabil_Tharwat16`,
+    title: 'Nabil\'s Blog',
+    description:
+      'Kick off your next, great project with a curated list of helpful blog posts.',
+    author: '@Nabil_Tharwat16'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -16,36 +17,38 @@ module.exports = {
     //     path: `${__dirname}/src/images`,
     //   },
     // },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-stylus`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Nabil's Blog`,
-    //     short_name: `Blog`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `yellow`,
-    //     icon: 'src/static/images/titleImage.png', // This path is relative to the root of the site.
-    //     display: `standalone`,
-    //   },
-    // },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-stylus',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `markdown-pages`),
-      },
+        name: 'Nabil\'s Blog',
+        short_name: 'Nabil',
+        start_url: '/',
+        background_color: '#FFE600',
+        theme_color: 'yellow',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        display: 'standalone',
+        crossOrigin: 'use-credentials'
+      }
+    },
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'src', 'markdown-pages')
+      }
     },
     // `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
-      },
+        name: 'markdown-pages',
+        path: `${__dirname}/src/markdown-pages`
+      }
     },
-    `gatsby-transformer-remark`
+    'gatsby-transformer-remark'
   ]
 }

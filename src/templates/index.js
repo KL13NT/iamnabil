@@ -21,7 +21,7 @@ export default ({ pageContext: { edges } }) => {
       <nav className=".o-navigation">
         <Link to="/about">About</Link>
       </nav>
-      <div className={styles.header}>
+      <div className='o-header'>
         <h1>Nabil Tharwat</h1>
         <p>
           I'm a software engineer and mentor based in Cairo. I blog about
