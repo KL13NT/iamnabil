@@ -140,7 +140,7 @@ const About = props => {
           available to make my products as accessible and user-friendly as
           possible. I'm also a performance freak, so whenever there's a tiny
           chance to improve the optimisation of my code, I will gladly do it.
-          60FPS is always my goal.
+          60FPS is always my goal. The toolset on my resume is not inclusive of everything I've ever used but rather the ones I actively use. <a href="/toolset">Click here for a full list of what I actively use or have used before.</a>
         </p>
         <br />
         <p>
