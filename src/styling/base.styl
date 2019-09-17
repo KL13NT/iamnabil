@@ -1,4 +1,3 @@
-//This file includes all base elements [resets], unmodified and scalable across the page
 @import './settings.styl'
 
 body, html, *
@@ -15,7 +14,6 @@ body
 	color rgb(34, 36, 38)
 	background #f3f7f9
 	padding 40px
-	min-height 100vh
 
 html 
 	font-size 16px
@@ -35,14 +33,33 @@ nav{
   right 2rem
 }
 
-a,button,button, a:active,button:active,button:active{
+a, button{
 	text-decoration: none
 	outline none
   border none
   background transparent
   text-decoration none
   color $base
+  transition color 0.2s, transform 0.2s
 } 
+
+
+a:hover, a:focus{
+  transform translateY(-3px)
+  color #ffca00
+
+}
 
 form
 	text-align left
+
+header p{
+  line-height: .7;
+  color: #222;
+}
+
+ul{
+  margin: 0 auto;
+  font-family: 'Lato', Arial, sans-serif;
+}
+

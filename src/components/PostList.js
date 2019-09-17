@@ -2,25 +2,21 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 
-
-export const PostList = ({ edges })=>
-  <ul className='c-postList'>
-    {
-      edges.map(({ node: { frontmatter } }) => {
-        const languageClass = frontmatter.lang === 'ar' ? 'rightToLeft' : null
-        return (
+export const PostList = ({ edges }) => (
+  <ul className="c-postList">
+    {edges.map(({ node: { frontmatter } }) => {
+      const languageClass = frontmatter.lang === 'ar' ? 'c-rightToLeft' : null
+      return (
         <>
           <li className={languageClass}>
             <Link to={frontmatter.path}>{frontmatter.title}</Link>
             <p className={languageClass}>{frontmatter.description}</p>
             {frontmatter.lang === 'ar' ? (
               <h5>
-                نشر في {frontmatter.date},{' '}
                 {Math.ceil(parseInt(frontmatter.length) / 150)} دقائق من القرائة
               </h5>
             ) : (
               <h5>
-                Posted {frontmatter.date},{' '}
                 {Math.ceil(parseInt(frontmatter.length) / 150)} min read
               </h5>
             )}
@@ -35,6 +31,7 @@ export const PostList = ({ edges })=>
             ) : null}
           </li>
         </>
-        )
-      })}
+      )
+    })}
   </ul>
+)

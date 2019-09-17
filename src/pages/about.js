@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import SEO from '../components/seo'
+import { Social } from '../components/Social'
 
 import '../styling/main.styl'
 
@@ -43,73 +44,73 @@ const About = props => {
         <link
           rel="apple-touch-icon"
           sizes="57x57"
-          href="apple-icon-57x57.png"
+          href="/apple-icon-57x57.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="60x60"
-          href="apple-icon-60x60.png"
+          href="/apple-icon-60x60.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="72x72"
-          href="apple-icon-72x72.png"
+          href="/apple-icon-72x72.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="76x76"
-          href="apple-icon-76x76.png"
+          href="/apple-icon-76x76.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="114x114"
-          href="apple-icon-114x114.png"
+          href="/apple-icon-114x114.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="120x120"
-          href="apple-icon-120x120.png"
+          href="/apple-icon-120x120.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="144x144"
-          href="apple-icon-144x144.png"
+          href="/apple-icon-144x144.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="152x152"
-          href="apple-icon-152x152.png"
+          href="/apple-icon-152x152.png"
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="apple-icon-180x180.png"
+          href="/apple-icon-180x180.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="192x192"
-          href="android-icon-192x192.png"
+          href="/android-icon-192x192.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="favicon-32x32.png"
+          href="/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="96x96"
-          href="favicon-96x96.png"
+          href="/favicon-96x96.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="favicon-16x16.png"
+          href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="/manifest.json" />
         <link
           href="https://fonts.googleapis.com/css?family=Playfair+Display:300,300i,400&display=swap"
           rel="preload"
@@ -150,26 +151,7 @@ const About = props => {
           Everyone is welcome! Be sure to check out our Discord server:{" "}
           <a href="https://discord.gg/xrGAnTg">Click here to check it out!</a>
         </p>
-        <div className="o-socialContainer">
-          <a className="c-social" href="https://twitter.com/Nabil_Tharwat16">
-            <img src="twitter.svg" alt="Twitter Link Icon" />
-          </a>
-          <a className="c-social" href="https://www.linkedin.com/in/i-am-nabil">
-            <img src="linkedin.svg" alt="LinkedIn Link Icon" />
-          </a>
-          <a className="c-social" href="https://github.com/KL13NT">
-            <img src="github-logo.svg" alt="GitHub Link Icon" />
-          </a>
-          <a className="c-social" href="mailto:nabil.tharwat@outlook.com">
-            <img src="mail.svg" alt="Email Link Icon" />
-          </a>
-          <a
-            className="c-social"
-            href="https://docs.google.com/document/export?format=pdf&id=1VL4_iTKO712R-H7S5_3_PkuG1ed97eoIJUMjo9T9noE"
-          >
-            <img src="cv.svg" alt="Resume Link Icon" />
-          </a>
-        </div>
+        <Social/>
       </div>
       <div className="o-body">
         <hr className="c-hr-break" />

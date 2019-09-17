@@ -100,25 +100,6 @@ section > p > span{
   color: rgba(0,0,0,.5)
 }
 
-.rightToLeft{
-  direction: rtl;
-  text-align: right;  
-}
-
-.rightToLeft p{
-  letter-spacing: 0.3px;
-  line-height: 31px;
-}
-
-.rightToLeft blockquote::before{
-    font-family: Arial, Georgia, serif;
-    right: -5px;
-}
-
-.rightToLeft blockquote span{
-  font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, 'Times New Roman', Sans;
 }

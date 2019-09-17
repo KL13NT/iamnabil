@@ -9,6 +9,8 @@ import SEO from "../components/seo"
 import styles from './post.module.css'
 import './post.css'
 
+import { convertEnglishDate } from '../utils/utils'
+
 
 export default class Post extends React.Component {
   constructor(props) {
@@ -24,24 +26,10 @@ export default class Post extends React.Component {
   }
 
   frontmatterToArabic = (frontmatter)=>{
-    frontmatter.date = this.convertEnglishDate(frontmatter.date)
+    frontmatter.date = convertEnglishDate(frontmatter.date)
     frontmatter.author = `كتبه: ${frontmatter.author} في`
     frontmatter.length = `${Math.ceil(parseInt(frontmatter.length)/150)} دقائق من القراءة`
     this.setState({frontmatter})
-  }
-  
-  convertEnglishDate= (date)=>{
-    let arabicNumbers = '۰١٢٣٤٥٦٧٨٩'
-    let englishMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    let arabicMonths = "يناير فبراير مارس ابريل مايو يونيو يوليو اغسطس سبتمبر اكتوبر نوفمبر ديسمبر".split(' ')
-    let splitDate = date.split(' ')
-    let arabicMonthFromEnglish = arabicMonths[englishMonths.indexOf(splitDate[0])]
-    
-    let replaced = splitDate.slice(1).toString().replace(/[0-9]/g, (w)=>{
-      return arabicNumbers[+w] //converts to integer
-    }).replace(',', '').split(',')
-    
-    return `${replaced[0]} ${arabicMonthFromEnglish}, ${replaced[1]}`
   }
   
   switchNightMode = (e)=>{
@@ -99,11 +87,12 @@ export default class Post extends React.Component {
       }
     }
   }
+  
   componentWillMount(){
     this.setState({
       markdownRemark: this.props.data.markdownRemark,
       html: this.props.data.markdownRemark.html,
-      languageClass: this.props.data.markdownRemark.frontmatter.lang === 'ar'? 'rightToLeft': null,
+      languageClass: this.props.data.markdownRemark.frontmatter.lang === 'ar'? 'c-rightToLeft': null,
       frontmatter: this.props.data.markdownRemark.frontmatter
     })
   }
@@ -113,7 +102,7 @@ export default class Post extends React.Component {
     let fontSize = parseInt(window.getComputedStyle(html, null).getPropertyValue('font-size'))
     html.dataset.fontsize = fontSize
     html.dataset.originalfontsize = fontSize
-    if(this.state.languageClass === 'rightToLeft') this.frontmatterToArabic(this.state.frontmatter)
+    if(this.state.languageClass === 'c-rightToLeft') this.frontmatterToArabic(this.state.frontmatter)
     else this.frontmatterToEnglish (this.state.frontmatter)
   }
   
@@ -187,7 +176,7 @@ export default class Post extends React.Component {
             <h1 className={`${styles.articleTitle} ${styles[this.state.languageClass]}`} style={{'textAlign': 'center'}}>{this.state.frontmatter.title}</h1>
             <h5 className={`${styles.articleDescription} ${styles[this.state.languageClass]}`}>
               {
-                this.state.languageClass==='rightToLeft'? `${this.state.frontmatter.author} ${this.state.frontmatter.date}`: `${this.state.frontmatter.date} ${this.state.frontmatter.author}`
+                this.state.languageClass==='c-rightToLeft'? `${this.state.frontmatter.author} ${this.state.frontmatter.date}`: `${this.state.frontmatter.date} ${this.state.frontmatter.author}`
               }
               <br/>
               <p className={`${styles.articleTime}`}>
@@ -196,7 +185,7 @@ export default class Post extends React.Component {
             </h5>
             <hr className={styles.frontmatterBreak}/>
             <section
-              className={`blog-post-content ${styles[this.state.languageClass]}`}
+              className={`blog-post-content ${this.state.languageClass}`}
               dangerouslySetInnerHTML={{ __html: this.state.html }}
             />
         </article>
