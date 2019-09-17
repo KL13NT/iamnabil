@@ -100,6 +100,7 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  display: inline-block;
 }
 figure {
   margin: 1em 40px;
@@ -412,6 +413,7 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
+  width: 100%;
 }
 table {
   margin-left: 0;
@@ -614,7 +616,7 @@ pre tt:after {
   content: "";
 }
 article{
-  width: 700px; 
+  width: 100%;
   margin: 0 auto;
   padding-top: 4rem;
 }
