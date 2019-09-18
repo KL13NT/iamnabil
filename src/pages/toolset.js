@@ -140,82 +140,67 @@ const Toolset = props => {
             <p>HTML5</p>
             <p>CSS3</p>
             <p>ES8+</p>
-          </div>
-          <div>
             <p>jQuery</p>
             <p>Underscore</p>
             <p>Lodash</p>
-          </div>
-          <div>
             <p>Semantic UI</p>
             <p>Bootstrap</p>
             <p>Skeleton</p>
-          </div>
-          <div>
             <p>Foundation</p>
             <p>Materialize</p>
             <p>Normalize</p>
+            <p>Pug</p>
+            <p>Slim</p>
+            <p>Stylus</p>
+            <p>Scss</p>
+            <p>Sass</p>
+            <p>PostCSS</p>
+            <p>Handlebars</p>
           </div>
           <div>
             <p>React</p>
             <p>Redux</p>
             <p>Next</p>
-          </div>
-          <div>
+            <p>Apollo</p>
             <p>Glamorous/Emotion</p>
             <p>Styled Components</p>
+            <p>Webpack</p>
+            <p>Babel</p>
             <p>GatsbyJS</p>
-          </div>
-          <div>
             <p>NodeJS</p>
             <p>Express</p>
             <p>MongoDB</p>
-          </div>
-          <div>
+            <p>Mongoose</p>
+            <p>SocketIO</p>
             <p>Firestore</p>
+            <p>GraphQL</p>
             <p>Heroku</p>
             <p>Netlify</p>
-          </div>
-          <div>
-            <p>Webpack</p>
-            <p>Babel</p>
-            <p>GraphQL</p>
-          </div>
-          <div>
             <p>Jest</p>
             <p>Enzyme</p>
             <p>Cypress</p>
-          </div>
-          <div>
+            <p>Git/GitHub</p>
             <p>TravisCI</p>
+          </div>
+          <div>
             <p>Adobe Illustrator</p>
-            <p>Sass</p>
-          </div>
-          <div>
-            <p>Scss</p>
-            <p>Stylus</p>
-            <p>PostCSS</p>
-          </div>
-          <div>
-            <p>Pug</p>
-            <p>Slim</p>
-            <p>Handlebars</p>
-          </div>
-          <div>
-            <p>ESLint</p>
-            <p>CSSLint</p>
-            <p>CSSModules</p>
-          </div>
-          <div>
             <p>Adobe Photoshop</p>
             <p>Adobe XD</p>
             <p>Figma</p>
+            <p>Zeplin</p>
+            <p>ESLint</p>
+            <p>Prettier</p>
+            <p>CSSLint</p>
+            <p>CSSModules</p>
           </div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
         <hr className="c-hr-break" />
       </div>
     </div>
-  )
+  );
 }
 
 export default Toolset
