@@ -9,34 +9,29 @@ h1,h2,h3,h4,h5,h6{
   font-family: Cambria, Georgia, Times New Roman, Sans;
 }
 
+
 a{
   text-decoration: none;
   color: inherit;
 }
 
-.articleTime{
-  color: rgba(0,0,0,.5);
-  font-family: inherit;
-  text-transform: lowercase;
-}
-
-.blog-post-content{
-  margin: 2rem auto;
-}
 
 h5{
   color: rgba(0,0,0,0.8);
 }
+
 
 h5 p{
   color: rgba(0,0,0,0.5);
   font-family: inherit;
 }
 
+
 img{
   margin: 0 auto;
   display: block;
 }
+
 
 p, ol{
   letter-spacing: 0.9;
@@ -95,20 +90,4 @@ section > p > span{
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Georgia, 'Times New Roman', Sans;
-}
-
-
-.articleDescription{
-  color: rgba(0,0,0,.8);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.frontmatterBreak{
-  padding: 0;
-  margin: 2rem auto;
-  background: rgba(0,0,0,.2);
-  border: none;
-  height: 1px;
-  width: 40%;
 }

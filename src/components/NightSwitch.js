@@ -18,8 +18,6 @@ export default function NightSwitch () {
   //First page load check
   useEffect(()=>{
     if(theme === 'dark') setNightMode(!isNightModeDisabled)
-
-    console.log('RAN ONLY ONCE ON PAGE LOAD', isNightModeDisabled, theme)
   }, [])
 
   useEffect(()=>{

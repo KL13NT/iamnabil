@@ -10,7 +10,7 @@ const Navbar = ({ home, about })=>{
       <div>
         {
           home
-            ? <Link href='/'>Home</Link>
+            ? <Link to='/'>Home</Link>
             : null
         }
         {
