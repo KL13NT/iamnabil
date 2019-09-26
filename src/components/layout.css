@@ -5,9 +5,6 @@ html {
   border: 6px solid #e8b700;
 }
 body {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #f3f7f9;
   padding: 40px;
 }
 
@@ -339,7 +336,7 @@ hgroup {
 }
 ul {
   margin-left: 1.45rem;
-  margin-right: 0;
+  margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -351,7 +348,7 @@ ul {
 }
 ol {
   margin-left: 1.45rem;
-  margin-right: 0;
+  margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -408,12 +405,15 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: #353535;
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
   width: 100%;
+}
+pre * {
+  color: white;
 }
 table {
   margin-left: 0;
@@ -594,9 +594,7 @@ code {
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 4px;
 }
 pre code {
   background: none;

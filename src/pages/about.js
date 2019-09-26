@@ -3,16 +3,17 @@ import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import SEO from '../components/seo'
+import Layout from '../components/layout'
+import Navbar from '../components/Navbar'
 import { Social } from '../components/Social'
 
 import '../styling/main.styl'
 
 const About = props => {
   return (
-    <div>
-      <nav className=".o-navigation">
-        <Link to="/">Blog</Link>
-      </nav>
+    <>
+    <Navbar home={true} about={false}/>
+    <Layout>
       <Helmet>
         <title>Nabil Tharwat | Front-End Engineer, Blogger, Mentor</title>
         <meta
@@ -147,7 +148,7 @@ const About = props => {
           I recently started a local student community that aims to make
           students' lives easier by providing the help and support needed and
           raise awareness about marginalised groups and underrepresented people.
-          Everyone is welcome! Be sure to check out our Discord server:{" "}
+          Everyone is welcome! Be sure to check out our Discord server:
           <a href="https://discord.gg/xrGAnTg">Click here to check it out!</a>
         </p>
         <Social/>
@@ -224,12 +225,13 @@ const About = props => {
             parameters, and in connection to block comments preceding those
             functions. Having parsed those files, the tool manages to create
             connections between those parts of the files and create beautifully
-            linked documentation pages.{" "}
+            linked documentation pages.
           </p>
         </div>
       </div>
-    </div>
-  );
+    </Layout>
+    </>
+  )
 }
 
 export default About

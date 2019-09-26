@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import './layout.css'
+import Navbar from './Navbar'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,7 +25,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        {children}
+        <div className='o-layout'>
+          {children}
+        </div>
       </>
     )}
   />
