@@ -11,7 +11,6 @@ import "../styling/main.styl";
 import { PostList } from '../components/PostList'
 import { Social } from '../components/Social'
 
-//TODO: UNIFY FONT-FAMILY ATTRIBUTES
 export default ({ pageContext: { edges } }) => {
   return (
     <>

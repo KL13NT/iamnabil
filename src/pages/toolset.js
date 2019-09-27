@@ -4,11 +4,10 @@ import { Helmet } from 'react-helmet'
 
 import SEO from '../components/seo'
 import Navbar from '../components/Navbar'
+import Layout from '../components/layout'
 import { Social } from '../components/Social'
 
-import '../styling/main.styl'
 import styles from './toolset.module.styl'
-import Layout from '../components/layout'
 
 
 const Toolset = props => {

@@ -10,22 +10,20 @@ export const PostList = ({ edges }) => (
         const time = Math.ceil(parseInt(frontmatter.length) / 150)
         return (
         <>
-          <li className={languageClass}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
+          <li>
+            <Link to={frontmatter.path} className={languageClass}>{frontmatter.title}</Link>
             <p className={languageClass}>{frontmatter.description}</p>
             <h5> Posted {frontmatter.date} . {time} min read </h5>
             {
               frontmatter.tags ?
                 (
-                  <ul className="o-tagsContainer">
+                  <div className="o-tagsContainer">
                     {
                       frontmatter.tags.map(tag => (
-                        <li key={tag}>
-                          <Link to={`tags/${tag}`}>{tag}</Link>
-                        </li>
+                        <Link to={`tags/${tag}`}>{tag}</Link>
                       ))
                     }
-                  </ul>
+                  </div>
                 ) 
                 : null
             }

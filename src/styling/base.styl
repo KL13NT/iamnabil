@@ -1,61 +1,92 @@
 @import './settings.styl'
 
-body, html, *
-	box-sizing border-box
-	padding 0
-	margin 0
-	font-display swap
+p, a, ol, ul
+  font-size 1rem
 
-body 
-	font 112.5%/1.55 'Roboto',sans-serif
-	font-weight 400
-	color rgb(34, 36, 38)
+h1
+  font-size 2.6rem
 
-html 
-	font-size 16px
-	border solid 6px #e8b700
-	background #f3f7f9
-
-header, footer 
-	width 100%
-	height 100vh
-
-
-nav{
-  display flex
-  flex-direction row
-  align-items center
-  position absolute 
-  top 2rem
-  right 2rem
-}
-
-a, button{
-	text-decoration: none
-	outline none
+a, button
+  text-decoration: none
+  outline none
   border none
   background transparent
-  text-decoration none
-  color $base
   transition color 0.2s, transform 0.2s
-} 
 
-
-a:hover, a:focus{
+a:hover, a:focus
   transform translateY(-3px)
   color #ffca00
 
-}
-
 form
-	text-align left
+  text-align left
 
-header p{
+header p
   line-height: .7;
   color: #222;
-}
 
-ul{
-  font-family: 'Lato', Arial, sans-serif;
-}
+body, html
+  box-sizing border-box
+  margin 0
+  padding 0
+  background #f3f7f9
+  color rgb(34, 36, 38)
+  font-family "Roboto","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+  font-size 1.25rem
+  font-weight 400
+  line-height 1.8rem
+  word-wrap: break-word
+  text-rendering optimizeLegibility
+  font-display swap
 
+html 
+  border solid 6px #e8b700
+  min-height 100%
+
+h5 
+	color rgba(0,0,0,0.8)
+
+p 
+  color rgba(0,0,0,0.5)
+  font-family inherit
+
+img 
+	margin 0 auto
+	display block
+
+ul 
+	letter-spacing 0.9
+	font-weight 400
+	color #555
+
+*::selection 
+	background #ffca00
+
+blockquote 
+	padding 30px
+	position relative
+	& > p > span 
+    --x-height-multiplier 0.342
+    --baseline-multiplier 0.22
+    font-weight 400
+    font-style italic
+    line-height 1.48
+    letter-spacing -.012em
+    background rgba(12,242,143,.2)
+    position relative
+    font-size 1.3rem
+	&::before 
+		content "\201C"
+		font-family Arial, serif
+		font-weight bold
+		color #999
+		position absolute
+		left -5px
+		top 5px
+		font-size 5rem
+section 
+	& > p > span 
+    text-align center
+    margin 0 auto
+    display block
+    margin 6px
+    color rgba(0,0,0,.5)

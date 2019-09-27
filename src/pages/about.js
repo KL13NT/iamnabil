@@ -7,8 +7,6 @@ import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 import { Social } from '../components/Social'
 
-import '../styling/main.styl'
-
 const About = props => {
   return (
     <>
@@ -125,9 +123,9 @@ const About = props => {
         <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
-      <div className="o-header">
-        <h1>I'm Nabil Tharwat —</h1>
-        <h3>Front-End Engineer, Blogger, Mentor</h3>
+      <div className="o-header u-justify">
+        <h1 className="u-center">I'm Nabil Tharwat —</h1>
+        <h3 className="u-center">Front-End Engineer, Blogger, Mentor</h3>
         <p>
           I'm a software engineer and mentor. I was born in 2000 and grew up in
           Cairo. After graduating High School I embarked on a mission to become
@@ -148,8 +146,8 @@ const About = props => {
           I recently started a local student community that aims to make
           students' lives easier by providing the help and support needed and
           raise awareness about marginalised groups and underrepresented people.
-          Everyone is welcome! Be sure to check out our Discord server:
-          <a href="https://discord.gg/xrGAnTg">Click here to check it out!</a>
+          Everyone is welcome! Be sure to check out our Discord server.
+          <a href="https://discord.gg/xrGAnTg"> Click here to check it out!</a>
         </p>
         <Social/>
       </div>

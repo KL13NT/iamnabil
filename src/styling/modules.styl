@@ -9,19 +9,13 @@
   position: relative 
   text-align center
   margin-top 1rem 
-  max-width: 600px;
   margin: 10rem auto 4rem;
-
-  h1, h2, h3
-    font-family 'Playfair Display', serif
   h1
     font-size 3rem
+    font-family Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   h3 
     font-size 1.8rem
     margin-bottom 1rem
-
-  p
-    text-align justify
 
     
 .o-socialContainer
@@ -33,25 +27,18 @@
 
 
 .o-tagsContainer
-  list-style none
   display flex
   margin 1rem 0
   padding 0
-  > li 
-    height 3rem
-    border-bottom solid 2px #e8b700
-    display block 
-    margin 0 10px 0 0
-    padding 5px
-  > li > a
+  > a
     height 100% 
-    font-size 1rem
+    font-size 0.9rem
+    margin 0 0.2rem
     color #555
-  > li > a::before
+    display: block
+    width min-content
+  > a::before
     content '#'
-  > li:hover 
-    box-shadow unset
-    transform unset
 
 .o-article-body
   a 
@@ -76,15 +63,18 @@
 .o-layout
   max-width 800px
   margin 0 auto
-  padding 40px
+  padding 40px 0
 
 .o-navigation
   width 100%
+  position absolute 
   display flex
-  justify-content: space-between
-  right 0
+  justify-content space-between
+  align-items center
+  top 2rem
+  right 2rem
   left 0
-  padding 0 2rem
   margin 0
+  padding 0 2rem
   > div:nth-child(1) a
     margin-right 1rem
