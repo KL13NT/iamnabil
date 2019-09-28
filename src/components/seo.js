@@ -8,12 +8,13 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
       <title>{title}</title>
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website"/>
-      <meta property="og:description" content={description}/>
+      <meta name="description" content={description} />
+      <meta property="og:description" content={description} />
       <meta property="og:url" content={`https://kl13nt.github.io${path}`} />
-      <meta property="twitter:title" content={title}/>
-      <meta property="twitter:card" content="summary"/>
-      <meta property="twitter:creator" content="Nabil Tharwat"/>
-      <meta property="og:site_name" content="Nabil Tharwat"/>
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:creator" content="Nabil Tharwat" />
+      <meta property="og:site_name" content="Nabil Tharwat" />
       {
         ogImageName 
           ? <meta property="og:image:url" content={`https://kl13nt.github.io/${ogImageName}.${ogImageExtension}`}/>
@@ -24,6 +25,7 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
           ? <meta property="og:image:url" content={`https://kl13nt.github.io/${ogImageName}.${ogImageExtension}`}/>
           : null
       }
+      <html lang="en-GB"/>
     </Helmet>
   )
 }

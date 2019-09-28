@@ -4,11 +4,12 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: 'Nabil\'s Blog',
-    description:
-      'Kick off your next, great project with a curated list of helpful blog posts.',
-    author: '@Nabil_Tharwat16'
+    description: 'Kick off your next, great project with a curated list of helpful blog posts.',
+    author: '@Nabil_Tharwat16',
+    siteUrl: 'https://iamnabil.me'
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     // {
     //   resolve: `gatsby-source-filesystem`,

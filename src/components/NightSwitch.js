@@ -37,6 +37,8 @@ export default function NightSwitch () {
         onChange={changeNightMode}
         checked={isNightModeDisabled}
         name="night mode switch"
+        label="nightmode switch"
+        aria-label="night mode switch"
         className="toggle-custom"
         icons={{
           checked: <ToggleMoon />,
