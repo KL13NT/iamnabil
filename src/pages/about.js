@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 import { Social } from '../components/Social'
 
+import styles from '../styling/main.styl'
+
 const About = props => {
   return (
     <>
