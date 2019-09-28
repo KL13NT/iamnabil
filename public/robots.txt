@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://iamnabil.me/sitemap.xml
+Host: https://iamnabil.me
