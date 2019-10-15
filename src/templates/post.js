@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../components/Navbar"
+import ArticleBody from '../components/Article'
 
 import styles from './post.module.css'
 
@@ -21,15 +22,7 @@ export default class Post extends React.Component {
       <Navbar home={true} about={true}/>
       <Layout>
         <SEO {...frontmatter}/>
-        <article className="o-article-body">
-          <div className="o-article-header">
-            <Img fluid={image.childImageSharp.fluid}/>
-            <h1 className={languageClass}> {title} </h1>
-            <p> {Math.ceil(parseInt(length)/150)} min read </p>
-          </div>
-          <hr className={`c-hr-break ${languageClass}`}/>
-          <section dangerouslySetInnerHTML={{ __html: html }} className={languageClass}/>
-      </article>
+        <ArticleBody frontmatter={frontmatter} languageClass={languageClass} html={html}/>
     </Layout>
     </>
     )

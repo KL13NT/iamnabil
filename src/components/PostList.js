@@ -9,8 +9,7 @@ export const PostList = ({ edges }) => (
         const languageClass = frontmatter.lang === 'ar' ? 'u-rightToLeft' : null
         const time = Math.ceil(parseInt(frontmatter.length) / 150)
         return (
-        <>
-          <li>
+          <li key={frontmatter.title}>
             <Link to={frontmatter.path} className={languageClass}>{frontmatter.title}</Link>
             <p className={languageClass}>{frontmatter.description}</p>
             <h5> Posted {frontmatter.date} . {time} min read </h5>
@@ -20,7 +19,7 @@ export const PostList = ({ edges }) => (
                   <div className="o-tagsContainer">
                     {
                       frontmatter.tags.map(tag => (
-                        <Link to={`tags/${tag}`}>{tag}</Link>
+                        <Link to={`tags/${tag}`} key={tag + Math.random()}>{tag}</Link>
                       ))
                     }
                   </div>
@@ -28,7 +27,6 @@ export const PostList = ({ edges }) => (
                 : null
             }
           </li>
-        </>
         )
       })}
   </ul>
