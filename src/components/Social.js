@@ -11,6 +11,9 @@ export const Social = () => (
     <a href="https://github.com/KL13NT">
       <img src="/github-logo.svg" alt="GitHub Link Icon" />
     </a>
+    <a href="https://dev.to/kl13nt">
+      <img src="/dev.svg" alt="Nabil Tharwat's DEV Profile"/>
+    </a>
     <a href="mailto:nabil.tharwat@outlook.com">
       <img src="/mail.svg" alt="Email Link Icon" />
     </a>
