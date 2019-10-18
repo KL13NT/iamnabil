@@ -14,13 +14,11 @@ import { Social } from '../components/Social'
 export default ({ pageContext: { edges } }) => {
   return (
     <>
+      <SEO
+        title="Nabil Tharwat | Blog" description="I build refreshing websites and take pride in providing an exceptional browsing experience through using the latest accessibility tools available to make my products as accessible and user-friendly as possible."
+      />
       <Navbar about={true} home={false}/>
       <Layout>
-        <SEO
-          title="Nabil Tharwat - Blog"
-          description="Welcome to my blog! I post technically helpful stuff!"
-          lang="en-gb"
-        />
         <div className='o-header'>
           <h1>Nabil Tharwat</h1>
           <p>
