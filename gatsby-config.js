@@ -35,6 +35,14 @@ module.exports = {
         theme_color: `#2F3BA2`
       }
     },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `markdown-pages`)
+      }
+    },
     // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
