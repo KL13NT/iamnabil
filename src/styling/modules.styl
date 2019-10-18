@@ -16,6 +16,17 @@
   h3 
     font-size 1.8rem
     margin-bottom 1rem
+  > p > a
+    display inline-block
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), #e8b700a3 calc(50% - 8px), #e8b700a3 100% )
+    transition background-position 120ms ease-in-out, padding 120ms ease-in-out
+    background-size 100% 200%
+    background-position 0 0
+    &:hover, &:focus
+      transform unset
+      padding: 2px 4px 4px
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )
+      background-position: 0 100%
 
     
 .o-socialContainer
@@ -64,7 +75,6 @@
     margin 0
     padding 0
 
-
 .o-layout
   max-width 800px
   margin 4rem auto
@@ -94,7 +104,7 @@
   transition background-position 120ms ease-in-out, padding 120ms ease-in-out
   background-size 100% 200%
   background-position 0 0
-  &:hover
+  &:hover, &:focus
     transform unset
     padding: 2px 4px 4px
     background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )

@@ -116,6 +116,18 @@ const About = () => {
             linked documentation pages.
             </p>
           </div>
+          <hr className="c-hr-break" />
+          <h2 className="c-sectionHeader">Contact</h2>
+          <div className="c-section">
+            <p>If you'd like to contact me you can use the links at the top of this page or fill this form</p>
+            <form className="c-form" name="contact" method="POST" data-netlify="true">
+              <label>Your Name:<input type="text" name="name" placeholder="What's your name?" required/></label>
+              <label>Your Email:<input type="email" name="email" placeholder="example@example.example" required/></label>
+              <label>Message: <textarea name="message" required></textarea></label>
+              <span>Data submitted in this form is secure and not shared with anyone but me.</span>
+              <button type="submit" name="submit">Send</button>
+            </form>
+          </div>
           <span className="u-center" style={{ fontSize: `0.8rem`, marginTop: `6rem` }}>Made with ❤️ and Gatsby</span>
         </div>
       </Layout>
