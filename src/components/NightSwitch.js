@@ -11,23 +11,23 @@ export default function NightSwitch () {
   //Fix for `window is not available in SSR` gatsby error
   //This hook will run once only 
   useEffect(()=>{
-    html = window.document.querySelector('html')
-    theme = localStorage.getItem('theme')
+    html = window.document.querySelector(`html`)
+    theme = localStorage.getItem(`theme`)
   })
 
   //First page load check
   useEffect(()=>{
-    if(theme === 'dark') setNightMode(!isNightModeDisabled)
+    if(theme === `dark`) setNightMode(!isNightModeDisabled)
   }, [])
 
   useEffect(()=>{
     !isNightModeDisabled
-      ? html.classList.add('u-nightmode')
-      : html.classList.remove('u-nightmode')
+      ? html.classList.add(`u-nightmode`)
+      : html.classList.remove(`u-nightmode`)
   }, [isNightModeDisabled])
 
   const changeNightMode = ()=>{
-    localStorage.setItem('theme', !isNightModeDisabled? 'light': 'dark')
+    localStorage.setItem(`theme`, !isNightModeDisabled? `light`: `dark`)
     setNightMode(!isNightModeDisabled)
   }
   

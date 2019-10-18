@@ -5,9 +5,9 @@ module.exports = {
 		'es6': true,
 		'node': true
 	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended"
+	'extends': [
+		'eslint:recommended',
+		'plugin:react/recommended'
 	],
 	'parser': 'babel-eslint',
 	'parserOptions': {
@@ -31,7 +31,7 @@ module.exports = {
 		],
 		'quotes': [
 			'error',
-			'single'
+			'backtick'
 		],
 		'semi': [
 			'error',
@@ -39,13 +39,13 @@ module.exports = {
 		],
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-unused-vars': [
-			'error', 
+			'error',
 			{
 				'varsIgnorePattern': 'Fragment'
 			}
 		],
 		'quote-props': [
-			"error",
+			'error',
 			'consistent-as-needed',
 			{
 				'keywords': true
@@ -55,18 +55,20 @@ module.exports = {
 			'error',
 			'always'
 		],
-		"prefer-destructuring": ["error", {
-      "array": true,
-      "object": true
-			}, {
-      "enforceForRenamedProperties": false
+		'prefer-destructuring': ['error', {
+			'array': true,
+			'object': true
+		}, {
+				'enforceForRenamedProperties': false
+			}],
+		'prefer-const': ['error', {
+			'destructuring': 'any',
+			'ignoreReadBeforeAssign': false
 		}],
-		"prefer-const": ["error", {
-			"destructuring": "any",
-			"ignoreReadBeforeAssign": false
-    }],
-		"space-before-function-paren": ["error", "always"],
-		"comma-dangle": ["error", "never"],
+		'no-unused-vars': 1,
+		'react/no-unescaped-entities': ['error', {'forbid': ['>', '}']}],
+		'space-before-function-paren': ['error', 'always'],
+		'comma-dangle': ['error', 'never'],
 		'react/prop-types': 0
 	},
 };

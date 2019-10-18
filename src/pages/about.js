@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 import { Social } from '../components/Social'
 
-import styles from '../styling/main.styl'
+import '../styling/main.styl'
 
 const About = () => {
   return (
@@ -116,7 +116,7 @@ const About = () => {
             linked documentation pages.
             </p>
           </div>
-          <span className="u-center" style={{ fontSize: '0.8rem', marginTop: '6rem' }}>Made with ❤️ and Gatsby</span>
+          <span className="u-center" style={{ fontSize: `0.8rem`, marginTop: `6rem` }}>Made with ❤️ and Gatsby</span>
         </div>
       </Layout>
     </>

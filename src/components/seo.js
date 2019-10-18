@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
-import PropTypes from 'prop-types'
 
 function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
   

@@ -1,10 +1,10 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require(`fs`)
+const path = require(`path`)
 
 exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => {
   
-  const blogPostTemplate = path.resolve('src/templates/post.js')
-  const tagPageTemplate = path.resolve('src/templates/tags.js')
+  const blogPostTemplate = path.resolve(`src/templates/post.js`)
+  const tagPageTemplate = path.resolve(`src/templates/tags.js`)
 
   const result = await graphql(`
     {
@@ -33,15 +33,15 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
   `)
 
   if (result.errors) {
-    reporter.panicOnBuild('Error while running GraphQL query.')
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
   const posts = result.data.allMarkdownRemark.edges
 
   createPage({
-    path: '/',
-    component: require.resolve('./src/templates/index.js'),
+    path: `/`,
+    component: require.resolve(`./src/templates/index.js`),
     context: result.data.allMarkdownRemark
   })
 

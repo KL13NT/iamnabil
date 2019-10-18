@@ -6,7 +6,7 @@ export const PostList = ({ edges }) => (
   <ul className="c-postList">
     {
       edges.map(({ node: { frontmatter } }) => {
-        const languageClass = frontmatter.lang === 'ar' ? 'u-rightToLeft' : null
+        const languageClass = frontmatter.lang === `ar` ? `u-rightToLeft` : null
         const time = Math.ceil(parseInt(frontmatter.length) / 150)
         return (
           <li key={frontmatter.title}>
