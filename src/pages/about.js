@@ -120,7 +120,7 @@ const About = () => {
           <h2 className="c-sectionHeader">Contact</h2>
           <div className="c-section">
             <p>If you'd like to contact me you can use the links at the top of this page or fill this form</p>
-            <form method="post" netlify-honeypot="bot-field" data-netlify="true" className="c-form" name="contact">
+            <form method="post" action="/" netlify-honeypot="bot-field" data-netlify="true" className="c-form" name="contact">
               <input type="hidden" name="bot-field" style={{display: 'none'}}/>
               <label>Your Name:<input type="text" name="name" placeholder="What's your name?" required/></label>
               <label>Your Email:<input type="email" name="email" placeholder="example@example.example" required/></label>
