@@ -87,3 +87,15 @@
     display block
   > div:nth-child(1) a
     margin-right 1rem
+
+.o-article-body a
+  display inline-block
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), #e8b700a3 calc(50% - 8px), #e8b700a3 100% )
+  transition background-position 120ms ease-in-out, padding 120ms ease-in-out
+  background-size 100% 200%
+  background-position 0 0
+  &:hover
+    transform unset
+    padding: 2px 4px 4px
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )
+    background-position: 0 100%
