@@ -117,16 +117,36 @@ const About = () => {
             </p>
           </div>
           <hr className="c-hr-break" />
+          <h3 className="c-sectionHeader">What I do</h3>
+          <div className="c-section">
+            <p>I love trying out new things all the time and teaching others what I learn along the way. I'm interested in performance and UX, as well as AI and ML and would love to work on something involving all of them. I also blog from time to time and mentor people who are new to the field.</p>
+            </div>
+          <h3 className="c-sectionHeader">Achievements</h3>
+          <div className="c-section">
+            <ul>
+              <li>Completed an internship in which I worked on a React project alone and delivered a First Viable Product within 30 days of starting work on it. I handled design on my own and made sure the website is accessible and performant even on 5+ years old mobile devices.</li>
+              <li>I've mentored some developers that are on their way to becoming successful front-end developers. </li>
+              <li>Gave a few classes in college and contributed directly to the explanation of some of the most complex topics involved with my college's curriculum regarding computer science.</li>
+              <li>Started Valarium, a mostly-online student club for computer science enthusiasts and people interested in technology as a whole.</li>
+              <li>Have been assigned as team leader in college for two years now, have been lifting the team up and helping the best I can, and the team has been growing rapidly ever since.</li>
+              <li>Came in first place TheNetNinja February Code Challege, 2019 with my simplistic <a href="https://kl13nt.github.io/Clock-Animated/">clock.</a></li>
+            </ul>
+          </div>
+          <h3 className="c-sectionHeader">What I'm looking for</h3>
+          <div className="c-section">
+            <p>I love environments that help me grow either by directly providing or by indirectly being helpful in that manner. Team members who know how to communicate their thoughts well are absolutely appreciated. I love making a difference with my code.</p>
+          </div>
+          <hr className="c-hr-break" />
           <h2 className="c-sectionHeader">Contact</h2>
           <div className="c-section">
-            <p>If you'd like to contact me you can use the links at the top of this page or fill this form</p>
+            <p>If you'd like to contact me you can use the links at the top of this page or fill this form:</p>
             <form method="post" netlify-honeypot="bot-field" data-netlify="true" className="c-form" name="contact">
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
-              <label>Your Name:<input type="text" name="name" placeholder="What's your name?" required/></label>
-              <label>Your Email:<input type="email" name="email" placeholder="example@example.example" required/></label>
+              <label>Name:<input type="text" name="name" placeholder="What's your name?" required/></label>
+              <label>Email:<input type="email" name="email" placeholder="example@example.example" required/></label>
               <label>Message: <textarea name="message" required></textarea></label>
-              <span>Data submitted in this form is secure and not shared with anyone but me.</span>
+              <span>Data submitted in this form is secure and not shared with anyone but me. <br/><br/>After sending the page will refresh and this form will be cleared. Don't worry though, it probably worked. </span>
               
               <button type="submit">Send</button>
             </form>
