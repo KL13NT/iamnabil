@@ -22,6 +22,7 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
         ogImageName 
           ? <>
             <meta property="og:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+            <meta property="og:image:type" content={`image/jpeg`}/>
             <meta property="og:image:url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
             <meta property="og:image:secure_url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
             <meta property="twitter:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
