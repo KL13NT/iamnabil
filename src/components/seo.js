@@ -20,17 +20,12 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
       <meta property="twitter:site" content="@Nabil_Tharwat16"/>
       {
         ogImageName 
-          ? <meta property="og:image:url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
-          : null
-      }
-      {
-        ogImageName 
-          ? <meta property="og:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
-          : null
-      }
-      {
-        ogImageName 
-          ? <meta property="twitter:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+          ? <>
+            <meta property="og:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+            <meta property="og:image:url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+            <meta property="og:image:secure_url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+            <meta property="twitter:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+          </>
           : null
       }
       <html lang="en-GB"/>
