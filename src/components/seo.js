@@ -12,10 +12,12 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={`${hostname}${path? path: null}`} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:creator" content="Nabil Tharwat" />
       <meta property="og:site_name" content="Nabil Tharwat" />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:creator" content="@Nabil_Tharwat" />
+      <meta property="twitter:site" content="@Nabil_Tharwat16"/>
       {
         ogImageName 
           ? <meta property="og:image:url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
@@ -23,7 +25,12 @@ function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
       }
       {
         ogImageName 
-          ? <meta property="og:image:url" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+          ? <meta property="og:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
+          : null
+      }
+      {
+        ogImageName 
+          ? <meta property="twitter:image" content={`${hostname}/${ogImageName}.${ogImageExtension}`}/>
           : null
       }
       <html lang="en-GB"/>
