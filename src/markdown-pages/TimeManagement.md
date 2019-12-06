@@ -70,9 +70,7 @@ How we spend time is often overlooked and regarded as 'too hard to measure' or '
 
 One of the very first steps is to measure exactly how you spend your time. How long transportations take, studying, being outside, playing video games, scrolling through Instagram, having a meal, and even bathroom breaks. 
 
-This is how you create a *time audit*:
-
-Begin by creating a new document/note on a notebook, your phone, or anything that you take with you everywhere. This note will have a list of everything you've done. There are apps that track your work, but I'm gonna go with the manual method for this one.
+To create my time-audit, I begin by creating a new note on my phone when I wake up. This note will have a list of everything I do during the day. There are apps that track your work, but I go with the manual method for this one.
 
 ![My time audit for half a day](/IMG_20191205_093509.png)
 

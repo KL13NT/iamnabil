@@ -51,6 +51,11 @@ export const pageQuery = graphql`
             tags
             date(formatString: "MMMM DD, YYYY")
           }
+          fields {
+            readingTime {
+              minutes
+            }
+          }
         }
       }
     }
