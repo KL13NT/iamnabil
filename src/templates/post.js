@@ -13,7 +13,7 @@ import styles from './post.module.css'
 
 export default class Post extends React.Component {
   render(){
-    const { frontmatter, html } = this.props.data.markdownRemark
+    const { frontmatter, html, fields } = this.props.data.markdownRemark
     const { title, image, length, lang } = frontmatter
     const languageClass = lang === 'ar'? 'u-rightToLeft': null
     
@@ -22,7 +22,7 @@ export default class Post extends React.Component {
       <Navbar home={true} about={true}/>
       <Layout>
         <SEO {...frontmatter}/>
-        <ArticleBody frontmatter={frontmatter} languageClass={languageClass} html={html}/>
+        <ArticleBody frontmatter={frontmatter} fields={fields} languageClass={languageClass} html={html}/>
     </Layout>
     </>
     )
@@ -53,6 +53,11 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_withWebp
             }
           }
+        }
+      }
+      fields {
+        readingTime {
+          minutes
         }
       }
     }

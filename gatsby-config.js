@@ -11,13 +11,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylus`,
@@ -43,7 +36,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `markdown-pages`)
       }
     },
-    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,6 +43,18 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`
       }
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-reading-time`,
+          {
+            resolve: `gatsby-remark-link-card`,
+            options: {
+            }
+          }
+        ]
+      }
+    }
   ]
 }

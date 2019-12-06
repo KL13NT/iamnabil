@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 export const PostList = ({ edges }) => (
   <ul className="c-postList">
     {
-      edges.map(({ node: { frontmatter } }) => {
+      edges.map(({ node: { frontmatter, fields: { readingTime } } }) => {
         const languageClass = frontmatter.lang === `ar` ? `u-rightToLeft` : null
-        const time = Math.ceil(parseInt(frontmatter.length) / 150)
+        const time = Math.floor(readingTime.minutes)
         return (
           <li key={frontmatter.title}>
             <Link to={frontmatter.path} className={languageClass}>{frontmatter.title}</Link>

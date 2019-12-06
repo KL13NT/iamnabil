@@ -26,6 +26,11 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
               ogImageExtension
               tags
             }
+            fields {
+              readingTime {
+                minutes
+              }
+            }
           }
         }
       }
