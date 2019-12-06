@@ -42,7 +42,6 @@ export const pageQuery = graphql`
         title
         description
         author
-        length
         lang
         ogImageName
         ogImageExtension
