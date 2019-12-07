@@ -120,7 +120,7 @@ const About = () => {
           <h3 className="c-sectionHeader">What I do</h3>
           <div className="c-section">
             <p>I love trying out new things all the time and teaching others what I learn along the way. I'm interested in performance and UX, as well as AI and ML and would love to work on something involving all of them. I also blog from time to time and mentor people who are new to the field.</p>
-            </div>
+          </div>
           <h3 className="c-sectionHeader">Achievements</h3>
           <div className="c-section">
             <ul>
@@ -130,6 +130,76 @@ const About = () => {
               <li>Started Valarium, a mostly-online student club for computer science enthusiasts and people interested in technology as a whole.</li>
               <li>Have been assigned as team leader in college for two years now, have been lifting the team up and helping the best I can, and the team has been growing rapidly ever since.</li>
               <li>Came in first place TheNetNinja February Code Challege, 2019 with my simplistic <a href="https://kl13nt.github.io/Clock-Animated/">clock.</a></li>
+            </ul>
+          </div>
+          <h3 className="c-sectionHeader">Q & A</h3>
+          <div className="c-section">
+            <ul>
+              <li>
+								What's the most useful business-related book you've ever read?<br/>
+								JavaScript and JQuery: Interactive Front-End Web Development<br/>
+								HTML and CSS: Design and Build Websites<br/>
+								Modern Web Development on the JAMstack<br/>
+								Design Systems Handbook (reading)<br/>
+              </li>
+
+              <li>
+								What's your favorite non-business book?<br/>
+								Nineteen Eighty-Four novel by George Orwell
+              </li>
+
+              <li>
+								If money were not an issue, what would you be doing right now?<br/>
+								Coding side projects, hiking, sky-diving, or gaming on an expensive machine
+              </li>
+
+              <li>
+								What words of advice would you give your younger self?<br/>
+								Concentrate on your goal and don't let the wind steer your ship away from course
+              </li>
+
+              <li>
+								What's the most creative thing you've ever done?<br/>
+								A discord bot with NLP using TensorFlow that actually converses with users
+              </li>
+
+              <li>
+								What's your super power?<br/>
+								Being able to focus on my goals and not let them fade from my vision, no matter what
+              </li>
+
+              <li>
+								What's the best way for people to get in touch with you?<br/>
+								I've got accounts almost everywhere! Discord, Facebook, Linkedin, Twitter, Skype, Email, you name it
+              </li>
+
+              <li>
+								What words of wisdom do you live by?<br/>
+								He who sows the win shall reap the storm.<br/>
+								Get knocked down, get back up again.<br/>
+              </li>
+
+              <li>
+								What aspects of your work are you most passionate about?<br/>
+								The part involving humans and loads of challenges for the mind
+              </li>
+
+              <li>
+								What was the most impactful class you took in school?<br/>
+								English
+              </li>
+
+              <li>
+								What's something you wish you had done years earlier?<br/>
+								Learning CS
+              </li>
+
+              <li>
+								What's an obstacle you've overcome?<br/>
+								Language barrier.<br/>
+								Cultural differences.<br/>
+								Negative opinions.<br/>
+              </li>
             </ul>
           </div>
           <h3 className="c-sectionHeader">What I'm looking for</h3>
