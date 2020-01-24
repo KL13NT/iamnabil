@@ -143,8 +143,3 @@ yarn add -D @babel/plugin-proposal-optional-chaining
 </div>
 
 طريق التسطيب المختلفة لـ *Babel* هتلاقوها هنا: [Babel Setup](https://babeljs.io/setup) و طرق تسطيب المعامل و معلومات اكتر عنه من هنا: [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
-
-
-## ملاحظات نهائية
-
-لو عبجكم المقال ابعتوه لاصحابكوا و اشتغلوا باحدث حاجه موجوده سوا. لو في اسئلة ابعتوهالي على تويتر [@Nabil_Tharwat16](Https://twitter.com/Nabil_Tharwat16) او على Valarium.

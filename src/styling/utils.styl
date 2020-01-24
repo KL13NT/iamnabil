@@ -19,7 +19,9 @@
   .c-form
     input, textarea
       color black
-  
+  .c-socialContainer a[data-id='AngelCo'], .c-socialContainer a[data-id='Dev.to']
+    filter invert()
+
 .u-justify
   text-align justify
 
@@ -33,10 +35,7 @@
   ul, li
     unicode-bidi embed
 
-.u-rightToLeft h1, .u-rightToLeft h2, .u-rightToLeft h3, .u-rightToLeft h4, .u-rightToLeft h5, .u-rightToLeft h6, p.u-rightToLeft
-  text-align right
-
-.u-rightToLeft blockquote
+.u-rightToLeft h1, .u-rightToLeft h2, .u-rightToLeft h3, .u-rightToLeft h4, .u-rightToLeft h5, .u-rightToLeft h6, p.u-rightToLeft, a.u-rightToLeft, .u-rightToLeft blockquote
   text-align right
 
 .u-rightToLeft blockquote::before
@@ -45,3 +44,10 @@
 
 hr.u-rightToLeft
   background #4a4a4a
+
+.u-unstyledLink
+	background unset
+	transition unset
+	&:hover, &:focus
+		transform unset 
+		background unset

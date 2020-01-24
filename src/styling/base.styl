@@ -13,14 +13,7 @@ a, button
   background transparent
   transition transform 0.2s
   color #9e003a
-
-a:hover, a:focus
-  transform translateY(-3px)
   cursor pointer
-
-
-
-
 
 form
   text-align left
@@ -38,7 +31,7 @@ body, html
   font-family "Roboto","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   font-size 1.25rem
   font-weight 400
-  line-height 1.8rem
+  line-height 1.6rem
   word-wrap: break-word
   text-rendering optimizeLegibility
   font-display swap
@@ -62,6 +55,10 @@ ul
 	letter-spacing 0.9
 	font-weight 400
 	color #555
+	margin 0 1rem
+
+li
+	margin 1rem 0
 
 *::selection 
 	background #ffca00
@@ -99,3 +96,15 @@ section
 
 code
   overflow auto
+
+
+a
+  display inline-block
+  background-image linear-gradient(transparent 0%, transparent calc(50% - 8px), #e8b700a3 calc(50% - 8px), #e8b700a3 100% )
+  transition background-position 120ms ease-in-out, padding 120ms ease-in-out
+  background-size 100% 200%
+  background-position 0 0
+  &:hover, &:focus
+    transform unset
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )
+    background-position: 0 100%

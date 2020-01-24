@@ -1,5 +1,3 @@
 node_modules/*
-src/templates/*
-src/GLOBAL_CSS/*
-data/
-**/*.test.js
+data/*
+src/commands/*

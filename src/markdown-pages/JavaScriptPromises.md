@@ -14,7 +14,7 @@ tags: ["JavaScript", "Babel", "Async"]
 
 Promises can cause a lot of confusion for newbies, just like it did to me when I first encountered them. Their names may not be the most descriptive but let's get over that. 
 
-# Definition
+## Definition
 
 A promise is an asynchronous object that has three states: 
 
@@ -28,7 +28,7 @@ Let's think of promises as messenger pigeons: you tie a message to their feet an
 
 Then the pigeon arrives with a response message tied to its feet, if that message is positive or allowing you to do something then it's purpose has been *fulfilled* and you can easily *then* handle the *resolved* (returned) message. If the message is negative though, then it's purpose is not fulfilled but rather *rejected* in which case there will be some kind of error that you will have to *catch* and handle. 
 
-# Example code
+## Example code
 Consider the following snippet
 ```Javascript
 new Promise((resolve, reject)=>{
@@ -61,7 +61,7 @@ This one worked and got *fulfilled* with the resolved message "We're good to go!
 
 What if we don't use `then` and `catch` at all?
 
-# Rejection without `catch`
+## Rejection without `catch`
 
 ```js
 let pro = new Promise((resolve, reject)=>{
@@ -75,7 +75,5 @@ console.log('Do your daily chores')
 
 In case of a rejection without a catch block the browser will throw an `Unhandled promise rejection` error. If you're developing on a *NodeJS* environment then you really **should** use a `catch` block because NodeJS will throw an the same error with a deprecation warning telling you that in future releases of NodeJS the whole process will be stopped with exit code that's not `0`, which could be problematic if you're working on a web server.
 
-# TL;DR
-Promises are messenger pigeons, send them with a message (request) in which it'll be `pending` while you do your chores (async code doesn't block the main thread) and when it comes back the response will either be a `rejection` error for you to `catch` or a `fulfilled` request which you handle with `then`
-
-If you liked this article make sure to share it with your friends, and if you have any questions or spotted a mistake tweet it to me [@Nabil_Tharwat16](https://twitter.com/Nabil_Tharwat16), and as always, stay safe!
+## TL;DR
+Promises are messenger pigeons, send them with a message (request) in which it'll be `pending` while you do your chores (async code doesn't block the main thread) and when it comes back the response will either be a `rejection` error for you to `catch` or a `fulfilled` request which you handle with `then`.

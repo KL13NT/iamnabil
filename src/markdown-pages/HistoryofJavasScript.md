@@ -17,7 +17,7 @@ JavaScript is often misinterpreted as a Java-related language or even a superset
 
 
 
-# A brief history
+## A brief history
 
 
 JavaScript appeared in late 90's after Java had started to gain attraction in the market. Brendan Eich was hired by Netscape (the company responsible for the powerful Firefox browser) to develop a language to be used in their browser as a scripting language to allow developers to manipulate the page as they see fit. The language was developed in just about 6 months (you'll hear 3 weeks but that's the time it took Brendan Eich to write the first spec), and was called LiveScript. It was something used to face Java in the market as other companies started suggesting making Java the defacto of the web platform, little did they know. Quite some time later the language was renamed to JavaScript to gain more attraction in the market. It gained a lot of attention and by that time it was handed to ECMA International to stop Microsoft from taking contol over the language, standardise it, and to maintain and develop it. It was assigned the name EcmaScript (abbreviated ES) and was given codename "ECMA-262". 
@@ -26,7 +26,7 @@ The second version was released with tiny bits of optimisations and a some new f
 
 
 
-# EcmaScript, JavaScript, what's the difference?
+## EcmaScript, JavaScript, what's the difference?
 
 
 EcmaScript as I have pointed out previously is the standard produced by ECMA International. JavaScript on the other hand is the implementation of that standard, and we all know that different browsers support different features, which is their own implementation of the standard. 
@@ -35,11 +35,7 @@ To highlight some of the main differences between them, if you look at the spec,
 
 
 
-# TL;DR
+## TL;DR
 
 
 EcmaScript is a standard maintained by Ecma International. JavaScript is the browser implementations that conform to that standard. 
-
-
-
-If you liked this article don't forget to share it with your friends, and as always, stay safe.

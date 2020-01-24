@@ -1,32 +1,31 @@
-import React, { Fragment, useState } from "react"
-import {Helmet} from "react-helmet"
-import { graphql } from "gatsby"
-import Img from 'gatsby-image'
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Navbar from "../components/Navbar"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Navbar from '../components/Navbar'
 import ArticleBody from '../components/Article'
 
 import styles from './post.module.css'
 
 
+
 export default class Post extends React.Component {
-  render(){
-    const { frontmatter, html, fields } = this.props.data.markdownRemark
-    const { title, image, length, lang } = frontmatter
-    const languageClass = lang === 'ar'? 'u-rightToLeft': null
-    
-    return (  
-      <>
-      <Navbar home={true} about={true}/>
-      <Layout>
-        <SEO {...frontmatter}/>
-        <ArticleBody frontmatter={frontmatter} fields={fields} languageClass={languageClass} html={html}/>
-    </Layout>
-    </>
-    )
-  }
+	render (){
+		const { frontmatter, html, fields } = this.props.data.markdownRemark
+		const { lang } = frontmatter
+		const languageClass = lang === 'ar'? 'u-rightToLeft': null
+		
+		return (  
+			<>
+				<Navbar home={true} about={true}/>
+				<Layout>
+					<SEO {...frontmatter}/>
+					<ArticleBody frontmatter={frontmatter} fields={fields} languageClass={languageClass} html={html}/>
+				</Layout>
+			</>
+		)
+	}
 }
 
 

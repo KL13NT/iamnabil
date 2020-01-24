@@ -99,10 +99,10 @@ let result =
 
 طيب دلوقتي ال pipeline operator مش موجود في اللغه لسه, و لسه اصلاً stage-1 يعني مش هينزل قريب خالص, فا الطريقة الوحيدة حالياً اننا نستعمله عن طريق [@babel/plugin-proposal-pipeline-operator](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator). هتلاقوا كمان في الصفحة 3 انواع منه (حالياً موجود 2 و واحد الdevelopment بتاعته اتسحبت). انا في الامثلة بستخدم `smart` لكن انتوا تقدروا تستخدموا اللي انتو عايزينه. 
 
-# ملاحظات اخيرة
+## ملاحظات اخيرة
 لو عجبتكم المقالة انشروها و لو عايزيني اكتب عن حاجه معينه مش فاهمينها قولولي على [تويتر](https://twitter.com/Nabil_Tharwat16) او [Valarium](https://discord.gg/xrGAnTg)
 
-# مصادر
+## مصادر
 - [صفحة موزيلا نيتورك عن الموضوع](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator)
 
 - [نوع الـ F#](https://github.com/valtech-nyc/proposal-fsharp-pipelines/blob/master/README.md)

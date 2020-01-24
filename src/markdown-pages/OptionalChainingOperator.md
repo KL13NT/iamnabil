@@ -17,7 +17,7 @@ NOTE: This article is also available in Arabic: [ازاي و ليه تستخدم
 Have you ever expected a deeply nested property of an object to be there but was shocked when you received `Uncaught TypeError: Can't get blabla of undefined`? Worry no more! With the Optional Chaining Operator you'll never have to worry about that again. 
 
 
-# Chaining Issues
+## Chaining Issues
 Let's imagine 3 deeply nested objects in each other in the following form, our goal is to get the length of the string `mystring`: 
 
 ```js
@@ -58,7 +58,7 @@ const mystringLength =
 
 But let's study this closely. If `mystring` is an empty string, meaning that its length is `0`, putting such value in a condition will result in it being `coerced` into `false`, which will make our tiny script return `undefined` instead of actually `0`. This could be problematic in so many ways. The solution to it would be either to check for type using `typeof` or some other one. Point is: it'll be more complicated than just an `if` conditional. 
 
-# ECMAScript TC39 Proposals 
+## ECMAScript TC39 Proposals 
 `JavaScript` is an *implementation* of *ECMAScript*, the standard that *Ecma International* is responsible for. Browsers take that standard and work on it, implementing it in whatever way they want.
 
 Each new feature of the standard goes through 5 stages:  
@@ -72,7 +72,7 @@ You can read the full documentation for each stage in the [TC39 Process Document
 
 > <span>TC39 is the committee responsible for the development of ECMAScript features.</span>
 
-# Optional Chaining Operator
+## Optional Chaining Operator
 This is a new proposal for the language that's currently at Stage-3, meaning it's to be expected in modern browsers soon enough. This is what it looks like: 
 
 ```js
@@ -95,7 +95,7 @@ Note that in the method calls, the `()` brackets come after the `?.` operator be
 
 
 
-# How to start using the Optional Chaining Operator
+## How to start using the Optional Chaining Operator
 Currently, the operator is not yet supported in the language as it's only Stage-3. But thanks to *Babel* you can enable it in your projects and start using it right away! 
 
 First, you'll need to setup *Babel* if you haven't done so yet. Full documentation on how to set it up with different bundlers and tools here: [Babel Setup Page](https://babeljs.io/setup)
@@ -119,7 +119,7 @@ Then in your `.babelrc` config file:
 Read the full documentation for the plugin here: [@babel/plugin-proposal-optional-chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
 
 
-# TL;DR
+## TL;DR
 You can use the `@babel/plugin-proposal-optional-chaining` plugin to use the new *Optional Chaining Operator* currently at Stage-3 to access object properties that you're unsure about their actual existence in the following way: 
 ```js
 const length = obj?.foo?.bar?.mystring?.length;
@@ -131,13 +131,9 @@ const optionLength = obj?.foo?.bar?.preferences?.[optionName];
 const returnedValueFromMethodCall = obj?.foo?.someMethod?.()
 ```
 
-# Read More
+## Read More
 Full ECMAScript 262 documentation go here: [Ecma International: Ecma-262 Standard](https://www.ecma-international.org/publications/standards/Ecma-262.htm). 
 
 Features they're working on: [TC39 ECMAScript Proposals GitHub Tracket](https://github.com/tc39/proposals) or [TC39 Website](https://tc39.es/)
 
 V8 official blog post: [Optional Chaining](https://v8.dev/features/optional-chaining) 
-
-
-
-If you liked this article make sure to share it with your friends, and if you have any questions or spotted a mistake tweet it to me [@Nabil_Tharwat16](https://twitter.com/Nabil_Tharwat16), and as always, stay safe!

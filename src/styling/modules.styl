@@ -16,19 +16,7 @@
   h3 
     font-size 1.8rem
     margin-bottom 1rem
-  > p > a
-    display inline-block
-    background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), #e8b700a3 calc(50% - 8px), #e8b700a3 100% )
-    transition background-position 120ms ease-in-out, padding 120ms ease-in-out
-    background-size 100% 200%
-    background-position 0 0
-    &:hover, &:focus
-      transform unset
-      padding: 2px 4px 4px
-      background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )
-      background-position: 0 100%
 
-    
 .o-socialContainer
   display flex 
   justify-content space-evenly
@@ -68,12 +56,16 @@
     font-family: Cambria, Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     text-transform: uppercase;
-    margin: 2rem 0 0 0;
-  p
-    text-align center
-    font-size 1rem
-    margin 0
-    padding 0
+    margin: 1rem 0;
+  > div
+    display flex
+    justify-content space-between
+    align-items center
+    margin 6px 0
+    > p, > a
+      font-size 0.8rem
+      padding: 0;
+      margin: 0;
 
 .o-layout
   max-width 800px
@@ -95,17 +87,8 @@
     display flex
   a
     display block
+		transition unset
+		&:hover, &:focus
+			transform unset
   > div:nth-child(1) a
     margin-right 1rem
-
-.o-article-body a
-  display inline-block
-  background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), #e8b700a3 calc(50% - 8px), #e8b700a3 100% )
-  transition background-position 120ms ease-in-out, padding 120ms ease-in-out
-  background-size 100% 200%
-  background-position 0 0
-  &:hover, &:focus
-    transform unset
-    padding: 2px 4px 4px
-    background-image: linear-gradient( transparent 0%, transparent calc(50% - 8px), #e8b700 calc(50% - 8px), #e8b700 100% )
-    background-position: 0 100%

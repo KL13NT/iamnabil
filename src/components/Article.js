@@ -2,35 +2,38 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
+import { PostBottom } from '../components/PostBottom'
 
-const ArticleHeader = ({ image, languageClass, title, readingTime })=>
-  <>
-    <div className="o-article-header">
-      <Img fluid={image.childImageSharp.fluid}/>
-      <h1 className={languageClass}> {title} </h1>
-      <p> {Math.floor(readingTime.minutes)} min read </p>
-    </div>
-    <hr className={`c-hr-break ${languageClass}`}/>
-  </>
+const ArticleHeader = ({ image, languageClass, title, date, path, tags }) =>
+	<>
+		<div className="o-article-header">
+			<h1 className={languageClass}> {title} </h1>
+			<div>
+				<p>{ date }</p>
+				<a href={`https://twitter.com/intent/tweet?text=${title}&amp;url=https://iamnabil.me${path}&amp;hashtags=${tags}`}>Tweet This</a>
+			</div>
+			<Img fluid={image.childImageSharp.fluid}/>
+		</div>
+	</>
 
-const ArticleBody = ({ frontmatter, languageClass, html, fields })=>
-  <article className="o-article-body">
-    <ArticleHeader {...frontmatter} {...fields} languageClass={languageClass}/>
-    <section dangerouslySetInnerHTML={{ __html: html }} className={languageClass}/>
-    <p>If you liked this article make sure to share it with your friends, and if you have any questions or want to see more like this make sure to follow me on Twitter <a href="Https://twitter.com/Nabil_Tharwat16">@Nabil_Tharwat16</a> or join in on the fun in our Discord server <a href="https://discord.gg/xrGAnTg">Valarium</a>.</p>
-  </article>
+const ArticleBody = ({ frontmatter, languageClass, html, fields }) =>
+	<article className="o-article-body">
+		<ArticleHeader {...frontmatter} {...fields} languageClass={languageClass}/>
+		<section dangerouslySetInnerHTML={{ __html: html }} className={languageClass}/>
+		<PostBottom lang={ frontmatter.lang } languageClass={ languageClass }/>
+	</article>
 
 
 ArticleHeader.propTypes = {
-  image: PropTypes.object.isRequired,
-  languageClass: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  length: PropTypes.number.isRequired
+	image: PropTypes.object.isRequired,
+	languageClass: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	length: PropTypes.number.isRequired
 }
 
 ArticleBody.propTypes = {
-  frontmatter: PropTypes.object.isRequired,
-  languageClass: PropTypes.string.isRequired
+	frontmatter: PropTypes.object.isRequired,
+	languageClass: PropTypes.string.isRequired
 }
 
 export default ArticleBody

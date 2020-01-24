@@ -13,7 +13,7 @@ tags: ["Git", "DevOps", "Arabic"]
 ---
 عمرك الكود بتاعك عدلت عليه و التعديل ده حصل فيه مشكلة و اضطريت انك تعيد البروجكت او تمسح و تعيد كتابة جزء كبير اوي؟ GitHub هيساعدك جداً في حاجه زي دي, تعالوا سوا نعرف فوايدة و استخداماته و ازاي نستخدمه.
 
-# ايه هو Git و ايه فوايدة؟
+## ايه هو Git و ايه فوايدة؟
 قبل ما ابين ايه فوايدة حابب اوضح ان في فرق بين Git و GitHub. Git هو نظام موزع للتحكم في نسخة البرامج و هو مجاني و open source بيسمح للمطورين انهم يشتغلوا على نفس الكود في نفس الوقت بسرعة و خفة. من خصائصه: 
 1. Repositories
 2. Branching
@@ -35,7 +35,7 @@ tags: ["Git", "DevOps", "Arabic"]
 
 طيب كفاية شرح من برا بقى, ازاي نستخدم GitHub؟ 
 
-# اساسيات GitHub
+## اساسيات GitHub
 GitHub مبني على نظام Git و هو من اشهر المواقع اللي مطبقة النظام ده و لكنه مش الوحيد. انا هفترض انكم مسطبين Git على اجهزتكم بالفعل. مبدأياً لازم متخافوش من ال Command line او الـ shell ايا كان نظام التشغيل اللي بتستخدموه.
 
 هندخل على موقع GitHub و نعمل Repository جديدة.
@@ -59,14 +59,12 @@ GitHub مبني على نظام Git و هو من اشهر المواقع الل�
 كده جيت واخد باله من الملفات بس على جهازنا احنا بس, محتاجين بقى نرفع الفايلات دي على جيتهاب عشان اي حد يفتح الريبو بعد كده يلاقي الفايلات و التعديلات و هكذا. عشان نعمل كده هنحتاج `git push origin master`. دي وظيفتها انها ترفع الفايلات الى الفرع الرئيسي *master*. 
 
 
-# ازاي تعمل افرع جديدة
+## ازاي تعمل افرع جديدة
 الطريقة سهلة و بسيطة. كل اللي عليك انك هتكتب `git checkout branchname -b` مع تغيير `branchname` بالاسم اللي تحبه للفرع. وظيفة كوماند `checkout` انها تغير مابين الافرع. بالاداء الاساسي هو هيغير الفرع لوحدة اول ما تكتب الكوماند بس من غير `-b` لان الفلاج ده وظيفته انه يقول لجيت "اعمل فرع جديد بالاسم ده". اما لو كتبنا `git checkout branchname` هيقوم محول لفرع تاني و هكذا. 
 
-# ازاي تحمل اي تحديثات حصلت للكود
+## ازاي تحمل اي تحديثات حصلت للكود
 لو انت شغال مع حد تاني في نفس الريبو من الاكيد انهم هيرفعوا كود هما كتبوه, و انت اكيد هتعوز تحمل الكود ده و تشتغل عليه. الكوماند لحاجه زي دي هي `git pull` و هو هيحمل الفايلات و يتأكد انك *up-to-date*.
 
 كده احنا عملنا ريبو, رفعنا شغلنا, و عملنا اكتر من فرع. و دلوقتي هسيبكوا مع صورة لكل الكوماندس اللي استخدمناهم
 
-![](https://lh3.googleusercontent.com/D31WtWGDdp-RY4bE-pUp_0FsLQkj6sA1OX2cYdB3rZpLkFMxNSa3q2auFnv-st-jtAOtfurZXPxR-FcbRKSLM7avFdLjJbftH9GDA-6QXQeG_DIuqGdmvD0pLUecy3LBZvARR4rU1m2Yc1_RmbcVYfvWT0ly6LA2YixlQ8K3ivWGgWCgKkBc5v792WfQzpm53VndnPILk27-Ovw9GUdeKdWHIhqp6xEJBCWzRgqnsAa3qtb2YHE2_5ZZ_Sxp6ZH4vzTPd3TKu5KAI8OSVCa074A9t2i273DVoAm5pxlkx1EtBYwPXJozhMGmVlSKV2wxBg6KqFFBGeULJxxz1veT6bhhvA9unT3Ccj_7k4dVngOIlrQnSj8WPubaeRAuh5RQ6N_YueUAegQCrgcwFu4fqE9lFFDXG-_FUQjRn1ssvZvVbKjxWIAvZKOxT-esH_tjlFEpSdDQCiM1rbcgv_xGMgI2IBVmsLIivNs3d3bEDEQBEhkNW9gxPi3tX0ZYcS75t-nYMbPrDM-80NucQFa1b081eYh8FBs-LaXJQnLdYzZ8wJqLcBX3GJw6itteH87pSnoQnijMoQ51giS3t8imdEy0GItI2xuwGeYQ0hw=w1366-h705)
-
-لو عجبكم البوست ده ابعتوه لاصحابكم و لو عندكم اسئلة ابعتوهالي على تويتر [@Nabil_Tharwat16](https://twitter.com/Nabil_Tharwat16) او على Valarium. 
+![المثال الكامل](https://lh3.googleusercontent.com/D31WtWGDdp-RY4bE-pUp_0FsLQkj6sA1OX2cYdB3rZpLkFMxNSa3q2auFnv-st-jtAOtfurZXPxR-FcbRKSLM7avFdLjJbftH9GDA-6QXQeG_DIuqGdmvD0pLUecy3LBZvARR4rU1m2Yc1_RmbcVYfvWT0ly6LA2YixlQ8K3ivWGgWCgKkBc5v792WfQzpm53VndnPILk27-Ovw9GUdeKdWHIhqp6xEJBCWzRgqnsAa3qtb2YHE2_5ZZ_Sxp6ZH4vzTPd3TKu5KAI8OSVCa074A9t2i273DVoAm5pxlkx1EtBYwPXJozhMGmVlSKV2wxBg6KqFFBGeULJxxz1veT6bhhvA9unT3Ccj_7k4dVngOIlrQnSj8WPubaeRAuh5RQ6N_YueUAegQCrgcwFu4fqE9lFFDXG-_FUQjRn1ssvZvVbKjxWIAvZKOxT-esH_tjlFEpSdDQCiM1rbcgv_xGMgI2IBVmsLIivNs3d3bEDEQBEhkNW9gxPi3tX0ZYcS75t-nYMbPrDM-80NucQFa1b081eYh8FBs-LaXJQnLdYzZ8wJqLcBX3GJw6itteH87pSnoQnijMoQ51giS3t8imdEy0GItI2xuwGeYQ0hw=w1366-h705)

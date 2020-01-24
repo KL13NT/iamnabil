@@ -22,7 +22,7 @@ Ever went through a really nice tutorial for some time only to find out after fi
 
 
 
-# What is tutorial purgatory?
+## What is tutorial purgatory?
 
 
 
@@ -38,7 +38,7 @@ Watching videos or reading articles without building real-world applications tha
 
 
 
-# How to escape tutorial purgatory
+## How to escape tutorial purgatory
 
 
 
@@ -50,7 +50,7 @@ By actually diving into code and trying out different ideas your mind will get a
 
 
 
-# Ask questions
+## Ask questions
 
 
 A lot of people are afraid of asking questions for many reasons, let their reason be the fact they're afraid of being judged, the fear of looking ignorant, or whatever other reason they might have. This is not good, and it's usually too personally-centric to be real. It's a type of negative thinking that people need to get rid of. Asking questions will make you look ignorant for a split second, until you're given a clear, concise answer, then you're no more ignorant of that subject. And it's not even 'ignorant' in the bad way that people choose to refer to, but rather the "curious person who's learning and trying to achieve greater things". Never be afraid of asking questions, and don't rely on a single person to answer all your questions unless he/she is your mentor. 
@@ -61,11 +61,7 @@ Understand that people are busy, they have their own lives and problems. Sometim
 
  
 
-# TL;DR
+## TL;DR
 
 
 Tutorial purgatory is an infinite loop of tutorials and no experience gain at all. Build things. Push your boundaries. Make new boundaries. Break records. Do whatever you have to achieve what you want. Get out of your comfort zone and challenge yourself.
-
-
-
-If you liked this article don't forget to share it with your friends, and as always, stay safe.

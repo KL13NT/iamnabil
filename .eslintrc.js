@@ -1,13 +1,12 @@
 module.exports = {
 	'env': {
-		'browser': true,
+		'browser': false,
 		'commonjs': true,
 		'es6': true,
 		'node': true
 	},
-	'extends': [
-		'eslint:recommended',
-		'plugin:react/recommended'
+	"extends": [
+		"eslint:recommended"
 	],
 	'parser': 'babel-eslint',
 	'parserOptions': {
@@ -23,7 +22,7 @@ module.exports = {
 	'rules': {
 		'indent': [
 			'error',
-			2
+			`tab`
 		],
 		'linebreak-style': [
 			'error',
@@ -31,7 +30,7 @@ module.exports = {
 		],
 		'quotes': [
 			'error',
-			'backtick'
+			'single'
 		],
 		'semi': [
 			'error',
@@ -39,13 +38,13 @@ module.exports = {
 		],
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-unused-vars': [
-			'error',
+			'error', 
 			{
 				'varsIgnorePattern': 'Fragment'
 			}
 		],
 		'quote-props': [
-			'error',
+			"error",
 			'consistent-as-needed',
 			{
 				'keywords': true
@@ -55,20 +54,38 @@ module.exports = {
 			'error',
 			'always'
 		],
-		'prefer-destructuring': ['error', {
-			'array': true,
-			'object': true
-		}, {
-				'enforceForRenamedProperties': false
-			}],
-		'prefer-const': ['error', {
-			'destructuring': 'any',
-			'ignoreReadBeforeAssign': false
+		'array-bracket-spacing': [
+			'error',
+			'always'
+		],
+		'no-whitespace-before-property': 2,
+		'space-unary-ops': [
+        2, {
+          "words": true,
+          "nonwords": false,
+          "overrides": {
+						"new": true,
+						"=": true
+          }
+    }],
+		"prefer-destructuring": ["error", {
+      "array": true,
+      "object": true
+			}, {
+      "enforceForRenamedProperties": false
 		}],
-		'no-unused-vars': 1,
-		'react/no-unescaped-entities': ['error', {'forbid': ['>', '}']}],
-		'space-before-function-paren': ['error', 'always'],
-		'comma-dangle': ['error', 'never'],
-		'react/prop-types': 0
+		"prefer-const": ["error", {
+			"destructuring": "any",
+			"ignoreReadBeforeAssign": false
+    }],
+		"space-before-function-paren": ["error", "always"],
+		"comma-dangle": ["error", "never"],
+		'react/prop-types': 0,
+		'arrow-spacing': ['error', { "before": true, "after": true }],
+		'block-spacing': [
+			2,
+			'always'
+		],
+		'no-unused-vars': 1
 	},
 };
