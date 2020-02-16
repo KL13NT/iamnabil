@@ -1,0 +1,127 @@
+@import './settings'
+
+.c-hr-break
+	background: rgba(0,0,0,0.2)
+	color: transparent
+	padding: 0
+	border: none
+	height: 1px
+	width: 40%
+	margin: 0 auto
+.c-section
+	margin: 0
+	padding: 0
+	text-align: left
+	ul
+		font-size: 0.9rem
+
+.c-section h2,
+.c-section h3
+	font-weight: 700
+	font-size: 1.2rem
+.c-sectionHeader
+	font-weight: 300
+.c-postList
+	margin: 0 auto
+	width: 100%
+	list-style: none
+	li
+		margin: 30px 0 0 0
+		background: #fff
+		padding: 80px 60px
+		border-radius: 5px
+		box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.02), 1px 1px 15px 0 rgba(0,0,0,0.03)
+		transition: transform 0.5s
+		font-size: 1.5rem
+		color: #000
+		text-align: left
+		&:hover
+			transform: translateY(-5px)
+			box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.1)
+	& > li
+		& > p
+			margin: 3rem 0
+			font-size: 1.2rem
+		& > h5
+			margin: 0
+		& > a
+			text-decoration: none
+			font-size: 2rem
+			color: inherit
+			transition: color 0.2s
+			font-weight: bold
+			margin: 0 0 1rem 0
+			display: block
+			line-height: normal
+			&:hover
+				color: #ffca00
+.c-socialContainer
+	display: flex
+	justify-content: space-evenly
+	height: 2rem
+	max-width: 60%
+	margin: 1rem auto
+	& > a
+		height: 100%
+		& > img
+			height: 100%
+			width: auto
+			transition: transform 0.2s
+	a
+		&:hover
+			transform: translateY(-3px)
+.c-form
+	display: flex
+	flex-direction: column
+	width: max-content
+	border: solid 4px #d9d9d9
+	border-radius: 5px
+	padding: 1rem
+	label
+		margin: 1rem 0
+		font-size: 1rem
+	button
+		text-align: left
+		background: #f3f7f9
+		padding: 0 8px 0 4px
+		border-radius: 5px
+		display: block
+		width: max-content
+		padding: 0 1rem
+		border: solid 2px #d9d9d9
+		color: #000
+		cursor: pointer
+	span
+		max-width: 16rem
+		font-size: 0.8rem
+		line-height: initial
+		margin: 4px 0 8px
+.c-form input,
+.c-form textarea
+	border: unset
+	border-radius: 5px
+	background: #fbfeff
+	border: solid 1px #d0d3d5
+	margin: 0 4px
+	padding: 4px
+	display: block
+	width: max-content
+	font-size: 1rem
+.c-form button:hover,
+.c-form button:focus
+	border: solid 1px #e8b700
+	box-shadow: 0 0 4px 0 #e8b700
+
+.c-tags
+	display: flex
+	flex-wrap: wrap
+.c-tag
+	display: inline-block
+	vertical-align: middle
+	background-color:#e00c0c
+	border-radius: .125rem
+	margin: 0 0.4rem
+	padding: .4rem
+	color: white
+	transform: scale(0.4)
+	transform-origin: left

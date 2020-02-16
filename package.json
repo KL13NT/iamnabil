@@ -27,8 +27,11 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "eslint": "^6.5.1",
+    "gatsby-plugin-sass": "^2.1.28",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.18.2"
+    "node-sass": "^4.13.1",
+    "prettier": "^1.18.2",
+    "sass-lint": "^1.13.1"
   },
   "keywords": [
     "gatsby"

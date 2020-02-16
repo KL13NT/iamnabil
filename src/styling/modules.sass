@@ -1,0 +1,92 @@
+//this includes all layout containers, objects, prefixed -o or -l for layout, layout stuff
+@import './settings'
+
+.o-body
+	overflow-y: hidden
+.o-header
+	position: relative
+	text-align: center
+	margin-top: 1rem
+	margin: 6rem auto 4rem
+	h1
+		font-size: 3rem
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+	h3
+		font-size: 1.8rem
+		margin-bottom: 1rem
+.o-socialContainer
+	display: flex
+	justify-content: space-evenly
+	height: 2rem
+	max-width: 60%
+	margin: 1rem auto
+.o-tagsContainer
+	display: flex
+	margin: 4px 0
+	padding: 0
+	& > a
+		display: inline
+		margin: 0 0.2rem 0 0
+		height: 100%
+		font-size: 0.7rem
+		color: #555
+		background: #f3f7f9
+		padding: 0 8px 0 4px
+		border-radius: 3px
+		text-transform: lowercase
+		&::before
+			content: '#'
+			margin: 0 2px
+			font-size: 0.9em
+		&:hover
+			transform: unset
+			color: #6a6a6a
+
+.o-article-body
+	padding: 4rem 2rem
+
+.o-article-header
+	h1
+		line-height: 1.25
+		font-weight: 400
+		color: #000
+		font-family: Cambria, Georgia, 'Times New Roman', Times, serif
+		text-align: center
+		text-transform: uppercase
+		margin: 1rem 0
+	& > div
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin: 6px 0
+	> div > p,
+	> div > a
+		font-size: 0.8rem
+		padding: 0
+		margin: 0
+.o-layout
+	max-width: 800px
+	margin: 4rem auto
+	padding: 40px 0
+.o-navigation
+	width: 100%
+	position: absolute
+	display: flex
+	justify-content: space-between
+	align-items: center
+	top: 2rem
+	right: 2rem
+	left: 0
+	margin: 0
+	padding: 0 2rem
+	transition: unset
+	& > div
+		display: flex
+		&:nth-child(1)
+			a
+				margin-right: 1rem
+	a
+		display: block
+.o-navigation:hover,
+.o-navigation:focus
+	transform: unset

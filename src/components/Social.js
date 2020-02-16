@@ -8,7 +8,7 @@ import AngelcoLogo from '../../static/angelco.svg'
 import OutlookLogo from '../../static/mail.svg'
 import CV from '../../static/cv.svg'
 
-export const Social = () => (
+export default () => (
 	<div className="c-socialContainer">
 		<a className='u-unstyledLink' href="https://twitter.com/Nabil_Tharwat16">
 			<img src={TwitterLogo} alt="Twitter profile" />

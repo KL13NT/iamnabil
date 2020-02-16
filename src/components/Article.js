@@ -20,7 +20,9 @@ const ArticleBody = ({ frontmatter, languageClass, html, fields }) =>
 	<article className="o-article-body">
 		<ArticleHeader {...frontmatter} {...fields} languageClass={languageClass}/>
 		<section dangerouslySetInnerHTML={{ __html: html }} className={languageClass}/>
-		<PostBottom lang={ frontmatter.lang } languageClass={ languageClass }/>
+		{
+			frontmatter.nofooter === 'true'? null: <PostBottom lang={ frontmatter.lang } languageClass={ languageClass }/>
+		}
 	</article>
 
 

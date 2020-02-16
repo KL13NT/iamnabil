@@ -3,9 +3,9 @@ import React from 'react'
 import SEO from '../components/seo'
 import Navbar from '../components/Navbar'
 import Layout from '../components/layout'
-import { Social } from '../components/Social'
+import Social from '../components/Social'
 
-import styles from './toolset.module.styl'
+import styles from './toolset.module.sass'
 
 
 const Toolset = () => {

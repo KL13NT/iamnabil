@@ -15,8 +15,8 @@ export default class Post extends React.Component {
 		const { frontmatter, html, fields } = this.props.data.markdownRemark
 		const { lang } = frontmatter
 		const languageClass = lang === 'ar'? 'u-rightToLeft': null
-		
-		return (  
+
+		return (
 			<>
 				<Navbar home={true} about={true}/>
 				<Layout>
@@ -31,7 +31,7 @@ export default class Post extends React.Component {
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { 
+    markdownRemark(frontmatter: {
       path: { eq: $path }
     }) {
       html
@@ -44,7 +44,8 @@ export const pageQuery = graphql`
         lang
         ogImageName
         ogImageExtension
-        tags
+				tags
+				nofooter
         image {
           childImageSharp {
             fluid(maxWidth: 786) {

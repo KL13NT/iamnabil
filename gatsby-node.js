@@ -1,12 +1,12 @@
-const fs = require(`fs`)
-const path = require(`path`)
+const fs = require('fs')
+const path = require('path')
 
 exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => {
-  
-  const blogPostTemplate = path.resolve(`src/templates/post.js`)
-  const tagPageTemplate = path.resolve(`src/templates/tags.js`)
 
-  const result = await graphql(`
+	const blogPostTemplate = path.resolve('src/templates/post.js')
+	const tagPageTemplate = path.resolve('src/templates/tags.js')
+
+	const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -37,40 +37,40 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
     }
   `)
 
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
+	if (result.errors) {
+		reporter.panicOnBuild('Error while running GraphQL query.')
+		return
+	}
 
-  const posts = result.data.allMarkdownRemark.edges
+	const posts = result.data.allMarkdownRemark.edges
 
-  createPage({
-    path: `/`,
-    component: require.resolve(`./src/templates/index.js`),
-    context: result.data.allMarkdownRemark
-  })
+	createPage({
+		path: '/',
+		component: require.resolve('./src/templates/index.js'),
+		context: result.data.allMarkdownRemark
+	})
 
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {} // additional data can be passed via context
-    })
-  })
+	posts.forEach(({ node }) => {
+		createPage({
+			path: node.frontmatter.path,
+			component: blogPostTemplate,
+			context: {} // additional data can be passed via context
+		})
+	})
 
-  const tags = new Set([])
+	const tags = new Set([])
 
-  posts.forEach(({ node }) => {
-    if(node.frontmatter.tags) node.frontmatter.tags.forEach(tag=>tags.add(tag))
-  })
+	posts.forEach(({ node }) => {
+		if(node.frontmatter.tags) node.frontmatter.tags.forEach(tag => tags.add(tag))
+	})
 
-  tags.forEach(tag=>{
-    createPage({
-      path: `/tags/${tag}/`,
-      component: tagPageTemplate,
-      context: {
-        tag: tag
-      }
-    })
-  })
+	tags.forEach(tag => {
+		createPage({
+			path: `/tags/${tag}/`,
+			component: tagPageTemplate,
+			context: {
+				tag: tag
+			}
+		})
+	})
 }

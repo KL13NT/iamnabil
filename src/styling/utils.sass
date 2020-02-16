@@ -1,0 +1,78 @@
+.u-nightmode
+	background:#212121
+
+	*
+		color: #ffffff
+
+	article,
+	body
+		background: #212121
+
+	article *
+		color: #fff !important
+
+	hr
+		background: #fff
+
+	.c-postList li
+		*
+			color: #fff
+
+		background: #353535
+
+	.o-tagsContainer > a
+		background: #484848
+
+	img[src="/dev.svg"]
+		filter: invert(95%)
+
+	.c-form
+		input, textarea
+			color: #000
+
+	.c-socialContainer a
+		&[data-id='AngelCo'],
+		&[data-id='Dev.to']
+			filter: invert(95%)
+
+.u-justify
+	text-align: justify
+
+.u-center
+	text-align: center
+	display: block
+
+.u-rightToLeft
+	direction: rtl
+	unicode-bidi: embed
+
+	*
+		direction: rtl
+		unicode-bidi: embed
+
+	ul, * ul, li, * li
+		unicode-bidi: embed
+
+	h1, h2, h3, h4, h5, h6
+		text-align: right
+
+p.u-rightToLeft, a.u-rightToLeft
+	text-align: right
+
+.u-rightToLeft blockquote
+	text-align: right
+
+	&::before
+		right: -5px
+		content: "\201d"
+
+hr.u-rightToLeft
+	background: #4a4a4a
+
+.u-unstyledLink
+	background: unset
+	transition: unset
+
+	&:hover, &:focus
+		transform: unset
+		background: unset
