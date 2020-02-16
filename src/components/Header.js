@@ -8,9 +8,9 @@ export default ({ tiny }) => tiny?
 		<h1 className="u-center">I'm Nabil Tharwat —</h1>
 		<h3 className="u-center">Front-End Engineer, Blogger, Mentor</h3>
 		<p>
-			I'm a software engineer, and occasionally a blogger and mentor. I was born in Cairo, Egypt and grew up in
-			there. After graduating High School I embarked on a mission to become
-			a software engineer. I'm the creator of Ally Reads! and DOCX.
+			I'm a software engineer and occasionally a blogger and a mentor. I was born in Cairo and grew up
+			there. After graduating high school I embarked on a mission to become
+			a software engineer. I'm the author of Ally Reads! and DOCX.
 		</p>
 		<Social/>
 	</div>
