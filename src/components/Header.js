@@ -24,8 +24,7 @@ const RestHeader = () =>
 			I recently started an online student community that aims to improve
 			students' lives by providing the help and support needed. We also
 			raise awareness about marginalised groups and underrepresented people.
-			Everyone is welcome! Be sure to check out our Discord server if you're an Egyptian/Arab student.
-			<a href="https://discord.gg/xrGAnTg">Click here to check it out!</a>
+			Everyone is welcome! Be sure to check out our Discord server if you're an Egyptian/Arab student. <a href="https://discord.gg/xrGAnTg">Click here to check it out!</a>
 		</p>
 	</>
 

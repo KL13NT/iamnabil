@@ -10,7 +10,7 @@ import CV from '../../static/cv.svg'
 
 export default () => (
 	<div className="c-socialContainer">
-		<a className='u-unstyledLink' href="https://twitter.com/Nabil_Tharwat16">
+		<a className='u-unstyledLink' data-id='Twitter' href="https://twitter.com/Nabil_Tharwat16">
 			<img src={TwitterLogo} alt="Twitter profile" />
 		</a>
 		<a className='u-unstyledLink' href="https://www.linkedin.com/in/i-am-nabil">

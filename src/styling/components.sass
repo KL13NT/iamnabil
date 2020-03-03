@@ -115,13 +115,14 @@
 .c-tags
 	display: flex
 	flex-wrap: wrap
-.c-tag
+
+.c-tag::after
+	content: attr(data-tag)
 	display: inline-block
-	vertical-align: middle
 	background-color:#e00c0c
 	border-radius: .125rem
 	margin: 0 0.4rem
 	padding: .4rem
 	color: white
-	transform: scale(0.4)
+	transform: scale(0.6)
 	transform-origin: left

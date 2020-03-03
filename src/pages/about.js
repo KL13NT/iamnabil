@@ -26,27 +26,24 @@ const About = () => {
 					</p>
 					<div className="c-section">
 						<a className='u-unstyledLink' href="https://KL13NT.github.io/ally-reads">
-							<h3 >Ally Reads!</h3>
+							<h3 className='c-tag' data-tag="open-source">Ally Reads!</h3>
 						</a>
-						<span className='c-tag'>Open Source</span>
 						<p>
             An accessibility browser extension made just for you. Allows you to change how text is displayed in articles and social media posts to make them more accessible, and every thing it does is 100% customisable.
 						</p>
 					</div>
 					<div className="c-section">
 						<a className='u-unstyledLink' href="https://github.com/KL13NT/SW19-WIP-">
-							<h3 >SW19</h3>
+							<h3 className='c-tag' data-tag="open-source">SW19</h3>
 						</a>
-						<span className='c-tag'>Open Source</span>
 						<p>
             A quick animation made in a few hours on an exams night for 2019 new year's eve. The architecture of the code is an absolute mess given it was made in a few hours and that I was basically experimenting with stuff. I may refactor it some time.
 						</p>
 					</div>
 					<div className="c-section">
 						<a className='u-unstyledLink' href="https://github.com/KL13NT/cppbasics">
-							<h3 >C++ Basics</h3>
+							<h3 className='c-tag' data-tag="open-source">C++ Basics</h3>
 						</a>
-						<span className='c-tag'>Open Source</span>
 						<p>
             An 8-module C++ basics explanation for students going through
             university or just willing to learn C++ to advance in software

@@ -18,22 +18,36 @@
 	.c-postList
 		width: 100%
 
+
 @media (max-width: 728px)
 	html
 		border: solid 4px #e8b700
 
+	.c-socialContainer
+		max-width: 100%
+
+	.o-article-body
+		padding: 2rem 0rem
+
 	h2, h3, h4, h5, h6
-		font-size: calc(1.6rem - 1.5vw)
+		font-size: 1.5rem
 
-	.c-postList li >
-		a
-			font-size: calc(1.6rem - 1.5vw)
+	.c-postList li
+		margin: 10px 0 0 0
+		padding: 30px 20px
+		> a
+			font-size: 1.2rem
 
-		h5
-			font-size: calc(1.6rem - 1.8vw)
+		> h5
+			font-size: 0.8rem
+			font-weight: 300
+
+		> p
+			margin: 1rem 0
+			font-size: 1rem
 
 	.o-layout
-		padding: 20px
+		padding: 10px
 		max-width: 100%
 
 	.o-header p
@@ -42,26 +56,9 @@
 	.c-postList
 		width: 100%
 
+	.o-tagsContainer > a
+		margin: 0.2rem 0.2rem 0 0
+
 @media (max-width: 480px)
-	html
-		border: solid 2px #e8b700
-
-	.c-postList
-		li
-			padding: 4rem
-
-	.c-socialContainer
-		margin: 1rem 0
-		width: 100%
-		max-width: 100%
-
-	.o-layout
-		padding: 20px
-		max-width: 100%
-
-	.o-tagsContainer
-		flex-direction: column
-
-		a
-			width: max-content
-			margin: 4px 0
+	.c-socialContainer> a[data-id="AngelCo"], a[data-id="Dev.to"], a[data-id="Twitter"]
+		display: none
