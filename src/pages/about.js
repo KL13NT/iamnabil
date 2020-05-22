@@ -1,9 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
-import Social from '../components/Social'
 import Header from '../components/Header'
 
 import '../styling/main.sass'
@@ -11,38 +11,88 @@ import '../styling/main.sass'
 const About = () => {
 	return (
 		<>
-			<SEO title="Nabil Tharwat | Front-End Engineer, Blogger, Mentor" description="I build refreshing websites and take pride in providing an exceptional browsing experience through using the latest accessibility tools available to make my products as accessible and user-friendly as possible." />
-			<Navbar home={true} about={false}/>
+			<SEO
+				description='Frontend self-taught croco, an occasional mentor and blogger. JavaScript is my robotic right hand. I’m all about performance and accessibility.'
+				title='Nabil Tharwat | Front-End Engineer, Blogger, Mentor' />
+			<Navbar about={ false } home={ true }/>
 			<Layout>
-				<Header tiny={false}/>
+				<Header tiny={ false }/>
 				<hr className='c-hr-break'></hr>
-				<div className="o-body">
+				<div className='o-body'>
 
-					<h2 >Selected Projects</h2>
+					<h2 >Recent Projects</h2>
 					<p>
-            Most of my projects are open source and free to use. I'm currently working on a
-            few projects that aim to provide a better developer experience and
-            provide end-users a more friendly and easy browser environment.
+						Most of my projects are open source and free to use.
+						This list is not inclusive of every thing I worked on. You can find
+						all my projects on my <a href='https://github.com/kl13nt'>GitHub</a>
 					</p>
-					<div className="c-section">
-						<a className='u-unstyledLink' href="https://KL13NT.github.io/ally-reads">
-							<h3 className='c-tag' data-tag="open-source">Ally Reads!</h3>
+
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://iamnabil.netlify.app'>
+							<h3 className='c-tag' data-tag='PWA'>My Blog</h3>
+						</a>
+						<p>
+							This very website. Built with Gatsby, Sass, and Markdown. I don't have
+							much to say about it except that I designed and developed it all from the ground up,
+							and maintain it from time to time.
+						</p>
+					</div>
+
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://auditmyday.netlify.app'>
+							<h3 className='c-tag' data-tag='open-source, PWA'>AuditMyDay</h3>
+						</a>
+						<p>
+							A simple and efficient time audit with cloud sync support.
+							Allows you to create audits and records without having to worry about
+							organising or moving stuff around. Built with React, Firebase Auth, and Firestore.
+							For the full list of technologies used refer to this <a href='https://www.facebook.com/groups/egyptian.geeks/permalink/3130397693666584/'>Facebook post</a>
+						</p>
+					</div>
+
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://nabdjs.netlify.app'>
+							<h3 className='c-tag' data-tag='open-source'>NabdJS</h3>
+						</a>
+						<p>
+							An Arabic programming language created using JavaScript following
+							the principles of BASIC. AST-based and has support for simple types such as
+							numbers and strings, as well as variables, globals and scoped.
+							Supports functions in BASIC syntax and passes-by-reference,
+							and them delicious # code comments.
+						</p>
+					</div>
+
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://valarium.netlify.app'>
+							<h3 className='c-tag' data-tag='open-source'>Valarium</h3>
+						</a>
+						<p>
+							This is the official website for the student community that I founded.
+							Has 0 lines of JavaScript code, and filled with delicious sassy Sass
+							resting on top of Pug.
+						</p>
+					</div>
+
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://KL13NT.github.io/ally-reads'>
+							<h3 className='c-tag' data-tag='open-source'>Ally Reads!</h3>
 						</a>
 						<p>
             An accessibility browser extension made just for you. Allows you to change how text is displayed in articles and social media posts to make them more accessible, and every thing it does is 100% customisable.
 						</p>
 					</div>
-					<div className="c-section">
-						<a className='u-unstyledLink' href="https://github.com/KL13NT/SW19-WIP-">
-							<h3 className='c-tag' data-tag="open-source">SW19</h3>
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://kl13nt.github.io/SW19-WIP-'>
+							<h3 className='c-tag' data-tag='open-source'>SW19</h3>
 						</a>
 						<p>
             A quick animation made in a few hours on an exams night for 2019 new year's eve. The architecture of the code is an absolute mess given it was made in a few hours and that I was basically experimenting with stuff. I may refactor it some time.
 						</p>
 					</div>
-					<div className="c-section">
-						<a className='u-unstyledLink' href="https://github.com/KL13NT/cppbasics">
-							<h3 className='c-tag' data-tag="open-source">C++ Basics</h3>
+					<div className='c-section'>
+						<a className='u-unstyledLink' href='https://github.com/KL13NT/cppbasics'>
+							<h3 className='c-tag' data-tag='educational'>C++ Basics</h3>
 						</a>
 						<p>
             An 8-module C++ basics explanation for students going through
@@ -54,22 +104,25 @@ const About = () => {
 					</div>
 
 					<h2 >What I do</h2>
-					<div className="c-section">
-						<p>I love trying out new things all the time and teaching others what I learn along the way. I'm interested in performance and UX, as well as AI/ML and would love to work on something involving all of them. I also blog from time to time and mentor people who are new to the field.</p>
+					<div className='c-section'>
+						<p>
+							I love trying out new things all the time.
+							I blog from time to time and mentor people who are new to the field.
+							I also have a YouTube channel where I post educational videos, devlogs, and more when I have the time.
+						</p>
 					</div>
 					<h2 >Achievements</h2>
-					<div className="c-section">
+					<div className='c-section'>
 						<ul>
-							<li>Mentored some developers that are on their way to becoming successful software engineers. </li>
-							<li>Gave a few classes in college and contributed directly to local computer science communities.</li>
-							<li>Produced introductory courses to topics like Data Structures and C++ Programming.</li>
-							<li>Started Valarium, an online student club for computer science enthusiasts and people interested in technology as a whole.</li>
-							<li>Have been assigned as team leader in college for two years now, and the team has been growing rapidly ever since.</li>
-							<li>Came in first place TheNetNinja's February Code Challege, 2019 with my simplistic <a href="https://kl13nt.github.io/Clock-Animated/">clock.</a></li>
+							<li>Mentored developers that are on their way to becoming successful software engineers. </li>
+							<li>Collected freeCodeCamp.org's Frontend-related certs (4 certs). </li>
+							<li>Gave classes in college and contributed directly to local computer science communities.</li>
+							<li>Founded Valarium, an online student club for computer science enthusiasts and people interested in technology as a whole.</li>
+							<li>Came in first place TheNetNinja's February Code Challege, 2019 with my simplistic <a href='https://kl13nt.github.io/Clock-Animated/'>clock.</a></li>
 						</ul>
 					</div>
 					<h2 >Q & A</h2>
-					<div className="c-section">
+					<div className='c-section'>
 						<ul>
 							<li>
 								What's your preferred type of employment?<br/>
@@ -77,7 +130,7 @@ const About = () => {
 							</li>
 							<li>
 								What roles would you be most excited about?<br/>
-								UXE, Frontend, and SRE.
+								UXE and Frontend.
 							</li>
 							<li>
 								What role attributes would you be most excited about in your next job?<br/>
@@ -102,23 +155,8 @@ const About = () => {
 							</li>
 
 							<li>
-								If money were not an issue, what would you be doing right now?<br/>
-								Hiking, sky-diving, biking, or playing Beat Saber.
-							</li>
-
-							<li>
-								What words of advice would you give your younger self?<br/>
-								Concentrate on your goal and don't let the wind steer your ship.
-							</li>
-
-							<li>
-								What's the most creative thing you've ever done?<br/>
-								A discord bot with NLP using TensorFlow that detects toxic behaviour and warns members with marked as such.
-							</li>
-
-							<li>
 								What's your super power?<br/>
-								Being able to focus on my goals and not let them fade away, no matter what.
+								Being able to follow through on my goals without hesitation.
 							</li>
 
 							<li>
@@ -153,25 +191,38 @@ const About = () => {
 						</ul>
 					</div>
 					<h2 >What I'm looking for</h2>
-					<div className="c-section">
+					<div className='c-section'>
 						<p>I love environments that help me grow either by directly providing or by indirectly being helpful in that manner. Team members who know how to communicate their thoughts well are absolutely appreciated. I love making a difference with my code.</p>
 					</div>
 
 					<h2 >Contact</h2>
-					<div className="c-section">
+					<div className='c-section'>
 						<p>If you'd like to contact me you can use the links at the top of this page or fill this form:</p>
-						<form method="post" netlify-honeypot="bot-field" data-netlify="true" className="c-form" name="contact">
-							<input type="hidden" name="bot-field" />
-							<input type="hidden" name="form-name" value="contact" />
-							<label>Name:<input type="text" name="name" placeholder="What's your name?" required/></label>
-							<label>Email:<input type="email" name="email" placeholder="example@example.example" required/></label>
-							<label>Message: <textarea name="message" required></textarea></label>
+						<form className='c-form' data-netlify='true' method='post' name='contact' netlify-honeypot='bot-field'>
+							<input name='bot-field' type='hidden' />
+							<input name='form-name' type='hidden' value='contact' />
+
+							<label htmlFor='name'>Name:</label>
+							<input required id='name' name='name' placeholder="What's your name?" type='text' />
+
+							<label htmlFor='email'>email:</label>
+							<input required id='email' name='email' placeholder='example@example' type='email' />
+
+							<label htmlFor='message'>message:</label>
+							<textarea required id='message' name='message'></textarea>
+
 							<span>Data submitted in this form is secure and not shared with anyone but me. <br/><br/>After sending the page will refresh and this form will be cleared. Don't worry though, it probably worked. </span>
 
-							<button type="submit">Send</button>
+							<button type='submit'>Send</button>
 						</form>
 					</div>
-					<span className="u-center" style={{ fontSize: '0.8rem', marginTop: '6rem' }}>Made with ❤️ and Gatsby</span>
+					<span
+						className='u-center'
+						style={ { fontSize: '0.8rem', marginTop: '6rem' } }>
+						Made with
+						<span aria-label='Heart emoji' role='img'>❤️</span>
+						and Gatsby
+					</span>
 				</div>
 			</Layout>
 		</>

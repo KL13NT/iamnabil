@@ -322,7 +322,7 @@ ul {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
-  list-style-position: outside;
+  list-style-position: inside;
   list-style-image: none;
 }
 ol {
@@ -334,7 +334,7 @@ ol {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
-  list-style-position: outside;
+  list-style-position: inside;
   list-style-image: none;
 }
 dl {
@@ -580,4 +580,3 @@ article{
   margin: 0 auto;
   padding-top: 4rem;
 }
-

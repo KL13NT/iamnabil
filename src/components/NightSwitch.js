@@ -7,9 +7,9 @@ export default function NightSwitch () {
   let html
   let theme
   const [isNightModeDisabled, setNightMode] = useState(true)
-  
+
   //Fix for `window is not available in SSR` gatsby error
-  //This hook will run once only 
+  //This hook will run once only
   useEffect(()=>{
     html = window.document.querySelector(`html`)
     theme = localStorage.getItem(`theme`)
@@ -30,7 +30,7 @@ export default function NightSwitch () {
     localStorage.setItem(`theme`, !isNightModeDisabled? `light`: `dark`)
     setNightMode(!isNightModeDisabled)
   }
-  
+
   return (
     <div className='c-nightmode-toggle'>
       <Toggle
@@ -41,8 +41,8 @@ export default function NightSwitch () {
         aria-label="night mode switch"
         className="toggle-custom"
         icons={{
-          checked: <ToggleMoon />,
-          unchecked: <ToggleSun />
+          unchecked: <ToggleMoon />,
+          checked: <ToggleSun />
         }}
       />
     </div>

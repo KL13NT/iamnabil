@@ -6,7 +6,7 @@ module.exports = {
 		title: 'Nabil\'s Blog',
 		description: 'Kick off your next, great project with a curated list of helpful blog posts.',
 		author: '@Nabil_Tharwat16',
-		siteUrl: 'https://iamnabil.me'
+		siteUrl: 'https://iamnabil.netlify.app'
 	},
 	plugins: [
 		'gatsby-plugin-robots-txt',

@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
       <Navbar home={true} about={true} />
       <Layout>
         <div>
-          <h1>{tagHeader}</h1>
+          <h3>{tagHeader}</h3>
           <PostList edges={edges} />
         </div>
       </Layout>
