@@ -46,7 +46,7 @@ const About = () => {
 							A simple and efficient time audit with cloud sync support.
 							Allows you to create audits and records without having to worry about
 							organising or moving stuff around. Built with React, Firebase Auth, and Firestore.
-							For the full list of technologies used refer to this <a href='https://www.facebook.com/groups/egyptian.geeks/permalink/3130397693666584/'>Facebook post</a>
+							For the full list of technologies used refer to this <a href='https://www.facebook.com/groups/egyptian.geeks/permalink/3130397693666584/'>Facebook post</a>.
 						</p>
 					</div>
 
@@ -127,7 +127,7 @@ const About = () => {
 						<ul>
 							<li>
 								What's your preferred type of employment?<br/>
-								Working remotely is my absolute favourite, but I'm okay with Full-Time with a flexible work schedule and Part-Time.
+								Working remotely is my absolute favourite, but I'm okay working Full-Time with a flexible work schedule and Part-Time.
 							</li>
 							<li>
 								What roles would you be most excited about?<br/>
@@ -209,11 +209,11 @@ const About = () => {
 							<label htmlFor='name'>Name:</label>
 							<input required id='name' name='name' placeholder="What's your name?" type='text' />
 
-							<label htmlFor='email'>email:</label>
-							<input required id='email' name='email' placeholder='example@example' type='email' />
+							<label htmlFor='email'>Email:</label>
+							<input required id='email' name='email' placeholder='Example@example' type='email' />
 
-							<label htmlFor='message'>message:</label>
-							<textarea required id='message' name='message'></textarea>
+							<label htmlFor='message'>Message:</label>
+							<textarea required id='message' name='message'>Something to say?</textarea>
 
 							<span>I will never share data sent through this form with anyone. </span>
 
