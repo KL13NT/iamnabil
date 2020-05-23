@@ -108,7 +108,8 @@ const About = () => {
 						<p>
 							I love trying out new things all the time.
 							I blog from time to time and mentor people who are new to the field.
-							I also have a YouTube channel where I post educational videos, devlogs, and more when I have the time.
+							I also have a YouTube channel where I post educational videos,
+							devlogs, and more when I have the time.
 						</p>
 					</div>
 					<h2 >Achievements</h2>
@@ -126,7 +127,7 @@ const About = () => {
 						<ul>
 							<li>
 								What's your preferred type of employment?<br/>
-								Remote, Full-Time with a flexible work schedule, and Part-Time.
+								Working remotely is my absolute favourite, but I'm okay with Full-Time with a flexible work schedule and Part-Time.
 							</li>
 							<li>
 								What roles would you be most excited about?<br/>
@@ -161,7 +162,7 @@ const About = () => {
 
 							<li>
 								What's the best way for people to get in touch with you?<br/>
-								The most preferable method of communication is through Discord or WhatsApp. I hate unsolicited calls.
+								The preferable method of communication is Email.
 							</li>
 
 							<li>
@@ -192,12 +193,15 @@ const About = () => {
 					</div>
 					<h2 >What I'm looking for</h2>
 					<div className='c-section'>
-						<p>I love environments that help me grow either by directly providing or by indirectly being helpful in that manner. Team members who know how to communicate their thoughts well are absolutely appreciated. I love making a difference with my code.</p>
+						<p>I love environments that help me grow.
+							Team members who know how to communicate their thoughts well are appreciated.
+							I love making a difference with my code.
+						</p>
 					</div>
 
 					<h2 >Contact</h2>
 					<div className='c-section'>
-						<p>If you'd like to contact me you can use the links at the top of this page or fill this form:</p>
+						<p>If you'd like to contact me, you can use the links at the top of this page or fill this form:</p>
 						<form className='c-form' data-netlify='true' method='post' name='contact' netlify-honeypot='bot-field'>
 							<input name='bot-field' type='hidden' />
 							<input name='form-name' type='hidden' value='contact' />
@@ -211,7 +215,7 @@ const About = () => {
 							<label htmlFor='message'>message:</label>
 							<textarea required id='message' name='message'></textarea>
 
-							<span>Data submitted in this form is secure and not shared with anyone but me. <br/><br/>After sending the page will refresh and this form will be cleared. Don't worry though, it probably worked. </span>
+							<span>I will never share data sent through this form with anyone. </span>
 
 							<button type='submit'>Send</button>
 						</form>
