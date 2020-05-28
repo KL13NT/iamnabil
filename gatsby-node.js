@@ -28,7 +28,8 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
             }
             fields {
               readingTime {
-                minutes
+								minutes
+								words
               }
             }
           }

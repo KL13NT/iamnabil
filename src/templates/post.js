@@ -57,7 +57,8 @@ export const pageQuery = graphql`
       }
       fields {
         readingTime {
-          minutes
+					words
+					minutes
         }
       }
     }
