@@ -18,10 +18,10 @@ export default class Post extends React.Component {
 
 		return (
 			<>
-				<Navbar home={true} about={true}/>
+				<Navbar about={ true } home={ true }/>
 				<Layout>
-					<SEO {...frontmatter}/>
-					<ArticleBody frontmatter={frontmatter} fields={fields} languageClass={languageClass} html={html}/>
+					<SEO { ...frontmatter }/>
+					<ArticleBody fields={ fields } frontmatter={ frontmatter } html={ html } languageClass={ languageClass }/>
 				</Layout>
 			</>
 		)
@@ -43,7 +43,8 @@ export const pageQuery = graphql`
         author
         lang
         ogImageName
-        ogImageExtension
+				ogImageExtension
+				imageCaption
 				tags
 				nofooter
         image {

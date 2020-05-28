@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import { PostBottom } from '../components/PostBottom'
 
-const ArticleHeader = ({ image, languageClass, title, date, path, tags }) =>
+const ArticleHeader = ({ image, languageClass, title, date, path,imageCaption, tags }) =>
 	<>
 		<div className='o-article-header'>
 			<h1 className={ languageClass }> { title } </h1>
@@ -13,6 +13,7 @@ const ArticleHeader = ({ image, languageClass, title, date, path, tags }) =>
 				<a href={ `https://twitter.com/intent/tweet?text=${title}&amp;url=https://iamnabil.netlify.app${path}&amp;hashtags=${tags}` }>Tweet This</a>
 			</div>
 			<Img fluid={ image.childImageSharp.fluid }/>
+			<span className='c-image-caption'>{ imageCaption }</span>
 		</div>
 	</>
 

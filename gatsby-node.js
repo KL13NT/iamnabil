@@ -20,7 +20,7 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
               title
               description
               author
-              length
+              imageCaption
               lang
               ogImageName
               ogImageExtension
