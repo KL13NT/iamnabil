@@ -6,7 +6,8 @@ import './toggle.css'
 export default function NightSwitch () {
 	let html
 
-	const [ theme, setTheme ] = useState(localStorage.getItem('theme'))
+	const localTheme = typeof window !== 'undefined'? (localStorage?.getItem('theme') ?? 'light'): 'light'
+	const [ theme, setTheme ] = useState(localTheme)
 
 	//Fix for `window is not available in SSR` gatsby error
 	//This hook will run once only
@@ -18,11 +19,12 @@ export default function NightSwitch () {
 		theme === 'dark'
 			? html.classList.add('u-nightmode')
 			: html.classList.remove('u-nightmode')
+
+		localStorage.setItem('theme', theme)
 	}, [ html, theme ])
 
 	const changeNightMode = () => {
 		setTheme(theme === 'dark'? 'light': 'dark')
-		localStorage.setItem('theme', theme)
 	}
 
 	return (

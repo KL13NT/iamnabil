@@ -36,20 +36,10 @@
 	display: block
 
 .u-rightToLeft
-	direction: rtl
-	unicode-bidi: embed
-	*
+	&, p, h1,h2,h3,h4,h5,h6
 		direction: rtl
 		unicode-bidi: embed
-
-	code, pre
-		direction: ltr
-
-	h1, h2, h3, h4, h5, h6
 		text-align: right
-
-p.u-rightToLeft, a.u-rightToLeft
-	text-align: right
 
 .u-rightToLeft blockquote
 	text-align: right

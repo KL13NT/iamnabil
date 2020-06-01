@@ -12,8 +12,8 @@ const About = () => {
 	return (
 		<>
 			<SEO
-				description='Frontend self-taught croco, an occasional mentor and blogger. JavaScript is my robotic right hand. I’m all about performance and accessibility.'
-				title='Nabil Tharwat | Front-End Engineer, Blogger, Mentor' />
+				description='Front-End Engineer, Blogger, Mentor'
+				title='Front-End Engineer, Blogger, Mentor' />
 			<Navbar about={ false } home={ true }/>
 			<Layout>
 				<Header tiny={ false }/>

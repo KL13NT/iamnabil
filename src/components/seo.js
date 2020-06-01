@@ -1,24 +1,35 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 
 const hostname = 'https://iamnabil.netlify.app'
+
+const defaultTitle = 'Nabil Tharwat | Blog'
+const defaultDescription = 'Front-End Engineer, Blogger, Mentor'
 const defaultOGImagePath = '/icons/icon-512x512.png'
+const defaultPath = '/'
 
 
-function SEO ({ title, description, path, ogImageName, ogImageExtension }) {
+function SEO ({
+	title = defaultTitle,
+	description = defaultDescription,
+	path = defaultPath,
+	ogImageName,
+	ogImageExtension }) {
+
 	const ogImageUrl = ogImageName? `${hostname}/${ogImageName}.${ogImageExtension}`: defaultOGImagePath
-	const url = `${hostname}${path? path: null}`
+	const url = `${hostname}${path}`
+	const finalTitle = 'Nabil Tharwat | ' + title
 
 	return (
 		<Helmet>
-			<title>{ title }</title>
-			<meta content={ title } property='og:title' />
+			<title>{ finalTitle }</title>
+			<meta content={ finalTitle } property='og:title' />
 			<meta content='website' property='og:type' />
 			<meta content={ description } name='description' />
 			<meta content={ description } property='og:description' />
 			<meta content={ url } property='og:url' />
 			<meta content='Nabil Tharwat' property='og:site_name' />
-			<meta content={ title } property='twitter:title' />
+			<meta content={ finalTitle } property='twitter:title' />
 			<meta content={ description } property='twitter:description' />
 			<meta content='summary' property='twitter:card' />
 			<meta content='@Nabil_Tharwat' property='twitter:creator' />

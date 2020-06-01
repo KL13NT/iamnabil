@@ -11,7 +11,7 @@ import styles from './toolset.module.sass'
 const Toolset = () => {
 	return (
 		<>
-			<SEO description='I build refreshing websites and take pride in providing an exceptional browsing experience through using the latest accessibility tools available to make my products as accessible and user-friendly as possible.' path='/toolset' title='Nabil Tharwat | Front-End Engineer, Blogger, Mentor'/>
+			<SEO path='/toolset' title='Toolset'/>
 			<Navbar about={ true } home={ true }/>
 			<Layout>
 				<div className='o-header'>

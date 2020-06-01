@@ -9,11 +9,18 @@ module.exports = {
 		siteUrl: 'https://iamnabil.netlify.app'
 	},
 	plugins: [
+		'gatsby-plugin-sitemap',
 		'gatsby-plugin-robots-txt',
 		'gatsby-plugin-react-helmet',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
+		{
+			resolve: 'gatsby-plugin-page-transitions',
+			options: {
+				transitionTime: 1000
+			}
+		},
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

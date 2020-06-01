@@ -4,9 +4,9 @@ import { Link } from 'gatsby'
 import NightSwitch from  './NightSwitch'
 
 
-const Navbar = ({ home, about })=>{
+const Navbar = ({ home, about }) => {
 	return(
-		<nav className="o-navigation">
+		<nav className='o-navigation'>
 			<div>
 				{
 					home
@@ -15,7 +15,7 @@ const Navbar = ({ home, about })=>{
 				}
 				{
 					about
-						? <Link className='u-unstyledLink' to="/about">About</Link>
+						? <Link className='u-unstyledLink' to='/about'>About</Link>
 						: null
 				}
 			</div>

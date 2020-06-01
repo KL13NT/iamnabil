@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
+import SEO from '../components/SEO'
 
 import { PostList } from '../components/PostList'
 
@@ -11,14 +12,17 @@ const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext
 	const { edges, totalCount } = data.allMarkdownRemark
 
-	const tagHeader = `${ totalCount } post${ totalCount === 1 ? '' : 's' } tagged with "${ tag }"`
+	const tagHeader = `Posts tagged with "${ tag }"`
+	const description = `${ totalCount } post${ totalCount === 1 ? '' : 's' } tagged with "${ tag }"`
 
 	return (
 		<>
+			<SEO description={ description } path={ `/tags/${tag}` } title={ tagHeader }/>
 			<Navbar about={ true } home={ true } />
 			<Layout>
 				<div>
 					<h1>{ tagHeader }</h1>
+					<p>{ description }</p>
 					<PostList edges={ edges } />
 				</div>
 			</Layout>

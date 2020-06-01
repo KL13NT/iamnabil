@@ -1,7 +1,8 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  border: 6px solid #e8b700;
+	border: 6px solid #e8b700;
+  transition: background 0.3s;
 }
 body {
   padding: 40px;

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/display-name */
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import Social from '../components/Social'
 

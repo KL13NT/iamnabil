@@ -6,9 +6,9 @@ import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import ArticleBody from '../components/Article'
 
-import styles from './post.module.css'
+import './post.css'
 
-
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 export default class Post extends React.Component {
 	render (){
@@ -17,13 +17,13 @@ export default class Post extends React.Component {
 		const languageClass = lang === 'ar'? 'u-rightToLeft': null
 
 		return (
-			<>
+			<PageTransition>
 				<Navbar about={ true } home={ true }/>
 				<Layout>
 					<SEO { ...frontmatter }/>
 					<ArticleBody fields={ fields } frontmatter={ frontmatter } html={ html } languageClass={ languageClass }/>
 				</Layout>
-			</>
+			</PageTransition>
 		)
 	}
 }

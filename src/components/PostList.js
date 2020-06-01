@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Link } from 'gatsby'
 
 
@@ -10,24 +11,26 @@ export const PostList = ({ edges }) => (
 				const time = Math.ceil(fields.readingTime.minutes)
 
 				return (
-					<li key={ frontmatter.title }>
-						<Link className={ languageClass + ' ' + 'u-unstyledLink' } to={ frontmatter.path }>{ frontmatter.title }</Link>
-						<p className={ languageClass }>{ frontmatter.description }</p>
-						<h5> Posted { frontmatter.date } . { time } min read </h5>
-						{
-							frontmatter.tags ?
-								(
-									<div className='o-tagsContainer'>
-										{
-											frontmatter.tags.map(tag => (
-												<Link key={ tag + Math.random() } className='u-unstyledLink' to={ `tags/${tag}` }>{ tag }</Link>
-											))
-										}
-									</div>
-								)
-								: null
-						}
-					</li>
+					<Link key={ frontmatter.title } className={ 'u-unstyledLink' } to={ frontmatter.path }>
+						<li key={ frontmatter.title }>
+							<h1 className={ languageClass }>{ frontmatter.title }</h1>
+							<p className={ languageClass }>{ frontmatter.description }</p>
+							<span> Posted { frontmatter.date } . { time } min read </span>
+							{
+								frontmatter.tags ?
+									(
+										<div className='o-tagsContainer'>
+											{
+												frontmatter.tags.map(tag => (
+													<Link key={ tag + Math.random() } className='u-unstyledLink' to={ `tags/${tag}` }>{ tag }</Link>
+												))
+											}
+										</div>
+									)
+									: null
+							}
+						</li>
+					</Link>
 				)
 			}) }
 	</ul>

@@ -14,7 +14,7 @@ tags: ["Lifestyle", "Productivity"]
 
 Time management can be a terrible experience, especially if you're a student and don't know how to do it properly. You may even be depressed because of how your time 'flies' away, wasted. Hopefully by the end of this you'll be able to manage your time well, or have a foundation to build upon. I'm not going into proving anything, instead, I'll be sharing my experience.
 
-> <span>This is perhaps the longest article I've ever written, but it's the conclusion of many years of research, so bear with me till the end.</span>
+> <span>This is perhaps the longest article I've ever written, but it's the conclusion of many years of research, so bear with me</span>
 
 This is a two-part article. Check part two [here](/blog/time-management-2)
 
@@ -23,11 +23,11 @@ This is a two-part article. Check part two [here](/blog/time-management-2)
 ## A Usual Scenario
 What I used to do in the past, and what many others of my friends used to do — which failed miserably — is setting up a strict schedule based on hours. Let's assume your schedule is set as follows; you study maths from `09:00` to `10:00` in the morning, then rest 15 minutes, then study another subject for an hour, and so on. You eventually run out of time before you finish the task at hand. And all of a sudden you're frustrated that you didn't finish.
 
-This is awfully depressing. You have to update your schedule all the time. This is why a strict schedule is bad. And often times we waste a lot of our time because of such routines, and eventually get bored of it and abandon alltogether, becoming unproductive — again, this is my experience. 
+This is awfully depressing. You have to update your schedule all the time. This is why a strict schedule is bad. And often times we waste a lot of our time because of such routines, and eventually get bored of it and abandon alltogether, becoming unproductive — again, this is my experience.
 
 
 ## Before you start
-Before you dive into applying anything you learnt thinking it'll make you more productive, think again. You have to prepare first. If you have dreams you want to make into reality and think having a strict schedule will give you that, think again. Goals are what give motivation, they're what give you purpose. Turn your dreams into goals. But there's a catch. You may have goals, but are still not productive. 
+Before you dive into applying anything you learnt thinking it'll make you more productive, think again. You have to prepare first. If you have dreams you want to make into reality and think having a strict schedule will give you that, think again. Goals are what give motivation, they're what give you purpose. Turn your dreams into goals. But there's a catch. You may have goals, but are still not productive.
 
 The reason why we're not as productive as we want to be isn’t because we lack information. Rather, it is because we fail to act; which, in itself, is the result of one’s complacency in the current moment. One must leverage *fear* by ensuring that the stakes are too high for one to stay *perpetually complacent*.
 
@@ -41,20 +41,20 @@ Before you start setting up a way to manage your time, you need to know where yo
 ## Set goals
 You need to have a vision for the future or else it'll just be a tangled mess of random dreams and fractions of goals that eventually lead to the abyss of zero productivity.
 
-Have you ever spent hours doing something with so much interest without even noticing? Hold onto this *something*. Any interest that you may have could potentially be your goal. Look for long-term satisfaction and joy, instead of instant gratification. Your goals may come true a few months from now, a year, or even a lifetime! This leads us to the *issue* that most young people face today, instant gratification and giving up too easily. 
+Have you ever spent hours doing something with so much interest without even noticing? Hold onto this *something*. Any interest that you may have could potentially be your goal. Look for long-term satisfaction and joy, instead of instant gratification. Your goals may come true a few months from now, a year, or even a lifetime! This leads us to the *issue* that most young people face today, instant gratification and giving up too easily.
 
-You may think you're not creative enough, have bad memory, or weak concentration. These are all things you can develop. There are "memory games" that improve your memory. "disconnecting", along other things, will boost your creativity. Meditation and having better time management, * wink wink *, will help you concentrate more. 
+You may think you're not creative enough, have bad memory, or weak concentration. These are all things you can develop. There are "memory games" that improve your memory. "disconnecting", along other things, will boost your creativity. Meditation and having better time management, * wink wink *, will help you concentrate more.
 
 ## Avoid instant gratification
-Ever woke up and went straight to your phone? When working, do you check your phone every few minutes? Do you keep your phone in sight when sitting with friends or in a meeting? Then you've got a problem. 
+Ever woke up and went straight to your phone? When working, do you check your phone every few minutes? Do you keep your phone in sight when sitting with friends or in a meeting? Then you've got a problem.
 
 > <span>Instant gratification is the desire to experience pleasure or fulfillment without delay.</span>
 
-> <span>Engagement with our cell phones releases dopamine. That's why when you get a text, it feels good. It's why we count the likes. It's highly addictive.</span> <br> 
+> <span>Engagement with our cell phones releases dopamine. That's why when you get a text, it feels good. It's why we count the likes. It's highly addictive.</span> <br>
 > — Simon Sinek
 
 
-With instant gratification on board, we look beyond what we truly *want*. We think we want a new phone and a new a car, but when we get those things, dopamine hits for a short period of time and then fades, leaving us feeling empty. We choose *not* to do the things that help us reach long-term goals — such as job satisfaction or relationships — because they're long-term. They take time, and we're *impatient*. We're *reactive*. Which is a terrible combination. **And it's not our fault** — for the most part. 
+With instant gratification on board, we look beyond what we truly *want*. We think we want a new phone and a new a car, but when we get those things, dopamine hits for a short period of time and then fades, leaving us feeling empty. We choose *not* to do the things that help us reach long-term goals — such as job satisfaction or relationships — because they're long-term. They take time, and we're *impatient*. We're *reactive*. Which is a terrible combination. **And it's not our fault** — for the most part.
 
 What can you do to solve this? Start small. This whole article will tell you to change tiny things in your life to reach that *big* change.
 
@@ -70,7 +70,7 @@ If you want to enjoy a song, wait till the end, don't jump around. Wait for the 
 ## Create a time audit
 How we spend time is often overlooked and regarded as 'too hard to measure' or 'often forgettable'. But those statements are far from truth. You can actually measure time if you pay enough attention to it.
 
-One of the very first steps is to measure exactly how you spend your time. How long transportations take, studying, being outside, playing video games, scrolling through Instagram, having a meal, and even bathroom breaks. 
+One of the very first steps is to measure exactly how you spend your time. How long transportations take, studying, being outside, playing video games, scrolling through Instagram, having a meal, and even bathroom breaks.
 
 To create my time-audit, I begin by creating a new note on my phone when I wake up. This note will have a list of everything I do during the day. There are apps that track your work, but I go with the manual method for this one.
 
@@ -83,28 +83,28 @@ This is a sample time audit. You can see I'm even logging breakfast. This is ess
 Now, there are times when you may go for excuses such as: "I was on the bus" or "I was driving", but that doesn't mean you should waste that time! Read a book while on that bus. Listen to a podcast. Plan ahead. Anything that makes you productive during 'inactive' times.
 
 ## Create a To-Do list
-A to-do list is a list of all the tasks you want to finish by the end of a day, week, or month. I find it especially helpful in managing what I need to do and what need *not* be done at all. 
+A to-do list is a list of all the tasks you want to finish by the end of a day, week, or month. I find it especially helpful in managing what I need to do and what need *not* be done at all.
 
 > <span>One of the very worst uses of time is to do something very well that need not be done at all.</span><br>
 > — Brian Tracy, Eat That Frog
 
-A to-do list will allow you to feel accomplished by showing you the tasks you completed, and how long each task took. It'll allow room for improvement alongside your time-audit. Using both will — at the end of the day — give you an overview of how you can spend your time better and use it more efficiently. 
+A to-do list will allow you to feel accomplished by showing you the tasks you completed, and how long each task took. It'll allow room for improvement alongside your time-audit. Using both will — at the end of the day — give you an overview of how you can spend your time better and use it more efficiently.
 
 Now here are some hacks I use around my own to-do list:
 1. Your to-do list contains all tasks.
 - If it's an everyday thing, don't add it (i.e. eating).
 - Place the most boring tasks first, the most important second, and the longest after.
 - Split long tasks into atomic tasks — you'll feel more accomplished.
-- Set a *flexible* time limit for each task. For instance, let's a task you estimate will take an hour. Set an hour with 15 extra minutes on top. 
+- Set a *flexible* time limit for each task. For instance, let's a task you estimate will take an hour. Set an hour with 15 extra minutes on top.
 - Wait until the end of the current task, then and *only* then, decide which task to start next. This allows you to eliminate half-work.
 - Don't abandon tasks. If you couldn't finish everything today, don't feel bad! Just add it to the following day. Easy peasy lemon squeezy.
-- Spend your morning on most important tasks, "important and boring" go first.  
+- Spend your morning on most important tasks, "important and boring" go first.
 - Let others help you on hard tasks.
 - Leave a buffer time between tasks. You may want a bathroom break, a quick snack, or just simply rest. Don't let tasks be like *train cars*.
 - Keep your mind busy with only 1 task. This helps you focus. You've planned the todo so that you prevent yourself from *overthinking* about it.
 - Do less, and remove useless tasks. If you're not certain something will help, remove it.
 - Don't go back to completed tasks. Stop being perfect. A task done is a task done.
-- Batch similar tasks together. If you have two tasks: "solve math sheet 1" and "study math class 2", batch those together and finish them one after the other. This will keep your mind focused on the subject. 
+- Batch similar tasks together. If you have two tasks: "solve math sheet 1" and "study math class 2", batch those together and finish them one after the other. This will keep your mind focused on the subject.
 - Have 15 minutes of break for every 1 hour of work and 2 hours of fun a day.
 
 > <span>If picking what to eat on breakfast takes more than a minute, you're wasting time. Make a food schedule. Food is a source of energy, not entertainment.</span>
