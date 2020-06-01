@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'

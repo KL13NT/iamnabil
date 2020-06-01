@@ -1,32 +1,32 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
 
-import Layout from "../components/layout"
+import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 
-import { PostList } from "../components/PostList";
+import { PostList } from '../components/PostList'
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
+	const { tag } = pageContext
+	const { edges, totalCount } = data.allMarkdownRemark
 
-  const tagHeader = `${ totalCount } post${ totalCount === 1 ? "" : "s" } tagged with "${ tag }"`;
+	const tagHeader = `${ totalCount } post${ totalCount === 1 ? '' : 's' } tagged with "${ tag }"`
 
-  return (
-    <>
-      <Navbar home={true} about={true} />
-      <Layout>
-        <div>
-          <h3>{tagHeader}</h3>
-          <PostList edges={edges} />
-        </div>
-      </Layout>
-    </>
-  );
-};
+	return (
+		<>
+			<Navbar about={ true } home={ true } />
+			<Layout>
+				<div>
+					<h1>{ tagHeader }</h1>
+					<PostList edges={ edges } />
+				</div>
+			</Layout>
+		</>
+	)
+}
 
-export default Tags;
+export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {

@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 
 import '../styling/main.sass'
