@@ -21,42 +21,42 @@
 	font-size: 1.2rem
 .c-sectionHeader
 	font-weight: 300
+
 .c-postList
 	margin: 0 auto
 	width: 100%
 	list-style: none
-	a
-		li
-			margin: 30px 0 0 0
-			background: #fff
-			padding: 60px
-			border-radius: 5px
-			box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.02), 1px 1px 15px 0 rgba(0,0,0,0.03)
-			transition: transform 0.5s
-			font-size: 1.5rem
-			color: #000
-			text-align: left
+	li
+		margin: 30px 0 0 0
+		background: #fff
+		padding: 60px
+		border-radius: 5px
+		box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.02), 1px 1px 15px 0 rgba(0,0,0,0.03)
+		transition: transform 0.5s
+		font-size: 1.5rem
+		color: #000
+		text-align: left
+		&:hover
+			transform: translateY(-5px)
+			box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.1)
+		& > p
+			font-size: 1.2rem
+			margin: 2rem 0
+		& > h5
+			margin: 0
+		& > span
+			font-size: 1rem
+		& > a > h1
+			text-decoration: none
+			font-size: 2rem
+			color: inherit
+			transition: color 0.2s
+			font-weight: bold
+			margin: 0 0 1rem 0
+			display: block
+			line-height: normal
 			&:hover
-				transform: translateY(-5px)
-				box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.1)
-		& > li
-			& > p
-				font-size: 1.2rem
-			& > h5
-				margin: 0
-			& > span
-				font-size: 1rem
-			& > h1
-				text-decoration: none
-				font-size: 2rem
-				color: inherit
-				transition: color 0.2s
-				font-weight: bold
-				margin: 0 0 1rem 0
-				display: block
-				line-height: normal
-				&:hover
-					color: #ffca00
+				color: #ffca00
 .c-socialContainer
 	display: flex
 	justify-content: space-evenly

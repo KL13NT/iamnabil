@@ -12,7 +12,7 @@ ogImageExtension: "png"
 tags: ["JavaScript", "Babel", "ESNext"]
 ---
 
-NOTE: This article is also available in Arabic: [ازاي و ليه تستخدم الـ Optional Chaining Operator](https://kl13nt.github.io/blog/optional-chaining-operator-ar/)
+المقالة دي موجودة باللغة العربية: [ازاي و ليه تستخدم الـ Optional Chaining Operator](/blog/optional-chaining-operator-ar/)
 
 Have you ever expected a deeply nested property of an object to be there but was shocked when you received `Uncaught TypeError: Can't get blabla of undefined`? Worry no more! With the Optional Chaining Operator you'll never have to worry about that again.
 
