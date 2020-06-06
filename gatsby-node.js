@@ -19,6 +19,7 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
               date
               title
               description
+              introduction
               author
               imageCaption
               lang

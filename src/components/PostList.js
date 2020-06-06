@@ -15,7 +15,7 @@ export const PostList = ({ edges }) => (
 						<Link key={ frontmatter.title } className={ 'u-unstyledLink' } to={ frontmatter.path }>
 							<h1 className={ languageClass }>{ frontmatter.title }</h1>
 						</Link>
-						<p className={ languageClass }>{ frontmatter.description }</p>
+						<p className={ languageClass }>{ frontmatter.introduction || frontmatter.description }</p>
 						<span> Posted { frontmatter.date } . { time } min read </span>
 						{
 							frontmatter.tags ?

@@ -2,7 +2,8 @@
 path: "/blog/time-management-2/"
 date: "2019-12-05"
 title: "How I Manage My Time as a Student-Developer - Part 2"
-description: "A lot of my friends wonder how I manage to pass while working as a front-end developer. In this article, I'll explore my time management habits."
+description: "In this article I'll explore my time management habits. Part 2."
+introduction: "Negative influences are things that keep us from reaching our goals, and making a better life for ourselves. It's a hindrance to our performance and should be handled with strong arms."
 image: TimeManagement.jpg
 author: "Nabil Tharwat"
 length: 560
@@ -22,7 +23,7 @@ Negative influences are things that keep us from reaching our goals, and making 
 
 Now don't get me wrong, spending time with your friends is absolutely a must, you must socialise and I love it. It has mental benefits. But with that aside, if you've already spent 2-4 hours of your day playing video games or spending time with friends, you can't dedicate one more *minute* to such activities.
 
-Sometimes people will tell you that you can't do it, that you're too weak, or just not enough. Don't listen to them. This is negative influence and if you let it control your life, I assure you, life will be hell. 
+Sometimes people will tell you that you can't do it, that you're too weak, or just not enough. Don't listen to them. This is negative influence and if you let it control your life, I assure you, life will be hell.
 
 ## Discipline
 All of this so far cannot be accomplished without some **discipline**. Think of discipline as a *results generator*. You use it to reach your goals, and this article so far has been aiming towards having more discipline. Take more responsibility of yourself. Set an alarm and wake yourself up. Set a morning routine. Plan ahead, and stick to plans. Stop being perfect, some tasks may not be finished on time. This is normal, we're humans after all and have limited time and energy. Build healthy habits like doing sports in the morning or meditating, anything!
@@ -39,24 +40,24 @@ Make plans, set goals, and hold *yourself* accountable. And tell no one about it
 ## Choose a suitable routine
 A morning routine is something you start your day with. You can have an evening routine. Some people claim that routine is bad, and they have every right to say that — but only when speaking for themselves. Personally, I love my morning and bedtime routines. Routine helps you manage your life in a better way. It helps your mind be at ease all day. And it encourages *discipline*.
 
-My morning routine consists of waking up at 05:00, taking a quick shower and meditating. By 05:30 I prepare my breakfast, and enjoy it in the calmness of the early morning — it's really calm then. I then check my to-do list for any left-overs from last night, fix it up and sort my day's tasks, and decide what I want to eat during that day. I then proceed to finishing the first task on my to-do, which is often studying, since I get bored of that really quick. 
+My morning routine consists of waking up at 05:00, taking a quick shower and meditating. By 05:30 I prepare my breakfast, and enjoy it in the calmness of the early morning — it's really calm then. I then check my to-do list for any left-overs from last night, fix it up and sort my day's tasks, and decide what I want to eat during that day. I then proceed to finishing the first task on my to-do, which is often studying, since I get bored of that really quick.
 
 My bedtime routine consists of meditating and relaxing, sorting my thoughts and deciding whether I spent my day well — not in the form of *overthinking* though.
 
 > <span>Learn to control your mind.</span>
 
 ## It's finally the weekend
-Having read this far, you may notice that I barely take breaks. This is not true, though. I go out with friends for whole days, I play video games, I chat, I spend time outside, I do sports. I'm not one of those Hollywood hackers that spend all night on a computer hacking away. I dedicate at least 2 hours of my time a day for fun, and if I finished all my to-do tasks, the rest of the day is spent having fun. Either playing online video games with friends, watching a movie, a TV series, youtube, or just doing something fun. 
+Having read this far, you may notice that I barely take breaks. This is not true, though. I go out with friends for whole days, I play video games, I chat, I spend time outside, I do sports. I'm not one of those Hollywood hackers that spend all night on a computer hacking away. I dedicate at least 2 hours of my time a day for fun, and if I finished all my to-do tasks, the rest of the day is spent having fun. Either playing online video games with friends, watching a movie, a TV series, youtube, or just doing something fun.
 
 The weekend is a whole different matter, though. On weekends, it's a *choice*. I either choose to stay all day outside with friends, game away my time, work on something I didn't have the chance to work on during the week, or a left-over task from last night that I really, *really* want to finish.
 
-Don't let your extremely-productive self take control, and don't let your extremely-procrastinating self take control either. *Burnout* is a thing that you want to avoid **at all costs**. Accept that it's *more terrifying to fail than it is to succeed*, and take control of your life. 
+Don't let your extremely-productive self take control, and don't let your extremely-procrastinating self take control either. *Burnout* is a thing that you want to avoid **at all costs**. Accept that it's *more terrifying to fail than it is to succeed*, and take control of your life.
 
 > <span>Having fun is good. Having too much or too little fun is bad. Balance is key.</span>
 
 
 ## Final notes
-I just want to say that there will always be a challenge. Life will never be a straight line. There will always be a mountain to climb and it'll never be a safe-to-climb mountain. You'll fall. You'll get bashed in the face with the world's cruelest hammer. You'll feel down. But you should never let yourself sink eternally. 
+I just want to say that there will always be a challenge. Life will never be a straight line. There will always be a mountain to climb and it'll never be a safe-to-climb mountain. You'll fall. You'll get bashed in the face with the world's cruelest hammer. You'll feel down. But you should never let yourself sink eternally.
 
 > <span>I’ve never understood that concept, having something to fall back on. If I’m going to fall, I don’t want to fall back on anything, except my faith. I want to fall… forward. At least that way I’ll see what I’m about to hit.</span><br>
 > — Denzel Washington

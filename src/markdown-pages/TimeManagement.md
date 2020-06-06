@@ -2,7 +2,8 @@
 path: "/blog/time-management-1/"
 date: "2019-12-05"
 title: "How I Manage My Time as a Student-Developer - Part 1"
-description: "A lot of my friends wonder how I manage to pass while working as a front-end developer. In this article, I'll explore my time management habits."
+description: "In this article I'll explore my time management habits. Part 1."
+introduction: "Time management can be a terrible experience, especially if you're a student and don't know how to do it properly. Hopefully by the end of this article you'll be able to manage your time well."
 image: TimeManagement.jpg
 author: "Nabil Tharwat"
 length: 560

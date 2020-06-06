@@ -3,6 +3,7 @@ path: "/blog/optional-chaining-operator/"
 date: "2019-08-31"
 title: "Optional Chaining Operator: How and Why"
 description: "In this post I'll talk about the Optional Chaining Operator and how to get rid of complex object property lookups"
+introduction: "Have you ever expected a deeply nested property of an object to be there but was shocked when you received `Uncaught TypeError: Can't get blabla of undefined`? Worry no more!"
 image: OptionalChainingOperator.png
 author: "Nabil Tharwat"
 length: 880

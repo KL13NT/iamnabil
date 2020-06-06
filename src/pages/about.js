@@ -12,8 +12,8 @@ const About = () => {
 	return (
 		<>
 			<SEO
-				description='Front-End Engineer, Blogger, Mentor'
-				title='Front-End Engineer, Blogger, Mentor' />
+				description='Learn more about me'
+				title='About' />
 			<Navbar about={ false } home={ true }/>
 			<Layout>
 				<Header tiny={ false }/>
@@ -118,7 +118,7 @@ const About = () => {
 							<li>Mentored developers that are on their way to becoming successful software engineers. </li>
 							<li>Collected freeCodeCamp.org's Frontend-related certs (4 certs). </li>
 							<li>Gave classes in college and contributed directly to local computer science communities.</li>
-							<li>Founded Valarium, an online student club for computer science enthusiasts and people interested in technology as a whole.</li>
+							<li>Founded Valarium, an online community for computer science enthusiasts and people interested in technology as a whole.</li>
 							<li>Came in first place TheNetNinja's February Code Challege, 2019 with my simplistic <a href='https://kl13nt.github.io/Clock-Animated/'>clock.</a></li>
 						</ul>
 					</div>
@@ -167,7 +167,7 @@ const About = () => {
 
 							<li>
 								What words of wisdom do you live by?<br/>
-								He who sows the win shall reap the storm.<br/>
+								He who sows the wind shall reap the storm.<br/>
 							</li>
 
 							<li>

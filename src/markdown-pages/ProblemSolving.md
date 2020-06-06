@@ -3,6 +3,7 @@ path: "/blog/10-tips-problem-solving"
 date: "2020-03-03"
 title: "10 نصايح لل Problem Solving"
 description: "في المقالة دي هشارك 10 نصائح بمشي عليهم في حل المشكلات"
+introduction: "ال problem solving مهارة مطلوبة جداً في شغلنا و في حياتنا عامة, بس في ناس كتير بتعاني بسبب انهم مش عارفين ايه الصح و ايه الغلط في اللي بيعملوه, في المقالة دي هتكلم باختصار عن 10 نقط ساعدوني شخصياً."
 image: DrgPNRvWsAITY5o.jpg
 author: "نبيل ثروت"
 length: 2700
