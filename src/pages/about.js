@@ -23,8 +23,8 @@ const About = () => {
 					<h2 >Recent Projects</h2>
 					<p>
 						Most of my projects are open source and free to use.
-						This list is not inclusive of every thing I worked on. You can find
-						all my projects on my <a href='https://github.com/kl13nt'>GitHub</a>
+						This list is not inclusive of everything I worked on. You can find
+						all my projects on my <a href='https://github.com/kl13nt'>GitHub</a>.
 					</p>
 
 					<div className='c-section'>
@@ -39,8 +39,15 @@ const About = () => {
 					</div>
 
 					<div className='c-section'>
+						<h3>ValariumBot</h3>
+						<p>
+							Valarium's dedicated super bot. A discord bot built using NodeJS, MongoDB, and Redis. Deployed on Heroku and connected to Mongo Cloud. Is fully customised, uses <a href='https://github.com/tensorflow/tfjs-models/tree/master/toxicity'>TensorFlow's Toxicity Classifier</a> to prevent toxic behaviour, and has a fully functional levels system based on Voice and Text activity.
+						</p>
+					</div>
+
+					<div className='c-section'>
 						<a className='u-unstyledLink' href='https://auditmyday.netlify.app'>
-							<h3 className='c-tag' data-tag='open-source, PWA'>AuditMyDay</h3>
+							<h3 className='c-tag' data-tag='open-source'>AuditMyDay</h3>
 						</a>
 						<p>
 							A simple and efficient time audit with cloud sync support.
@@ -52,7 +59,7 @@ const About = () => {
 
 					<div className='c-section'>
 						<a className='u-unstyledLink' href='https://nabdjs.netlify.app'>
-							<h3 className='c-tag' data-tag='open-source'>NabdJS</h3>
+							<h3 className='c-tag' data-tag='toy'>NabdJS</h3>
 						</a>
 						<p>
 							An Arabic programming language created using JavaScript following
@@ -82,14 +89,7 @@ const About = () => {
             An accessibility browser extension made just for you. Allows you to change how text is displayed in articles and social media posts to make them more accessible, and every thing it does is 100% customisable.
 						</p>
 					</div>
-					<div className='c-section'>
-						<a className='u-unstyledLink' href='https://kl13nt.github.io/SW19-WIP-'>
-							<h3 className='c-tag' data-tag='open-source'>SW19</h3>
-						</a>
-						<p>
-            A quick animation made in a few hours on an exams night for 2019 new year's eve. The architecture of the code is an absolute mess given it was made in a few hours and that I was basically experimenting with stuff. I may refactor it some time.
-						</p>
-					</div>
+
 					<div className='c-section'>
 						<a className='u-unstyledLink' href='https://github.com/KL13NT/cppbasics'>
 							<h3 className='c-tag' data-tag='educational'>C++ Basics</h3>
@@ -112,13 +112,13 @@ const About = () => {
 							devlogs, and more when I have the time.
 						</p>
 					</div>
-					<h2 >Achievements</h2>
+					<h2>Achievements</h2>
 					<div className='c-section'>
 						<ul>
-							<li>Mentored developers that are on their way to becoming successful software engineers. </li>
+							<li>Participated in and completed Hacktoberfest 2019.</li>
+							<li>Founded Valarium, an online community for computer science enthusiasts and people interested in technology as a whole.</li>
 							<li>Collected freeCodeCamp.org's Frontend-related certs (4 certs). </li>
 							<li>Gave classes in college and contributed directly to local computer science communities.</li>
-							<li>Founded Valarium, an online community for computer science enthusiasts and people interested in technology as a whole.</li>
 							<li>Came in first place TheNetNinja's February Code Challege, 2019 with my simplistic <a href='https://kl13nt.github.io/Clock-Animated/'>clock.</a></li>
 						</ul>
 					</div>
