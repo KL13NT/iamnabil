@@ -5,7 +5,7 @@ const hostname = 'https://iamnabil.netlify.app'
 
 const defaultTitle = 'Blog'
 const defaultDescription = 'Front-End Engineer, Blogger, Mentor'
-const defaultOGImagePath = 'icons/icon-512x512.png'
+const defaultOGImagePath = 'oggeneral.png'
 const defaultPath = '/'
 
 
