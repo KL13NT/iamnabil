@@ -16,7 +16,7 @@ function SEO ({
 	ogImageName,
 	ogImageExtension }) {
 
-	const ogImageUrl = ogImageName? `${hostname}/${ogImageName}.${ogImageExtension}`: defaultOGImagePath
+	const ogImageUrl = ogImageName? `${hostname}/${ogImageName}.${ogImageExtension}`: `${hostname}/${defaultOGImagePath}`
 	const url = `${hostname}${path}`
 	const finalTitle = 'Nabil Tharwat | ' + title
 	const fullDescription = `Nabil Tharwat | ${description}`
