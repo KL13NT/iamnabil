@@ -30,15 +30,15 @@ function SEO ({
 			<meta content={ fullDescription } property='og:description' />
 			<meta content={ url } property='og:url' />
 			<meta content='Nabil Tharwat' property='og:site_name' />
-			<meta content={ finalTitle } property='twitter:title' />
-			<meta content={ fullDescription } property='twitter:description' />
-			<meta content='summary' property='twitter:card' />
-			<meta content='@Nabil_Tharwat' property='twitter:creator' />
-			<meta content='@Nabil_Tharwat16' property='twitter:site'/>
 			<meta content={ ogImageUrl } property='og:image'/>
 			<meta content={ 'image/jpeg' } property='og:image:type'/>
 			<meta content={ ogImageUrl } property='og:image:url'/>
 			<meta content={ ogImageUrl } property='og:image:secure_url'/>
+			<meta content='summary_large_image' name='twitter:card'></meta>
+			<meta content={ finalTitle } property='twitter:title' />
+			<meta content={ fullDescription } property='twitter:description' />
+			<meta content='@Nabil_Tharwat' property='twitter:creator' />
+			<meta content='@Nabil_Tharwat16' property='twitter:site'/>
 			<meta content={ ogImageUrl } property='twitter:image'/>
 			{ /* {
         ogImageName
