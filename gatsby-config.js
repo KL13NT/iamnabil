@@ -16,12 +16,6 @@ module.exports = {
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
 		{
-			resolve: 'gatsby-plugin-page-transitions',
-			options: {
-				transitionTime: 1000
-			}
-		},
-		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: 'Nabil\'s Blog',
