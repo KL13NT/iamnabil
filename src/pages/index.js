@@ -5,8 +5,6 @@ import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 
-import '../styling/main.sass'
-
 const About = () => {
 	return (
 		<>
