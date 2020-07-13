@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://iamnabil.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://iamnabil.netlify.app/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/design-systems-handbook-summary/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/10-tips-problem-solving</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/welcome-to-valarium/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/blog/time-management-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/time-management-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://iamnabil.netlify.app/blog/time-management-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/pipeline-operator-ar</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/blog/optional-chaining-operator-ar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/optional-chaining-operator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://iamnabil.netlify.app/blog/optional-chaining-operator-ar/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/GitHub-basics/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/javascript-promises/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/history-of-javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/blog/tutorial-purgatory/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/blog/algorithm-complexity-big-bang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/blog/algorithm-complexity-big-bang-arabic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/tags/Design/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/tags/Front-End/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/tags/Arabic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,7 +30,7 @@
 <url> <loc>https://iamnabil.netlify.app/tags/DevOps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/tags/Async/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/tags/Tutorials/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/tags/Performance/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://iamnabil.netlify.app/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://iamnabil.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://iamnabil.netlify.app/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://iamnabil.netlify.app/toolset/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

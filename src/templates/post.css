@@ -29,7 +29,7 @@ p, ol{
 
 ul{
   letter-spacing: 0.9;
-  color: #black
+  color: black;
 }
 
 *::selection{
