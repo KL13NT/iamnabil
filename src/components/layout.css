@@ -8,6 +8,11 @@ body {
   padding: 40px;
 }
 
+@media screen and (max-width: 768px){
+	body{
+		padding: 5px;
+	}
+}
 
 article,
 aside,

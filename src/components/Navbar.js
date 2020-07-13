@@ -4,17 +4,16 @@ import { Link } from 'gatsby'
 import NightSwitch from  './NightSwitch'
 
 
-const Navbar = ({ home, about }) => {
+const Navbar = () => {
 	return(
 		<nav className='o-navigation'>
 			<div>
 				<Link className='u-unstyledLink' to='/'>Nabil Tharwat</Link>
 				<Link className='u-unstyledLink' to='/blog'>Blog</Link>
 				<Link className='u-unstyledLink' to='/projects'>Projects</Link>
+				<Link className='u-unstyledLink' to='/toolset'>Tools</Link>
 			</div>
-			<div>
-				<NightSwitch/>
-			</div>
+			<NightSwitch/>
 		</nav>
 	)
 }
