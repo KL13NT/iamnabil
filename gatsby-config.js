@@ -29,7 +29,7 @@ module.exports = {
 				theme_color: '#2F3BA2'
 			}
 		},
-		'gatsby-plugin-offline',
+		// 'gatsby-plugin-offline',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

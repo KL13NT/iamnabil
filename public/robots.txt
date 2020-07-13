@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://iamnabil.netlify.app/sitemap.xml
-Host: https://iamnabil.netlify.app
+Allow: *
