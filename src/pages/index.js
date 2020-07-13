@@ -20,7 +20,7 @@ const About = () => {
 				</h1>
 
 				<p>
-					My name is Nabil Tharwat, I'm a software engineer, content creator, and mentor. I was born and raised in Cairo with a passion for computers. I started coding when I was 12 with VB, now living in JS land. I love contributing to open source. Accessibility and performance are part of my eternal quest.
+					My name is Nabil Tharwat. I'm a software engineer, content creator, and mentor. I was born and raised in Cairo with a passion for computers. I started coding when I was 12 with VB, now living in JS land. I love contributing to open source. Accessibility and performance are part of my eternal quest.
 				</p>
 
 				<p>
