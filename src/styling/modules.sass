@@ -33,7 +33,8 @@
 		margin: 0 0.2rem 0 0
 		height: 100%
 		font-size: 0.7rem
-		color: #555
+		padding: 6px 0
+  	color: black
 		background: #f3f7f9
 		padding: 0 8px 0 4px
 		border-radius: 3px
@@ -74,6 +75,7 @@
 	max-width: 800px
 	margin: 4rem auto
 	padding: 40px 0
+
 .o-navigation
 	width: 100%
 	position: absolute
@@ -88,11 +90,19 @@
 	transition: unset
 	& > div
 		display: flex
-		&:nth-child(1)
-			a
-				margin-right: 1rem
-	a
-		display: block
+		a
+			margin-right: 1rem
+			display: block
+			font-weight: bold
+			background-size: 100% 200%
+			background-position: 0 0
+	a:hover, a:focus
+		background-image: linear-gradient(transparent 0%, transparent calc(50% - 8px), rgba(232, 183, 0, 0.639) calc(50% - 8px), rgba(232, 183, 0, 0.639) 100%)
 .o-navigation:hover,
 .o-navigation:focus
 	transform: unset
+
+@media screen and (max-width: 800px)
+	.o-navigation
+		padding: 0.4rem
+		position: relative

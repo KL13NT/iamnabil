@@ -8,16 +8,9 @@ const Navbar = ({ home, about }) => {
 	return(
 		<nav className='o-navigation'>
 			<div>
-				{
-					home
-						? <Link className='u-unstyledLink' to='/'>Home</Link>
-						: null
-				}
-				{
-					about
-						? <Link className='u-unstyledLink' to='/about'>About</Link>
-						: null
-				}
+				<Link className='u-unstyledLink' to='/'>Nabil Tharwat</Link>
+				<Link className='u-unstyledLink' to='/blog'>Blog</Link>
+				<Link className='u-unstyledLink' to='/projects'>Projects</Link>
 			</div>
 			<div>
 				<NightSwitch/>

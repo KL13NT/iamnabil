@@ -1,4 +1,3 @@
-const fs = require('fs')
 const path = require('path')
 
 exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => {
@@ -47,8 +46,8 @@ exports.createPages = async ({ actions: { createPage }, graphql, reporter }) => 
 	const posts = result.data.allMarkdownRemark.edges
 
 	createPage({
-		path: '/',
-		component: require.resolve('./src/templates/index.js'),
+		path: '/blog',
+		component: require.resolve('./src/templates/blog.js'),
 		context: result.data.allMarkdownRemark
 	})
 
