@@ -17,11 +17,9 @@ const About = () => {
 			<Navbar/>
 			<Layout>
 				<div className='o-body'>
-					<h1 >Recent Projects</h1>
+					<h1 >Useless is not worthless</h1>
 					<p>
-						Most of my projects are open source and free to use.
-						This list is not inclusive of everything I worked on. You can find
-						all my open source projects on my <a href='https://github.com/kl13nt'>GitHub</a>.
+						Most of my projects are open source and free to use. Some of these don't have any other purpose than exploration and experimenting.
 					</p>
 
 					<div className='c-section'>

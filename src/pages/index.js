@@ -36,7 +36,7 @@ const About = () => {
 				</p>
 
 				<p>
-					By mid-2020 I managed to collect all four frontend-related FreeCodeCamp certificates, published my first <a href='https://github.com/KL13NT/discord-utils'>npm package</a>, hosted 4 online <a href='https://www.youtube.com/playlist?list=PLLVZR2VAHRwGGihgl7StmuS6DdvPXbfoV'>sessions</a>,
+					By mid-2020 I managed to collect all four frontend-related FreeCodeCamp certificates, published my first <a href='https://github.com/KL13NT/discord-utils'>npm package</a>, hosted 4 online <a href='https://www.youtube.com/playlist?list=PLLVZR2VAHRwGGihgl7StmuS6DdvPXbfoV'>sessions</a>, and started learning Russian.
 				</p>
 
 				<p>
