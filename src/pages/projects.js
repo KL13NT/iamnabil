@@ -26,7 +26,7 @@ const About = () => {
 					<p>
 							This very website. Built with GatsbyJS, React, and Sass. I don't have
 							much to say about it except that I designed and developed it all from the ground up,
-							and maintain it from time to time.
+							and maintain it from time to time. Oh, I hooked it up to NetlifyCMS recently too! A much better blogging workflow if you ask me. <span aria-label='Smiling emoji' role='img'>😄</span>
 					</p>
 				</div>
 
