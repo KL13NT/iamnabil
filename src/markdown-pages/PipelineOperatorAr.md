@@ -4,11 +4,7 @@ date: "2019-09-26"
 title: "Pipeline Operator"
 description: "شكل الـ function calls لما بيكونوا جوا بعض وحش, النهاردة هنخلص من الشكل ده ونخلي شكلة جميل جداً"
 image: pipeline.jpg
-author: "نبيل ثروت"
-length: 2700
 lang: "ar"
-ogImageName: "pipeline"
-ogImageExtension: "jpg"
 tags: ["Babel", "JavaScript", "ESNext", "Arabic"]
 ---
 
@@ -51,7 +47,6 @@ let result =
 
 </div>
 
-
 ماشي, بقت ابسط شوية في القراية. ممكن كمان نزودها اوي و نستخدم 3 متغيرات زيادة او نعمل فنكشن رابعة:
 
 <div dir="ltr">
@@ -93,6 +88,7 @@ let result =
 
 //result = 15
 ```
+
 </div>
 
 ببساطة كل اللي بيحصل هنا اننا بندخل الـreturned value من فنكشن و بنقوم معديينها في ماسورة للفنكشن اللي بعدها, فا هنا احنا بنجمع الاول بعد كده بنقوم مدخلين ناتج الجمع في ماسورة يقوم ظاهر في دالة الضرب في شكل ال # و بعد كده بناخد حاصل الضرب ندخله لدالة القسمه في شكل ال # برضه. فا ممكن هنا نعتبر ان المتغير اللي بيعدي في الماسورة اسمه # و قيمته بتتغير كل مره بيخش في فنكشن جديدة.
@@ -100,17 +96,19 @@ let result =
 طيب دلوقتي ال pipeline operator مش موجود في اللغه لسه, و لسه اصلاً stage-1 يعني مش هينزل قريب خالص, فا الطريقة الوحيدة حالياً اننا نستعمله عن طريق [@babel/plugin-proposal-pipeline-operator](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator). هتلاقوا كمان في الصفحة 3 انواع منه (حالياً موجود 2 و واحد الdevelopment بتاعته اتسحبت). انا في الامثلة بستخدم `smart` لكن انتوا تقدروا تستخدموا اللي انتو عايزينه.
 
 ## ملاحظات اخيرة
+
 لو عجبتكم المقالة انشروها و لو عايزيني اكتب عن حاجه معينه مش فاهمينها قولولي على [تويتر](https://twitter.com/Nabil_Tharwat16) او [Valarium](https://discord.gg/xrGAnTg)
 
 ## مصادر
-- [صفحة موزيلا نيتورك عن الموضوع](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator)
 
-- [نوع الـ F#](https://github.com/valtech-nyc/proposal-fsharp-pipelines/blob/master/README.md)
+-   [صفحة موزيلا نيتورك عن الموضوع](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator)
 
-- [نوع Smart](https://github.com/js-choi/proposal-smart-pipelines/blob/master/readme.md)
+-   [نوع الـ F#](https://github.com/valtech-nyc/proposal-fsharp-pipelines/blob/master/README.md)
 
-- [صفحة Babel عشان تعرفوا ازاي تشغلوه](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator)
+-   [نوع Smart](https://github.com/js-choi/proposal-smart-pipelines/blob/master/readme.md)
 
-- [عرض تقديم الاقتراح على لجنة الـTC39](https://docs.google.com/presentation/d/1eFFRK1wLIazIuK0F6fY974OIDvvWXS890XAMB59PUBA/edit#slide=id.g34fe3d0ed9_0_12)
+-   [صفحة Babel عشان تعرفوا ازاي تشغلوه](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator)
 
-- [شرح تفاصيل الموضوع بالانجليزية](https://itnext.io/how-to-try-the-javascript-pipeline-operator-today-e3f75eb12cf1)
+-   [عرض تقديم الاقتراح على لجنة الـTC39](https://docs.google.com/presentation/d/1eFFRK1wLIazIuK0F6fY974OIDvvWXS890XAMB59PUBA/edit#slide=id.g34fe3d0ed9_0_12)
+
+-   [شرح تفاصيل الموضوع بالانجليزية](https://itnext.io/how-to-try-the-javascript-pipeline-operator-today-e3f75eb12cf1)

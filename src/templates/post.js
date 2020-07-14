@@ -37,10 +37,7 @@ export const pageQuery = graphql`
         path
         title
         description
-        author
         lang
-        ogImageName
-				ogImageExtension
 				imageCaption
 				tags
 				nofooter

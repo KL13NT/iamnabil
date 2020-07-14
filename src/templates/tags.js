@@ -47,11 +47,7 @@ export const pageQuery = graphql`
             path
             title
             description
-            author
-            length
             lang
-            ogImageName
-            ogImageExtension
             tags
             date(formatString: "MMMM DD, YYYY")
           }

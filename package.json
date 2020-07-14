@@ -14,6 +14,7 @@
 		"gatsby-plugin-sharp": "^2.1.5",
 		"gatsby-plugin-sitemap": "^2.4.3",
 		"gatsby-plugin-stylus": "^2.1.8",
+		"gatsby-remark-images": "^3.3.18",
 		"gatsby-remark-link-card": "^1.0.3",
 		"gatsby-remark-reading-time": "^1.1.0",
 		"gatsby-source-filesystem": "^2.0.39",

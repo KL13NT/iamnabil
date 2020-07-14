@@ -5,7 +5,7 @@ const hostname = 'https://iamnabil.netlify.app'
 
 const defaultTitle = 'Blog'
 const defaultDescription = 'Front-End Engineer, Blogger, Mentor'
-const defaultOGImagePath = 'oggeneral.png'
+const defaultOGImagePath = '/oggeneral.png'
 const defaultPath = '/'
 
 
@@ -13,10 +13,9 @@ function SEO ({
 	title = defaultTitle,
 	description = defaultDescription,
 	path = defaultPath,
-	ogImageName,
-	ogImageExtension }) {
+	image }) {
 
-	const ogImageUrl = ogImageName? `${hostname}/${ogImageName}.${ogImageExtension}`: `${hostname}/${defaultOGImagePath}`
+	const ogImageUrl = image? `${hostname}${image.childImageSharp.fluid.src}`: `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}${path}`
 	const finalTitle = 'Nabil Tharwat | ' + title
 	const fullDescription = `Nabil Tharwat | ${description}`
@@ -40,11 +39,6 @@ function SEO ({
 			<meta content='@Nabil_Tharwat' property='twitter:creator' />
 			<meta content='@Nabil_Tharwat16' property='twitter:site'/>
 			<meta content={ ogImageUrl } property='twitter:image'/>
-			{ /* {
-        ogImageName
-          ? <SEOImages ogImageName={ogImageName} ogImageExtension={ogImageExtension}/>
-          : null
-      } */ }
 			<html lang='en-GB'/>
 		</Helmet>
 	)

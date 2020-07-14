@@ -5,10 +5,7 @@ title: "ملخص كتاب Design Systems Handbook"
 description: "ملخصي لكتاب Design Systems Handbook لـ InVision"
 introduction: "من فترة كنت بقرأ كتاب بعنوان Design Systems Handbook بيتكلم عن خطوات الـ design و الـ development في الشركات الكبيرة اللي بتستعمل Design Systems والمشاكل اللي بتحصل في الـ design at scale."
 image: design-systems-handbook-summary.png
-author: "نبيل ثروت"
 lang: "ar"
-ogImageName: "design-systems-handbook-summary"
-ogImageExtension: "png"
 imageCaption: "Image courtesy of InVision"
 tags: ["Design", "Front-End", "Arabic"]
 ---

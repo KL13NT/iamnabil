@@ -30,8 +30,7 @@ const ArticleBody = ({ frontmatter, languageClass, html, fields }) =>
 ArticleHeader.propTypes = {
 	image: PropTypes.object.isRequired,
 	languageClass: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	length: PropTypes.number.isRequired
+	title: PropTypes.string.isRequired
 }
 
 ArticleBody.propTypes = {
