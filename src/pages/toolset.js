@@ -30,13 +30,13 @@ const Toolset = () => {
 				<div className='c-section'>
 					<p>
 						<span className='u-bold'>CSS Frameworks/Libraries</span><br/>
-						Skeleton, Semantic UI, Bootstrap 4, Foundation, and Materialize.
+						Skeleton, Semantic UI, Bootstrap 4, Foundation, and Materialize. Haven't really used them much.
 					</p>
 				</div>
 				<div className='c-section'>
 					<p>
 						<span className='u-bold'>Templating Engines</span><br/>
-						Pug ❤️, Slim, and Handlebars.
+						Pug ❤️, Slim, and Handlebars. Mainly for small projects.
 					</p>
 				</div>
 				<div className='c-section'>
@@ -47,14 +47,14 @@ const Toolset = () => {
 				</div>
 				<div className='c-section'>
 					<p>
-						<span className='u-bold'>Frontned Frameworks/State Management</span><br/>
-						React ❤️, Redux, and Apollo. Barely used Apollo though.
+						<span className='u-bold'>Frontend Frameworks/State Management</span><br/>
+						React ❤️, Redux, and messed around with Vue just a tad bit.
 					</p>
 				</div>
 				<div className='c-section'>
 					<p>
 						<span className='u-bold'>CSS-in-JS</span><br/>
-						Glamorous/Emotion, and Styled Components. Not a fan of CSS-in-JS though.
+						Glamorous/Emotion, and Styled Components. Not a fan of CSS-in-JS though.🙅
 					</p>
 				</div>
 				<div className='c-section'>
@@ -66,7 +66,7 @@ const Toolset = () => {
 				<div className='c-section'>
 					<p>
 						<span className='u-bold'>Server-Side Technologies</span><br/>
-						MongoDB, Mongoose, NodeJS, Express, GraphQL, Firebase Firestore, Firebase Functions, and SocketIO.
+						MongoDB ❤️, Mongoose, NodeJS, Express, GraphQL, Firebase Firestore, Firebase Functions, and SocketIO.
 					</p>
 				</div>
 				<div className='c-section'>
@@ -94,8 +94,9 @@ const Toolset = () => {
 				<div className='c-section'>
 					<p>
 						<span className='u-bold'>Editor + Terminal <span aria-label='man technologist emoji' role='img'>👨‍💻</span></span><br/>
-						<a href='https://code.visualstudio.com/'>Visual Studio Code</a> is my current editor. <br/>
-						I'm using Shades of Purple theme, and Space Mono font. <br/>
+						<a href='https://code.visualstudio.com/'>Visual Studio Code</a> is my current editor. It allows a lot of customisation. <br/>
+						I'm using Shades of Purple as my main theme and sometimes switch to GitHub Light. <br/>
+						My main fonts are Space Mono and FiraCode, currently using the former. <br/>
 						Firefox is my main, and I use Chrome for testing alongside Firefox. <br/>
 						<a href='https://cmder.net/'>Cmder</a> is my terminal of choice with custom git and NPM integrations.
 					</p>
