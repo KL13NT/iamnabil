@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 
 const About = () => {
-	useEffect(() => {
+	if (typeof window !== 'undefined') {
 		if (window.netlifyIdentity) {
 			window.netlifyIdentity.on('init', user => {
 				if (!user) {
@@ -16,9 +16,10 @@ const About = () => {
 				}
 			})
 		}
-	}, [])
+	}
 	return (
 		<>
+			<script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
 			<SEO
 				description='Learn more about me'
 				title='About' />
