@@ -23,7 +23,7 @@ export const PostList = ({ edges }) => (
 									<div className='o-tagsContainer'>
 										{
 											frontmatter.tags.map(tag => (
-												<Link key={ tag + Math.random() } className='u-unstyledLink' to={ `tags/${tag}` }>{ tag }</Link>
+												<Link key={ tag + Math.random() } className='u-unstyledLink' to={ `/tags/${tag}` }>{ tag }</Link>
 											))
 										}
 									</div>
