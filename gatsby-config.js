@@ -15,7 +15,6 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-sass',
-		'gatsby-remark-images',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -50,6 +49,12 @@ module.exports = {
 			options: {
 				plugins: [
 					'gatsby-remark-reading-time',
+					{
+						resolve:'gatsby-remark-images',
+						options: {
+							maxWidth: 500
+						}
+					},
 					{
 						resolve: 'gatsby-remark-link-card',
 						options: {
