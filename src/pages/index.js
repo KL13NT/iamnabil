@@ -1,11 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import Navbar from '../components/Navbar'
 
 const About = () => {
+	useEffect(() => {
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on('init', user => {
+				if (!user) {
+					window.netlifyIdentity.on('login', () => {
+						document.location.href = '/admin/'
+					})
+				}
+			})
+		}
+	}, [])
 	return (
 		<>
 			<SEO
