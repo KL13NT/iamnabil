@@ -18,7 +18,7 @@ function SEO ({
 	const ogImageUrl = image? `${hostname}${image.childImageSharp.fluid.src}`: `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}${path}`
 	const finalTitle = 'Nabil Tharwat | ' + title
-	const fullDescription = `Nabil Tharwat | ${description}`
+	const fullDescription = `${description}`
 
 	return (
 		<Helmet>
