@@ -1,48 +1,45 @@
 import React, { useState, useEffect } from 'react'
 import Toggle from 'react-toggle'
 
-import './toggle.css'
+import './toggle.sass'
 
 export default function NightSwitch () {
-	let html
+	const classList = typeof window !== 'undefined'? window.document.querySelector('html').classList: undefined
+	const storedTheme = typeof window !== 'undefined'? localStorage.getItem('theme'): 'light'
 
-	const localTheme = typeof window !== 'undefined'? (localStorage?.getItem('theme') ?? 'light'): 'light'
-	const [ theme, setTheme ] = useState(localTheme)
+	const [ theme, setTheme ] = useState(storedTheme)
 
-	//Fix for `window is not available in SSR` gatsby error
-	//This hook will run once only
-	if(typeof window !== 'undefined'){
-		html = window.document.querySelector('html')
+	const toggleTheme = () => {
+		const newState = theme === 'light'? 'dark': 'light'
+
+		window.localStorage.setItem('theme', newState)
+		setTheme(newState)
 	}
 
-	useEffect(() => {
+	const setClass = () => {
 		theme === 'dark'
-			? html.classList.add('u-nightmode')
-			: html.classList.remove('u-nightmode')
-
-		localStorage.setItem('theme', theme)
-	}, [ html, theme ])
-
-	const changeNightMode = () => {
-		setTheme(theme === 'dark'? 'light': 'dark')
+			? classList.add('u-nightmode')
+			: classList.remove('u-nightmode')
 	}
+
+	useEffect(setClass, [ classList, theme ])
 
 	return (
 		<div className='c-nightmode-toggle'>
 			<Toggle
 				aria-label='night mode switch'
-				checked={ theme === 'light' }
+				checked={ theme === 'dark' }
 				className='toggle-custom'
 				icons={ {
-					unchecked: <ToggleMoon />,
-					checked: <ToggleSun />
+					unchecked: <ToggleSun />,
+					checked: <ToggleMoon />
 				} }
 				label='nightmode switch'
-				name='night mode switch'
-				onChange={ changeNightMode }/>
+				name='nightmode switch'
+				onChange={ toggleTheme }/>
 		</div>
 	)
 }
 
-const ToggleMoon = () => <span className='toggle-moon' />
-const ToggleSun = () => <span className='toggle-sun' />
+const ToggleSun = () => <span aria-label='sun with clouds emoji' role='img'>🌤</span>
+const ToggleMoon = () => <span aria-label='moon emoji' role='img'>🌛</span>

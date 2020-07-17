@@ -47,7 +47,7 @@ const Toolset = () => {
 				</div>
 				<div className='c-section'>
 					<p>
-						<span className='u-bold'>Frontend Frameworks/State Management</span><br/>
+						<span className='u-bold'>UI Frameworks and State Management</span><br/>
 						React ❤️, Redux, and messed around with Vue just a tad bit.
 					</p>
 				</div>
@@ -65,14 +65,26 @@ const Toolset = () => {
 				</div>
 				<div className='c-section'>
 					<p>
-						<span className='u-bold'>Server-Side Technologies</span><br/>
-						MongoDB ❤️, Mongoose, NodeJS, Express, GraphQL, Firebase Firestore, Firebase Functions, and SocketIO.
+						<span className='u-bold'>Databases and Cache</span><br/>
+						MongoDB ❤️, Firebase Firestore, Redis.
 					</p>
 				</div>
 				<div className='c-section'>
 					<p>
-						<span className='u-bold'>Static Site Generators, Deployment, and CI/CD</span><br/>
-						GatsbyJS, Heroku, Netlify ❤️, Firebase Hosting, Git/GitHub, and TravisCI.
+						<span className='u-bold'>Server-Side and Serverless Technologies</span><br/>
+						Mongoose, NodeJS, Express, GraphQL, Firebase Functions, and SocketIO.
+					</p>
+				</div>
+				<div className='c-section'>
+					<p>
+						<span className='u-bold'>Static Site Generators and CMS</span><br/>
+						GatsbyJS, NetlifyCMS
+					</p>
+				</div>
+				<div className='c-section'>
+					<p>
+						<span className='u-bold'>Deployment, and CI/CD</span><br/>
+						GatsbyJS, Heroku, Netlify ❤️, Firebase, Git/GitHub, and TravisCI.
 					</p>
 				</div>
 				<div className='c-section'>

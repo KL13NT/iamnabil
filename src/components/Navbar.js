@@ -13,7 +13,12 @@ const Navbar = () => {
 				<Link className='u-unstyledLink' to='/projects'>Projects</Link>
 				<Link className='u-unstyledLink' to='/toolset'>Tools</Link>
 			</div>
-			<NightSwitch/>
+			{
+				// fix for SSR bug
+				typeof window !== 'undefined'?
+					<NightSwitch/>:
+					null
+			}
 		</nav>
 	)
 }
