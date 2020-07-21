@@ -1,23 +1,52 @@
 publish_mode: editorial_workflow
-media_folder: 'src/markdown-pages'
-public_folder: '/'
+media_folder: "src/markdown-pages"
+public_folder: "/"
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 collections:
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
-    label: 'Blog' # Used in the UI
-    folder: 'src/markdown-pages' # The path to the folder where the documents are stored
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/markdown-pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Path (Must start with /blog/)', name: 'path', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', format: '"YYYY-MM-DD"' }
-      - { label: 'Featured Image', name: 'image', widget: 'string' }
-      - { label: 'Description (60 char)', name: 'description', widget: 'string' }
-      - { label: 'Introduction', name: 'introduction', widget: 'string' }
-      - { label: 'Language', name: 'lang', widget: 'string' }
-      - { label: 'Featured Image Caption', name: 'imageCaption', widget: 'string' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title (Make it catchy ;3)", name: "title", widget: "string" }
+      - {
+          label: "Path (Must start with /blog/)",
+          name: "path",
+          widget: "string",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: '"YYYY-MM-DD"',
+        }
+      - {
+          label: "Featured Image (Image to use as header)",
+          name: "image",
+          widget: "string",
+        }
+      - {
+          label: "Description (60 char)",
+          name: "description",
+          widget: "string",
+        }
+      - {
+          label: "Introduction (What do display in post list)",
+          name: "introduction",
+          widget: "string",
+        }
+      - { label: "Language (ar, en)", name: "lang", widget: "string" }
+      - {
+          label: "Featured Image Caption (Add description of image and source/artist)",
+          name: "imageCaption",
+          widget: "string",
+        }
+      - {
+          label: "Tags (Array of capitalised strings)",
+          name: "tags",
+          widget: "list",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
