@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-import { PostBottom } from '../components/PostBottom'
+import { PostBottom } from './PostBottom'
 
 const ArticleHeader = ({ image, languageClass, title, date, path,imageCaption, tags }) =>
 	<>

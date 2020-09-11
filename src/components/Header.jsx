@@ -2,11 +2,11 @@
 /* eslint-disable react/display-name */
 import React from 'react'
 
-import Social from '../components/Social'
+import Social from './Social'
 
 const MainHeader = () =>
 	<>
-		
+
 	</>
 
 export default () =>
