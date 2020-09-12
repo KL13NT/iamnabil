@@ -62,9 +62,13 @@ tags:
 - او خشوا فالاريوم 😆 هناك بنحل سوا وبنتفاهم و ببيتوفر عامل مع غيركوا في تنافس ونقاش, الشكوك و الحيرة مش بتبقى موجودة بنفس المقدار, وهتعرفوا بكل سهولة ايه اللي ناقصكوا عشان تتحسنوا لما تلاقوا في كذا عين بيبصوا ف الكود بتاعكوا و بيديكوا feedback عليه. 
 
 
+مصادر:
+<div dir="ltr" align="left">
 
-1. https://link.springer.com/article/10.1186/s40945-019-0059-2
-2. https://www.researchgate.net/publication/332995462_Gamification_through_leaderboards_An_empirical_study_in_engineering_education
-3. https://www.sciencedirect.com/science/article/pii/S0268401217305169
-4. https://scholarworks.iupui.edu/bitstream/handle/1805/17645/Jia_2018_designing.pdf
-5. https://journals.sagepub.com/doi/abs/10.1177/0146167286123001
+1. Benefits and challenges with gamified multi-media physiotherapy case studies: a mixed method study [[s40945-019-0059-2](https://link.springer.com/article/10.1186/s40945-019-0059-2)]
+2. Gamification through leaderboards: An empirical study in engineering education [[332995462](https://www.researchgate.net/publication/332995462_Gamification_through_leaderboards_An_empirical_study_in_engineering_education)]
+3. The rise of motivational information systems: A review of gamification research [[S0268401217305169](https://www.sciencedirect.com/science/article/pii/S0268401217305169)]
+4. Designing Leaderboards for Gamification: Perceived Differences Based on User Ranking, Application Domain, and Personality Traits  [[1805/17645](https://scholarworks.iupui.edu/bitstream/handle/1805/17645/Jia_2018_designing.pdf)]
+5. Social Comparison Theory: Psychology from the Lost and Found  [[10.1177/0146167286123001](https://journals.sagepub.com/doi/abs/10.1177/0146167286123001)]
+
+</div>
