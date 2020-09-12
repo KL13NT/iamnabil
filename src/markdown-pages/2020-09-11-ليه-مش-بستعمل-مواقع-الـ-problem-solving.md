@@ -1,5 +1,5 @@
 ---
-title: مخاطر مواقع الـ Problem Solving
+title: مخاطر مواقع الـ Problem Solving — اسباب وحلول
 path: why-i-dont-use-problem-solving-sites
 date: '"2020-09-11"'
 image: and_the_wind_cries_mary_by_pajunen_d671u7g-pre.jpg
