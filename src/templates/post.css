@@ -1,73 +1,69 @@
-a{
-  text-decoration: none;
-  color: inherit;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-
-h5{
-  color: rgba(0,0,0,0.8);
+h5 {
+	color: rgba(0, 0, 0, 0.8);
 }
 
-
-h5 p{
-  color: rgba(0,0,0,0.5);
-  font-family: inherit;
+h5 p {
+	color: rgba(0, 0, 0, 0.5);
+	font-family: inherit;
 }
 
-
-img{
-  margin: 0 auto;
-  display: block;
+img {
+	margin: 0 auto;
+	display: block;
 }
 
-
-p, ol{
-  letter-spacing: 0.9;
-  padding: 6px 0;
-  color: black
+p,
+ol {
+	letter-spacing: 0.9;
+	color: black;
 }
 
-ul{
-  letter-spacing: 0.9;
-  color: black;
+ul {
+	letter-spacing: 0.9;
+	color: black;
 }
 
-*::selection{
-  background: #ffca00;
+*::selection {
+	background: #ffca00;
 }
 
-blockquote{
-  padding: 30px;
-  position: relative;
+blockquote {
+	padding: 30px;
+	position: relative;
 }
 
-blockquote > p >span{
-  --x-height-multiplier: 0.342;
-  --baseline-multiplier: 0.22;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.48;
-  letter-spacing: -.012em;
-  background: rgba(12,242,143,.2);
-  position: relative;
-  font-size: 1.3rem;
+blockquote > p > span {
+	--x-height-multiplier: 0.342;
+	--baseline-multiplier: 0.22;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 1.48;
+	letter-spacing: -0.012em;
+	background: rgba(12, 242, 143, 0.2);
+	position: relative;
+	font-size: 1.3rem;
 }
 
-blockquote::before{
-  content: "\201C";
-  font-family: Arial, serif;
-  font-weight: bold;
-  color: #999;
-  position: absolute;
-  left: -5px;
-  top: 5px;
-  font-size: 5rem;
+blockquote::before {
+	content: '\201C';
+	font-family: Arial, serif;
+	font-weight: bold;
+	color: #999;
+	position: absolute;
+	left: -5px;
+	top: 5px;
+	font-size: 5rem;
 }
 
-section > p > span{
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  margin: 6px;
-  color: rgba(0,0,0,.5)
+section > p > span {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	margin: 6px;
+	color: rgba(0, 0, 0, 0.5);
 }
