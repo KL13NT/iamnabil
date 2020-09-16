@@ -157,7 +157,7 @@ const About = () => {
 
 				<p>
 					<span className='u-bold'>
-						What's are obstacle you've overcome to become who you are now?
+						What are obstacle you've overcome to become who you are now?
 					</span>
 					<br />
 					Language barrier, cultural differences, and self-denial.
