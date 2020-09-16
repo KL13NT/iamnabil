@@ -25,7 +25,7 @@ const ArticleHeader = ({
 					Tweet This
 				</a>
 			</div>
-			<Img fluid={image.childImageSharp.fluid} alt={imageAlt} />
+			<Img className='c-article-image' fluid={image.childImageSharp.fluid} alt={imageAlt} />
 			<span className='c-image-caption'>{imageCaption}</span>
 		</div>
 	</>
