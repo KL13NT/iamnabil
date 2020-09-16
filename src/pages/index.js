@@ -48,10 +48,6 @@ const About = () => {
 					<a href='https://www.youtube.com/channel/UCdGKzbiQkePzSqFf7HBrSPg'>
 						YouTube
 					</a>
-					. My resume can be downloaded in PDF{' '}
-					<a href='https://docs.google.com/document/export?format=pdf&amp;id=1VL4_iTKO712R-H7S5_3_PkuG1ed97eoIJUMjo9T9noE'>
-						here
-					</a>
 					.
 				</p>
 
