@@ -16,16 +16,20 @@ const ArticleHeader = ({
 }) => (
 	<>
 		<div className='o-article-header'>
-			<h1 className={languageClass}> {title} </h1>
+			<h1 className={languageClass}>{title}</h1>
 			<div>
 				<p>{date}</p>
 				<a
-					href={`https://twitter.com/intent/tweet?text=${title}&amp;url=https://iamnabil.netlify.app${path}&amp;hashtags=${tags}`}
+					href={`https://twitter.com/intent/tweet?text=${title}&url=https://iamnabil.netlify.app${path}&hashtags=${tags}`}
 				>
 					Tweet This
 				</a>
 			</div>
-			<Img className='c-article-image' fluid={image.childImageSharp.fluid} alt={imageAlt} />
+			<Img
+				className='c-article-image'
+				fluid={image.childImageSharp.fluid}
+				alt={imageAlt}
+			/>
 			<span className='c-image-caption'>{imageCaption}</span>
 		</div>
 	</>
