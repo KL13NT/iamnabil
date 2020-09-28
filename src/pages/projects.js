@@ -54,14 +54,13 @@ const About = () => {
 						<span className='u-bold'>Discord Utils</span>
 					</a>
 					<p>
-						A useful collection of utilities (functions and classes) that help
-						acceelerate NodeJS discord bot development. Built with TypeScript,
-						versioned with{' '}
+						A useful collection of utilities that acceelerate NodeJS discord bot
+						development. Built with TypeScript, versioned with{' '}
 						<a href='https://github.com/conventional-changelog/standard-version'>
 							standard version
 						</a>
 						. This is extracted from ValariumBot and currently the bot depends
-						on it as a dependency.
+						on it.
 					</p>
 				</div>
 
@@ -86,9 +85,8 @@ const About = () => {
 						<span className='u-bold'>Valarium</span>
 					</a>
 					<p>
-						The official website for the student community that I founded. Has a
-						blog built with Gatsby and uses NetlifyCMS to manage articles and
-						authors.
+						The official website for the online community that I founded. Has a
+						blog built with GatsbyJS and Sass, and hooked up to NetlifyCMS.
 					</p>
 				</div>
 

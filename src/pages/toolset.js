@@ -18,13 +18,6 @@ const Toolset = () => {
 				</p>
 				<div className='c-section'>
 					<p>
-						<span className='u-bold'>The Basics</span>
-						<br />
-						HTML5, CSS3, ES2020. Always trying to be up to date. 💯😉
-					</p>
-				</div>
-				<div className='c-section'>
-					<p>
 						<span className='u-bold'>JavaScript Utilities</span>
 						<br />
 						Lodash, Underscore, and jQuery. Don't use them anymore, the language
