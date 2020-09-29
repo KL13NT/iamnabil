@@ -31,11 +31,10 @@ const About = () => {
 				</h1>
 
 				<p>
-					My name is Nabil Tharwat. I'm a software engineer, content creator,
-					and mentor. I was born and raised in Cairo with a passion for
-					computers. I started coding when I was 12 with VB, now living in JS
-					land. I love contributing to open source. Accessibility and
-					performance are part of my eternal quest.
+					I'm Nabil Tharwat, a software engineer, content creator, and mentor
+					based in Cairo, Egypt. I started coding when I was 12 with VB, and now
+					living in JS land. I love contributing to open source and lifting
+					others up. Accessibility and performance are part of my eternal quest.
 				</p>
 
 				<p>
@@ -54,15 +53,14 @@ const About = () => {
 				<p>
 					When I'm not coding some frontend stuff I'm usually found
 					experimenting, mentoring people new to the field, trying out new
-					utilities on the market, blogging, making videos and devlogs, or
-					contributing to Valarium.
+					utilities on the market, blogging, going live, making videos and
+					devlogs, or contributing to Valarium.
 				</p>
 
 				<p>
-					2019 was a busy year for a freshman student in which I participated in
-					Hacktoberfest, founded{' '}
-					<a href='https://valarium.netlify.app'>Valarium</a>, scored first
-					place on TheNetNinja's February Code{' '}
+					2019 was a busy year for a me. I participated in Hacktoberfest,
+					founded <a href='https://valarium.netlify.app'>Valarium</a>, scored
+					first place on TheNetNinja's February Code{' '}
 					<a href='https://kl13nt.github.io/Clock-Animated/'>Challenge</a>, and
 					created a simple C++ introductory text{' '}
 					<a href='https://github.com/KL13NT/cppbasics'>course</a> for college
@@ -78,6 +76,13 @@ const About = () => {
 						sessions
 					</a>
 					, and started learning Russian.
+				</p>
+
+				<p>
+					Coming from the future @late-2020, I started my own podcast, created a
+					social network against discrimination, improved my online presence,
+					enhanced my design skills, and produced more content focused on
+					students like myself.
 				</p>
 
 				<p>

@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import { PostList } from '../components/PostList'
 
 export default ({ pageContext: { edges } }) => {
+	console.log(edges)
 	return (
 		<>
 			<SEO />
