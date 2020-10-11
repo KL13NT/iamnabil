@@ -11,11 +11,22 @@ const About = () => {
 			<SEO description='My fun projects' path='/projects' title='Projects' />
 			<Navbar />
 			<Layout>
-				<h1>Useless is not worthless</h1>
+				<h1>Useless is not worthless 🚀</h1>
 				<p>
 					Most of my projects are open source and free to use. Some of these
 					don't have any other purpose than exploration and experimenting.
 				</p>
+
+				<div className='c-section'>
+					<a className='u-unstyledLink' href='https://pollu.vercel.app'>
+						<span className='u-bold'>Pollu</span>
+					</a>
+					<p>
+						An open-source anonymous straw poll platform with privacy in mind.
+						Built with StorybookJS, NextJS, TailwindCSS, Vercel Serverless
+						Functions, ExpressJS, Mongoose, and Mongo Cloud over the weekend.
+					</p>
+				</div>
 
 				<div className='c-section'>
 					<a className='u-unstyledLink' href='https://iamnabil.netlify.app'>

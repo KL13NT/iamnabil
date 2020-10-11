@@ -80,9 +80,11 @@ const About = () => {
 
 				<p>
 					Coming from the future @late-2020, I started my own podcast, created a
-					social network against discrimination, improved my online presence,
-					enhanced my design skills, and produced more content focused on
-					students like myself.
+					social network against discrimination, created{' '}
+					<a href='pollu.vercel.app'>Pollu</a>, an open-source straw poll
+					platform built with anonymity in mind. I also participated in
+					Hacktoberfest 2020, improved my online presence, enhanced my design
+					skills, and produced more content focused on students like myself.
 				</p>
 
 				<p>
