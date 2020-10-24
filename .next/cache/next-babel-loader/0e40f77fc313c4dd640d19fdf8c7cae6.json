@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsxs as _jsxs } from \"react/jsx-runtime\";\nimport React from 'react';\n\nfunction PostTemplate(props) {\n  console.log(props);\n  return /*#__PURE__*/_jsxs(\"div\", {\n    children: [\"Here we'll load \\\"\", props.slug, \"\\\"\"]\n  });\n}\n\nexport var __N_SSG = true;\nexport default PostTemplate;","map":null,"metadata":{},"sourceType":"module"}

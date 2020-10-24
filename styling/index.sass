@@ -1,0 +1,54 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap')
+
+
+h1, h2
+	@apply font-black mt-8
+
+h3, h4
+	@apply font-bold mt-8
+
+h1
+	@apply text-6xl
+
+h2
+	@apply text-5xl
+
+h3, h4
+	@apply text-white max-w-max bg-shadow block
+
+h3
+	@apply text-2xl
+
+h4
+	@apply text-xl
+
+p, u
+	@apply text-lg mt-4
+
+a
+	@apply bg-link
+
+	&:hover, &:active, &:focus
+		@apply underline
+
+ul
+	@apply p-4
+
+li
+	list-style-type: square
+
+.rtl
+	text-align: right
+	direction: rtl
+	text-decoration-skip-ink: skip
+
+	h3, h4
+		padding-bottom: 4px
+
+	@apply font-rtl

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\n\nconst Layout = ({\n  children\n}) => /*#__PURE__*/_jsx(\"div\", {\n  children: children\n});\n\nexport default Layout;","map":null,"metadata":{},"sourceType":"module"}
