@@ -39,17 +39,11 @@
 	"license": "MIT",
 	"scripts": {
 		"develop": "next dev",
-		"build": "next build",
-		"postbuild": "next-on-netlify",
+		"build": "next build && next export",
 		"start": "next start",
-		"prepreview": "build",
-		"preview": "netlify dev",
 		"format": "prettier --write src/**/*.{js,jsx}",
 		"lint": "eslint --ext .jsx --ext .js src/ --fix --config ./.eslintrc.js"
 	},
-	"files": [
-		"/lib"
-	],
 	"repository": {
 		"type": "git"
 	}

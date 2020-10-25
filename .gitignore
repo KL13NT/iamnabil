@@ -70,3 +70,7 @@ yarn-error.log
 # Netlify next-on-netlify
 /out_publish/
 /out_functions/
+
+out/
+
+.next/
