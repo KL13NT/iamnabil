@@ -17,7 +17,7 @@ tags: ['JavaScript', 'Babel', 'ESNext', 'Arabic']
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 const obj = {
 	foo: {
 		bar: {
@@ -35,7 +35,7 @@ const value = obj.foo.bar.value
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 const obj = {
   foo: {
     bar: {
@@ -87,7 +87,7 @@ if(obj && obj.foo && obj.foo.bar && obj.foo.bar.value)
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 //بيعمل تشيك الاول على القيمة قبل ما ياخدها في كل مرحلة
 const length = obj?.foo?.bar?.value?.length
 ```
@@ -98,7 +98,7 @@ const length = obj?.foo?.bar?.value?.length
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 //بيعمل تشيك الاول على القيمة قبل ما ياخدها في كل مرحلة
 const length = obj?.foo?.bar?.value?.length;
 if(length !== undefined) //do something
@@ -116,7 +116,7 @@ if(length !== undefined) //do something
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 npm install --save-dev @babel/core @babel/cli
 
 او
@@ -130,7 +130,7 @@ yarn add -D @babel/core @babel/cli
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 npm install --save-dev @babel/plugin-proposal-optional-chaining
 
 او
@@ -144,7 +144,7 @@ yarn add -D @babel/plugin-proposal-optional-chaining
 
 <div dir="ltr" align="left">
 
-```js
+```javascript
 {
   "plugins": ["@babel/plugin-proposal-optional-chaining"]
 }

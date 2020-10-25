@@ -3,15 +3,16 @@ import ReactMarkdown from 'react-markdown/with-html'
 
 const ArticleHeader = ({ title, date, path, tags }) => (
 	<div>
-		<h1>{title}</h1>
-		<div>
-			<p>{date}</p>
+		<span>{date}</span>
+		<span> — </span>
+		<span>
 			<a
 				href={`https://twitter.com/intent/tweet?text=${title}&url=https://iamnabil.netlify.app${path}&hashtags=${tags}`}
 			>
 				Tweet This
 			</a>
-		</div>
+		</span>
+		<h1>{title}</h1>
 	</div>
 )
 

@@ -1,32 +1,24 @@
 import React from 'react'
-
 import Link from 'next/link'
 
-export const Post = ({ frontmatter }) => {
-	const { lang, title, path, date, description } = frontmatter
-	console.log(date, typeof date)
+import { formatDate } from '../utils'
 
-	const options = {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	}
-	const languageClass = lang === 'ar' ? 'rtl' : null
-	const localeDate = new Date(date).toLocaleDateString(
-		lang === 'ar' ? 'ar-EG' : 'en-US',
-		options
-	)
+export const Post = ({ slug, frontmatter }) => {
+	const { lang, title, date, description, category } = frontmatter
+
+	const dir = lang === 'ar' ? 'dir-rtl' : null
 
 	return (
-		<li className={languageClass}>
-			<Link href={`/blog/${path}`}>
-				<a>
-					<h4>{title}</h4>
+		<li className={`list-none mb-12 text-center ${dir}`}>
+			<span className='block mb-4'>
+				{formatDate(date, lang)} // {category}
+			</span>
+			<Link href={`/blog/${slug}`}>
+				<a className='mx-auto bg-transparent'>
+					<h2 className='mt-2 mx-auto text-2xl lg:text-4xl inline'>{title}</h2>
 				</a>
 			</Link>
-			<p>{description}</p>
-			<span>{localeDate}</span>
+			<p className='mt-4 text-xl'>{description}</p>
 		</li>
 	)
 }

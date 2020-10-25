@@ -29,7 +29,7 @@ Then the pigeon arrives with a response message tied to its feet, if that messag
 
 Consider the following snippet
 
-```Javascript
+```javascript
 new Promise((resolve, reject)=>{
 	setTimeout(()=>reject("Pigeon message: We're no go!"), 2000)
 })
@@ -65,7 +65,7 @@ What if we don't use `then` and `catch` at all?
 
 ## Rejection without `catch`
 
-```js
+```javascript
 let pro = new Promise((resolve, reject)=>{
     setTimeout(()=>reject("Pigeon message: We're no go!"), 2000)
 })

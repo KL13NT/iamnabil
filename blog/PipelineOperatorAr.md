@@ -12,7 +12,7 @@ tags: ['Babel', 'JavaScript', 'ESNext', 'Arabic']
 
 <div dir="ltr">
 
-```js
+```javascript
 const sampleInteger = 5
 
 const add = (x, y) => x + y
@@ -30,7 +30,7 @@ let result = divide(multiply(add(sampleInteger, 10), sampleInteger), 5) //15
 
 <div dir="ltr">
 
-```js
+```javascript
 const sampleInteger = 5
 
 const add = (x, y) => x + y
@@ -46,7 +46,7 @@ let result = divide(multiply(add(sampleInteger, 10), sampleInteger), 5) //15
 
 <div dir="ltr">
 
-```js
+```javascript
 const sampleInteger = 5
 
 const add = (x, y) => x + y
@@ -69,7 +69,7 @@ let result = generateResult() //15
 
 <div dir="ltr">
 
-```js
+```javascript
 const sampleInteger = 5;
 
 const add = (x, y) => x + y;

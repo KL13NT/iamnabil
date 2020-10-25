@@ -1,0 +1,210 @@
+webpackHotUpdate_N_E("pages/blog/[slug]",{
+
+/***/ "./pages/blog/[slug].js":
+/*!******************************!*\
+  !*** ./pages/blog/[slug].js ***!
+  \******************************/
+/*! exports provided: __N_SSG, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__N_SSG", function() { return __N_SSG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostTemplate; });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-markdown/with-html */ "./node_modules/react-markdown/with-html.js");
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-syntax-highlighter */ "./node_modules/react-syntax-highlighter/dist/esm/index.js");
+/* harmony import */ var react_syntax_highlighter_dist_cjs_styles_hljs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-syntax-highlighter/dist/cjs/styles/hljs */ "./node_modules/react-syntax-highlighter/dist/cjs/styles/hljs/index.js");
+/* harmony import */ var react_syntax_highlighter_dist_cjs_styles_hljs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_syntax_highlighter_dist_cjs_styles_hljs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_SEO__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/SEO */ "./components/SEO.jsx");
+
+
+
+
+var _jsxFileName = "D:\\Workspace\\Maintaining\\iamnabil\\pages\\blog\\[slug].js",
+    _this = undefined;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
+
+var renderers = {
+  code: function code(_ref) {
+    var language = _ref.language,
+        value = _ref.value;
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_4__["Prism"], Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      style: react_syntax_highlighter_dist_cjs_styles_hljs__WEBPACK_IMPORTED_MODULE_5__["a11yDark"],
+      language: language,
+      children: value,
+      showLineNumbers: true
+    }, "children", value), void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 4
+    }, _this);
+  },
+  pre: function pre(_ref2) {
+    var language = _ref2.language,
+        value = _ref2.value;
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_4__["Prism"], Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      style: react_syntax_highlighter_dist_cjs_styles_hljs__WEBPACK_IMPORTED_MODULE_5__["a11yDark"],
+      language: language,
+      children: value,
+      showLineNumbers: true
+    }, "children", value), void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 4
+    }, _this);
+  }
+};
+var __N_SSG = true;
+function PostTemplate(_ref3) {
+  var html = _ref3.html,
+      frontmatter = _ref3.frontmatter;
+  var lang = frontmatter.lang,
+      date = frontmatter.date,
+      tags = frontmatter.tags,
+      title = frontmatter.title,
+      path = frontmatter.path;
+  var dir = lang === 'ar' ? 'rtl' : null;
+  console.log(html);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(_components_SEO__WEBPACK_IMPORTED_MODULE_6__["default"], _objectSpread({}, frontmatter), void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 4
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("div", {
+      dir: dir,
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("span", {
+        children: date
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 5
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("span", {
+        children: " \u2014 "
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 5
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("span", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("a", {
+          href: "https://twitter.com/intent/tweet?text=".concat(title, "&url=https://iamnabil.netlify.app").concat(path, "&hashtags=").concat(tags),
+          children: lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 6
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 5
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("h1", {
+        className: "mt-0 mb-4",
+        children: title
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 55,
+        columnNumber: 5
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 4
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])("article", {
+      dir: dir,
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__["jsxDEV"])(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        renderers: renderers,
+        allowDangerousHtml: true,
+        children: html
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 59,
+        columnNumber: 5
+      }, this)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 4
+    }, this)]
+  }, void 0, true);
+}
+_c = PostTemplate;
+
+var _c;
+
+$RefreshReg$(_c, "PostTemplate");
+
+;
+    var _a, _b;
+    // Legacy CSS implementations will `eval` browser code in a Node.js context
+    // to extract CSS. For backwards compatibility, we need to check we're in a
+    // browser context before continuing.
+    if (typeof self !== 'undefined' &&
+        // AMP / No-JS mode does not inject these helpers:
+        '$RefreshHelpers$' in self) {
+        var currentExports = module.__proto__.exports;
+        var prevExports = (_b = (_a = module.hot.data) === null || _a === void 0 ? void 0 : _a.prevExports) !== null && _b !== void 0 ? _b : null;
+        // This cannot happen in MainTemplate because the exports mismatch between
+        // templating and execution.
+        self.$RefreshHelpers$.registerExportsForReactRefresh(currentExports, module.i);
+        // A module can be accepted automatically based on its exports, e.g. when
+        // it is a Refresh Boundary.
+        if (self.$RefreshHelpers$.isReactRefreshBoundary(currentExports)) {
+            // Save the previous exports on update so we can compare the boundary
+            // signatures.
+            module.hot.dispose(function (data) {
+                data.prevExports = currentExports;
+            });
+            // Unconditionally accept an update to this module, we'll check if it's
+            // still a Refresh Boundary later.
+            module.hot.accept();
+            // This field is set when the previous version of this module was a
+            // Refresh Boundary, letting us know we need to check for invalidation or
+            // enqueue an update.
+            if (prevExports !== null) {
+                // A boundary can become ineligible if its exports are incompatible
+                // with the previous exports.
+                //
+                // For example, if you add/remove/change exports, we'll want to
+                // re-execute the importing modules, and force those components to
+                // re-render. Similarly, if you convert a class component to a
+                // function, we want to invalidate the boundary.
+                if (self.$RefreshHelpers$.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)) {
+                    module.hot.invalidate();
+                }
+                else {
+                    self.$RefreshHelpers$.scheduleUpdate();
+                }
+            }
+        }
+        else {
+            // Since we just executed the code for the module, it's possible that the
+            // new exports made it ineligible for being a boundary.
+            // We only care about the case when we were _previously_ a boundary,
+            // because we already accepted this update (accidental side effect).
+            var isNoLongerABoundary = prevExports !== null;
+            if (isNoLongerABoundary) {
+                module.hot.invalidate();
+            }
+        }
+    }
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ })
+
+})
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vcGFnZXMvYmxvZy9bc2x1Z10uanMiXSwibmFtZXMiOlsicmVuZGVyZXJzIiwiY29kZSIsImxhbmd1YWdlIiwidmFsdWUiLCJhMTF5RGFyayIsInByZSIsIlBvc3RUZW1wbGF0ZSIsImh0bWwiLCJmcm9udG1hdHRlciIsImxhbmciLCJkYXRlIiwidGFncyIsInRpdGxlIiwicGF0aCIsImRpciIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUtBLElBQU1BLFNBQVMsR0FBRztBQUNqQkMsTUFBSSxFQUFFLG9CQUF5QjtBQUFBLFFBQXRCQyxRQUFzQixRQUF0QkEsUUFBc0I7QUFBQSxRQUFaQyxLQUFZLFFBQVpBLEtBQVk7QUFDOUIsd0JBQ0MscUVBQUMsOERBQUQ7QUFDQyxXQUFLLEVBQUVDLHNGQURSO0FBRUMsY0FBUSxFQUFFRixRQUZYO0FBR0MsY0FBUSxFQUFFQyxLQUhYO0FBSUMscUJBQWU7QUFKaEIsbUJBS1dBLEtBTFg7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUREO0FBU0EsR0FYZ0I7QUFZakJFLEtBQUcsRUFBRSxvQkFBeUI7QUFBQSxRQUF0QkgsUUFBc0IsU0FBdEJBLFFBQXNCO0FBQUEsUUFBWkMsS0FBWSxTQUFaQSxLQUFZO0FBQzdCLHdCQUNDLHFFQUFDLDhEQUFEO0FBQ0MsV0FBSyxFQUFFQyxzRkFEUjtBQUVDLGNBQVEsRUFBRUYsUUFGWDtBQUdDLGNBQVEsRUFBRUMsS0FIWDtBQUlDLHFCQUFlO0FBSmhCLG1CQUtXQSxLQUxYO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFERDtBQVNBO0FBdEJnQixDQUFsQjs7QUF5QmUsU0FBU0csWUFBVCxRQUE2QztBQUFBLE1BQXJCQyxJQUFxQixTQUFyQkEsSUFBcUI7QUFBQSxNQUFmQyxXQUFlLFNBQWZBLFdBQWU7QUFBQSxNQUNuREMsSUFEbUQsR0FDakJELFdBRGlCLENBQ25EQyxJQURtRDtBQUFBLE1BQzdDQyxJQUQ2QyxHQUNqQkYsV0FEaUIsQ0FDN0NFLElBRDZDO0FBQUEsTUFDdkNDLElBRHVDLEdBQ2pCSCxXQURpQixDQUN2Q0csSUFEdUM7QUFBQSxNQUNqQ0MsS0FEaUMsR0FDakJKLFdBRGlCLENBQ2pDSSxLQURpQztBQUFBLE1BQzFCQyxJQUQwQixHQUNqQkwsV0FEaUIsQ0FDMUJLLElBRDBCO0FBRTNELE1BQU1DLEdBQUcsR0FBR0wsSUFBSSxLQUFLLElBQVQsR0FBZ0IsS0FBaEIsR0FBd0IsSUFBcEM7QUFFQU0sU0FBTyxDQUFDQyxHQUFSLENBQVlULElBQVo7QUFFQSxzQkFDQztBQUFBLDRCQUNDLHFFQUFDLHVEQUFELG9CQUFTQyxXQUFUO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFERCxlQUVDO0FBQUssU0FBRyxFQUFFTSxHQUFWO0FBQUEsOEJBQ0M7QUFBQSxrQkFBT0o7QUFBUDtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBREQsZUFFQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQUZELGVBR0M7QUFBQSwrQkFDQztBQUNDLGNBQUksa0RBQTJDRSxLQUEzQyw4Q0FBb0ZDLElBQXBGLHVCQUFxR0YsSUFBckcsQ0FETDtBQUFBLG9CQUdFRixJQUFJLEtBQUssSUFBVCxHQUFnQixpQkFBaEIsR0FBb0M7QUFIdEM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUREO0FBQUE7QUFBQTtBQUFBO0FBQUEsY0FIRCxlQVVDO0FBQUksaUJBQVMsRUFBQyxXQUFkO0FBQUEsa0JBQTJCRztBQUEzQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGNBVkQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBRkQsZUFlQztBQUFTLFNBQUcsRUFBRUUsR0FBZDtBQUFBLDZCQUNDLHFFQUFDLCtEQUFEO0FBQWUsaUJBQVMsRUFBRWQsU0FBMUI7QUFBcUMsMEJBQWtCLE1BQXZEO0FBQUEsa0JBQ0VPO0FBREY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUREO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFmRDtBQUFBLGtCQUREO0FBdUJBO0tBN0J1QkQsWSIsImZpbGUiOiJzdGF0aWMvd2VicGFjay9wYWdlcy9ibG9nL1tzbHVnXS5jNGI0MTNiOWMzODc1YjdhZjBlZC5ob3QtdXBkYXRlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IFJlYWN0TWFya2Rvd24gZnJvbSAncmVhY3QtbWFya2Rvd24vd2l0aC1odG1sJ1xuaW1wb3J0IHsgUHJpc20gYXMgU3ludGF4SGlnaGxpZ2h0ZXIgfSBmcm9tICdyZWFjdC1zeW50YXgtaGlnaGxpZ2h0ZXInXG5pbXBvcnQgeyBhMTF5RGFyayB9IGZyb20gJ3JlYWN0LXN5bnRheC1oaWdobGlnaHRlci9kaXN0L2Nqcy9zdHlsZXMvaGxqcydcblxuaW1wb3J0IFNFTyBmcm9tICcuLi8uLi9jb21wb25lbnRzL1NFTydcblxuaW1wb3J0IHsgZ2V0QWxsU2x1Z3MsIGdldFBvc3RCeVNsdWcgfSBmcm9tICcuLi8uLi9hcGknXG5pbXBvcnQgeyBmb3JtYXREYXRlIH0gZnJvbSAnLi4vLi4vdXRpbHMnXG5cbmNvbnN0IHJlbmRlcmVycyA9IHtcblx0Y29kZTogKHsgbGFuZ3VhZ2UsIHZhbHVlIH0pID0+IHtcblx0XHRyZXR1cm4gKFxuXHRcdFx0PFN5bnRheEhpZ2hsaWdodGVyXG5cdFx0XHRcdHN0eWxlPXthMTF5RGFya31cblx0XHRcdFx0bGFuZ3VhZ2U9e2xhbmd1YWdlfVxuXHRcdFx0XHRjaGlsZHJlbj17dmFsdWV9XG5cdFx0XHRcdHNob3dMaW5lTnVtYmVyc1xuXHRcdFx0XHRjaGlsZHJlbj17dmFsdWV9XG5cdFx0XHQvPlxuXHRcdClcblx0fSxcblx0cHJlOiAoeyBsYW5ndWFnZSwgdmFsdWUgfSkgPT4ge1xuXHRcdHJldHVybiAoXG5cdFx0XHQ8U3ludGF4SGlnaGxpZ2h0ZXJcblx0XHRcdFx0c3R5bGU9e2ExMXlEYXJrfVxuXHRcdFx0XHRsYW5ndWFnZT17bGFuZ3VhZ2V9XG5cdFx0XHRcdGNoaWxkcmVuPXt2YWx1ZX1cblx0XHRcdFx0c2hvd0xpbmVOdW1iZXJzXG5cdFx0XHRcdGNoaWxkcmVuPXt2YWx1ZX1cblx0XHRcdC8+XG5cdFx0KVxuXHR9XG59XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBvc3RUZW1wbGF0ZSh7IGh0bWwsIGZyb250bWF0dGVyIH0pIHtcblx0Y29uc3QgeyBsYW5nLCBkYXRlLCB0YWdzLCB0aXRsZSwgcGF0aCB9ID0gZnJvbnRtYXR0ZXJcblx0Y29uc3QgZGlyID0gbGFuZyA9PT0gJ2FyJyA/ICdydGwnIDogbnVsbFxuXG5cdGNvbnNvbGUubG9nKGh0bWwpXG5cblx0cmV0dXJuIChcblx0XHQ8PlxuXHRcdFx0PFNFTyB7Li4uZnJvbnRtYXR0ZXJ9IC8+XG5cdFx0XHQ8ZGl2IGRpcj17ZGlyfT5cblx0XHRcdFx0PHNwYW4+e2RhdGV9PC9zcGFuPlxuXHRcdFx0XHQ8c3Bhbj4g4oCUIDwvc3Bhbj5cblx0XHRcdFx0PHNwYW4+XG5cdFx0XHRcdFx0PGFcblx0XHRcdFx0XHRcdGhyZWY9e2BodHRwczovL3R3aXR0ZXIuY29tL2ludGVudC90d2VldD90ZXh0PSR7dGl0bGV9JnVybD1odHRwczovL2lhbW5hYmlsLm5ldGxpZnkuYXBwJHtwYXRofSZoYXNodGFncz0ke3RhZ3N9YH1cblx0XHRcdFx0XHQ+XG5cdFx0XHRcdFx0XHR7bGFuZyA9PT0gJ2FyJyA/ICfYutix2K8g2YfYsNmHINin2YTZhdmC2KfZhNipJyA6ICdUd2VldCBUaGlzJ31cblx0XHRcdFx0XHQ8L2E+XG5cdFx0XHRcdDwvc3Bhbj5cblx0XHRcdFx0PGgxIGNsYXNzTmFtZT0nbXQtMCBtYi00Jz57dGl0bGV9PC9oMT5cblx0XHRcdDwvZGl2PlxuXG5cdFx0XHQ8YXJ0aWNsZSBkaXI9e2Rpcn0+XG5cdFx0XHRcdDxSZWFjdE1hcmtkb3duIHJlbmRlcmVycz17cmVuZGVyZXJzfSBhbGxvd0Rhbmdlcm91c0h0bWw+XG5cdFx0XHRcdFx0e2h0bWx9XG5cdFx0XHRcdDwvUmVhY3RNYXJrZG93bj5cblx0XHRcdDwvYXJ0aWNsZT5cblx0XHQ8Lz5cblx0KVxufVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0U3RhdGljUHJvcHMoeyBwYXJhbXM6IHsgc2x1ZyB9IH0pIHtcblx0Y29uc3QgcG9zdCA9IGdldFBvc3RCeVNsdWcoc2x1ZylcblxuXHRwb3N0LmZyb250bWF0dGVyLmRhdGUgPSBmb3JtYXREYXRlKFxuXHRcdHBvc3QuZnJvbnRtYXR0ZXIuZGF0ZSxcblx0XHRwb3N0LmZyb250bWF0dGVyLmxhbmdcblx0KVxuXG5cdHJldHVybiB7XG5cdFx0cHJvcHM6IHtcblx0XHRcdC4uLnBvc3Rcblx0XHR9XG5cdH1cbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFN0YXRpY1BhdGhzKCkge1xuXHRjb25zdCBwYXRocyA9IGdldEFsbFNsdWdzKCkubWFwKHNsdWcgPT4gKHtcblx0XHRwYXJhbXM6IHsgc2x1Zzogc2x1Zy5yZXBsYWNlKCcubWQnLCAnJykgfVxuXHR9KSlcblxuXHRyZXR1cm4ge1xuXHRcdHBhdGhzLFxuXHRcdGZhbGxiYWNrOiBmYWxzZVxuXHR9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9

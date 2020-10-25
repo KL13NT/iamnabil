@@ -5,13 +5,13 @@ const classes = 'text-xl lowercase ml-8 no-underline bg-transparent'
 
 const Navbar = () => {
 	return (
-		<nav className='flex w-full justify-between'>
+		<nav className='flex w-full justify-between flex-wrap'>
 			<Link href='/'>
 				<a className='text-xl font-bold no-underline bg-transparent'>
 					Nabil Tharwat
 				</a>
 			</Link>
-			<div className='flex'>
+			<div className='flex flex-wrap'>
 				<Link href='/blog'>
 					<a className={classes}>Blog</a>
 				</Link>

@@ -17,7 +17,7 @@ Have you ever expected a deeply nested property of an object to be there but was
 
 Let's imagine 3 deeply nested objects in each other in the following form, our goal is to get the length of the string `mystring`:
 
-```js
+```javascript
 const obj = {
 	foo: {
 		bar: {
@@ -31,7 +31,7 @@ const mystringLength = obj.foo.bar.mystring.length
 
 The problem is that sometimes we may not always know that `mystring`, `bar`, `foo`, or even `obj` actually exist. That's why we would settle for an `if` condition that may look like the following:
 
-```js
+```javascript
 let mystringLength
 if (object && object.foo && object.foo.bar && object.foo.bar.mystring)
 	mystringLength = object.foo.bar.mystring.length
@@ -39,7 +39,7 @@ if (object && object.foo && object.foo.bar && object.foo.bar.mystring)
 
 or even a ternary one!
 
-```js
+```javascript
 const mystringLength = obj
 	? obj.foo
 		? obj.foo.bar
@@ -72,7 +72,7 @@ You can read the full documentation for each stage in the [TC39 Process Document
 
 This is a new proposal for the language that's currently at Stage-3, meaning it's to be expected in modern browsers soon enough. This is what it looks like:
 
-```js
+```javascript
 const length = obj?.foo?.bar?.mystring?.length
 ```
 
@@ -80,7 +80,7 @@ It works by checking the validity of the preceding expression. If it encounters 
 
 It can also be used dynamically or with optional method calls!
 
-```js
+```javascript
 //Dynamic property names
 const mystring = 'someObjectProperty'
 const optionLength = obj?.foo?.bar?.preferences?.[optionName]
@@ -99,7 +99,7 @@ First, you'll need to setup _Babel_ if you haven't done so yet. Full documentati
 
 After that, you'll need to install the _Babel_ operator plugin and add it to the config file:
 
-```js
+```javascript
 npm install --save-dev @babel/plugin-proposal-optional-chaining
 
 OR
@@ -109,7 +109,7 @@ yarn add -D @babel/plugin-proposal-optional-chaining
 
 Then in your `.babelrc` config file:
 
-```js
+```javascript
 {
   "plugins": ["@babel/plugin-proposal-optional-chaining"]
 }
@@ -121,7 +121,7 @@ Read the full documentation for the plugin here: [@babel/plugin-proposal-optiona
 
 You can use the `@babel/plugin-proposal-optional-chaining` plugin to use the new _Optional Chaining Operator_ currently at Stage-3 to access object properties that you're unsure about their actual existence in the following way:
 
-```js
+```javascript
 const length = obj?.foo?.bar?.mystring?.length
 //Dynamic property names
 const mystring = 'someObjectProperty'

@@ -3,9 +3,12 @@ import React from 'react'
 import { Post } from './Post'
 
 export const PostList = ({ posts }) => (
-	<ul className='c-postList'>
+	<ul className='mt-12'>
 		{posts.map(post => (
-			<Post {...post} />
+			<>
+				<Post {...post} />
+				<hr />
+			</>
 		))}
 	</ul>
 )

@@ -9,7 +9,6 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:react-hooks/recommended',
 		'plugin:jsx-a11y/recommended'
 	],
 	parser: 'babel-eslint',
@@ -21,7 +20,7 @@ module.exports = {
 			experimentalObjectRestSpread: true
 		}
 	},
-	plugins: ['react', 'jsx-a11y', 'sort-destructure-keys', 'react-hooks'],
+	plugins: ['react', 'jsx-a11y'],
 	rules: {
 		indent: 0,
 		'linebreak-style': 0,
