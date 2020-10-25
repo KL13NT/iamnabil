@@ -38,6 +38,40 @@ function SEO({
 			<meta content='@Nabil_Tharwat16' property='twitter:site' />
 			<meta content={ogImageUrl} property='twitter:image' />
 			<html lang='en-GB' />
+
+			{/* ICONS */}
+
+			<link
+				rel='apple-touch-icon'
+				sizes='180x180'
+				href='/icons/apple-touch-icon.png'
+			/>
+			<link
+				rel='icon'
+				type='image/png'
+				sizes='32x32'
+				href='/icons/favicon-32x32.png'
+			/>
+			<link
+				rel='icon'
+				type='image/png'
+				sizes='16x16'
+				href='/icons/favicon-16x16.png'
+			/>
+			<link rel='manifest' href='/icons/site.webmanifest' />
+			<link
+				rel='mask-icon'
+				href='/icons/safari-pinned-tab.svg'
+				color='#5bbad5'
+			/>
+			<link rel='shortcut icon' href='/icons/favicon.ico' />
+			<meta name='msapplication-TileColor' content='#f3f7f9' />
+			<meta
+				name='msapplication-TileImage'
+				content='/icons/mstile-144x144.png'
+			/>
+			<meta name='msapplication-config' content='/icons/browserconfig.xml' />
+			<meta name='theme-color' content='#ffffff' />
 		</Head>
 	)
 }

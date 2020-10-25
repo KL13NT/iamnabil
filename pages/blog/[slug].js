@@ -38,8 +38,6 @@ export default function PostTemplate({ html, frontmatter }) {
 	const { lang, date, tags, title, path } = frontmatter
 	const dir = lang === 'ar' ? 'rtl' : null
 
-	console.log(html)
-
 	return (
 		<>
 			<SEO {...frontmatter} />
