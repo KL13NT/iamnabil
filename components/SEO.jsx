@@ -3,19 +3,15 @@ import Head from 'next/head'
 
 const hostname = 'https://iamnabil.netlify.app'
 
-const defaultTitle = 'Blog'
+const defaultTitle = 'Nabil Tharwat'
 const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
 const defaultOGImagePath = '/og.png'
 const defaultPath = '/'
 
-function SEO({
-	title = defaultTitle,
-	description = defaultDescription,
-	path = defaultPath
-}) {
+function SEO({ title, description = defaultDescription, path = defaultPath }) {
 	const ogImageUrl = `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}${path}`
-	const finalTitle = title + ' | Nabil Tharwat'
+	const finalTitle = title ? title + ' | Nabil Tharwat' : defaultTitle
 	const fullDescription = `${description}`
 
 	return (

@@ -8,7 +8,7 @@ import { getAllPosts } from '../api'
 export default function Blog({ posts }) {
 	return (
 		<>
-			<SEO />
+			<SEO title='Blog' />
 			<h1>Thoughts</h1>
 			<p>
 				These are not entirely thoughts. Some of them written in Arabic, others
