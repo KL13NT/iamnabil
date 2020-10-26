@@ -4,8 +4,8 @@ import Head from 'next/head'
 const hostname = 'https://iamnabil.netlify.app'
 
 const defaultTitle = 'Blog'
-const defaultDescription = 'Front-End Engineer, Blogger, Mentor'
-const defaultOGImagePath = '/oggeneral.png'
+const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
+const defaultOGImagePath = '/og.png'
 const defaultPath = '/'
 
 function SEO({
