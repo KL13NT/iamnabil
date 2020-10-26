@@ -1,15 +1,12 @@
 ---
-path: time-management-2
+path: how-i-manage-my-time-as-student-developer
 date: 2019-12-05
 title: 'How I Manage My Time as a Student-Developer - Part 2'
-description: "In this article I'll explore my time management habits. Part 2."
-introduction: "Negative influences are things that keep us from reaching our goals, and making a better life for ourselves. It's a hindrance to our performance and should be handled with strong arms."
-image: TimeManagement.jpg
+description: "Negative influences are things that keep us from reaching our goals, and making a better life for ourselves. It's a hindrance to our performance and should be handled with strong arms."
 lang: 'en'
-tags: ['Lifestyle', 'Productivity']
 ---
 
-This is a two-part article. Part 1 is available [here](/blog/time-management-1)
+This is a two-part article. Part 1 is available [here](/blog/2019-12-05-how-i-manage-my-time-as-student-developer)
 
 ## A note on negative influences
 

@@ -3,10 +3,7 @@ path: tutorial-purgatory
 date: 2019-07-11
 title: 'Tutorial Purgatory'
 description: "Tutorial Purgatory is a curse that haunts every newbie developer, here's how to escape it."
-introduction: "Tutorial purgatory is defined as the act of going from a tutorial to another without practically learning anything. This is not limited to coding only, but I'll stick to the coding part of the equation."
-image: TutorialPurgatory.jpg
 lang: 'en'
-tags: ['Self Development', 'Tutorials']
 ---
 
 Tutorial Purgatory

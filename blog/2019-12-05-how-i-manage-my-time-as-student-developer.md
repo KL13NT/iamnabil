@@ -1,12 +1,9 @@
 ---
-path: time-management-1
+path: how-i-manage-my-time-as-student-developer
 date: 2019-12-05
 title: 'How I Manage My Time as a Student-Developer - Part 1'
-description: "In this article I'll explore my time management habits. Part 1."
-introduction: "Time management can be a terrible experience, especially if you're a student and don't know how to do it properly. Hopefully by the end of this article you'll be able to manage your time well."
-image: TimeManagement.jpg
+description: "Time management can be a terrible experience, hopefully by the end of this article you'll have more insight into my routine."
 lang: 'en'
-tags: ['Lifestyle', 'Productivity']
 ---
 
 Time management can be a terrible experience, especially if you're a student and don't know how to do it properly. You may even be depressed because of how your time 'flies' away, wasted. Hopefully by the end of this you'll be able to manage your time well, or have a foundation to build upon. I'm not going into proving anything, instead, I'll be sharing my experience.
@@ -71,7 +68,7 @@ One of the very first steps is to measure exactly how you spend your time. How l
 
 To create my time-audit, I begin by creating a new note on my phone when I wake up. This note will have a list of everything I do during the day. There are apps that track your work, but I go with the manual method for this one.
 
-![My time audit for half a day](/IMG_20191205_093509.png)
+![My time audit for half a day](//IMG_20191205_093509.png)
 
 This is a sample time audit. You can see I'm even logging breakfast. This is essential. At the end of the day, I'll be able to recognise how my time was spent and what I need to do more efficiently. You can do this too. Do it for a few days, then check how you spend time and decide how you can improve.
 

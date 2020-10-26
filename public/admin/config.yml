@@ -20,34 +20,10 @@ collections:
           format: 'YYYY-MM-DD',
         }
       - {
-          label: 'Featured Image (Image to use as header)',
-          name: 'image',
-          widget: 'string',
-        }
-      - {
-          label: 'Featured Image Caption (Add description of image and source/artist)',
-          name: 'imageCaption',
-          widget: 'string',
-        }
-      - {
-          label: 'Featured Image Alt (Add alternative text of image)',
-          name: 'imageAlt',
-          widget: 'string',
-        }
-      - {
           label: 'Description (60 char)',
           name: 'description',
           widget: 'string',
         }
-      - {
-          label: 'Introduction (What do display in post list)',
-          name: 'introduction',
-          widget: 'string',
-        }
-      - { label: 'Language (ar, en)', name: 'lang', widget: 'string' }
-      - {
-          label: 'Tags (Array of capitalised strings)',
-          name: 'tags',
-          widget: 'list',
-        }
+      - { label: 'Language (ar, en) lowercase', name: 'lang', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
