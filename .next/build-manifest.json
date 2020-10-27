@@ -23,6 +23,21 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/confirmed": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/confirmed.js"
+    ],
+    "/goodbye": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/goodbye.js"
+    ],
+    "/newsletter": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/newsletter.js"
     ]
   },
   "ampFirstPages": []
