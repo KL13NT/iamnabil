@@ -24,20 +24,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/confirmed": [
+    "/blog": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/confirmed.js"
+      "static/chunks/pages/blog.js"
     ],
-    "/goodbye": [
+    "/blog/[slug]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/goodbye.js"
-    ],
-    "/newsletter": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/newsletter.js"
+      "static/chunks/pages/blog/[slug].js"
     ]
   },
   "ampFirstPages": []

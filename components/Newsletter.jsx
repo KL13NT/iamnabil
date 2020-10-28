@@ -14,7 +14,7 @@ export default function Newsletter() {
 					name='mc-embedded-subscribe-form'
 					className='validate'
 					target='_blank'
-					novalidate
+					noValidate
 				>
 					<div id='mc_embed_signup_scroll'>
 						<h3 className='bg-transparent text-black text-center mt-4 mx-auto'>
@@ -23,7 +23,7 @@ export default function Newsletter() {
 						<p className='text-center mt-2'>Subscribe to my newsletter!</p>
 						<div className='flex flex-wrap justify-evenly mt-4'>
 							<div className='mc-field-group mt-4 lg:mt-0'>
-								<label for='mce-FNAME' className='block'>
+								<label htmlFor='mce-FNAME' className='block'>
 									First Name
 								</label>
 								<input
@@ -36,7 +36,7 @@ export default function Newsletter() {
 								/>
 							</div>
 							<div className='mc-field-group mt-4 lg:mt-0'>
-								<label for='mce-EMAIL' className='block'>
+								<label htmlFor='mce-EMAIL' className='block'>
 									Email Address
 								</label>
 								<input
@@ -52,12 +52,11 @@ export default function Newsletter() {
 						<div id='mce-responses' className='clear'>
 							<div className='response hidden' id='mce-error-response'></div>
 							<div className='response hidden' id='mce-success-response'></div>
-							<div classNameName='invisible' aria-hidden='true'>
+							<div className='invisible' aria-hidden='true'>
 								<input
 									type='text'
 									name='b_74ad345e428279b3147350326_cdc5fd5c4c'
-									tabindex='-1'
-									value=''
+									tabIndex='-1'
 									className='hidden'
 								/>
 							</div>

@@ -6,7 +6,7 @@ export const PostList = ({ posts }) => (
 	<ul className='mt-12'>
 		{posts.map(post => (
 			<>
-				<Post {...post} />
+				<Post {...post} key={post.frontmatter.path} />
 				<hr />
 			</>
 		))}
