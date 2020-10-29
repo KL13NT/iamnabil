@@ -8,19 +8,25 @@ const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
 const defaultOGImagePath = '/og.png'
 const defaultPath = '/'
 
-function SEO({ title, description = defaultDescription, path = defaultPath }) {
+function SEO({
+	title,
+	lang,
+	description = defaultDescription,
+	path = defaultPath
+}) {
 	const ogImageUrl = `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}${path}`
-	const finalTitle = title ? title + ' | Nabil Tharwat' : defaultTitle
-	const fullDescription = `${description}`
+	const finalTitle = title
+		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
+		: defaultTitle
 
 	return (
 		<Head>
 			<title>{finalTitle}</title>
 			<meta content={finalTitle} property='og:title' />
 			<meta content='website' property='og:type' />
-			<meta content={fullDescription} name='description' />
-			<meta content={fullDescription} property='og:description' />
+			<meta content={description} name='description' />
+			<meta content={description} property='og:description' />
 			<meta content={url} property='og:url' />
 			<meta content='Nabil Tharwat' property='og:site_name' />
 			<meta content={ogImageUrl} property='og:image' />
@@ -29,7 +35,7 @@ function SEO({ title, description = defaultDescription, path = defaultPath }) {
 			<meta content={ogImageUrl} property='og:image:secure_url' />
 			<meta content='summary_large_image' name='twitter:card'></meta>
 			<meta content={finalTitle} property='twitter:title' />
-			<meta content={fullDescription} property='twitter:description' />
+			<meta content={description} property='twitter:description' />
 			<meta content='@Nabil_Tharwat' property='twitter:creator' />
 			<meta content='@Nabil_Tharwat16' property='twitter:site' />
 			<meta content={ogImageUrl} property='twitter:image' />
