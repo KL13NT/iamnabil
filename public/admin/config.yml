@@ -1,5 +1,5 @@
 publish_mode: editorial_workflow
-media_folder: 'blog'
+media_folder: 'public'
 public_folder: '/'
 backend:
   name: git-gateway
