@@ -45,4 +45,4 @@ category: هندسة البرمجيات
 
 >اذا وجدت نفسك في فريق ومشروع ذو جودة عالية فمن المرجح ان يزيد اهتمامك بذلك المشروع حتى لا تكون اول من يُفسدها.
 > 
-> <cite dir="ltr" style="text-align: left">— The Pragmatic Programmer</cite>
+> <cite>— من كتاب The Pragmatic Programmer</cite>
