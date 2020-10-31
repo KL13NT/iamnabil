@@ -1,5 +1,5 @@
 ---
-title: تعفن البرمجيات
+title: تعفُّن البرمجيات
 path: software-entropy
 date: 2020-10-31
 description: كيف تتعفن البرمجيات وهل من الممكن تجنب ذلك؟
