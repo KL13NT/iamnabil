@@ -5,19 +5,20 @@ module.exports = {
 		removeDeprecatedGapUtilities: true,
 		purgeLayersByDefault: true
 	},
-	purge: [
-		'./pages/**/*.js',
-		'./pages/**/*.jsx',
-		'./components/**/*.js',
-		'./components/**/*.jsx'
-	],
+	// purge: [
+	// 	'./pages/**/*.js',
+	// 	'./pages/**/*.jsx',
+	// 	'./components/**/*.js',
+	// 	'./components/**/*.jsx'
+	// ],
 	theme: {
 		extend: {
 			colors: {
 				accent: '#F3F3F3',
 				shadow: '#1F1F1F',
 				link: '#FACF90',
-				code: '#2d2b57'
+				code: '#2d2b57',
+				'dark-700': '#393939'
 			},
 			maxWidth: {
 				min: 'min-content',

@@ -1,0 +1,157 @@
+## Background
+
+**Lots** of people face discrimination because of their skin colour, religious beliefs, political views, origins, and gender.
+
+People struggle to keep a happy life and deal with mental and psychological damage because of discrimination. It's time for a change.
+
+## Technology stack
+
+- AWS EC2
+- NodeJS
+- MongoDB & Mongoose
+- Joi
+- Redis
+- GraphQL (Apollo-Express)
+
+* React
+* Zustand
+* Storybook
+* Urql
+* Cypress
+* Sass
+* Webpack
+
+I coupled this stack with Firebase Authentication and used Trello in addition to GitHub. I also setup TravisCI for frontend code alongside Jest and ESLint to make sure new code 'just works'.
+
+> Sadly this project never made it to production because it costs a lot for a student like myself. 😅
+
+## Challenges
+
+Discriminatory was my most ambitious project yet. It was the first time I build a full GraphQL API with authentication, authorisation, and rate-limiting. It was also my first time working with the AWS platform, provided I'm a frontend developer!
+
+- Localising this React monolith
+- Providing more enjoyable user experience
+- Speeding up the GraphQL API (which was _really_ slow at first, and responded in an average of 10 seconds)
+
+### Localising this React monolith
+
+For this, I had to use _react-intl_ (Format.JS), combined with static JSON that corresponded to each page. I didn't version those JSON files, so it was wiser not to cache them. Each view/page loaded its JSON Localisation files and passed it dynamically to the _react-intl_ provider by updating the localisation store.
+
+### Providing an awesome user experience
+
+Researching date pickers, custom dropdown select list, and custom input fields lead me to the conclusion that the React ecosystem overflows with over-engineered and poorly-maintained utilities that introduce more problems than they solve.
+
+> One would expect a 100KB (gzipped!) select dropdown downloaded 2.5M times a week to be _at least_ accessible to some extent, but you'd be **so wrong**.
+
+So I opted for a custom component library. I built all components from scratch and tested their accessibility using ESLint _jsx-a11y_ and _react-axe_.
+
+I mostly used the browsers' default. That harmed the _uniqueness_ of the website a bit but provided a more familiar way of doing things. It also allowed me to boost the performance of components on low-end devices since the interfaces are built-in 😉.
+
+### Speeding up the GraphQL API
+
+The API had an average response time of ~10 seconds. Slow Mongoose queries contributed most of it, and GraphQL query validation was another bottleneck. I benchmarked using _autocannon_.
+
+```
+type Post {
+  # Some simple types
+  author: User
+  location: Location!
+  reactions: ReactionData!
+  comments: [Comment!]!
+}
+
+type Comment {
+	# Some simple types
+	author: User
+}
+```
+
+Each of those fields started a sub-query which potentially had another, deeper sub-query.
+
+- Location went for the Location collection to fetch specific information about each post.
+- Reactions fetched, aggregated, and compiled data for easy reactions display like on Facebook.
+- A comment `Comment` had an author `User` sub-query, and each author had things like member `Badges` that acted as a sub-query.
+
+Now repeat this for 20 posts per screen, per user. The API was crying. So I had to change a bunch of stuff.
+
+- Mongoose by default wraps all query results in `Document` objects to populate methods that allow for further interaction with models. I didn't need that in most cases, so the _lean()_ option was perfect. That cut average query time _in half_.
+
+- An author may have a post and a few comments on that post. Caching their `User` objects cut down on both memory and database load.
+
+- Caching user feeds improved responses greatly, a user would get the same posts over a period of time before updating their cache, instead of re-compiling their feed on every refresh.
+
+- JIT compiling GraphQL queries also cut down a lot of the left-over delay. With this change, Apollo doesn't need to re-validate previous queries anymore.
+
+- Rate limiting requests also cut down on API load.
+
+## Results
+
+Results were more than fascinating!
+
+- The whole frontend was less than a megabyte! Thanks to Webpack chunking, route-based code-splitting, and the custom components that cut down on the number of external dependencies the project depended on React, Zustand, and Urql only! Add client-side caching to this and voila, instant loading!
+
+- The API's average response time was down to `<1s` in the worst case, and repeated requests such as the home feed and reactions were down to `<100ms` because of the caching mechanisms I set in place!
+
+## Conclusions
+
+Like I said, my most ambitious project yet. Working on this project made me see a bigger picture I wasn't aware. It allowed me to learn new experiences in things like GraphQL JIT, scalability, project management, risk management and mitigation, and more. I'm happy I worked on this and would love to do it again!
+
+## Screenshots
+
+![The landing page](/discriminatory/1.png)
+
+<p align='center'>The landing page</p>
+
+![Arabic registration page](/discriminatory/4.png)
+
+<p align='center'>Arabic registration page</p>
+
+![Complete profile page](/discriminatory/6.png)
+
+<p align='center'>Complete profile page</p>
+
+![Unregistered user settings](/discriminatory/8.png)
+
+<p align='center'>Unregistered user settings</p>
+
+![Custom file upload component](/discriminatory/9.png)
+
+<p align='center'>Custom file upload component</p>
+
+![Home page of user with no posts in feed](/discriminatory/10.png)
+
+<p align='center'>Home page of user with no posts in feed</p>
+
+![Profile of user with 0 posts](/discriminatory/11.png)
+
+<p align='center'>Profile of user with 0 posts</p>
+
+![Profile with 1 post, comments expanded](/discriminatory/12.png)
+
+<p align='center'>Profile with 1 post, comments expanded</p>
+
+![Loading screen](/discriminatory/13.png)
+
+<p align='center'>
+	Loading screen (there are multiple loading screens actually)
+</p>
+
+![Profile editor screen](/discriminatory/14.png)
+
+<p align='center'>Profile editor screen</p>
+
+![You can follow other users to get their posts in your feed](/discriminatory/16.png)
+
+<p align='center'>You can follow other users to get their posts in your feed</p>
+
+![You can disable ads in the settings](/discriminatory/18.png)
+
+<p align='center'>You can disable ads in the settings</p>
+
+![Location search](/discriminatory/19.png)
+
+<p align='center'>Location search</p>
+
+![You can delete posts and pin posts to your profile](/discriminatory/20.png)
+
+<p align='center'>You can delete posts and pin posts to your profile</p>
