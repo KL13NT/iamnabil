@@ -5,12 +5,14 @@ module.exports = {
 		removeDeprecatedGapUtilities: true,
 		purgeLayersByDefault: true
 	},
-	// purge: [
-	// 	'./pages/**/*.js',
-	// 	'./pages/**/*.jsx',
-	// 	'./components/**/*.js',
-	// 	'./components/**/*.jsx'
-	// ],
+	purge: [
+		'./pages/**/*.js',
+		'./pages/**/*.jsx',
+		'./components/**/*.js',
+		'./components/**/*.jsx',
+		'./components/**/*.mdx',
+		'./pages/**/*.mdx'
+	],
 	theme: {
 		extend: {
 			colors: {
