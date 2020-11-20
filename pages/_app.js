@@ -27,7 +27,12 @@ const CustomLink = ({ href, ...props }) => {
 const CustomImg = ({ src, ...props }) => {
 	return (
 		<a href={src}>
-			<img src={src} {...props} />
+			<img
+				src={src}
+				{...props}
+				loading='lazy'
+				className='text-center mx-auto'
+			/>
 		</a>
 	)
 }

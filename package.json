@@ -17,9 +17,7 @@
 		"react-helmet": "^5.2.1",
 		"react-markdown": "^5.0.2",
 		"react-syntax-highlighter": "^15.2.1",
-		"tailwindcss": "^1.9.6"
-	},
-	"devDependencies": {
+		"tailwindcss": "^1.9.6",
 		"@babel/plugin-proposal-class-properties": "^7.4.4",
 		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
 		"@babel/plugin-proposal-optional-chaining": "^7.10.1",
