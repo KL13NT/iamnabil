@@ -21,7 +21,7 @@ const CustomLink = ({ href, ...props }) => {
 		)
 	}
 
-	return <a {...props} />
+	return <a href={href} {...props} />
 }
 
 const CustomImg = ({ src, ...props }) => {
