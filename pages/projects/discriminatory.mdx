@@ -43,7 +43,7 @@ Discriminatory was my most ambitious project yet. It was the first time I build 
 
 ### Localising this React monolith
 
-For this, I had to use _react-intl_ (Format.JS), combined with static JSON that corresponded to each page. I didn't version those JSON files, so it was wiser not to cache them. Each view/page loaded its JSON Localisation files and passed it dynamically to the _react-intl_ provider by updating the localisation store.
+For this, I had to use _react-intl_ (Format.JS). _react-intl_ uses JSON objects to process translation `messages`. Instead of creating a localisation API endpoint I opted for build-time compiled JSON files. This, combined with cdn and client-side caching, saved a lot of resources both on the server and the client. Each view/page loaded its JSON localisation files and passed them dynamically to the _react-intl_ provider by updating the localisation store.
 
 ### Providing an awesome user experience
 
