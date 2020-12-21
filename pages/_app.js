@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-has-content */
+import React from 'react'
+
 import Link from 'next/link'
 
 import { MDXProvider } from '@mdx-js/react'
@@ -50,6 +54,7 @@ function App({ Component, pageProps }) {
 					href={link}
 					className='underline'
 					target='_blank'
+					rel='noreferrer'
 					referrerPolicy='no-referrer'
 				>
 					# Boycott France

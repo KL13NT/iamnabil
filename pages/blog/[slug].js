@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 
@@ -15,10 +16,10 @@ const renderers = {
 			<SyntaxHighlighter
 				style={shadesOfPurple}
 				language={language}
-				children={value}
 				showLineNumbers
-				children={value}
-			/>
+			>
+				{value}
+			</SyntaxHighlighter>
 		)
 	},
 	pre: ({ language, value }) => {
@@ -26,10 +27,10 @@ const renderers = {
 			<SyntaxHighlighter
 				style={shadesOfPurple}
 				language={language}
-				children={value}
 				showLineNumbers
-				children={value}
-			/>
+			>
+				{value}
+			</SyntaxHighlighter>
 		)
 	}
 }
