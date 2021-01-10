@@ -31,7 +31,7 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"develop": "next dev",
+		"dev": "next dev",
 		"build": "next build && next export",
 		"start": "next start",
 		"format": "prettier --write src/**/*.{js,jsx}",
