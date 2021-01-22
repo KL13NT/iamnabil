@@ -3,8 +3,6 @@ import matter from 'gray-matter'
 import { readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 
-import { sortByDate } from './utils'
-
 const postsDirectory = join(process.cwd(), 'blog')
 
 export function getAllSlugs() {
@@ -28,11 +26,11 @@ export function getPostBySlug(slug) {
 	}
 }
 
-export function getAllPosts(sorter) {
+export function getAllPosts() {
 	const slugs = getAllSlugs()
 	const posts = slugs
 		.map(slug => getPostBySlug(slug))
-		.sort(sorter || sortByDate)
+		.sort((post1, post2) => (post1.date > post2.date ? 1 : -1))
 
 	return posts
 }
