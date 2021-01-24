@@ -49,3 +49,5 @@ category: tutorial
 > اتأكدوا ان في الصفحة الرئيسية للاكستنشن مختارين Use Enabled Proxies By Patterns and Order. 
 
 ![Use Enabled Proxies By Patterns and Order](https://i.imgur.com/vD8QCiN.png)
+
+لو في اسئلة تقدروا تبعتوهالي في اي حته :"D
