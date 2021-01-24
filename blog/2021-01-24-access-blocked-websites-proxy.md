@@ -1,5 +1,5 @@
 ---
-title: كيفية الدخول على المواقع المحجوبة
+title: مشكلة Medium وحل سريع
 path: access-blocked-websites-proxy
 date: 2021-01-24
 description: ناس كتير (من ضمنهم انا) بيشتكوا من موضوع ان مواقع زي Medium مقفوله
