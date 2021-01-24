@@ -20,3 +20,32 @@ category: tutorial
 # FoxyProxy Standard
 الطريقة بقى عن طريق addon للمتصفحات اسمها FoxyProxy Standard, الاكستنشن دي بقالها في السوق سنين طويلة, وناس كتير بيشكروا فيها. 
 
+1- اول ما تحملوا الاكستنشن هتفتح صفحة الـ about, تقدروا تقفلوها وتفتحوا اعدادات الاكستنشن بنفسكم او تنزلوا تحت خالص تدوسوا على `back`.
+
+![About page](https://i.imgur.com/BuJEcVN.png)
+
+2- هيظهر قدامكم الشكل ده, دلوقتي دوسوا على Add 
+
+![Options page](https://i.imgur.com/4GEJjSB.png)
+
+3- هيفتح صفحة الـ Add Proxy اللي من خلالها هنضيف بروكسي جديد
+
+![Add proxy](https://i.imgur.com/hVcEAqu.png)
+
+4- هتفتحوا موقع من الاتنين دول (او اي reference عارفينه) وتاخدوا الـ IP والـ Port بتوع اي بروكسي قدامكم. لازم يكون نوعه HTTP/HTTPS ويُفضّل يبقى الـ Speed بتاعته قليله (اخضر, ده ping مش سرعة حقيقية).
+
+![Proxy list](https://i.imgur.com/2BK7joK.png)
+
+5- هتاخدوا الـ IP والـ Port وتكتبوهم في صفحة الـ Add في الخطوة رقم 3
+
+![After adding data](https://i.imgur.com/mwQYhp3.png)
+
+6- بعد كده هتدوسوا على Save & Edit Patterns. هيفتحلكوا الصفحة دي. من خلالها هتكتبوا medium.com في الـ pattern وبعد كده Save
+
+![Last step](https://i.imgur.com/0lMpMNb.png)
+
+ممكن تحتاجوا تعملوا ريستارت للمتصفح, بس كده.  
+
+> اتأكدوا ان في الصفحة الرئيسية للاكستنشن مختارين Use Enabled Proxies By Patterns and Order. 
+
+![Use Enabled Proxies By Patterns and Order](https://i.imgur.com/vD8QCiN.png)
