@@ -34,6 +34,9 @@ category: مقتطفات
 
 4- هتفتحوا موقع من الاتنين دول (او اي reference عارفينه) وتاخدوا الـ IP والـ Port بتوع اي بروكسي قدامكم. لازم يكون نوعه HTTP/HTTPS ويُفضّل يبقى الـ Speed بتاعته قليله (اخضر, ده ping مش سرعة حقيقية).
 
+[Hide My Name](https://hidemy.name/en/proxy-list)
+[Free Proxy Lists](http://www.freeproxylists.net)
+
 ![Proxy list](https://i.imgur.com/2BK7joK.png)
 
 5- هتاخدوا الـ IP والـ Port وتكتبوهم في صفحة الـ Add في الخطوة رقم 3
