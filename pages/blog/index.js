@@ -1,9 +1,9 @@
 import React from 'react'
 
-import SEO from '../components/SEO'
+import SEO from '../../components/SEO'
 
-import { PostList } from '../components/PostList'
-import { getAllPosts } from '../api'
+import { PostList } from '../../components/PostList'
+import { getAllPosts } from '../../api'
 
 export default function Blog({ posts }) {
 	return (
@@ -31,5 +31,5 @@ export async function getStaticProps() {
 }
 
 export const config = {
-  unstable_runtimeJS: false
+	unstable_runtimeJS: false
 }

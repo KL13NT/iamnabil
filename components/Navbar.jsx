@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import Link from 'next/link'
 
@@ -14,6 +15,9 @@ const Navbar = () => {
 			<div className='flex flex-wrap'>
 				<Link href='/blog'>
 					<a className={classes}>Blog</a>
+				</Link>
+				<Link href='/tutorials'>
+					<a className={classes}>Tutorials</a>
 				</Link>
 				<Link href='/projects'>
 					<a className={classes}>Projects</a>

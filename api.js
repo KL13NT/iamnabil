@@ -4,14 +4,20 @@ import { readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 
 const postsDirectory = join(process.cwd(), 'blog')
+const tutorialsDirectory = join(process.cwd(), 'tutorials')
 
-export function getAllSlugs() {
-	return readdirSync(postsDirectory).filter(path => path.endsWith('.md'))
+export function getAllSlugs(filter = 'blog') {
+	return readdirSync(
+		filter === 'blog' ? postsDirectory : tutorialsDirectory
+	).filter(path => path.endsWith('.md'))
 }
 
-export function getPostBySlug(slug) {
+export function getPostBySlug(slug, filter = 'blog') {
 	const filename = slug.replace(/\.md$/, '')
-	const path = join(postsDirectory, `${filename}.md`)
+	const path = join(
+		filter === 'blog' ? postsDirectory : tutorialsDirectory,
+		`${filename}.md`
+	)
 	const text = readFileSync(path, 'utf-8')
 
 	const { data, content } = matter(text)
@@ -26,10 +32,10 @@ export function getPostBySlug(slug) {
 	}
 }
 
-export function getAllPosts() {
-	const slugs = getAllSlugs()
+export function getAllPosts(filter = 'blog') {
+	const slugs = getAllSlugs(filter)
 	const posts = slugs
-		.map(slug => getPostBySlug(slug))
+		.map(slug => getPostBySlug(slug, filter))
 		.sort((post1, post2) => (post1.date > post2.date ? 1 : -1))
 
 	return posts
