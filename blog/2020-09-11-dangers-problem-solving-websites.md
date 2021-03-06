@@ -1,6 +1,5 @@
 ---
 title: مخاطر مواقع الـ Problem Solving — اسباب وحلول
-path: dangers-problem-solving-websites
 date: 2020-09-11
 description: مواقع الـ Problem Solving من اخطر المواقع اللي ممكن مبتدئ يستعملها. الاسباب والحلول.
 lang: ar

@@ -1,5 +1,4 @@
 ---
-path: how-i-manage-my-time-as-student-developer
 date: 2019-12-05
 title: 'How I Manage My Time as a Student-Developer - Part 1'
 description: "Time management can be a terrible experience, hopefully by the end of this article you'll have more insight into my routine."

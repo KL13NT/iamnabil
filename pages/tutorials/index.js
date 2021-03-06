@@ -14,7 +14,7 @@ export default function Tutorials({ posts }) {
 				I post technical tutorials for frontend developers and students here.
 			</p>
 			<hr />
-			<PostList posts={posts} />
+			<PostList posts={posts} filter='tutorials' />
 		</>
 	)
 }

@@ -11,8 +11,8 @@ export default function Blog({ posts }) {
 			<SEO title='Blog' />
 			<h1>Thoughts</h1>
 			<p>
-				These are not entirely thoughts. Some of them written in Arabic, others
-				in English.
+				These are not entirely thoughts. Some of them are written in Arabic,
+				some others are available in English.
 			</p>
 			<hr />
 			<PostList posts={posts} />

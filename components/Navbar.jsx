@@ -6,13 +6,13 @@ const classes = 'text-xl lowercase ml-8 no-underline bg-transparent'
 
 const Navbar = () => {
 	return (
-		<nav className='flex w-full justify-between flex-wrap'>
+		<nav className='flex w-full justify-between flex-wrap flex-col md:flex-row'>
 			<Link href='/'>
 				<a className='text-xl font-bold no-underline bg-transparent'>
 					Nabil Tharwat
 				</a>
 			</Link>
-			<div className='flex flex-wrap'>
+			<div className='flex flex-wrap flex-col md:flex-row'>
 				<Link href='/blog'>
 					<a className={classes}>Blog</a>
 				</Link>

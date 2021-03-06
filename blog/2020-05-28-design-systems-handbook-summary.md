@@ -1,5 +1,4 @@
 ---
-path: design-systems-handbook-summary
 date: 2020-05-28
 title: 'ملخص كتاب Design Systems Handbook'
 description: 'ملخصي لكتاب Design Systems Handbook لـ InVision'

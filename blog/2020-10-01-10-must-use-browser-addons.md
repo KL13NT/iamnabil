@@ -1,6 +1,5 @@
 ---
 title: 10 اضافات للمتصفحات لا غنى عنهم
-path: 10-must-use-browser-addons
 date: 2020-10-01
 description: شوية Addons للمتصفحات بتسهل حياتي جداً لا غنى عنهم ابداً
 lang: ar

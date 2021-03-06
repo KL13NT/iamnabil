@@ -1,6 +1,5 @@
 ---
 title: رحلتي في عالم البرمجة
-path: journey-in-programming-world
 date: 2020-07-14
 description: حابب استرجع معاكوا طريقي في البرمجة, من اول يوم عرفت ايه هي, لحد دلوقتي.
 lang: ar

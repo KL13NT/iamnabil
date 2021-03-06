@@ -9,10 +9,9 @@ collections:
     label: 'Tutorials' # Used in the UI
     folder: 'tutorials' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{path}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title (Make it catchy ;3)', name: 'title', widget: 'string' }
-      - { label: 'Path (Should not contain /)', name: 'path', widget: 'string' }
       - {
           label: 'Publish Date',
           name: 'date',
@@ -25,6 +24,8 @@ collections:
           widget: 'string',
         }
       - { label: 'Language (ar, en) lowercase', name: 'lang', widget: 'string' }
+      - { label: 'Translation link', name: 'translation',
+      widget: 'string', required: false }
       - { label: 'Category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -32,10 +33,9 @@ collections:
     label: 'Blog' # Used in the UI
     folder: 'blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{path}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title (Make it catchy ;3)', name: 'title', widget: 'string' }
-      - { label: 'Path (Should not contain /)', name: 'path', widget: 'string' }
       - {
           label: 'Publish Date',
           name: 'date',
@@ -48,5 +48,7 @@ collections:
           widget: 'string',
         }
       - { label: 'Language (ar, en) lowercase', name: 'lang', widget: 'string' }
+      - { label: 'Translation link', name: 'translation',
+      widget: 'string', required: false }
       - { label: 'Category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

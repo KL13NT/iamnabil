@@ -1,5 +1,4 @@
 ---
-path: 10-tips-for-problem-solving
 date: 2020-03-03
 title: '10 نصايح لل Problem Solving'
 description: 'في المقالة دي هشارك 10 نصائح بمشي عليهم في حل المشكلات'

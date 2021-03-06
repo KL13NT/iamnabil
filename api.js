@@ -18,6 +18,7 @@ export function getPostBySlug(slug, filter = 'blog') {
 		filter === 'blog' ? postsDirectory : tutorialsDirectory,
 		`${filename}.md`
 	)
+	console.log(path)
 	const text = readFileSync(path, 'utf-8')
 
 	const { data, content } = matter(text)

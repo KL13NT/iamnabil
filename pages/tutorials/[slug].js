@@ -65,7 +65,7 @@ export default function PostTemplate({ html, frontmatter }) {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-	const post = getPostBySlug(slug)
+	const post = getPostBySlug(slug, 'tutorials')
 
 	post.frontmatter.date = formatDate(
 		post.frontmatter.date,

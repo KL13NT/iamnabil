@@ -1,6 +1,5 @@
 ---
 title: عن غياب التعاطف في مؤسسات التعليم المصرية
-path: about-the-lack-of-sympathy-in-egyptian-educational-institutes
 date: 2020-10-29
 description: اردت ان اتحدث عما يحدث معي كطالب في "تالته حاسبات" حتى اوفر مرجِع لنفسي و غيري.
 lang: ar
