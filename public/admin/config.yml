@@ -1,54 +1,68 @@
 publish_mode: editorial_workflow
-media_folder: 'public'
+media_folder: public
 public_folder: '/'
+
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-collections:
-  - name: 'tutorials' # Used in routes, e.g., /admin/collections/blog
-    label: 'Tutorials' # Used in the UI
-    folder: 'tutorials' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: 'Title (Make it catchy ;3)', name: 'title', widget: 'string' }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          format: 'YYYY-MM-DD',
-        }
-      - {
-          label: 'Description (60 char)',
-          name: 'description',
-          widget: 'string',
-        }
-      - { label: 'Language (ar, en) lowercase', name: 'lang', widget: 'string' }
-      - { label: 'Translation link', name: 'translation',
-      widget: 'string', required: false }
-      - { label: 'Category', name: 'category', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  branch: master
 
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
-    label: 'Blog' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: 'Title (Make it catchy ;3)', name: 'title', widget: 'string' }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          format: 'YYYY-MM-DD',
-        }
-      - {
-          label: 'Description (60 char)',
-          name: 'description',
-          widget: 'string',
-        }
-      - { label: 'Language (ar, en) lowercase', name: 'lang', widget: 'string' }
-      - { label: 'Translation link', name: 'translation',
-      widget: 'string', required: false }
-      - { label: 'Category', name: 'category', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+collections:
+  - name: tutorials
+    label: Tutorials
+    folder: 'collections/tutorials'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+      - label: Description (60 char)
+        name: description
+        widget: string
+      - label: Language (ar, en) lowercase
+        name: lang
+        widget: string
+      - label: Translation link
+        name: translation
+        widget: string
+        required: false
+      - label: Category
+        name: category
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: blog
+    label: Blog
+    folder: 'collections/blog'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+      - label: Description (60 char)
+        name: description
+        widget: string
+      - label: Language (ar, en) lowercase
+        name: lang
+        widget: string
+      - label: Translation link
+        name: translation
+        widget: string
+        required: false
+      - label: Category
+        name: category
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown

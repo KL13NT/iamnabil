@@ -6,7 +6,7 @@ const hostname = 'https://iamnabil.netlify.app'
 const defaultTitle = 'Nabil Tharwat'
 const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
 const defaultOGImagePath = '/og.png'
-const defaultPath = '/'
+const defaultPath = ''
 
 function SEO({
 	title,
@@ -15,7 +15,7 @@ function SEO({
 	path = defaultPath
 }) {
 	const ogImageUrl = `${hostname}${defaultOGImagePath}`
-	const url = `${hostname}${path}`
+	const url = `${hostname}/${path}`
 	const finalTitle = title
 		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
 		: defaultTitle

@@ -1,27 +1,46 @@
 import matter from 'gray-matter'
 
 import { readFileSync, readdirSync } from 'fs'
-import { join } from 'path'
+import { join, resolve } from 'path'
 
-const postsDirectory = join(process.cwd(), 'blog')
-const tutorialsDirectory = join(process.cwd(), 'tutorials')
+const collections = join(process.cwd(), 'collections')
 
-export function getAllSlugs(filter = 'blog') {
-	return readdirSync(
-		filter === 'blog' ? postsDirectory : tutorialsDirectory
-	).filter(path => path.endsWith('.md'))
+/**
+ * @typedef {Object} Slug
+ * @property {String} path relative path from / without .md
+ * @property {String} slug file name with .md
+ */
+
+export function getAllSlugs(collection = 'blog') {
+	return readdirSync(`${collections}/${collection}`)
+		.filter(path => path.endsWith('.md'))
+		.map(slug => slug.replace('.md', ''))
 }
 
-export function getPostBySlug(slug, filter = 'blog') {
-	const filename = slug.replace(/\.md$/, '')
-	const path = join(
-		filter === 'blog' ? postsDirectory : tutorialsDirectory,
-		`${filename}.md`
-	)
-	console.log(path)
-	const text = readFileSync(path, 'utf-8')
+export function getFSPathFromSlug(slug, collection) {
+	return resolve(__dirname, `${collections}/${collection}/${slug}`)
+}
 
-	const { data, content } = matter(text)
+export function getFSPathFromWeb(path) {
+	return resolve(__dirname, `${collections}/${path}.md`)
+}
+
+export function getWebPathFromSlug(slug, collection) {
+	return `${collection}/${slug.replace('.md', '')}`
+}
+
+/**
+ *
+ * @param {String} slug
+ * @param {String} collection
+ */
+export function getPostByFilename(slug, collection) {
+	const file = readFileSync(
+		resolve(__dirname, `${collections}/${collection}/${slug}.md`),
+		'utf-8'
+	)
+
+	const { data, content } = matter(file)
 
 	return {
 		frontmatter: {
@@ -29,14 +48,15 @@ export function getPostBySlug(slug, filter = 'blog') {
 			date: new Date(data.date).toJSON()
 		},
 		html: content,
-		slug: filename
+		slug, // filename
+		path: getWebPathFromSlug(slug, collection) // web path
 	}
 }
 
-export function getAllPosts(filter = 'blog') {
-	const slugs = getAllSlugs(filter)
+export function getAllPosts(collection = 'blog') {
+	const slugs = getAllSlugs(collection)
 	const posts = slugs
-		.map(slug => getPostBySlug(slug, filter))
+		.map(slug => getPostByFilename(slug, collection))
 		.sort((post1, post2) => (post1.date > post2.date ? 1 : -1))
 
 	return posts

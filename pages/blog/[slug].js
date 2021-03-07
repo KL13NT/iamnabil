@@ -1,4 +1,6 @@
 /* eslint-disable react/display-name */
+const COLLECTION = 'blog'
+
 import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 
@@ -7,7 +9,7 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 import SEO from '../../components/SEO'
 
-import { getAllSlugs, getPostBySlug } from '../../api'
+import { getAllSlugs, getPostByFilename, getWebPathFromSlug } from '../../api'
 import { formatDate } from '../../utils'
 
 const renderers = {
@@ -35,19 +37,21 @@ const renderers = {
 	}
 }
 
-export default function PostTemplate({ html, frontmatter }) {
-	const { lang, date, tags, title, path } = frontmatter
+export default function PostTemplate({ html, frontmatter, path }) {
+	const { lang, date, title } = frontmatter
 	const dir = lang === 'ar' ? 'rtl' : null
 
 	return (
 		<>
-			<SEO {...frontmatter} />
+			<SEO {...frontmatter} path={path} />
 			<div dir={dir}>
 				<p>
 					{date}
 					<span> — </span>
 					<a
-						href={`https://twitter.com/intent/tweet?text=${title}&url=https://iamnabil.netlify.app${path}&hashtags=${tags}`}
+						href={`https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(
+							`https://iamnabil.netlify.app/${path})`
+						)}&via=kl13nt`}
 					>
 						{lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'}
 					</a>
@@ -65,7 +69,7 @@ export default function PostTemplate({ html, frontmatter }) {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-	const post = getPostBySlug(slug)
+	const post = getPostByFilename(slug, COLLECTION)
 
 	post.frontmatter.date = formatDate(
 		post.frontmatter.date,
@@ -74,14 +78,17 @@ export async function getStaticProps({ params: { slug } }) {
 
 	return {
 		props: {
-			...post
+			...post,
+			path: getWebPathFromSlug(slug, COLLECTION)
 		}
 	}
 }
 
 export async function getStaticPaths() {
-	const paths = getAllSlugs().map(slug => ({
-		params: { slug: slug.replace('.md', '') }
+	const paths = getAllSlugs(COLLECTION).map(slug => ({
+		params: {
+			slug
+		}
 	}))
 
 	return {
@@ -91,5 +98,5 @@ export async function getStaticPaths() {
 }
 
 export const config = {
-  unstable_runtimeJS: false
+	unstable_runtimeJS: false
 }

@@ -8,7 +8,7 @@ import { getAllPosts } from '../../api'
 export default function Blog({ posts }) {
 	return (
 		<>
-			<SEO title='Blog' />
+			<SEO title='Blog' path='blog' />
 			<h1>Thoughts</h1>
 			<p>
 				These are not entirely thoughts. Some of them are written in Arabic,
@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-	const posts = getAllPosts()
+	const posts = getAllPosts('blog')
 
 	return {
 		props: {

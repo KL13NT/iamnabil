@@ -8,13 +8,13 @@ import { getAllPosts } from '../../api'
 export default function Tutorials({ posts }) {
 	return (
 		<>
-			<SEO title='Tutorials' />
+			<SEO title='Tutorials' path='tutorials' />
 			<h1>Tutorials</h1>
 			<p>
 				I post technical tutorials for frontend developers and students here.
 			</p>
 			<hr />
-			<PostList posts={posts} filter='tutorials' />
+			<PostList posts={posts} />
 		</>
 	)
 }
