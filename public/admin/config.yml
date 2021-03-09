@@ -11,10 +11,13 @@ collections:
     label: Tutorials
     folder: 'collections/tutorials'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{path}}'
     fields:
       - label: Title (Make it catchy ;3)
         name: title
+        widget: string
+      - label: Path (Slug name)
+        name: path
         widget: string
       - label: Publish Date
         name: date
@@ -41,10 +44,13 @@ collections:
     label: Blog
     folder: 'collections/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{path}}'
     fields:
       - label: Title (Make it catchy ;3)
         name: title
+        widget: string
+      - label: Path (Slug name)
+        name: path
         widget: string
       - label: Publish Date
         name: date

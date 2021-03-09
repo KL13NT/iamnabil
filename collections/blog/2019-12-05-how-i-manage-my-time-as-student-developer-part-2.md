@@ -3,6 +3,7 @@ date: 2019-12-05
 title: 'How I Manage My Time as a Student-Developer - Part 2'
 description: "Negative influences are things that keep us from reaching our goals, and making a better life for ourselves. It's a hindrance to our performance and should be handled with strong arms."
 lang: 'en'
+path: how-i-manage-my-time-as-student-developer-part-2
 ---
 
 This is a two-part article. Part 1 is available [here](/blog/2019-12-05-how-i-manage-my-time-as-student-developer)

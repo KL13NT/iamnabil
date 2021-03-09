@@ -3,6 +3,7 @@ date: 2019-12-05
 title: 'How I Manage My Time as a Student-Developer - Part 1'
 description: "Time management can be a terrible experience, hopefully by the end of this article you'll have more insight into my routine."
 lang: 'en'
+path: how-i-manage-my-time-as-student-developer
 ---
 
 Time management can be a terrible experience, especially if you're a student and don't know how to do it properly. You may even be depressed because of how your time 'flies' away, wasted. Hopefully by the end of this you'll be able to manage your time well, or have a foundation to build upon. I'm not going into proving anything, instead, I'll be sharing my experience.

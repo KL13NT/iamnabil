@@ -10,38 +10,35 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import SEO from './SEO'
 
 const renderers = {
-	code: ({ language, value }) => {
-		return (
-			<SyntaxHighlighter
-				style={shadesOfPurple}
-				language={language}
-				showLineNumbers
-			>
-				{value}
-			</SyntaxHighlighter>
-		)
-	},
-	pre: ({ language, value }) => {
-		return (
-			<SyntaxHighlighter
-				style={shadesOfPurple}
-				language={language}
-				showLineNumbers
-			>
-				{value}
-			</SyntaxHighlighter>
-		)
-	}
+	p: ({ value }) => <p dir='auto'>{value}</p>,
+	blockquote: ({ children }) => <blockquote dir='auto'>{children}</blockquote>,
+	code: ({ language, value }) => (
+		<SyntaxHighlighter
+			style={shadesOfPurple}
+			language={language}
+			showLineNumbers
+		>
+			{value}
+		</SyntaxHighlighter>
+	),
+	pre: ({ language, value }) => (
+		<SyntaxHighlighter
+			style={shadesOfPurple}
+			language={language}
+			showLineNumbers
+		>
+			{value}
+		</SyntaxHighlighter>
+	)
 }
 
 export default function Article({ html, frontmatter, path }) {
 	const { lang, date, title } = frontmatter
-	const dir = lang === 'ar' ? 'rtl' : null
 
 	return (
 		<>
 			<SEO {...frontmatter} path={path} />
-			<div dir={dir}>
+			<div dir='auto' data-lang={lang}>
 				<p>
 					{date}
 					<span> — </span>
@@ -56,7 +53,7 @@ export default function Article({ html, frontmatter, path }) {
 				<h1 className='mt-0 mb-4'># {title}</h1>
 			</div>
 			<hr />
-			<article dir={dir} className='mt-24'>
+			<article dir='auto' data-lang={lang} className='mt-24'>
 				<ReactMarkdown renderers={renderers} allowDangerousHtml>
 					{html}
 				</ReactMarkdown>

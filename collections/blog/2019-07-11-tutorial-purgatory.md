@@ -3,6 +3,7 @@ date: 2019-07-11
 title: 'Tutorial Purgatory'
 description: "Tutorial Purgatory is a curse that haunts every newbie developer, here's how to escape it."
 lang: 'en'
+path: tutorial-purgatory
 ---
 
 Tutorial Purgatory
