@@ -10,7 +10,7 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import SEO from './SEO'
 
 const renderers = {
-	p: ({ value }) => <p dir='auto'>{value}</p>,
+	paragraph: ({ children }) => <p dir='auto'>{children}</p>,
 	blockquote: ({ children }) => <blockquote dir='auto'>{children}</blockquote>,
 	code: ({ language, value }) => (
 		<SyntaxHighlighter
