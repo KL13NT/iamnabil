@@ -3,7 +3,7 @@
 	publish = "out"
 	
 [[redirects]]
-  from = "https://iamnabil.netlify.app"
-  to = "https://iamnabil.vercel.app"
+  from = "https://iamnabil.netlify.app/*"
+  to = "https://iamnabil.vercel.app/:splat"
   status = 301
   force = true
