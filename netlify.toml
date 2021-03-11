@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
 	publish = "out"
+	
+[[redirects]]
+  from = "https://iamnabil.netlify.app"
+  to = "https://iamnabil.vercel.app"
+  status = 301
+  force = true
