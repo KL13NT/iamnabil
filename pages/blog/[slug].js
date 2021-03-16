@@ -28,11 +28,13 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export async function getStaticPaths() {
-	const paths = getAllSlugs(COLLECTION).map(slug => ({
-		params: {
-			slug
-		}
-	}))
+	const paths = getAllSlugs(COLLECTION)
+		.filter(path => !path.endsWith('external'))
+		.map(slug => ({
+			params: {
+				slug
+			}
+		}))
 
 	return {
 		paths,

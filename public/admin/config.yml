@@ -33,12 +33,17 @@ collections:
         name: translation
         widget: string
         required: false
+      - label: External
+        name: external
+        widget: string
+        required: false
       - label: Category
         name: category
         widget: string
       - label: Body
         name: body
         widget: markdown
+        required: false
 
   - name: blog
     label: Blog
@@ -66,9 +71,14 @@ collections:
         name: translation
         widget: string
         required: false
+      - label: External
+        name: external
+        widget: string
+        required: false
       - label: Category
         name: category
         widget: string
       - label: Body
         name: body
         widget: markdown
+        required: false

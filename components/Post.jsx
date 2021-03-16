@@ -5,6 +5,14 @@ import Link from 'next/link'
 
 import { formatDate } from '../utils'
 
+const External = () => (
+	<img
+		alt='external link'
+		className='w-8 mx-4 inline-block align-middle'
+		src='external-link-outline.svg'
+	/>
+)
+
 const Translation = ({ translation }) => (
 	<p dir='ltr'>
 		<a href={translation} className='bg-transparent'>
@@ -19,8 +27,19 @@ const Translation = ({ translation }) => (
 )
 
 export const Post = ({ path, frontmatter }) => {
-	const { lang, title, date, description, category, translation } = frontmatter
+	const {
+		lang,
+		title,
+		date,
+		description,
+		category,
+		translation,
+		external
+	} = frontmatter
 
+	console.log(path, frontmatter)
+
+	const link = external || `/${path}`
 	const dir = lang === 'ar' ? 'dir-rtl' : null
 
 	return (
@@ -29,9 +48,12 @@ export const Post = ({ path, frontmatter }) => {
 				{formatDate(date, lang)} // {category}
 			</span>
 
-			<Link href={`/${path}`}>
+			<Link href={link}>
 				<a className='mx-auto bg-transparent'>
-					<h2 className='mt-2 mx-auto text-2xl lg:text-4xl inline'>{title}</h2>
+					<h2 className='mt-2 mx-auto text-2xl lg:text-4xl inline'>
+						{title}
+						{external && <External />}
+					</h2>
 				</a>
 			</Link>
 
