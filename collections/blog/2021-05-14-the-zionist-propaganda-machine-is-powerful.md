@@ -2,8 +2,7 @@
 title: البروباجاندا الصهيونية قوية, هذه قصتي
 path: the-zionist-propaganda-machine-is-powerful
 date: 2021-05-15
-description: كارالين ليفيتون, يهودية أمريكيةKaralyn Leviton, an American Jew,
-  speaks about Zionist propaganda.
+description: كارالين ليفيتون يهودية الديانة أمريكية الجنسية تتحدث عن البروباجاندا الصهيونية
 lang: ar
 category: Palestine
 ---
