@@ -1,5 +1,5 @@
 ---
-title: The Zionist Propaganda Machine Is Powerful
+title: البروباجاندا الصهيونية قوية, هذه قصتي
 path: the-zionist-propaganda-machine-is-powerful
 date: 2021-05-13
 description: The zionist propaganda machine is powerful. It worked on me until I
@@ -9,7 +9,7 @@ description: The zionist propaganda machine is powerful. It worked on me until I
 lang: ar
 category: Palestine
 ---
-_هذه المقالة مترجمة من منشور لـ "كارالين ليفيتون" يهودية الديانة. يمكنكم قراءة المنشور الأصلي باللغة الإنجليزية [هنا](https://www.facebook.com/karalyn.leviton/posts/3049467711949124)._
+_هذه المقالة مترجمة من منشور لـ "كارالين ليفيتون" يهودية الديانة. يمكنكم قراءة المنشور الأصلي باللغة الإنجليزية والتعرف عليها [هنا](https://www.facebook.com/karalyn.leviton/posts/3049467711949124)._
 
 ---
 
