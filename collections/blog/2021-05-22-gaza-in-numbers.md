@@ -1,6 +1,7 @@
 ---
 title: Gaza, the Open-Air Prison, in Numbers
 path: gaza-in-numbers
+cover: https://i.imgur.com/aPx9lkM.png
 date: 2021-05-22
 description: Gaza is suffering one of the worst humanitarian crises in the
   world. Here are the numbers.
