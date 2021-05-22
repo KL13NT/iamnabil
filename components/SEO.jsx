@@ -12,9 +12,10 @@ function SEO({
 	title,
 	lang,
 	description = defaultDescription,
-	path = defaultPath
+	path = defaultPath,
+	cover
 }) {
-	const ogImageUrl = `${hostname}${defaultOGImagePath}`
+	const ogImageUrl = cover || `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}/${path}`
 	const finalTitle = title
 		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
@@ -23,7 +24,10 @@ function SEO({
 	return (
 		<Head>
 			<title>{finalTitle}</title>
-			<meta name="google-site-verification" content="Jwd5WF70ZzZgB0muYxnSlHsVh3allc411SZx25cGYTo" />
+			<meta
+				name='google-site-verification'
+				content='Jwd5WF70ZzZgB0muYxnSlHsVh3allc411SZx25cGYTo'
+			/>
 			<meta content={finalTitle} property='og:title' />
 			<meta content='website' property='og:type' />
 			<meta content={description} name='description' />

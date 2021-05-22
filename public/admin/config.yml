@@ -57,6 +57,10 @@ collections:
       - label: Path (Slug name)
         name: path
         widget: string
+      - label: Cover (Full url ending with extension if any)
+        name: cover
+        widget: string
+        required: false
       - label: Publish Date
         name: date
         widget: datetime
