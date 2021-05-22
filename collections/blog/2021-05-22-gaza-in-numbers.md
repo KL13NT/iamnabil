@@ -9,6 +9,8 @@ category: فلسطين
 ---
 Palestinians are living buried under siege. Gaza is suffering one of the worst humanitarian crises in the world. An open-air prison, this is Gaza in numbers.
 
+_This is originally a Twitter [thread][thread] on my profile._
+
 _If you don't know what's going on in Palestine, I recommend [these][documentaries] documentaries._
 
 - The Gaza strip is only 25 miles long, and 5 miles wide. 2 million Palestinians live in this tiny space. Half are children.
@@ -36,3 +38,4 @@ _If you don't know what's going on in Palestine, I recommend [these][documentari
 And on top of all that, Israel considers every woman, child, and elder in Gaza aa threat. They're all labelled "terrorist" by the Israeli government, and they use this excuse to bomb civilian buildings and governmental services such as hospitals, schools, refugee camps, and roads.
 
 [documentaries]: https://www.youtube.com/playlist?list=PLLVZR2VAHRwGSYGyQsEGDCRo7Dx3y1VXL
+[thread]: https://twitter.com/kl13nt/status/1395381871689748490
