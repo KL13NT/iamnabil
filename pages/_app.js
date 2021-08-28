@@ -68,6 +68,8 @@ function App({ Component, pageProps }) {
 					</MDXProvider>
 				</div>
 			</div>
+
+			<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'></script>
 		</>
 	)
 }
