@@ -7,44 +7,6 @@ backend:
   branch: master
 
 collections:
-  - name: tutorials
-    label: Tutorials
-    folder: 'collections/tutorials'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{path}}'
-    fields:
-      - label: Title (Make it catchy ;3)
-        name: title
-        widget: string
-      - label: Path (Slug name)
-        name: path
-        widget: string
-      - label: Publish Date
-        name: date
-        widget: datetime
-        format: YYYY-MM-DD
-      - label: Description (60 char)
-        name: description
-        widget: string
-      - label: Language (ar, en) lowercase
-        name: lang
-        widget: string
-      - label: Translation link
-        name: translation
-        widget: string
-        required: false
-      - label: External
-        name: external
-        widget: string
-        required: false
-      - label: Category
-        name: category
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-        required: false
-
   - name: blog
     label: Blog
     folder: 'collections/blog'

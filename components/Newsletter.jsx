@@ -29,7 +29,7 @@ export default function Newsletter() {
 								<input
 									required
 									type='text'
-									placeholder='John Wick'
+									placeholder='John'
 									name='FNAME'
 									className='bg-shadow text-white focus:shadow rounded border-2 outline-none p-3 focus:shadow-outline-indigo focus:border-indigo-300 placeholder-white'
 									id='mce-FNAME'

@@ -3,14 +3,15 @@
 @tailwind utilities
 
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap')
 
 
 h1, h2
-	@apply font-black mt-8
+	@apply font-black mt-8 font-title
 
 h3, h4
-	@apply font-bold mt-8 text-dark-700 max-w-max
+	@apply font-bold mt-8 text-dark-700 max-w-max font-title
 
 
 h1
@@ -60,8 +61,14 @@ blockquote
 
 .dir-rtl
 	@apply font-rtl
-
 	direction: rtl
+
+	h1,
+	h2,
+	h3,
+	h4
+	
+		@apply font-rtl
 
 hr
 	margin: 4rem auto
@@ -104,10 +111,10 @@ pre code
 
 @media (min-width: 768px)
 	h1
-		@apply text-6xl
+		@apply text-5xl
 
 	h2
-		@apply text-5xl
+		@apply text-4xl
 
 	h3
 		@apply text-2xl

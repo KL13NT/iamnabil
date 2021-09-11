@@ -13,11 +13,11 @@ const Navbar = () => {
 				</a>
 			</Link>
 			<div className='flex flex-wrap flex-col md:flex-row'>
+				<Link href='/about'>
+					<a className={classes}>About</a>
+				</Link>
 				<Link href='/blog'>
 					<a className={classes}>Blog</a>
-				</Link>
-				<Link href='/tutorials'>
-					<a className={classes}>Tutorials</a>
 				</Link>
 				<Link href='/projects'>
 					<a className={classes}>Projects</a>

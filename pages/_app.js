@@ -11,8 +11,7 @@ import Navbar from '../components/Navbar'
 
 import '../styling/index.sass'
 
-const link =
-	'https://twitter.com/trtworld/status/1391030130886201347'
+const link = 'https://twitter.com/trtworld/status/1391030130886201347'
 
 const CustomLink = ({ href, ...props }) => {
 	const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
@@ -62,14 +61,18 @@ function App({ Component, pageProps }) {
 			</Banner>
 			<div className='bg-accent font-display p-4 py-8 lg:p-8 lg:p-12 min-h-screen'>
 				<Navbar />
-				<div className='lg:w-3/5 mx-auto mt-24'>
+				<div className='lg:w-3/6 mx-auto mt-24'>
 					<MDXProvider components={components}>
 						<Component {...pageProps} />
 					</MDXProvider>
 				</div>
 			</div>
 
-			<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'></script>
+			<script
+				defer
+				src='https://static.cloudflareinsights.com/beacon.min.js'
+				data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'
+			></script>
 		</>
 	)
 }
