@@ -5,6 +5,7 @@
 	"version": "0.1.0",
 	"author": "Nabil Tharwat",
 	"dependencies": {
+		"@babel/eslint-parser": "^7.19.1",
 		"@babel/plugin-proposal-class-properties": "^7.4.4",
 		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
 		"@babel/plugin-proposal-optional-chaining": "^7.10.1",
@@ -29,17 +30,9 @@
 		"react-helmet": "^5.2.1",
 		"react-markdown": "^5.0.2",
 		"react-syntax-highlighter": "^15.2.1",
-		"rehype-sanitize": "^5.0.1",
-		"rehype-stringify": "^9.0.3",
-		"remark-frontmatter": "^4.0.1",
-		"remark-parse": "^10.0.1",
-		"remark-parse-frontmatter": "^1.0.3",
-		"remark-rehype": "^10.1.0",
 		"sass": "^1.55.0",
 		"sass-lint": "^1.13.1",
-		"tailwindcss": "^3.2.0",
-		"unified": "^10.1.2",
-		"yaml": "^2.1.3"
+		"tailwindcss": "^3.2.0"
 	},
 	"license": "MIT",
 	"scripts": {
@@ -53,8 +46,6 @@
 		"type": "git"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.19.1",
-		"babel-eslint": "^10.1.0",
 		"postcss-import": "^15.0.0"
 	}
 }
