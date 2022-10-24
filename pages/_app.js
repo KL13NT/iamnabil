@@ -56,12 +56,15 @@ function App({ Component, pageProps }) {
 					rel='noreferrer'
 					referrerPolicy='no-referrer'
 				>
-					# SaveSheikhJarrah 🇵🇸
+					# SaveSheikhJarrah{' '}
+					<span role='img' aria-label='palestine emoji'>
+						🇵🇸
+					</span>
 				</a>
 			</Banner>
 			<div className='bg-accent font-display p-4 py-8 lg:p-8 lg:p-12 min-h-screen'>
 				<Navbar />
-				<div className='lg:w-3/6 mx-auto mt-24'>
+				<div className='w-5/6 mx-auto mt-24'>
 					<MDXProvider components={components}>
 						<Component {...pageProps} />
 					</MDXProvider>

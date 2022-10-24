@@ -1,11 +1,14 @@
 import SEO from '../../components/SEO.jsx'
 import Link from 'next/link'
+import Layout from '../../components/layout'
 
 <SEO
 	description='An overview of my favourite projects'
 	path='projects'
 	title='Projects'
 />
+
+<Layout>
 
 # Useless is not worthless 🚀
 
@@ -87,6 +90,8 @@ An Arabic programming language created using JavaScript following the principles
 [tensorflow's toxicity classifier]: https://github.com/tensorflow/tfjs-models/tree/master/toxicity
 [standard version]: https://github.com/conventional-changelog/standard-version
 [facebook post]: https://www.facebook.com/groups/egyptian.geeks/permalink/3130397693666584
+
+</Layout>
 
 export const config = {
 	unstable_runtimeJS: false

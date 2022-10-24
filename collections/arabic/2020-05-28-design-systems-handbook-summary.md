@@ -1,9 +1,11 @@
 ---
 date: 2020-05-28
-title: 'ملخص كتاب Design Systems Handbook'
-description: 'ملخصي لكتاب Design Systems Handbook لـ InVision'
-lang: 'ar'
-path: design-systems-handbook-summary
+cover:
+  path: https://images.unsplash.com/photo-1604187350414-5cd124389d93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  credit:
+
+title: ملخص كتاب Design Systems Handbook
+description: ملخصي لكتاب Design Systems Handbook لـ InVision
 ---
 
 من فترة كنت بقرأ كتاب عن الـ design systems بعنوان Design Systems Handbook بيتكلم عن خطوات الـ design و الـ development في الشركات الكبيرة اللي بتستعمل Design Systems والمشاكل اللي بتحصل في الـ design at scale وبيكسر شوية myths عن الموضوع. نقاط كتيرة من اللي ف الكتاب نقدر نطبقها من غير ما نعمل design system كامل, حاجات زي الـ design tokens و الـ standards اللي بتتحط للاحجام و الtypography وغيرهم كتير.

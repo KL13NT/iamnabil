@@ -11,3 +11,4 @@ arrowParens: "avoid"
 requirePragma: false
 proseWrap: "preserve"
 endOfLine: "lf"
+printWidth: 80

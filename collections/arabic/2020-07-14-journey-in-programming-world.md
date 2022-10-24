@@ -1,9 +1,11 @@
 ---
-title: رحلتي في عالم البرمجة
 date: 2020-07-14
+cover:
+  path: https://images.unsplash.com/photo-1533561797500-4fad4750814e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  credit:
+
+title: رحلتي في عالم البرمجة
 description: حابب استرجع معاكوا طريقي في البرمجة, من اول يوم عرفت ايه هي, لحد دلوقتي.
-lang: ar
-path: journey-in-programming-world
 ---
 
 صباح الخير. اتسألت كتير انا بقيت فروند اند ازاي, و اتسألت اكتر عن ازاي بقيت مبرمج و ازاي عارف اللي انا اعرفه. في المقالة دي همشيكوا معايا في رحلتي من اول ما كان عندي 12 سنة لحد دلوقتي. حاولت اخليها قصيرة على قد ما اقدر.

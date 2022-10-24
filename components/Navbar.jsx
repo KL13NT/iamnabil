@@ -19,6 +19,11 @@ const Navbar = () => {
 				<Link href='/blog'>
 					<a className={classes}>Blog</a>
 				</Link>
+				<Link href='/arabic'>
+					<a className={classes} data-lang='ar'>
+						بالعربية
+					</a>
+				</Link>
 				<Link href='/projects'>
 					<a className={classes}>Projects</a>
 				</Link>

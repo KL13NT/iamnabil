@@ -1,9 +1,11 @@
 ---
 date: 2020-03-03
-title: '10 نصايح لل Problem Solving'
-description: 'في المقالة دي هشارك 10 نصائح بمشي عليهم في حل المشكلات'
-lang: 'ar'
-path: 10-tip-for-problem-solving
+cover:
+  path: https://images.unsplash.com/photo-1612611741189-a9b9eb01d515?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  credit:
+
+title: 10 نصايح لل Problem Solving
+description: في المقالة دي هشارك 10 نصائح بمشي عليهم في حل المشكلات
 ---
 
 ال problem solving مهارة مطلوبة جداً في شغلنا و في حياتنا عامة, بس في ناس كتير بتعاني بسبب انهم مش عارفين ايه الصح و ايه الغلط في اللي بيعملوه, في المقالة دي هتكلم باختصار عن 10 نقط _ساعدوني شخصياً_. النصائح دي ممكن حد ميتقبلهاش او متنفعش ليه, ده عادي و عقولنا مختلفة. مش لازم كله يشتغل. لو انت مستواك حلو بالفعل في الموضوع هتلاحظ ان معظم المقالة دي بديهيات.

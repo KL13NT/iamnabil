@@ -1,12 +1,11 @@
 ---
 date: 2019-07-11
-title: 'Tutorial Purgatory'
-description: "Tutorial Purgatory is a curse that haunts every newbie developer, here's how to escape it."
-lang: 'en'
-path: tutorial-purgatory
+cover:
+  path: https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  credit: ''
+title: Tutorial Purgatory
+description: Tutorial Purgatory is a curse that haunts every newbie developer, here's how to escape it.
 ---
-
-Tutorial Purgatory
 
 Ever went through a really nice tutorial for some time only to find out after finishing or at least going a long way that you're not actually learning anything? That's what tutorial purgatory is about.
 

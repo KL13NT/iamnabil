@@ -7,20 +7,17 @@ import { getAllPosts } from '../../api'
 
 export default function Blog({ posts }) {
 	return (
-		<>
-			<SEO title='Blog' path='blog' />
-			<h1>Thoughts</h1>
-			<p>
-				These are not entirely thoughts. My Arabic articles can be found on the
-				Arabic blog page.
-			</p>
-			<PostList posts={posts} lang='english' />
-		</>
+		<div data-lang='ar' className='dir-rtl'>
+			<SEO title='بالعربية' path='arabic' />
+			<h1>مقالاتي</h1>
+			<p>مقالاتي المكتوبة والمترجمة باللغة العربية الفصحى والعاميّة المصرية.</p>
+			<PostList posts={posts} lang='arabic' />
+		</div>
 	)
 }
 
 export async function getStaticProps() {
-	const posts = getAllPosts('blog')
+	const posts = getAllPosts('arabic')
 
 	return {
 		props: {

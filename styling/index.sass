@@ -4,14 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap')
 
 h1, h2
-	@apply font-black mt-8 font-title
+	@apply text-black font-black mt-8 font-title
 
 h3, h4
-	@apply font-bold mt-8 text-dark-700 max-w-max font-title
+	@apply text-black font-bold mt-8 max-w-max font-title
 
 
 h1
@@ -59,6 +58,9 @@ blockquote
 	p
 		@apply text-2xl font-bold
 
+.text-content
+	@apply w-7/12
+
 .dir-rtl
 	@apply font-rtl
 	direction: rtl
@@ -70,12 +72,6 @@ blockquote
 	
 		@apply font-rtl
 
-hr
-	margin: 4rem auto
-	background: black
-	opacity: 0.3
-	height: 1px
-	width: 60%
 
 pre
 	@apply mt-4
@@ -88,8 +84,12 @@ pre code
 
 
 [data-lang='ar']
+	@apply font-rtl
 	text-decoration-skip-ink: skip
 	letter-spacing: -1px
+
+	h1, h2, h3, h4
+		@apply font-rtl
 
 	p, ul, ol
 		@apply text-2xl mt-8
@@ -106,7 +106,6 @@ pre code
 	blockquote
 		@apply border-l-0 border-r-2
 
-	@apply font-rtl
 
 
 @media (min-width: 768px)
