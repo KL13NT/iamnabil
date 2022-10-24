@@ -11,16 +11,19 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:jsx-a11y/recommended'
 	],
-	parser: 'babel-eslint',
+	parser: '@babel/eslint-parser',
 	parserOptions: {
-		ecmaVersion: 2018,
+		babelOptions: {
+			presets: ['@babel/preset-react']
+		},
+		requireConfigFile: false,
+		ecmaVersion: 2022,
 		ecmaFeatures: {
-			jsx: true,
 			modules: true,
 			experimentalObjectRestSpread: true
 		}
 	},
-	plugins: ['react', 'jsx-a11y'],
+	plugins: ['@next/eslint-plugin-next'],
 	rules: {
 		indent: 0,
 		'linebreak-style': 0,
@@ -30,7 +33,6 @@ module.exports = {
 		'react/prop-types': 0,
 		'no-mixed-spaces-and-tabs': 0,
 		'prefer-rest-params': 0,
-		'no-unused-vars': 1,
 		'no-whitespace-before-property': 2,
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'object-curly-spacing': ['error', 'always'],

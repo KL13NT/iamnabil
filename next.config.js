@@ -3,6 +3,5 @@ const withMDX = require('@next/mdx')({
 })
 
 module.exports = withMDX({
-	target: 'experimental-serverless-trace',
 	pageExtensions: ['js', 'jsx', 'md', 'mdx']
 })
