@@ -47,7 +47,7 @@ export function getPostByFilename(slug, collection) {
 				? {
 						path: data.cover.thumb
 							? data.cover.path
-							: `${data.cover.path}&q=80`,
+							: `${data.cover.path}&w=1920&q=80`,
 						thumb: data.cover.thumb
 							? data.cover.thumb
 							: `${data.cover.path}&w=420&h=560&q=80`
