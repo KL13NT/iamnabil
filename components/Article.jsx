@@ -60,7 +60,7 @@ export default function Article({ html, frontmatter, path, lang }) {
 	const twitterText = lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'
 
 	return (
-		<div className='mx-auto'>
+		<div className='mx-auto mb-20'>
 			<SEO {...frontmatter} path={path} />
 			<div dir='auto' data-lang={lang} className='w-4/6 mx-auto'>
 				<div className='w-full'>
