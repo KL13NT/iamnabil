@@ -62,7 +62,7 @@ export default function Article({ html, frontmatter, path, lang }) {
 	return (
 		<div className='mx-auto mb-20'>
 			<SEO {...frontmatter} path={path} />
-			<div dir='auto' data-lang={lang} className='w-4/6 mx-auto'>
+			<div dir='auto' data-lang={lang} className='w-full lg:w-4/6 mx-auto'>
 				<div className='w-full'>
 					<div className='flex justify-between w-full'>
 						<p>
