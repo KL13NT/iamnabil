@@ -9,14 +9,13 @@ export const Post = ({ path, frontmatter, lang }) => {
 	const { date, path: externalPath, cover, title } = frontmatter
 
 	const dir = lang === 'arabic' ? 'rtl' : 'ltr'
-	const coverSrc = cover.thumb || `${cover.path}&w=420&h=560&q=80`
 
 	return (
 		<li className='list-none' dir={dir}>
 			<Link href={externalPath || `/${path}`}>
 				<a className='group hover:no-underline bg-transparent'>
 					<img
-						src={coverSrc}
+						src={cover.thumb}
 						alt={title}
 						className='transition-all rounded-md outline outline-0 outline-red-500 outline-offset-0 group-hover:outline-2 group-hover:outline-offset-4 h-[560px] w-[420px] object-cover m-0'
 						loading='lazy'

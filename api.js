@@ -42,7 +42,17 @@ export function getPostByFilename(slug, collection) {
 	return {
 		frontmatter: {
 			...data,
-			date: new Date(data.date).toJSON()
+			date: new Date(data.date).toJSON(),
+			cover: data.cover
+				? {
+						path: data.cover.thumb
+							? data.cover.path
+							: `${data.cover.path}&q=80`,
+						thumb: data.cover.thumb
+							? data.cover.thumb
+							: `${data.cover.path}&w=420&h=560&q=80`
+				  }
+				: null
 		},
 		html: content,
 		slug, // filename
