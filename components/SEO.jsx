@@ -15,7 +15,7 @@ function SEO({
 	path = defaultPath,
 	cover
 }) {
-	const ogImageUrl = cover || `${hostname}${defaultOGImagePath}`
+	const ogImageUrl = cover ? cover.path : `${hostname}${defaultOGImagePath}`
 	const url = `${hostname}/${path}`
 	const finalTitle = title
 		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
