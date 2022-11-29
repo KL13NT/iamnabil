@@ -46,8 +46,6 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 	const { date, title, translation, cover } = frontmatter
 	const translationNoticeAlt = lang === 'ar' ? 'English version' : 'بالعربية'
 
-	const coverCredit = ''
-
 	const translationNoticeMarkup = translation ? (
 		<p dir={lang === 'ar' ? 'ltr' : 'rtl'}>
 			<a href={translation} title={translationNoticeAlt}>
@@ -80,7 +78,8 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 				</div>
 				<img
 					src={cover.path}
-					alt={title}
+					title={`Photo by ${cover.credit}`}
+					alt={`Photo by ${cover.credit}`}
 					className='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
 					loading='lazy'
 				/>
