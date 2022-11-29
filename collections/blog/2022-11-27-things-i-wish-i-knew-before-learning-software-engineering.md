@@ -9,7 +9,7 @@ description: Becoming a software engineer can be daunting, here are things I wis
 ---
 
 Becoming a software engineer is a fantastic way to use your creativity and
-technical skills to build amazing things that improves people's lives. But it's
+technical skills to build amazing things that improve people's lives. But it's
 not always an easy road, and a lack of guidance can often make the process
 hideous and getting started daunting. Here are things I wish I had known before
 learning software engineering.
@@ -17,19 +17,35 @@ learning software engineering.
 # Define your reason
 
 Having a well-defined reason in mind when learning software engineering can help
-through the rough parts of it. This reason can be money, especially that
-software engineering does not require a degree.
+through the rough parts of it. Software engineering may seem shiny and easy to
+dive into, but it does get difficult. And when it does, you will want a strong
+reason to keep going.
 
-Your reason may be a passion, which is my reason. I chose software engineering
-because it appealed to me at a young age. I wrote [an article][1] about it.
+A valid reason may be an added value in your personal or work life. You may wish
+to automate tedious processes in your everyday job. It can also aid you in
+understanding the software engineers you work with, even if you are not in a
+technical role. Others may learn software engineering to build an app or website
+for a volunteer job.
 
-These are not all there is, though! Some people learn to code because they can
-use it to automate tedious processes in their everyday life. It can also aid you
-in understanding the software engineers you work with, even if you are not in a
-technical role.
+Your reasons will be different from others. You may have a passion for
+technology and programming and decide to learn software engineering. Usually,
+passion is not enough. Software engineering is a complex maze that can be
+impossible at times. It is more sensible, however, to set realistic goals and
+expectations to keep you from lacking the motivation.
 
-The sky is the limit. What matters is a well-defined reason to make the journey
-worth it.
+Money is also a valid motive for learning software engineering, especially that
+software engineering does not require a degree. But money does not come easy,
+and it may take you months or even a couple years before you start making _good_
+money. Instead, setting a realistic set of _objective_ goals is the better way
+to go. Keep in mind that you may prefer average pay with a good work environment
+to a 6-figure in a brutal atmosphere. It does not come down to just money.
+
+I chose software engineering because it appealed to me at a young age. And this
+passion has worked for me for as long as I can remember because I set realistic
+expectations for myself and my goals, which motivated me to follow my passion.
+
+The sky is the limit. What matters is a well-defined reason with realistic
+expectations to make the journey worth it.
 
 # You are not your code
 
