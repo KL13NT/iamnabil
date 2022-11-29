@@ -14,7 +14,9 @@ export default function Blog({ posts }) {
 				These are not entirely thoughts. My Arabic articles can be found on the
 				Arabic blog page.
 			</p>
-			<PostList posts={posts} lang='english' />
+			<div className='mt-12'>
+				<PostList posts={posts} lang='english' />
+			</div>
 		</>
 	)
 }

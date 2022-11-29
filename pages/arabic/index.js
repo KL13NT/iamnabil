@@ -11,7 +11,9 @@ export default function Blog({ posts }) {
 			<SEO title='بالعربية' path='arabic' />
 			<h1>مقالاتي</h1>
 			<p>مقالاتي المكتوبة والمترجمة باللغة العربية الفصحى والعاميّة المصرية.</p>
-			<PostList posts={posts} lang='arabic' />
+			<div className='mt-12'>
+				<PostList posts={posts} lang='ar' />
+			</div>
 		</div>
 	)
 }

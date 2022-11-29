@@ -71,6 +71,7 @@ export function getAllPosts(collection = 'arabic') {
 
 export function getArticleStaticProps(slug, collection) {
 	const post = getPostByFilename(slug, collection)
+	const related = getRelated(3, collection, slug)
 
 	const { external, translation: translationSlug } = post.frontmatter
 
@@ -81,7 +82,11 @@ export function getArticleStaticProps(slug, collection) {
 	}
 
 	const lang = collection === 'blog' ? 'en' : 'ar'
-	const date = formatDate(post.frontmatter.date, 'en-GB')
+	const date = formatDate(
+		post.frontmatter.date,
+		collection === 'blog' ? 'en-GB' : 'ar-EG'
+	)
+
 	const translation = translationSlug
 		? `/${getWebPathFromSlug(translationSlug, collection)}`
 		: null
@@ -94,7 +99,8 @@ export function getArticleStaticProps(slug, collection) {
 				translation,
 				date
 			},
-			lang
+			lang,
+			related
 		}
 	}
 }
@@ -110,4 +116,10 @@ export function getArticleStaticPaths(collection) {
 		paths,
 		fallback: false
 	}
+}
+
+export function getRelated(number, collection, slug) {
+	const posts = getAllPosts(collection)
+
+	return posts.filter(post => post.slug !== slug).slice(0, number)
 }
