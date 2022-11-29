@@ -79,7 +79,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 				<img
 					src={cover.path}
 					title={`Photo by ${cover.credit}`}
-					alt={`Photo by ${cover.credit}`}
+					alt={`By ${cover.credit}`}
 					className='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
 					loading='lazy'
 				/>
