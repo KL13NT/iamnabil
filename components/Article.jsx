@@ -45,7 +45,7 @@ function getTwitterPath(title, path) {
 }
 
 function getTwitterSearchPath(path) {
-	return `https://twitter.com/search?q=${encodeURIComponent(path)}%22%20(from%3A${TWITTER_HANDLE})%20filter%3Alinks%20-filter%3Areplies&src=typed_query`
+	return `https://twitter.com/search?q=${encodeURIComponent(`https://iamnabil.netlify.app/${path}`)}%22%20(from%3A${TWITTER_HANDLE})%20filter%3Alinks%20-filter%3Areplies&src=typed_query`
 }
 
 export default function Article({ html, frontmatter, path, lang, related }) {
