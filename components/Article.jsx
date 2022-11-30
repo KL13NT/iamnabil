@@ -9,7 +9,7 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import SEO from './SEO'
 import { PostList } from './PostList'
 
-const TWITTER_HANDLE = "kl13nt"
+const TWITTER_HANDLE = 'kl13nt'
 
 const renderers = {
 	paragraph: ({ children }) => <p dir='auto'>{children}</p>,
@@ -66,7 +66,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 
 	const twitterText = lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'
 
-	const discussionText = lang === 'ar'? "ناقش هذه المقالة" : "Discuss This"
+	const discussionText = lang === 'ar'? 'ناقش هذه المقالة' : 'Discuss This'
 
 	return (
 		<div className='mx-auto mb-20'>
