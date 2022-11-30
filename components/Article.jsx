@@ -78,7 +78,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 							{date}
 							<span> — </span>
 							<a href={getTwitterPath(title, path)}>{twitterText}</a>
-							<span>-</span>
+							<span> - </span>
 							<a href={getTwitterSearchPath(path)}>{discussionText}</a>
 						</p>
 
