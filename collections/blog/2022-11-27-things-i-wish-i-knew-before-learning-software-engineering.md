@@ -2,7 +2,7 @@
 date: 2022-11-27
 cover:
   path: https://images.unsplash.com/photo-1542500186-6edb30855637?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-  credit: unknown
+  credit: Barth Bailey
 external: false
 title: Things I Wish I Knew Before Learning Software Engineering
 description: Becoming a software engineer can be daunting, here are things I wish I knew before I started.
