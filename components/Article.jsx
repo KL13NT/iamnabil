@@ -9,6 +9,8 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import SEO from './SEO'
 import { PostList } from './PostList'
 
+const TWITTER_HANDLE = "kl13nt"
+
 const renderers = {
 	paragraph: ({ children }) => <p dir='auto'>{children}</p>,
 	heading: ({ children, level }) => {
@@ -39,7 +41,11 @@ const renderers = {
 function getTwitterPath(title, path) {
 	return `https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(
 		`https://iamnabil.netlify.app/${path}`
-	)}&via=kl13nt`
+	)}&via=${TWITTER_HANDLE}`
+}
+
+function getTwitterSearchPath(path) {
+	return `https://twitter.com/search?q=${encodeURIComponent(path)}%22%20(from%3A${TWITTER_HANDLE})%20filter%3Alinks%20-filter%3Areplies&src=typed_query`
 }
 
 export default function Article({ html, frontmatter, path, lang, related }) {
@@ -60,6 +66,8 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 
 	const twitterText = lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'
 
+	const discussionText = lang === 'ar'? "ناقش هذه المقالة" : "Discuss This"
+
 	return (
 		<div className='mx-auto mb-20'>
 			<SEO {...frontmatter} path={path} />
@@ -70,6 +78,8 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 							{date}
 							<span> — </span>
 							<a href={getTwitterPath(title, path)}>{twitterText}</a>
+							<span>-</span>
+							<a href={getTwitterSearchPath(path)}>{discussionText}</a>
 						</p>
 
 						{translationNoticeMarkup}
