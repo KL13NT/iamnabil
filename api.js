@@ -69,11 +69,16 @@ export function getAllPosts(collection = 'arabic') {
 	return posts
 }
 
+export function getTranslationSlug(translation, collection) {
+	if (!translation) return null
+	else if (translation.type === 0)
+		return `/${getWebPathFromSlug(translation.path, collection)}`
+	else return translation.path
+}
+
 export function getArticleStaticProps(slug, collection) {
 	const post = getPostByFilename(slug, collection)
-	const related = getRelated(3, collection, slug)
-
-	const { external, translation: translationSlug } = post.frontmatter
+	const { external, translation } = post.frontmatter
 
 	if (external) {
 		return {
@@ -81,22 +86,20 @@ export function getArticleStaticProps(slug, collection) {
 		}
 	}
 
+	const related = getRelated(3, collection, slug)
+	const translationSlug = getTranslationSlug(translation, collection)
 	const lang = collection === 'blog' ? 'en' : 'ar'
 	const date = formatDate(
 		post.frontmatter.date,
 		collection === 'blog' ? 'en-GB' : 'ar-EG'
 	)
 
-	const translation = translationSlug
-		? `/${getWebPathFromSlug(translationSlug, collection)}`
-		: null
-
 	return {
 		props: {
 			...post,
 			frontmatter: {
 				...post.frontmatter,
-				translation,
+				translation: translationSlug,
 				date
 			},
 			lang,

@@ -8,8 +8,7 @@ import { shadesOfPurple } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 import SEO from './SEO'
 import { PostList } from './PostList'
-
-const TWITTER_HANDLE = 'kl13nt'
+import { getTwitterPath, getTwitterSearchPath } from '../utils'
 
 const renderers = {
 	paragraph: ({ children }) => <p dir='auto'>{children}</p>,
@@ -38,35 +37,53 @@ const renderers = {
 	)
 }
 
-function getTwitterPath(title, path) {
-	return `https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(
-		`https://iamnabil.netlify.app/${path}`
-	)}&via=${TWITTER_HANDLE}`
+const textLanguageMapping = {
+	translation: {
+		en: 'بالعربية',
+		ar: 'English version'
+	},
+	tweet: {
+		ar: 'غرد هذه المقالة',
+		en: 'Tweet this article'
+	},
+	discuss: {
+		ar: 'ناقش هذه المقالة على تويتر',
+		en: 'Discuss this article on Twitter'
+	}
 }
 
-function getTwitterSearchPath(path) {
-	return `https://twitter.com/search?q=${encodeURIComponent(`"https://iamnabil.netlify.app/${path}"`)}%20(from%3A${TWITTER_HANDLE})%20filter%3Alinks%20-filter%3Areplies&src=typed_query`
+function ArticleHeaderLink({ href, title, src }) {
+	return (
+		<a href={href} title={title} className='bg-transparent mx-2'>
+			<img alt='' role='presentation' src={src} className='h-8' />
+		</a>
+	)
 }
 
 export default function Article({ html, frontmatter, path, lang, related }) {
 	const { date, title, translation, cover } = frontmatter
-	const translationNoticeAlt = lang === 'ar' ? 'English version' : 'بالعربية'
 
-	const translationNoticeMarkup = translation ? (
-		<p dir={lang === 'ar' ? 'ltr' : 'rtl'}>
-			<a href={translation} title={translationNoticeAlt}>
-				<img
-					alt={translationNoticeAlt}
+	const articleHeaderLinksMarkup = (
+		<p dir={lang === 'ar' ? 'ltr' : 'rtl'} className='flex'>
+			{translation ? (
+				<ArticleHeaderLink
+					href={translation}
+					title={textLanguageMapping.translation[lang]}
 					src='/language-svgrepo-com.svg'
-					className='h-8'
 				/>
-			</a>
+			) : null}
+			<ArticleHeaderLink
+				href={getTwitterPath(title, path)}
+				title={textLanguageMapping.tweet[lang]}
+				src='/twitter-tweet.svg'
+			/>
+			<ArticleHeaderLink
+				href={getTwitterSearchPath(path)}
+				title={textLanguageMapping.discuss[lang]}
+				src='/twitter-reply.svg'
+			/>
 		</p>
-	) : null
-
-	const twitterText = lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'
-
-	const discussionText = lang === 'ar'? 'ناقش هذه المقالة' : 'Discuss This'
+	)
 
 	return (
 		<div className='mx-auto mb-20'>
@@ -74,15 +91,8 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 			<div dir='auto' data-lang={lang} className='w-full lg:w-4/6 mx-auto'>
 				<div className='w-full'>
 					<div className='flex justify-between w-full'>
-						<p>
-							{date}
-							<span> — </span>
-							<a href={getTwitterPath(title, path)}>{twitterText}</a>
-							<span> - </span>
-							<a href={getTwitterSearchPath(path)}>{discussionText}</a>
-						</p>
-
-						{translationNoticeMarkup}
+						<p>{date}</p>
+						{articleHeaderLinksMarkup}
 					</div>
 					<h1 className='mt-4 mb-4'>{title}</h1>
 				</div>

@@ -1,0 +1,9 @@
+date: 2021-03-08
+cover:
+  path: unsplash path
+  credit: author/photographer name
+translation: 
+  path: link to translated article
+  type: 0 # 0 = on personal blog, 1 = other sites
+title: string
+description: string
