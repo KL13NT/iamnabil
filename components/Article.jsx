@@ -88,7 +88,11 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 	return (
 		<div className='mx-auto mb-20'>
 			<SEO {...frontmatter} path={path} />
-			<div dir='auto' data-lang={lang} className='w-full lg:w-4/6 mx-auto'>
+			<div
+				dir='auto'
+				data-lang={lang}
+				className='w-full md:w-5/6 xl:w-4/6 mx-auto'
+			>
 				<div className='w-full'>
 					<div className='flex justify-between w-full'>
 						<p>{date}</p>
@@ -107,7 +111,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 			<article
 				dir='auto'
 				data-lang={lang}
-				className='mt-14 text-content mx-auto'
+				className='mt-14 w-full md:10/12 lg:max-w-[850px] mx-auto'
 			>
 				<ReactMarkdown renderers={renderers} allowDangerousHtml>
 					{html}

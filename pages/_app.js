@@ -64,7 +64,7 @@ function App({ Component, pageProps }) {
 			</Banner>
 			<div className='bg-accent font-display p-4 py-8 lg:p-8 lg:p-12 min-h-screen'>
 				<Navbar />
-				<div className='w-full lg:w-5/6 mx-auto mt-24'>
+				<div className='w-full xl:w-5/6 mx-auto mt-24 max-w-screen-2xl'>
 					<MDXProvider components={components}>
 						<Component {...pageProps} />
 					</MDXProvider>

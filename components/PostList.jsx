@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 import { formatDate } from '../utils'
 
@@ -11,13 +12,13 @@ export const Post = ({ path, frontmatter, lang }) => {
 	const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 	return (
-		<li className='list-none' dir={dir}>
-			<Link href={externalPath || `/${path}`}>
-				<a className='group hover:no-underline bg-transparent block w-full lg:w-min'>
+		<li className='list-none max-w-md' dir={dir}>
+			<Link href={externalPath || `/${path}`} className='block w-full'>
+				<a className='group hover:no-underline bg-transparent block w-full'>
 					<img
 						src={cover.thumb}
 						alt={title}
-						className='transition-all rounded-md outline outline-0 outline-red-500 outline-offset-0 group-hover:outline-2 group-hover:outline-offset-4 w-full h-[580px] lg:h-[580px] lg:w-[440px] lg:min-w-[440px] object-cover m-0'
+						className='transition-all rounded-md outline outline-0 outline-red-500 outline-offset-0 group-hover:outline-2 group-hover:outline-offset-4 w-full h-[580px] lg:h-[580px] object-cover m-0'
 						loading='lazy'
 					/>
 					<span className='block text-lg mt-4'>{formatDate(date, lang)}</span>
@@ -33,9 +34,10 @@ export const Post = ({ path, frontmatter, lang }) => {
 
 export const PostList = ({ posts, lang }) => (
 	<ul
-		className={`grid grid-cols-1 lg:grid-cols-3 gap-8 ${
-			lang === 'ar' ? 'dir-rtl' : ''
-		}`}
+		className={clsx(
+			'p-0 mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center  w-full max-w-7xl',
+			lang === 'ar' ? 'dir-rtl' : null
+		)}
 		data-lang={lang}
 	>
 		{posts.map(post => (
