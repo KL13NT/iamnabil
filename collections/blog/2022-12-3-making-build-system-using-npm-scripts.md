@@ -201,7 +201,7 @@ Applying this to the build scripts we end up with the following:
 
 ```diff
 {
-+ "prebuild": "run-s -n checks test", // much
++ "prebuild": "run-s -n checks test",
 - "build": "run-s -n checks test transpile css generate deploy",
 + "build": "run-s -n babel & css",
 + "postbuild": "run-s -n generate deploy",
