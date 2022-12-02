@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-
-const hostname = 'https://iamnabil.netlify.app'
+import { HOSTNAME } from '../constants'
 
 const defaultTitle = 'Nabil Tharwat'
 const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
@@ -15,11 +14,11 @@ function SEO({
 	path = defaultPath,
 	cover
 }) {
-	const ogImageUrl = cover ? cover.path : `${hostname}${defaultOGImagePath}`
-	const url = `${hostname}/${path}`
+	const ogImageUrl = cover ? cover.path : `${HOSTNAME}${defaultOGImagePath}`
+	const url = `${HOSTNAME}/${path}`
 	const finalTitle = title
 		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
-		: defaultTitle
+		: defaultTitle	
 
 	return (
 		<Head>

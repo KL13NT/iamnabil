@@ -1,4 +1,4 @@
-const TWITTER_HANDLE = 'kl13nt'
+import { GITHUB_REPO, TWITTER_HANDLE } from './constants'
 
 export function formatDate(date, lang) {
 	return new Date(date).toLocaleDateString(lang, {
@@ -18,4 +18,8 @@ export function getTwitterPath(title, path) {
 	return `https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(
 		`https://iamnabil.netlify.app/${path}`
 	)}&via=${TWITTER_HANDLE}`
+}
+
+export function getArticleGithubPath(path) {
+	return `${GITHUB_REPO}/tree/master/collections/${path}.md`
 }
