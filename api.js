@@ -45,12 +45,8 @@ export function getPostByFilename(slug, collection) {
 			date: new Date(data.date).toJSON(),
 			cover: data.cover
 				? {
-						path: data.cover.thumb
-							? data.cover.path
-							: `${data.cover.path}&w=1920&q=80`,
-						thumb: data.cover.thumb
-							? data.cover.thumb
-							: `${data.cover.path}&w=420&h=560&q=80`,
+						path: `${data.cover.path}&w=1920&q=80`,
+						thumb: `${data.cover.thumb || data.cover.path}&w=420&h=560&q=80`,
 						credit: data.cover.credit || null
 				  }
 				: null
