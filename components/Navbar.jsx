@@ -27,6 +27,9 @@ const Navbar = () => {
 				<Link href='/projects'>
 					<a className={classes}>Projects</a>
 				</Link>
+				<a className={classes} href='https://github.com/sponsors/KL13NT'>
+					sponsor
+				</a>
 				<Link href='/uses'>
 					<a className={classes}>/uses</a>
 				</Link>
