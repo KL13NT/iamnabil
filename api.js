@@ -85,10 +85,10 @@ export function getArticleStaticProps(slug, collection) {
 
 	const related = getRelated(3, collection, slug)
 	const translationSlug = getTranslationSlug(translation, collection)
-	const lang = collection === 'blog' ? 'en' : 'ar'
+	const lang = collection !== 'arabic' ? 'en' : 'ar'
 	const date = formatDate(
 		post.frontmatter.date,
-		collection === 'blog' ? 'en-GB' : 'ar-EG'
+		collection !== 'arabic' ? 'en-GB' : 'ar-EG'
 	)
 
 	return {
