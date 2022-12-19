@@ -24,6 +24,9 @@ const Navbar = () => {
 						بالعربية
 					</a>
 				</Link>
+				<Link href='/notes'>
+					<a className={classes}>Notes</a>
+				</Link>
 				<Link href='/projects'>
 					<a className={classes}>Projects</a>
 				</Link>

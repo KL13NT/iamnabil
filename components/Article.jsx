@@ -117,13 +117,15 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 					</div>
 					<h1 className='mt-4 mb-4'>{title}</h1>
 				</div>
-				<img
-					src={cover.path}
-					title={`Photo by ${cover.credit}`}
-					alt={`By ${cover.credit}`}
-					className='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
-					loading='lazy'
-				/>
+				{cover ? (
+					<img
+						src={cover.path}
+						title={`Photo by ${cover.credit}`}
+						alt={`By ${cover.credit}`}
+						className='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
+						loading='lazy'
+					/>
+				) : null}
 			</div>
 			<article
 				dir='auto'
