@@ -26,9 +26,8 @@
 
 					const title = widgetFor('title')
 					const date = widgetFor('date')
-					const path = widgetFor('path')
 					const lang = entry.getIn(['data', 'lang'])
-					const category = widgetFor('category')
+					const slug = entry.getIn(['data', 'slug'])
 					const html = widgetFor('body')
 					const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
@@ -40,12 +39,12 @@
 										{date}
 										<span> — </span>
 										<a
-											href={`https://twitter.com/intent/tweet?text=${title}&url=https://iamnabil.netlify.app${path}&hashtags=${category}`}
+											href={`https://twitter.com/intent/tweet?text=${title}&url=https://iamnabil.netlify.app${slug}`}
 										>
 											{lang === 'ar' ? 'غرد هذه المقالة' : 'Tweet This'}
 										</a>
 									</p>
-									<h1 className='mt-0 mb-4'># {title}</h1>
+									<h1 className='mt-0 mb-4'>{title}</h1>
 								</div>
 								<hr />
 								<article dir={dir} className='mt-24'>
@@ -58,6 +57,8 @@
 			}
 
 			CMS.registerPreviewTemplate('blog', ArticlePreview)
+			CMS.registerPreviewTemplate('arabic', ArticlePreview)
+			CMS.registerPreviewTemplate('notes', ArticlePreview)
 
 			CMS.registerPreviewStyle('/admin/preview.css')
 		</script>

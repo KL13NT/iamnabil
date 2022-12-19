@@ -1,6 +1,7 @@
 publish_mode: editorial_workflow
 media_folder: public
 public_folder: '/'
+local_backend: true
 
 backend:
   name: git-gateway
@@ -8,21 +9,74 @@ backend:
 
 collections:
   - name: blog
-    label: Blog
+    label: English blog posts
     folder: 'collections/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{path}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - label: Title (Make it catchy ;3)
         name: title
         widget: string
-      - label: Path (Slug name)
-        name: path
-        widget: string
-      - label: Cover (Full url ending with extension if any)
+      - label: External (Is this post originally on an external source?)
+        name: external
+        widget: boolean
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+      - label: Cover (Unsplash URL &auto=format&fit=crop)
         name: cover
-        widget: string
         required: false
+        widget: 'object'
+        fields:
+          - { label: 'Path', name: 'path', widget: 'string' }
+          - { label: 'Credit', name: 'credit', widget: 'string' }
+      - label: Description (60 char)
+        name: description
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: arabic
+    label: Arabic blog posts
+    folder: 'collections/arabic'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+      - label: External (Is this post originally on an external source?)
+        name: external
+        widget: boolean
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+      - label: Cover (Unsplash URL &auto=format&fit=crop)
+        name: cover
+        required: false
+        widget: 'object'
+        fields:
+          - { label: 'Path', name: 'path', widget: 'string' }
+          - { label: 'Credit', name: 'credit', widget: 'string' }
+      - label: Description (60 char)
+        name: description
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: notes
+    label: Prep notes
+    folder: 'collections/notes'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
       - label: Publish Date
         name: date
         widget: datetime
@@ -30,21 +84,6 @@ collections:
       - label: Description (60 char)
         name: description
         widget: string
-      - label: Language (ar, en) lowercase
-        name: lang
-        widget: string
-      - label: Translation link
-        name: translation
-        widget: string
-        required: false
-      - label: External
-        name: external
-        widget: string
-        required: false
-      - label: Category
-        name: category
-        widget: string
       - label: Body
         name: body
         widget: markdown
-        required: false
