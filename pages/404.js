@@ -9,7 +9,7 @@ const NotFoundPage = () => (
 		<SEO title='404: Not found' />
 		<div className='text-center'>
 			<img src='/doge_sad.jpg' alt='doge sad' className='h-64 mx-auto' />
-			<h1>
+			<h1 className='font-display'>
 				{'<'}NOT_FOUND{'>'}
 			</h1>
 			<p>
@@ -26,5 +26,5 @@ const NotFoundPage = () => (
 export default NotFoundPage
 
 export const config = {
-  unstable_runtimeJS: false
+	unstable_runtimeJS: false
 }
