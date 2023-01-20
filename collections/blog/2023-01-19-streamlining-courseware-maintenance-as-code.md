@@ -11,7 +11,26 @@ description: 'Courseware as Code is the process of producing courseware from
 external: false
 ---
 
-Courseware as Code is a revolutionary approach to designing, creating, and maintaining course content and all related assets. According to the Army Cyberschool, "Leveraging applicable aspects of the software development lifecycle to courseware facilitates discussions of suggested changes amongst faculty, provides transparency in updates, enables custom workﬂows based on the complexity of course content, and allows faculty, students, and workforce members to identify issues and contribute Content."
+Courseware as Code (CaC for short) is a revolutionary approach to designing, creating, and
+maintaining course content and all related assets. According to the Army
+Cyberschool, "Leveraging applicable aspects of the software development
+lifecycle to courseware facilitates _discussions_ of suggested changes amongst
+faculty, provides _transparency_ in updates, enables _custom workﬂows_ based on
+the complexity of course content, and allows faculty, students, and workforce
+members to _identify issues and contribute Content_."
+
+## Introducing CaC Action
+
+CaC Action is a project that I created with one
+goal in mind: Bringing a better experience to courseware management to the
+world. It works by transforming a course repository of nothing but markdown
+files into a fully working and deployed GitHub Pages website without any
+interaction from courseware maintainers.
+
+The project consists of 3 repositories, including a GitHub Action that executes
+the build, a NextJS template used to statically generate the website, and an
+example repo that anyone can "Use this template" on and get started using CaC
+Action right away!
 
 ## Motivation
 
