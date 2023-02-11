@@ -1,7 +1,9 @@
 [build]
   command = "yarn build"
-	publish = "out"
+  publish = "out"
+
 [[plugins]]
-package = "netlify-plugin-cache"
-  [plugins.inputs]
-  paths = [".next", ".npm", "node_modules"]
+package = "netlify-plugin-cache"
+
+  [plugins.inputs]
+  	paths = [".next",".npm","node_modules"]
