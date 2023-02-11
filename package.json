@@ -47,6 +47,7 @@
 		"type": "git"
 	},
 	"devDependencies": {
+		"netlify-plugin-cache": "^1.0.3",
 		"postcss-import": "^15.0.0",
 		"tailwindcss-logical": "^3.0.0"
 	}
