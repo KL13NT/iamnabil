@@ -74,9 +74,12 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - label: Title
+      - label: Title (Make it catchy ;3)
         name: title
         widget: string
+      - label: External (Is this post originally on an external source?)
+        name: external
+        widget: boolean
       - label: Publish Date
         name: date
         widget: datetime
@@ -87,3 +90,4 @@ collections:
       - label: Body
         name: body
         widget: markdown
+        required: false
