@@ -6,6 +6,13 @@ local_backend: true
 backend:
   name: git-gateway
   branch: master
+  commit_messages:
+    create: 'content: Create “{{slug}}”'
+    update: 'content: Update “{{slug}}”'
+    delete: 'content: Delete “{{slug}}”'
+    uploadMedia: 'content: Upload “{{path}}”'
+    deleteMedia: 'content: Delete “{{path}}”'
+    openAuthoring: '{{message}}'
 
 collections:
   - name: blog
