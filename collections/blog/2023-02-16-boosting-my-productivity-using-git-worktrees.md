@@ -8,21 +8,19 @@ cover:
 description: "Git Worktrees are a way to manage multiple git working trees at
   the same time without the hassle of git stash. "
 ---
-Git Worktrees are a way to manage multiple git working trees at the same time without the hassle of git stash. They allow us to work on branches as sub-directories to a repository, completely alleviating the pain of stashing changes when an urgent, unrelated change is required.
+I usuaully work on multiple features in parallel due to my multi-tasking brain. This forces me to stash a lot of changes, work on unrelated features, and completely forget about my stashed changes in the process. I tried to set a reminder using git hooks but they were too much of a hassle. And tried using terminal aliases that remind me to check my stashes but my brain would just dismiss the reminders altogether. I had to look for an alternative. 
 
 ## Git in a nutshell
 
-Other version control systems store information as a list of changes. Git stores information as a list of *snapshots*. A *snapshot* is a stored version of the repository at a given point in time. Each commit represents a snapshot in the git world. 
+Git stores information as a list of *snapshots*. A *snapshot* is a stored version of the repository at a given point in time. Each commit represents a snapshot in the git world. 
 
 The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify. This is the place in which you do your work before staging and committing.
 
 ## Git Work Trees
 
-The _git-worktree_ module allows you to checkout multiple versions of the project in separate sub-directories in the same root directory of the repository. 
+Git Worktrees are a way to manage multiple git working trees at the same time without the hassle of git stash. They allow us to work on branches as sub-directories to a repository, completely alleviating the pain of stashing changes when an urgent, unrelated change is required.
 
-The term "Git working tree" refers to the place in which you do your work. Each working tree is represented by a tree object that contains one entry per file or sub-directory in the repository. Git relies heavily on the "tree" concept to describe its operations and execute them. 
-
-A git working tree is a snapshot of a repository at a given moment in the commit history. Each commit 
+The _worktree_ module allows you to checkout multiple versions of the project in separate sub-directories in the same root directory of the repository. 
 
 ## Creating a worktree
 
