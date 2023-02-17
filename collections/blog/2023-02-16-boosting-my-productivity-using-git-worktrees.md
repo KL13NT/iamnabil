@@ -24,7 +24,7 @@ The *worktree* module allows you to checkout multiple versions of the project in
 
 ![Branches based approach](public/branches_approach.png)
 
-In this approach as you can see I have two stashed changes (which could be hundreds of lines of code) and 3 branches, *feature-1*, *feature-2*, and *fix-1*. By the time I finish working on the *fix-1* branch and push it my brain would've jumped to the next task and completely forgot about the previous features until I'm reminded of them again. 
+In this example I have two stashed changes (which could be hundreds of lines of code) and 3 branches, *feature-1*, *feature-2*, and *fix-1*. By the time I finish working on the *fix-1* branch and push it my brain would've jumped to the next task and completely forgot about the previous features until I'm reminded of them again. 
 
 
 Instead, with worktrees, it looks like this:
