@@ -20,9 +20,15 @@ The working tree is a single checkout of one version of the project. These files
 
 Git Worktrees are a way to manage multiple git working trees at the same time without the hassle of git stash. They allow us to work on branches as sub-directories to a repository, completely alleviating the pain of stashing changes when an urgent, unrelated change is required.
 
-The _worktree_ module allows you to checkout multiple versions of the project in separate sub-directories in the same root directory of the repository. Take the following diagram for example on the traditional approach:
+The *worktree* module allows you to checkout multiple versions of the project in separate sub-directories in the same root directory of the repository. Take the following diagram for example on the traditional approach:
+
+![](public/branches_approach.png)
+
+In this approach as you can see I have two stashed changes (which could be hundreds of lines of code) and 3 branches, *feature-1*, *feature-2*, and *fix-1*. By the time I finish working on the *fix-1* branch and push it my brain would've jumped to the next task and completely forgot about the previous features until I'm reminded of them again. 
 
 
+
+![](public/worktree_approach.png)
 
 ## Creating a worktree
 
