@@ -34,7 +34,7 @@ Feature flags are worth mentioning because they allow us to ship continuously wi
 
 ![https://nvie.com/img/git-model@2x.png](https://nvie.com/img/git-model@2x.png)
 
-Gitflow involves heavy usage of feature branches and multiple main branches (keyword here being multiple). It was published by Vincent Driessen on his [blog]([https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)) in 2010. 
+Gitflow involves heavy usage of feature branches and multiple main branches (keyword here being multiple). It was published by Vincent Driessen on his [blog](https://nvie.com/posts/a-successful-git-branching-model/) in 2010. 
 
 This workflow can be thought of as a heavy mutation of the Feature Branch Workflow as it doesn't introduce complexity through new concepts, but rather assigns specific roles to branches. It is one of the most complicated ones, and therefore the choice for using it should be studied carefully as it may be overkill.
 
@@ -46,15 +46,14 @@ This is not all of it though. Gitflow assigns “supporting” roles to branches
 
 A *release* branch may receive code changes that are not anywhere else such as bug fixes related to that release. When a *release* branch is ready to become a “real release” it is merged into *master* and tagged with a release number. The changes on the *release* branch must then be merged back into *develop.*
 
-Hot fixes are branched off from the most recent *master* and merged back into *master* and *develop. If a release branch exists then the fix needs to be merged into it instead of develop.*
+Hot fixes are branched off from the most recent *master* and merged back into *master* and *develop*. If a release branch exists then the fix needs to be merged into it instead of develop.
 
 Vincent documented this approach 13 years ago when most software was explicitly versioned and teams maintained multiple versions concurrently. He added a note of reflection to the original post 3 years ago, which I quote:
 
 > […] the most popular type of software that is being developed with Git is shifting more towards web apps — at least in my filter bubble. Web apps are typically continuously delivered, not rolled back, and you don't have to support multiple versions of the software running in the wild. […] This is not the class of software that I had in mind when I wrote the blog post 10 years ago.
-
-— Vincent Driessen
-
 > 
+> Vincent Driessen
+
 
 That statement still holds true to this day. Web apps are prominent amongst software teams, and they’re usually released in cycles of weeks (sprints) or even multiple times a day.
 
