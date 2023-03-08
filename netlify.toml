@@ -6,4 +6,4 @@
 package = "netlify-plugin-cache"
 
   [plugins.inputs]
-  	paths = [".next",".npm","node_modules"]
+  	paths = [".npm","node_modules"]
