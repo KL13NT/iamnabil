@@ -52,7 +52,7 @@ Vincent documented this approach 13 years ago when most software was explicitly 
 
 > […] the most popular type of software that is being developed with Git is shifting more towards web apps — at least in my filter bubble. Web apps are typically continuously delivered, not rolled back, and you don't have to support multiple versions of the software running in the wild. […] This is not the class of software that I had in mind when I wrote the blog post 10 years ago.
 > 
-> Vincent Driessen
+> - Vincent Driessen
 
 
 That statement still holds true to this day. Web apps are prominent amongst software teams, and they’re usually released in cycles of weeks (sprints) or even multiple times a day.
@@ -66,15 +66,10 @@ Gitflow was too complicated for the fast-moving GitHub team. It has its strength
 GitHub Flow was created to provide a simpler approach that allows GUI users and developers who may not be comfortable with the system to easily follow along. It's based on several principles:
 
 - Anything in the master branch is deployable
-
 - Create descriptive branches off of master
-
 - Push to named branches constantly
-
 - Open a pull request at any time
-
 - Merge only after pull request review
-
 - Deploy immediately after review
 
 GitLab flow is identical with the application of merge requests and issues for progress tracking. This approach is fairly simple, introduces no git management overhead, and can be paired with [Git Worktrees](https://iamnabil.netlify.app/blog/2023-02-16-boosting-my-productivity-using-git-worktrees). 
@@ -104,11 +99,8 @@ Teams often require a different environment for testing things out manually with
 With this approach you may encounter 4 environments, represented by corresponding branches as follows:
 
 - Dev: the most unstable environment, usually local only and not replicated on a server but can be nonetheless.
-
 - QA: an environment specifically made for quality assurance and bug reporting testing. This is the main source of bug reports and change requests.
-
 - Staging (pre-prod): the environment that most closely resembles the production environment. This environment is used for client and manager review, and is recommended to keep as stable as production. This is the release candidate.
-
 - Production (master): the current released version of the software, accessible to end-users.
 
 There is also data environments that correspond to these environments. Each data source usually supports a specific environment. For example, the databases supporting dev are usually the same as the ones supporting the QA environment. 
@@ -130,11 +122,7 @@ With this approach, a release is usually created from the main branch in the sam
 Each workflow has its own set of benefits and challenges, and the choice eventually comes down to which flow best fits your team. Always try to minimize the friction between developers, keep feature and bug-fix branches as short-lived as possible, and integrate CI/CD into your workflow to make things easier for yourself. 
 
 - [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-
 - [https://trunkbaseddevelopment.com/](https://trunkbaseddevelopment.com/)
-
 - [https://www.szalimben.com.py/blog/english/posts/git-branch-strategy/](https://www.szalimben.com.py/blog/english/posts/git-branch-strategy/)
-
 - [https://commonflow.org/](https://commonflow.org/)
-
 - [https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
