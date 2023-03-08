@@ -121,8 +121,7 @@ With this approach, a release is usually created from the main branch in the sam
 
 Each workflow has its own set of benefits and challenges, and the choice eventually comes down to which flow best fits your team. Always try to minimize the friction between developers, keep feature and bug-fix branches as short-lived as possible, and integrate CI/CD into your workflow to make things easier for yourself. 
 
-- [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-- [https://trunkbaseddevelopment.com/](https://trunkbaseddevelopment.com/)
-- [https://www.szalimben.com.py/blog/english/posts/git-branch-strategy/](https://www.szalimben.com.py/blog/english/posts/git-branch-strategy/)
-- [https://commonflow.org/](https://commonflow.org/)
-- [https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
+- [Atlassian Continuous Delivery Guide](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
+- [Trunk Based Development](https://trunkbaseddevelopment.com/)
+- [Git Branch Strategy](https://www.szalimben.com.py/blog/english/posts/git-branch-strategy/)
+- [Commonflow](https://commonflow.org/)
