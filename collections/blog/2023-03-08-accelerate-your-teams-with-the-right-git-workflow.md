@@ -52,7 +52,7 @@ Vincent documented this approach 13 years ago when most software was explicitly 
 
 > […] the most popular type of software that is being developed with Git is shifting more towards web apps — at least in my filter bubble. Web apps are typically continuously delivered, not rolled back, and you don't have to support multiple versions of the software running in the wild. […] This is not the class of software that I had in mind when I wrote the blog post 10 years ago.
 > 
-> - Vincent Driessen
+> — Vincent Driessen
 
 
 That statement still holds true to this day. Web apps are prominent amongst software teams, and they’re usually released in cycles of weeks (sprints) or even multiple times a day.
