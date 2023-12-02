@@ -7,3 +7,9 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   	paths = [".next",".npm"]
+
+[[redirects]]
+  from = "/badeel"
+  to = "https://badeel-masr.netlify.app"
+  status = 301
+  force = true
