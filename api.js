@@ -1,6 +1,6 @@
 import matter from 'gray-matter'
 
-import { readFileSync, readdirSync } from 'fs'
+import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join, resolve } from 'path'
 import { formatDate } from './utils'
 
@@ -13,6 +13,10 @@ const collections = join(process.cwd(), 'collections')
  */
 
 export function getAllSlugs(collection = 'arabic') {
+	if (!existsSync(`${collections}/${collection}`)) {
+		return []
+	}
+
 	return readdirSync(`${collections}/${collection}`).map(slug =>
 		slug.replace('.md', '')
 	)
