@@ -11,7 +11,7 @@ import Navbar from '../components/Navbar'
 
 import '../styling/index.sass'
 
-const link = 'https://twitter.com/trtworld/status/1715131151159812176'
+const link = 'https://ceasefiretoday.com/'
 
 const CustomLink = ({ href, ...props }) => {
 	const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
@@ -56,7 +56,7 @@ function App({ Component, pageProps }) {
 					rel='noreferrer'
 					referrerPolicy='no-referrer'
 				>
-					# PalestinianGenocide!{' '}
+					# CeasefireNow!{' '}
 					<span role='img' aria-label='palestine emoji'>
 						🇵🇸
 					</span>
