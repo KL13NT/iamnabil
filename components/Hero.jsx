@@ -10,6 +10,10 @@ export default function Hero() {
 	const [index, setImage] = useState(0)
 
 	useEffect(() => {
+		if (typeof window === 'undefined') {
+			return
+		}
+
 		const interval = setInterval(() => {
 			const newIndex = index + 1 === images.length ? 0 : index + 1
 			setImage(newIndex)
@@ -28,6 +32,7 @@ export default function Hero() {
 				src={images[index]}
 				alt='Me!'
 				className='w-3/4 aspect-square lg:w-60 rounded-full object-cover border-4 border-link m-0 max-w-[240px]'
+				loading='lazy'
 			/>
 		</div>
 	)

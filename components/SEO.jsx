@@ -18,10 +18,28 @@ function SEO({
 	const url = `${HOSTNAME}/${path}`
 	const finalTitle = title
 		? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
-		: defaultTitle	
+		: defaultTitle
 
 	return (
 		<Head>
+			<link rel='preconnect' href='https://fonts.googleapis.com' />
+			<link
+				rel='preconnect'
+				href='https://fonts.gstatic.com'
+				crossOrigin='true'
+			/>
+			<link
+				href='https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap'
+				rel='stylesheet'
+			/>
+			<link
+				href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap'
+				rel='stylesheet'
+			/>
+			<link
+				href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap'
+				rel='stylesheet'
+			/>
 			<title>{finalTitle}</title>
 			<meta
 				name='google-site-verification'
@@ -43,7 +61,6 @@ function SEO({
 			<meta content='@Nabil_Tharwat' property='twitter:creator' />
 			<meta content='@Nabil_Tharwat16' property='twitter:site' />
 			<meta content={ogImageUrl} property='twitter:image' />
-			<html lang='en-GB' />
 
 			{/* ICONS */}
 

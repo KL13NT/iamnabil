@@ -8,13 +8,12 @@ class MyDocument extends Document {
 	}
 
 	render() {
-		const isDev = String(process.env.NODE_ENV).toLowerCase() === 'development'
 		return (
 			<Html>
 				<Head />
 				<body>
 					<Main />
-					{isDev ? <NextScript /> : null}
+					<NextScript />
 				</body>
 			</Html>
 		)

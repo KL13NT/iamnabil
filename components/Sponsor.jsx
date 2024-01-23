@@ -4,7 +4,7 @@ function Sponsor() {
 	return (
 		<a
 			href='https://github.com/sponsors/KL13NT'
-			className='block bg-white px-5 py-1 mt-2 border border-slate-300 rounded-md hover:no-underline group hover:bg-slate-100 transition-colors'
+			className='block bg-white px-5 py-1 mt-4 border border-slate-300 rounded-md hover:no-underline group hover:bg-slate-100 transition-colors'
 		>
 			<img
 				src='/sponsor.svg'
