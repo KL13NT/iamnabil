@@ -24,6 +24,10 @@ const Navbar = () => {
 				<a className={classes}>Newsletter</a>
 			</Link>
 
+			<Link href='/connect'>
+				<a className={classes}>Connect</a>
+			</Link>
+
 			<Link href='/blog'>
 				<a className={classes}>Blog</a>
 			</Link>
