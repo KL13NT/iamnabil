@@ -10,7 +10,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "";
 
 const HEADERS = {
   "Content-Type": "application/json",
-  "Access-Control-Allow-Origin": "nabiltharwat.com",
+  "Access-Control-Allow-Origin": "https://nabiltharwat.com",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
 };
@@ -38,6 +38,8 @@ async function turnstileVerify(token: string, req: Request) {
   });
 
   const outcome = await result.json();
+
+  console.log(outcome);
 
   return outcome.success;
 }
@@ -78,6 +80,28 @@ function serverError(reason = "Something went wrong") {
   );
 }
 
+const illegalRe = /[\/\?<>\\:\*\|"]/g;
+// deno-lint-ignore no-control-regex
+const controlRe = /[\x00-\x1f\x80-\x9f]/g;
+const reservedRe = /^\.+$/;
+const windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
+const windowsTrailingRe = /[\. ]+$/;
+
+function sanitize(input: string) {
+  if (typeof input !== "string") {
+    throw new Error("Input must be string");
+  }
+
+  const sanitized = input
+    .replace(illegalRe, "")
+    .replace(controlRe, "")
+    .replace(reservedRe, "")
+    .replace(windowsReservedRe, "")
+    .replace(windowsTrailingRe, "");
+
+  return sanitized;
+}
+
 function extractBase64(input: string) {
   try {
     const split = input.split("data:audio/ogg; codecs=opus;base64,");
@@ -95,8 +119,8 @@ function extractBase64(input: string) {
 }
 
 function extractName(input: string) {
-  if (input?.length > 0 && input.length < 50) {
-    return input;
+  if (input?.length > 0 && input?.length < 50) {
+    return sanitize(input);
   } else {
     return false;
   }
@@ -119,6 +143,8 @@ Deno.serve(async (req) => {
     const content = extractBase64(base64);
     const name = extractName(body.name);
     const timestamp = Date.now();
+
+    console.log(valid, !!content, name);
 
     if (valid && content && name) {
       const supabaseClient = createClient(

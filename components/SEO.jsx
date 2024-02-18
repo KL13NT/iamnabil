@@ -12,7 +12,8 @@ function SEO({
 	lang,
 	description = defaultDescription,
 	path = defaultPath,
-	cover
+	cover,
+	children
 }) {
 	const ogImageUrl = cover ? cover.path : `${HOSTNAME}${defaultOGImagePath}`
 	const url = `${HOSTNAME}/${path}`
@@ -95,6 +96,8 @@ function SEO({
 			/>
 			<meta name='msapplication-config' content='/icons/browserconfig.xml' />
 			<meta name='theme-color' content='#ffffff' />
+
+			{children}
 		</Head>
 	)
 }
