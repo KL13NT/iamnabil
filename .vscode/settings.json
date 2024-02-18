@@ -1,6 +1,11 @@
 {
-  "eslint.enable": true,
-  "cSpell.words": [
-    "blockquote"
-  ]
+	"[typescript]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"cSpell.words": ["blockquote", "remoteip"],
+	"deno.enable": true,
+	"deno.enablePaths": ["supabase/functions"],
+	"deno.lint": true,
+	"deno.unstable": true,
+	"eslint.enable": true
 }

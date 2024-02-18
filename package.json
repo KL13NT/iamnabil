@@ -13,6 +13,7 @@
 		"@mdx-js/loader": "^1.6.19",
 		"@next/eslint-plugin-next": "^12.3.1",
 		"@next/mdx": "^9.5.5",
+		"@supabase/supabase-js": "^2.39.6",
 		"clsx": "^1.2.1",
 		"eslint": "^8.26.0",
 		"eslint-config-next": "^12.3.1",
@@ -49,6 +50,7 @@
 	"devDependencies": {
 		"netlify-plugin-cache": "^1.0.3",
 		"postcss-import": "^15.0.0",
+		"supabase": "^1.142.2",
 		"tailwindcss-logical": "^3.0.0"
 	}
 }
