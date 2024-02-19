@@ -15,8 +15,6 @@ const API_JWT =
 		? `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0`
 		: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNpZXVud21vbWp2cGJjdG9qaG1yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDgyNTYwNzcsImV4cCI6MjAyMzgzMjA3N30.q6G_faganDvjblAmVlVQMVYXkzEgSSK1FyRsX2T0PSI`
 
-console.log(TURNSTILE_KEY)
-
 function blobToBase64(blob) {
 	return new Promise((resolve, _) => {
 		const reader = new FileReader()
@@ -34,28 +32,56 @@ const Rendezvous = () => {
 		playing: false,
 		audioURL: null,
 		base64: null,
-		turnstileSuccess: null
+		turnstileSuccess: null,
+		status: 'idle', // 'idle' | 'submitting' | 'success' | 'error'
+		error: null
 	})
 
 	const handleSubmit = async event => {
 		event.preventDefault()
 
-		const form = new FormData(event.target)
-		const response = window.turnstile.getResponse()
+		setState(state => ({
+			...state,
+			status: 'submitting'
+		}))
 
-		await fetch(API_URL, {
-			method: 'POST',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-				Authorization: `Bearer ${API_JWT}`
-			},
-			body: JSON.stringify({
-				base64: state.base64,
-				name: form.get('name'),
-				'cf-turnstile-response': response
+		const form = new FormData(event.target)
+		const token = window.turnstile.getResponse()
+
+		try {
+			const response = await fetch(API_URL, {
+				method: 'POST',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${API_JWT}`
+				},
+				body: JSON.stringify({
+					base64: state.base64,
+					name: form.get('name'),
+					'cf-turnstile-response': token
+				})
 			})
-		})
+
+			if (!response.ok) {
+				setState(state => ({
+					...state,
+					status: 'error',
+					error: 'Something went wrong'
+				}))
+			} else {
+				setState(state => ({
+					...state,
+					status: 'success'
+				}))
+			}
+		} catch (error) {
+			setState(state => ({
+				...state,
+				status: 'error',
+				error: 'Check your internet connection and try again.'
+			}))
+		}
 	}
 
 	const startRecording = () => {
@@ -100,12 +126,9 @@ const Rendezvous = () => {
 
 	const play = () => {
 		const endedListener = () => {
-			audioPlayer.current.removeEventListener('ended', endedListener)
+			stop()
 
-			setState(state => ({
-				...state,
-				playing: false
-			}))
+			audioPlayer.current.removeEventListener('ended', endedListener)
 		}
 
 		audioPlayer.current.play()
@@ -138,7 +161,7 @@ const Rendezvous = () => {
 	}
 
 	useEffect(() => {
-		window.turnstile.ready(function () {
+		window.onloadTurnstileCallback = function () {
 			window.turnstile.render(turnstileRef.current, {
 				sitekey: TURNSTILE_KEY,
 				callback: function () {
@@ -148,7 +171,7 @@ const Rendezvous = () => {
 					}))
 				}
 			})
-		})
+		}
 	}, [])
 
 	return (
@@ -161,7 +184,7 @@ const Rendezvous = () => {
 					type='text'
 					name='name'
 					placeholder='Your name'
-					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:text-sm sm:leading-6 py-2 px-4 w-full'
+					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:text-sm sm:leading-6 py-2 px-4 min-w-[300px]'
 					required
 				/>
 
@@ -245,10 +268,14 @@ const Rendezvous = () => {
 
 				<div ref={turnstileRef} className='h-[65px]'></div>
 
-				{!state.recording && state.audioURL && state.turnstileSuccess ? (
+				{!state.recording &&
+				state.status !== 'success' &&
+				state.audioURL &&
+				state.turnstileSuccess ? (
 					<button
 						type='submit'
-						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
+						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors disabled:opacity-70 disabled:cursor-not-allowed'
+						disabled={state.status === 'submitting'}
 					>
 						Submit
 						<img
@@ -258,6 +285,12 @@ const Rendezvous = () => {
 							className='h-6'
 						/>
 					</button>
+				) : null}
+
+				{state.status === 'success' ? (
+					<p>✔ Your question has been collected. Thank you!</p>
+				) : state.status === 'error' ? (
+					<p>❌ {state.error}</p>
 				) : null}
 			</form>
 		</div>
