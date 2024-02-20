@@ -24,6 +24,7 @@ function blobToBase64(blob) {
 }
 
 let chunks = []
+let timeout
 const Rendezvous = () => {
 	const audioPlayer = useRef()
 	const turnstileRef = useRef()
@@ -84,6 +85,10 @@ const Rendezvous = () => {
 		}
 	}
 
+	const stopRecording = () => {
+		state.mediaRecorder.stop()
+	}
+
 	const startRecording = () => {
 		const handleSuccess = function (stream) {
 			const mediaRecorder = new MediaRecorder(stream)
@@ -93,6 +98,8 @@ const Rendezvous = () => {
 				const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' })
 				const base64 = await blobToBase64(blob)
 				const audioURL = URL.createObjectURL(blob)
+
+				clearTimeout(timeout)
 
 				chunks = []
 
@@ -120,9 +127,13 @@ const Rendezvous = () => {
 			.then(handleSuccess)
 	}
 
-	const stopRecording = () => {
-		state.mediaRecorder.stop()
-	}
+	useEffect(() => {
+		if (state.mediaRecorder && state.recording) {
+			timeout = setTimeout(stopRecording, 1000 * 90 /* 90 sec */)
+		} else clearTimeout(timeout)
+
+		return () => clearTimeout(timeout)
+	}, [state.mediaRecorder, state.recording])
 
 	const play = () => {
 		const endedListener = () => {
@@ -154,6 +165,7 @@ const Rendezvous = () => {
 		setState(state => ({
 			...state,
 			playing: false,
+			base64: null,
 			status: 'idle',
 			audioURL: null,
 			recording: false,
