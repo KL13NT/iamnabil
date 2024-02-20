@@ -1,5 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react'
 
+import playIcon from '../assets/icons/play.svg'
+import loadingIcon from '../assets/icons/loading.svg'
+import micIcon from '../assets/icons/mic.svg'
+import stopIcon from '../assets/icons/stop.svg'
+import restartIcon from '../assets/icons/restart.svg'
+
 const API_URL =
 	process.env.NODE_ENV === 'production'
 		? 'https://cieunwmomjvpbctojhmr.supabase.co/functions/v1/rendezvous-connect'
@@ -91,7 +97,9 @@ const Rendezvous = () => {
 
 	const startRecording = () => {
 		const handleSuccess = function (stream) {
-			const mediaRecorder = new MediaRecorder(stream)
+			const mediaRecorder = new MediaRecorder(stream, {
+				mimeType: 'audio/ogg; codecs=opus'
+			})
 			mediaRecorder.start()
 
 			mediaRecorder.onstop = async () => {
@@ -196,6 +204,7 @@ const Rendezvous = () => {
 				<input
 					type='text'
 					name='name'
+					maxLength={50}
 					placeholder='Your name'
 					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:text-sm sm:leading-6 py-2 px-4 min-w-[300px]'
 					required
@@ -214,7 +223,7 @@ const Rendezvous = () => {
 								>
 									Stop
 									<img
-										src='/icons/stop.svg'
+										src={stopIcon.src}
 										role='presentation'
 										alt=''
 										className='h-6'
@@ -228,7 +237,7 @@ const Rendezvous = () => {
 								>
 									Play
 									<img
-										src='/icons/play.svg'
+										src={playIcon.src}
 										role='presentation'
 										alt=''
 										className='h-6'
@@ -242,7 +251,7 @@ const Rendezvous = () => {
 						>
 							Record again
 							<img
-								src='/icons/restart.svg'
+								src={restartIcon.src}
 								role='presentation'
 								alt=''
 								className='h-6'
@@ -257,7 +266,7 @@ const Rendezvous = () => {
 					>
 						Stop recording
 						<img
-							src='/icons/stop.svg'
+							src={stopIcon.src}
 							role='presentation'
 							alt=''
 							className='h-8'
@@ -270,12 +279,7 @@ const Rendezvous = () => {
 						className='flex justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 					>
 						Start recording
-						<img
-							src='/icons/mic.svg'
-							role='presentation'
-							alt=''
-							className='h-8'
-						/>
+						<img src={micIcon.src} role='presentation' alt='' className='h-8' />
 					</button>
 				)}
 
@@ -290,13 +294,15 @@ const Rendezvous = () => {
 						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors disabled:opacity-70 disabled:cursor-not-allowed'
 						disabled={state.status === 'submitting'}
 					>
-						Submit
-						<img
-							src='/icons/play.svg'
-							role='presentation'
-							alt=''
-							className='h-6'
-						/>
+						{state.status === 'submitting' ? 'Submitting' : 'Submit'}
+						{state.status === 'submitting' ? (
+							<img
+								src={loadingIcon.src}
+								role='presentation'
+								alt=''
+								className='animate-spin h-6'
+							/>
+						) : null}
 					</button>
 				) : null}
 

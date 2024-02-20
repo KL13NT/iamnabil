@@ -135,6 +135,12 @@ function extractBase64(input: string) {
 
     const content = split[1];
     const decoded = decodeBase64(content);
+    const sizeInMB = decoded.length / 1_048_576;
+
+    if (sizeInMB >= 50) {
+      return false;
+    }
+
     return decoded;
   } catch {
     return false;
