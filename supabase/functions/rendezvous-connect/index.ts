@@ -7,10 +7,16 @@ const TURNSTILE_SECRET_KEY = Deno.env.get("TURNSTILE_SECRET_KEY") ?? "";
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ??
   "";
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "";
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
+const MODE = Deno.env.get("MODE") ?? "";
+
+const h = String.raw;
 
 const HEADERS = {
   "Content-Type": "application/json",
-  "Access-Control-Allow-Origin": "https://nabiltharwat.com",
+  "Access-Control-Allow-Origin": MODE === "dev"
+    ? "*"
+    : "https://nabiltharwat.com",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
 };
@@ -19,6 +25,34 @@ function ips(req: Request) {
   const clientIps = req.headers.get("x-forwarded-for")?.split(/\s*,\s*/) || [];
 
   return clientIps.length >= 1 ? clientIps[0] : null;
+}
+
+async function sendEmail(name: string, url?: string) {
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: "rendezvous@nabiltharwat.com",
+        to: "nabil.tharwat@outlook.com",
+        subject: "New rendezvous voicemail!",
+        html: h`
+				<p>You have a new voicemail from ${name}</p>
+				<p>Give it a listen at <a href="${url}">${url}</a>. This URL is only available for  24 hours.</p>
+				<audio src="${url}" controls></audio>
+			`,
+      }),
+    });
+
+    if (res.ok) return true;
+  } catch (error) {
+    console.error(error);
+  }
+
+  return false;
 }
 
 async function turnstileVerify(token: string, req: Request) {
@@ -39,45 +73,34 @@ async function turnstileVerify(token: string, req: Request) {
 
   const outcome = await result.json();
 
-  console.log(outcome);
-
   return outcome.success;
 }
 
 function badRequest(reason = "Bad input", status?: number) {
-  return new Response(
-    JSON.stringify({ error: reason }),
-    {
-      headers: {
-        ...HEADERS,
-      },
-      status: status ?? 400,
+  return new Response(JSON.stringify({ error: reason }), {
+    headers: {
+      ...HEADERS,
     },
-  );
+    status: status ?? 400,
+  });
 }
 
 function okRequest() {
-  return new Response(
-    undefined,
-    {
-      headers: {
-        ...HEADERS,
-      },
-      status: 200,
+  return new Response(undefined, {
+    headers: {
+      ...HEADERS,
     },
-  );
+    status: 200,
+  });
 }
 
 function serverError(reason = "Something went wrong") {
-  return new Response(
-    JSON.stringify({ error: reason }),
-    {
-      headers: {
-        ...HEADERS,
-      },
-      status: 500,
+  return new Response(JSON.stringify({ error: reason }), {
+    headers: {
+      ...HEADERS,
     },
-  );
+    status: 500,
+  });
 }
 
 const illegalRe = /[\/\?<>\\:\*\|"]/g;
@@ -144,15 +167,14 @@ Deno.serve(async (req) => {
     const name = extractName(body.name);
     const timestamp = Date.now();
 
-    console.log(valid, !!content, name);
-
     if (valid && content && name) {
       const supabaseClient = createClient(
         SUPABASE_URL,
         SUPABASE_SERVICE_ROLE_KEY,
       );
 
-      const { error: uploadError } = await supabaseClient.storage
+      const { error: uploadError, data: uploadData } = await supabaseClient
+        .storage
         .from("recordings")
         .upload(`${name}-${timestamp}.ogg`, content.buffer, {
           contentType: "audio/ogg",
@@ -166,12 +188,22 @@ Deno.serve(async (req) => {
         return serverError("Something went wrong");
       }
 
+      const { data: signedUrlData, error: signedUrlError } =
+        await supabaseClient.storage
+          .from("recordings")
+          .createSignedUrl(uploadData.path, 60 * 60 * 24);
+
+      if (signedUrlError) {
+        console.error("Failed to create signed url", { signedUrlError });
+      }
+
+      await sendEmail(name, signedUrlData?.signedUrl);
       return okRequest();
     } else {
       return badRequest("Form verification failed");
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     return serverError();
   }

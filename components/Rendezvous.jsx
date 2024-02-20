@@ -154,6 +154,7 @@ const Rendezvous = () => {
 		setState(state => ({
 			...state,
 			playing: false,
+			status: 'idle',
 			audioURL: null,
 			recording: false,
 			mediaRecorder: null
