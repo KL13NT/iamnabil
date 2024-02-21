@@ -8,7 +8,7 @@ export default function Hero() {
 				<p>Software Engineer in Cairo</p>
 			</div>
 			<img
-				src='/images/nabil-2.jpg'
+				src='/images/nabil-4.jpg'
 				alt='Me!'
 				className='w-3/4 aspect-square lg:w-60 rounded-full object-cover border-4 border-link m-0 max-w-[240px]'
 				loading='lazy'
