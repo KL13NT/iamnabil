@@ -27,10 +27,8 @@ module.exports = {
 			}
 		},
 		fontFamily: {
-			title: 'Playfair Display, serif',
-
 			display:
-				'Comfortaa, Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+				'Manrope, Comfortaa, Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
 
 			rtl: 'Tajawal, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
 		}

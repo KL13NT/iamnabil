@@ -2,14 +2,20 @@
 @tailwind components
 @tailwind utilities
 
+*
+	font-feature-settings: "salt" on,"ss01" on,"liga" off
+
 body, html
 	@apply bg-accent
 
+	font-optical-sizing: auto
+	font-style: normal
+
 h1, h2
-	@apply text-black font-black mt-8 font-title
+	@apply text-black font-black mt-8
 
 h3, h4
-	@apply text-black font-bold mt-8 max-w-max font-title
+	@apply text-black font-bold mt-8 max-w-max
 
 
 h1
@@ -25,7 +31,9 @@ h4
 	@apply text-xl
 
 p, ul, ol
-	@apply text-lg mt-4
+	@apply text-xl mt-4
+
+	line-height: unset
 
 a
 	@apply bg-link max-w-max
@@ -57,7 +65,9 @@ blockquote
 		@apply text-lg font-normal
 
 	p
-		@apply text-lg font-bold
+		@apply text-xl font-bold
+
+		line-height: unset
 
 .text-content
 	@apply w-full lg:w-7/12

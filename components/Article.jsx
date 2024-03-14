@@ -49,11 +49,11 @@ const textLanguageMapping = {
 	},
 	tweet: {
 		ar: 'غرد هذه المقالة',
-		en: 'Tweet this article'
+		en: 'Tweet this'
 	},
 	discuss: {
 		ar: 'ناقش هذه المقالة على تويتر',
-		en: 'Discuss this article on Twitter'
+		en: 'Discuss on X'
 	},
 	github: {
 		ar: 'عدل هذه المقالة على جيتهب',
@@ -130,7 +130,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 			<article
 				dir='auto'
 				data-lang={lang}
-				className='mt-14 w-full md:10/12 lg:max-w-[850px] mx-auto'
+				className='mt-14 w-full md:10/12 lg:max-w-[650px] mx-auto'
 			>
 				<ReactMarkdown renderers={renderers} allowDangerousHtml>
 					{html}

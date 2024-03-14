@@ -5,7 +5,7 @@ export default function Hero() {
 		<div className='flex flex-col items-center justify-between lg:flex-row gap-8 mb-10 max-w-[650px] mx-auto'>
 			<div>
 				<h1>Nabil Tharwat</h1>
-				<p>Software Engineer in Cairo</p>
+				<p className='mt-2'>Software Engineer</p>
 			</div>
 			<img
 				src='/images/nabil-4.jpg'

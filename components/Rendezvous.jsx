@@ -206,7 +206,7 @@ const Rendezvous = () => {
 					name='name'
 					maxLength={50}
 					placeholder='Your name'
-					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:text-sm sm:leading-6 py-2 px-4 min-w-[300px]'
+					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 min-w-[300px]'
 					required
 				/>
 

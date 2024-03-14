@@ -34,11 +34,7 @@ function SEO({
 				rel='stylesheet'
 			/>
 			<link
-				href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap'
-				rel='stylesheet'
-			/>
-			<link
-				href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap'
+				href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'
 				rel='stylesheet'
 			/>
 			<title>{finalTitle}</title>
