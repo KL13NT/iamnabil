@@ -76,6 +76,11 @@ function App({ Component, pageProps }) {
 				src='https://static.cloudflareinsights.com/beacon.min.js'
 				data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'
 			></script>
+
+			<script
+				src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+				defer
+			/>
 		</>
 	)
 }

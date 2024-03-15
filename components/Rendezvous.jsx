@@ -198,11 +198,6 @@ const Rendezvous = () => {
 
 	return (
 		<div className='container mx-auto p-4 mt-16 w-fit min-w-[300px]'>
-			<script
-				src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
-				defer
-			/>
-
 			<form
 				className='flex flex-col justify-center items-center gap-6 min-w-[300px]'
 				onSubmit={handleSubmit}
