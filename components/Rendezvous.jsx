@@ -241,7 +241,7 @@ const Rendezvous = () => {
 				/>
 
 				<input
-					type='text'
+					type='email'
 					name='email'
 					maxLength={50}
 					placeholder='ايميلك'

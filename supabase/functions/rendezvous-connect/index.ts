@@ -2,6 +2,7 @@
 
 import { decodeBase64 } from "https://deno.land/std@0.216.0/encoding/base64.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
+import { nanoid } from "https://deno.land/x/nanoid@v3.0.0/mod.ts";
 
 const TURNSTILE_SECRET_KEY = Deno.env.get("TURNSTILE_SECRET_KEY") ?? "";
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ??
@@ -27,7 +28,7 @@ function ips(req: Request) {
   return clientIps.length >= 1 ? clientIps[0] : null;
 }
 
-async function sendEmail(name: string, url?: string) {
+async function sendEmail(name: string, email: string, url?: string) {
   try {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -41,6 +42,7 @@ async function sendEmail(name: string, url?: string) {
         subject: "New rendezvous voicemail!",
         html: h`
 				<p>You have a new voicemail from ${name}</p>
+				<p>${email}</p>
 				<p>Give it a listen at <a href="${url}">${url}</a>. This URL is only available for  24 hours.</p>
 				<audio src="${url}" controls></audio>
 			`,
@@ -142,7 +144,8 @@ function extractBase64(input: string) {
     }
 
     return decoded;
-  } catch {
+  } catch (error) {
+    console.log(error);
     return false;
   }
 }
@@ -171,9 +174,11 @@ Deno.serve(async (req) => {
     const valid = await turnstileVerify(token, req);
     const content = extractBase64(base64);
     const name = extractName(body.name);
+    const email = extractName(body.email);
     const timestamp = Date.now();
+    const id = nanoid();
 
-    if (valid && content && name) {
+    if (valid && content && name && email) {
       const supabaseClient = createClient(
         SUPABASE_URL,
         SUPABASE_SERVICE_ROLE_KEY,
@@ -182,7 +187,7 @@ Deno.serve(async (req) => {
       const { error: uploadError, data: uploadData } = await supabaseClient
         .storage
         .from("recordings")
-        .upload(`${name}-${timestamp}.ogg`, content.buffer, {
+        .upload(`${id}-${timestamp}.ogg`, content.buffer, {
           contentType: "audio/ogg",
           cacheControl: "3600",
           upsert: false,
@@ -203,7 +208,7 @@ Deno.serve(async (req) => {
         console.error("Failed to create signed url", { signedUrlError });
       }
 
-      await sendEmail(name, signedUrlData?.signedUrl);
+      await sendEmail(name, email, signedUrlData?.signedUrl);
       return okRequest();
     } else {
       return badRequest("Form verification failed");
