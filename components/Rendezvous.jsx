@@ -31,8 +31,10 @@ function blobToBase64(blob) {
 
 let chunks = []
 let timeout
+let interval
 const Rendezvous = () => {
 	const audioPlayer = useRef()
+	const timerRef = useRef()
 	const turnstileRef = useRef()
 	const [state, setState] = useState({
 		recording: false,
@@ -95,6 +97,26 @@ const Rendezvous = () => {
 		state.mediaRecorder.stop()
 	}
 
+	const startTimer = () => {
+		const target = new Date().getTime() + 90 * 1000
+
+		return setInterval(() => {
+			const difference = target - Date.now()
+
+			if (difference > 0) {
+				const minutes = Math.floor((difference / 1000 / 60) % 60)
+				const seconds = Math.floor((difference / 1000) % 60)
+
+				const l = number => number.toLocaleString('ar-EG')
+				const remaining = `متبقي ${l(minutes)}:${l(seconds)}`
+
+				timerRef.current.textContent = remaining
+			} else {
+				clearInterval(interval)
+			}
+		}, 1000)
+	}
+
 	const startRecording = () => {
 		const handleSuccess = function (stream) {
 			const mediaRecorder = new MediaRecorder(stream, {})
@@ -136,9 +158,15 @@ const Rendezvous = () => {
 	useEffect(() => {
 		if (state.mediaRecorder && state.recording) {
 			timeout = setTimeout(stopRecording, 1000 * 90 /* 90 sec */)
-		} else clearTimeout(timeout)
+			interval = startTimer()
+		} else {
+			clearTimeout(timeout)
+		}
 
-		return () => clearTimeout(timeout)
+		return () => {
+			clearTimeout(timeout)
+			clearInterval(interval)
+		}
 	}, [state.mediaRecorder, state.recording])
 
 	const play = () => {
@@ -197,9 +225,9 @@ const Rendezvous = () => {
 	}, [])
 
 	return (
-		<div className='container mx-auto p-4 mt-16 w-fit min-w-[300px]'>
+		<div className='container mx-auto mt-16 w-full lg:w-fit lg:min-w-[300px]'>
 			<form
-				className='flex flex-col justify-center items-center gap-6 min-w-[300px]'
+				className='flex flex-col justify-center items-center gap-6 w-full'
 				onSubmit={handleSubmit}
 			>
 				<input
@@ -207,14 +235,14 @@ const Rendezvous = () => {
 					name='name'
 					maxLength={50}
 					placeholder='إسمك'
-					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 min-w-[300px]'
+					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 w-full lg:w-fit lg:min-w-[300px]'
 					required
 				/>
 
 				<audio className='hidden' ref={audioPlayer} src={state.audioURL} />
 
 				{state.audioURL && !state.recording ? (
-					<div className='flex col justify-center items-center gap-2'>
+					<div className='flex flex-wrap justify-center items-center gap-2'>
 						<div className='flex items-center justify-center gap-2'>
 							{state.playing ? (
 								<button
@@ -260,19 +288,22 @@ const Rendezvous = () => {
 						</button>
 					</div>
 				) : state.recording ? (
-					<button
-						type='button'
-						onClick={stopRecording}
-						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
-					>
-						توقف
-						<img
-							src={stopIcon.src}
-							role='presentation'
-							alt=''
-							className='h-8'
-						/>
-					</button>
+					<div className='flex gap-2 flex-wrap justify-between items-center w-full text-2xl'>
+						<span ref={timerRef}>متبقي ١:٢٩</span>
+						<button
+							type='button'
+							onClick={stopRecording}
+							className='text-lg flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
+						>
+							توقف
+							<img
+								src={stopIcon.src}
+								role='presentation'
+								alt=''
+								className='h-8'
+							/>
+						</button>
+					</div>
 				) : (
 					<button
 						type='button'
@@ -284,7 +315,14 @@ const Rendezvous = () => {
 					</button>
 				)}
 
-				<div ref={turnstileRef} className='h-[65px]'></div>
+				<div className='w-full overflow-auto flex justify-end'>
+					<div
+						ref={turnstileRef}
+						className='h-[65px] mx-auto w-fit'
+						data-size='normal'
+						data-theme='light'
+					></div>
+				</div>
 
 				{!state.recording &&
 				state.status !== 'success' &&
