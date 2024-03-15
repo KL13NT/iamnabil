@@ -45,7 +45,7 @@ li
 	@apply mt-4
 
 ul, ol
-	@apply p-4 mt-0
+	@apply p-0 mt-0
 
 ul li
 	list-style-type: square
@@ -102,8 +102,11 @@ pre code
 	h1, h2, h3, h4
 		@apply font-rtl
 
-	p, ul, ol
+	p
 		@apply text-2xl mt-8
+
+	ul, ol
+		@apply text-2xl mt-0
 
 	h3, h4
 		line-height: 2.2

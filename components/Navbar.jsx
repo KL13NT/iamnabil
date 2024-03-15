@@ -25,7 +25,9 @@ const Navbar = () => {
 			</Link>
 
 			<Link href='/connect'>
-				<a className={classes}>Connect</a>
+				<a className={classes} data-lang='ar'>
+					اتّصل
+				</a>
 			</Link>
 
 			<Link href='/blog'>

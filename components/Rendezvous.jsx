@@ -74,7 +74,7 @@ const Rendezvous = () => {
 				setState(state => ({
 					...state,
 					status: 'error',
-					error: 'Something went wrong'
+					error: 'حدث خطأ ما'
 				}))
 			} else {
 				setState(state => ({
@@ -86,7 +86,7 @@ const Rendezvous = () => {
 			setState(state => ({
 				...state,
 				status: 'error',
-				error: 'Check your internet connection and try again.'
+				error: 'برجاء التأكد من إتصالكم بالإنترنت وإعادة المحاولة.'
 			}))
 		}
 	}
@@ -97,9 +97,7 @@ const Rendezvous = () => {
 
 	const startRecording = () => {
 		const handleSuccess = function (stream) {
-			const mediaRecorder = new MediaRecorder(stream, {
-				mimeType: 'audio/ogg; codecs=opus'
-			})
+			const mediaRecorder = new MediaRecorder(stream, {})
 			mediaRecorder.start()
 
 			mediaRecorder.onstop = async () => {
@@ -181,22 +179,30 @@ const Rendezvous = () => {
 		}))
 	}
 
+	const renderTurnstile = () => {
+		window.turnstile.render(turnstileRef.current, {
+			sitekey: TURNSTILE_KEY,
+			callback: function () {
+				setState(state => ({
+					...state,
+					turnstileSuccess: true
+				}))
+			}
+		})
+	}
+
 	useEffect(() => {
-		window.onloadTurnstileCallback = function () {
-			window.turnstile.render(turnstileRef.current, {
-				sitekey: TURNSTILE_KEY,
-				callback: function () {
-					setState(state => ({
-						...state,
-						turnstileSuccess: true
-					}))
-				}
-			})
-		}
+		if (window.turnstile) renderTurnstile()
+		else window.onloadTurnstileCallback = renderTurnstile
 	}, [])
 
 	return (
 		<div className='container mx-auto p-4 mt-16 w-fit min-w-[300px]'>
+			<script
+				src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+				defer
+			/>
+
 			<form
 				className='flex flex-col justify-center items-center gap-6 min-w-[300px]'
 				onSubmit={handleSubmit}
@@ -205,7 +211,7 @@ const Rendezvous = () => {
 					type='text'
 					name='name'
 					maxLength={50}
-					placeholder='Your name'
+					placeholder='إسمك'
 					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 min-w-[300px]'
 					required
 				/>
@@ -221,7 +227,7 @@ const Rendezvous = () => {
 									type='button'
 									className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 								>
-									Stop
+									توقف
 									<img
 										src={stopIcon.src}
 										role='presentation'
@@ -235,7 +241,7 @@ const Rendezvous = () => {
 									type='button'
 									className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 								>
-									Play
+									تشغيل
 									<img
 										src={playIcon.src}
 										role='presentation'
@@ -249,7 +255,7 @@ const Rendezvous = () => {
 							onClick={retry}
 							className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 						>
-							Record again
+							إعادة التسجيل
 							<img
 								src={restartIcon.src}
 								role='presentation'
@@ -264,7 +270,7 @@ const Rendezvous = () => {
 						onClick={stopRecording}
 						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 					>
-						Stop recording
+						توقف
 						<img
 							src={stopIcon.src}
 							role='presentation'
@@ -278,7 +284,7 @@ const Rendezvous = () => {
 						onClick={startRecording}
 						className='flex justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors'
 					>
-						Start recording
+						إبدأ التسجيل
 						<img src={micIcon.src} role='presentation' alt='' className='h-8' />
 					</button>
 				)}
@@ -294,7 +300,7 @@ const Rendezvous = () => {
 						className='flex gap-2 justify-center items-center py-2 px-4 font-bold text-md border rounded-md text-theme-contrast bg-link transition-colors disabled:opacity-70 disabled:cursor-not-allowed'
 						disabled={state.status === 'submitting'}
 					>
-						{state.status === 'submitting' ? 'Submitting' : 'Submit'}
+						{state.status === 'submitting' ? 'جاري الإرسال' : 'إرسال'}
 						{state.status === 'submitting' ? (
 							<img
 								src={loadingIcon.src}
@@ -307,7 +313,7 @@ const Rendezvous = () => {
 				) : null}
 
 				{state.status === 'success' ? (
-					<p>✔ Your question has been collected. Thank you!</p>
+					<p>✔ لقد تم تسجيل سؤالك. شكرًا لك!</p>
 				) : state.status === 'error' ? (
 					<p>❌ {state.error}</p>
 				) : null}
