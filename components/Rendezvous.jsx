@@ -68,6 +68,7 @@ const Rendezvous = () => {
 				body: JSON.stringify({
 					base64: state.base64,
 					name: form.get('name'),
+					email: form.get('email'),
 					'cf-turnstile-response': token
 				})
 			})
@@ -235,6 +236,15 @@ const Rendezvous = () => {
 					name='name'
 					maxLength={50}
 					placeholder='إسمك'
+					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 w-full lg:w-fit lg:min-w-[300px]'
+					required
+				/>
+
+				<input
+					type='text'
+					name='email'
+					maxLength={50}
+					placeholder='ايميلك'
 					className='bg-primary rounded-md text-accent placeholder:text-accent border-2 border-link block flex-1 sm:leading-6 py-2 px-4 w-full lg:w-fit lg:min-w-[300px]'
 					required
 				/>

@@ -5,6 +5,7 @@ import Rendezvous from '../components/Rendezvous'
 import RendezvousList from '../components/RendezvousList'
 import { PostList } from '../components/PostList'
 import { getAllPosts } from '../api'
+import { HOSTNAME } from '../constants'
 
 const parser = new XMLParser()
 
@@ -12,9 +13,12 @@ const Connect = ({ rss, articles }) => {
 	return (
 		<>
 			<SEO
-				description="Nabil's very own voice mail! 👀"
+				description='البريد الصوتي الخاص بنبيل ثروت! 👀'
 				path='connect'
-				title='Connect with Nabil'
+				title='إتصّل بنبيل'
+				cover={{
+					path: `${HOSTNAME}/connect.jpg`
+				}}
 			/>
 
 			<Layout thin>
@@ -30,8 +34,7 @@ const Connect = ({ rss, articles }) => {
 					</p>
 					<p>
 						لو الفورم معلقة إتأكد ان إعدادات الخصوصية في متصفحك مش حاجبة رمز
-						التحقق من البشرية Cloudflare Turnstile، وإنك مدي إذن لاستخدام
-						الميكروفون الخاص بيك.
+						التحقق من البشرية وإنك مدي إذن لاستخدام الميكروفون الخاص بيك.
 					</p>
 
 					<Rendezvous />
