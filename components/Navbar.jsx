@@ -24,7 +24,7 @@ const Navbar = () => {
 				<a className={classes}>Newsletter</a>
 			</Link>
 
-			<Link href='/connect'>
+			<Link href='/call'>
 				<a className={classes} data-lang='ar'>
 					اتّصل
 				</a>
