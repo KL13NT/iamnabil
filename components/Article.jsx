@@ -130,7 +130,7 @@ export default function Article({ html, frontmatter, path, lang, related }) {
 			<article
 				dir='auto'
 				data-lang={lang}
-				className='mt-14 w-full md:10/12 lg:max-w-[650px] mx-auto'
+				className='mt-14 w-full md:10/12 lg:max-w-[820px] mx-auto'
 			>
 				<ReactMarkdown renderers={renderers} allowDangerousHtml>
 					{html}
