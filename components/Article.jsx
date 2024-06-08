@@ -3,8 +3,8 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 
-import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import SEO from './SEO'
 import { PostList } from './PostList'
@@ -24,18 +24,29 @@ const renderers = {
 	blockquote: ({ children }) => <blockquote dir='auto'>{children}</blockquote>,
 	code: ({ language, value }) => (
 		<SyntaxHighlighter
-			style={atomOneDarkReasonable}
+			style={coldarkDark}
 			language={language}
 			showLineNumbers
+			wrapLongLines
+			customStyle={{
+				padding: '0',
+				borderRadius: '16px'
+			}}
 		>
 			{value}
 		</SyntaxHighlighter>
 	),
 	pre: ({ language, value }) => (
 		<SyntaxHighlighter
-			style={atomOneDarkReasonable}
+			style={coldarkDark}
 			language={language}
 			showLineNumbers
+			wrapLongLines
+			customStyle={{
+				padding: '0',
+				borderRadius: '16px',
+				fontSize: '18px'
+			}}
 		>
 			{value}
 		</SyntaxHighlighter>

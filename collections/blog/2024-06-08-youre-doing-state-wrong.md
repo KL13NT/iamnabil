@@ -1,15 +1,18 @@
 ---
 title: You're doing state wrong
 external: false
-date: 2023-03-08
+date: 2024-06-08
 cover:
-  path: https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  path: https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   credit: Namroud Gorguis on Unsplash
-description: 'Boolean state variables are not the answer.'
+description: 'Boolean state variables are not always the answer. A platform-agnostic article about structuring UI state.'
 ---
 
 Implementing component state as a combination of booleans may seem like the
 easiest way to do it, but let's do something different.
+
+> This article is framework- and language- agnostic. Code examples presented are
+> written in a generic form.
 
 ## Consider a music player
 
@@ -100,9 +103,8 @@ easier to control, and improve the component's readability.
 
 ## What about effects?
 
-Remember when I said a finite machine can execute **effects** as a result of a
-transition? An **effect** is anything secondary to the component's
-functionality, like loading the track, submitting a form's data, etc.
+An **effect** is anything secondary to the component's
+functionality, like loading the track, submitting a form's data, etc. An **action**.
 
 Let's consider forms. A form is usually found in one of four states: idle,
 submitting, success, and error. If we use boolean states we end up with 4
@@ -134,6 +136,43 @@ const submit = (formData: FormData) => {
 			setState(State.ERROR)
 		})
 }
+```
+
+## The exception
+
+Obviously there are cases where a component may truly have
+only 2 states, therefore using a boolean for it works perfectly. Examples
+of this are modals to control their visibility, buttons to indicate a11y
+activation, etc.
+
+```typescript
+const isVisible = createState<boolean>(false)
+
+const toggle = () => {
+	setState(!isVisible)
+}
+```
+
+The problem starts to form when you introduce multiple booleans to represent
+variations of the state.
+
+## I still need booleans!
+
+You can derive booleans from your state. Control your component through a single state machine variable, but derive a hundred booleans from it if you want.
+
+Using the form example:
+
+```typescript
+enum State {
+	IDLE /* default state */,
+	SUBMITTING,
+	ERROR,
+	SUCCESS
+}
+
+const isSubmitting = state === State.SUBMITTING
+const hasError = state === State.ERROR
+const isSuccessful = state === State.SUCCESS
 ```
 
 ## Wrap up
