@@ -7,5 +7,6 @@
 	"deno.enablePaths": ["supabase/functions"],
 	"deno.lint": true,
 	"deno.unstable": true,
-	"eslint.enable": true
+	"eslint.enable": true,
+	"dimmer.enabled": true
 }
