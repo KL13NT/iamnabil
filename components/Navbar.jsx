@@ -11,14 +11,14 @@ const Navbar = () => {
 	// Wrapping the links in a div because next renders the data-lang attribute on
 	// the wrong element client-side
 	return (
-		<nav className='flex w-full justify-center flex-wrap flex-row gap-8'>
-			<div>
-				{!home && (
+		<nav className='flex w-full sm:justify-center flex-wrap flex-row gap-8'>
+			{!home && (
+				<div>
 					<Link href='/'>
 						<a className={classes}>Home</a>
 					</Link>
-				)}
-			</div>
+				</div>
+			)}
 
 			<Link href='/newsletter'>
 				<a className={classes}>Newsletter</a>
@@ -41,8 +41,6 @@ const Navbar = () => {
 			<Link href='/uses'>
 				<a className={classes}>/uses</a>
 			</Link>
-
-			<div />
 		</nav>
 	)
 }
