@@ -3,7 +3,7 @@ import React from 'react'
 function Sponsor() {
 	return (
 		<a
-			href='https://github.com/sponsors/KL13NT'
+			href='https://github.com/sponsors/KL13NT?frequency=one-time&sponsor=KL13NT'
 			className='bg-white px-5 py-1 mt-4 border border-slate-300 rounded-md hover:no-underline group hover:bg-slate-100 transition-colors flex items-center'
 		>
 			<svg
