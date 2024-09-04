@@ -53,7 +53,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://github.com/sponsors/KL13NT?frequency=one-time&sponsor=KL13NT'
+							href='https://github.com/sponsors/KL13NT'
 						>
 							GitHub Sponsors 💸
 						</a>
