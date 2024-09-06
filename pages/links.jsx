@@ -17,7 +17,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://github.com/kl13nt'
+							href='https://nabiltharwat.com/gh'
 						>
 							GitHub 👨‍💻
 						</a>
@@ -53,7 +53,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://github.com/sponsors/KL13NT'
+							href='https://nabiltharwat.com/sponsor'
 						>
 							GitHub Sponsors 💸
 						</a>
@@ -62,7 +62,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://x.com/kl13nt/'
+							href='https://nabiltharwat.com/x'
 						>
 							Twitter/X 🐣
 						</a>
@@ -71,7 +71,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://www.youtube.com/@NabilTharwat_'
+							href='https://nabiltharwat.com/yt'
 						>
 							YouTube 🎴
 						</a>
@@ -80,7 +80,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://theweeklynoob.netlify.app/'
+							href='https://nabiltharwat.com/podcast'
 						>
 							The Weekly Noob Podcast 🎙
 						</a>
@@ -89,7 +89,7 @@ const Links = () => {
 					<li className='list-none'>
 						<a
 							className='text-3xl bg-none bg-transparent mt-12 block'
-							href='https://www.linkedin.com/in/i-am-nabil/'
+							href='https://nabiltharwat.com/in'
 						>
 							LinkedIn 💼
 						</a>

@@ -31,3 +31,33 @@ package = "netlify-plugin-cache"
   to = "https://github.com/sponsors/KL13NT"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://nabiltharwat.com/yt"
+  to = "https://www.youtube.com/@NabilTharwat_"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nabiltharwat.com/x"
+  to = "https://x.com/kl13nt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nabiltharwat.com/gh"
+  to = "https://github.com/kl13nt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nabiltharwat.com/podcast"
+  to = "https://theweeklynoob.netlify.app/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nabiltharwat.com/in"
+  to = "https://www.linkedin.com/in/i-am-nabil"
+  status = 301
+  force = true
