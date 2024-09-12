@@ -22,7 +22,7 @@ Git Worktrees are a way to manage multiple git working trees at the same time wi
 
 The *worktree* module allows you to checkout multiple versions of the project in separate sub-directories in the same root directory of the repository. Take the following diagram for example on the traditional approach:
 
-![Branches based approach](branches_approach.png)
+![Branches based approach](/branches_approach.png)
 
 In this example I have two stashed changes (which could be hundreds of lines of code) and 3 branches, *feature-1*, *feature-2*, and *fix-1*. By the time I finish working on the *fix-1* branch and push it my brain would've jumped to the next task and completely forgot about the previous features until I'm reminded of them again. 
 
@@ -30,7 +30,7 @@ In this example I have two stashed changes (which could be hundreds of lines of 
 Instead, with worktrees, it looks like this:
 
 
-![Worktree based approach](worktree_approach.png)
+![Worktree based approach](/worktree_approach.png)
 
 With worktrees the directory structure contains each worktree (branch) in a separate directory. This allows me to seamlessly switch from a branch to another simply by changing the directory I'm currently working in. My usual workflow with this approach consists of the following:
 
