@@ -27,12 +27,6 @@ package = "netlify-plugin-cache"
   force = true
 
 [[redirects]]
-  from = "https://nabiltharwat.com/sponsor"
-  to = "https://github.com/sponsors/KL13NT"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "https://nabiltharwat.com/yt"
   to = "https://www.youtube.com/@NabilTharwat_"
   status = 301
