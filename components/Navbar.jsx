@@ -41,6 +41,15 @@ const Navbar = () => {
 			<Link href='/uses'>
 				<a className={classes}>/uses</a>
 			</Link>
+
+			<a
+				className={classes}
+				href='https://flowcv.com/resume/uapuv7emin'
+				rel='noreferrer noopener'
+				target='_blank'
+			>
+				resume
+			</a>
 		</nav>
 	)
 }
