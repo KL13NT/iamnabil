@@ -67,13 +67,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Netlify next-on-netlify
-/out_publish/
-/out_functions/
-
 out/
 
-.next/
 .astro/
 dist/
 # Local Netlify folder

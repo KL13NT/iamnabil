@@ -24,7 +24,6 @@ module.exports = {
 			experimentalObjectRestSpread: true
 		}
 	},
-	plugins: ['@next/eslint-plugin-next'],
 	rules: {
 		indent: 0,
 		'linebreak-style': 0,

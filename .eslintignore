@@ -1,10 +1,8 @@
 node_modules/*
 data/*
 **/*.stories.js
-.next
 .vscode
 out
-.next/
 .astro/
 dist/
 public/

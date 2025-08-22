@@ -1,7 +1,6 @@
 **/node_modules
 docs
 build
-.next/
 .astro/
 dist/
 public/
