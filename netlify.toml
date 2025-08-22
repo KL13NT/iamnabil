@@ -1,12 +1,12 @@
 [build]
-  command = "pnpm build"
+  command = "astro build"
   publish = "dist"
 
 [[plugins]]
 package = "netlify-plugin-cache"
 
   [plugins.inputs]
-  	paths = [".astro","dist"]
+  	paths = [".astro","./node_modules/.astro"]
 
 [[redirects]]
   from = "/badeel"

@@ -76,3 +76,5 @@ out/
 .next/
 .astro/
 dist/
+# Local Netlify folder
+.netlify
