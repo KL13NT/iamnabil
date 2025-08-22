@@ -1,12 +1,12 @@
 [build]
-  command = "yarn build"
-  publish = "out"
+  command = "pnpm build"
+  publish = "dist"
 
 [[plugins]]
 package = "netlify-plugin-cache"
 
   [plugins.inputs]
-  	paths = [".next",".npm"]
+  	paths = [".astro","dist"]
 
 [[redirects]]
   from = "/badeel"

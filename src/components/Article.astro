@@ -13,7 +13,7 @@ type Props = {
 }
 
 const { post, lang, related } = Astro.props
-const { date, title, translation, description, cover, path } = post.data
+const { title, description, cover } = post.data
 const { Content } = await render(post)
 ---
 

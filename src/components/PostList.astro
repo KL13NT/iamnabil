@@ -38,7 +38,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 								class='motion-safe:transition-all rounded-md outline-0 outline-red-500 outline-offset-0 group-hover:outline-2 group-hover:outline-offset-4 w-full h-[580px] lg:h-[580px] object-cover m-0 overflow-hidden'
 								alt=''
 								loading='lazy'
-								formats={['avif', 'webp']}
+								formats={['avif']}
+								fallbackFormat='avif'
 								{...generateImageSizes({
 									sm: 100,
 									md: 50,

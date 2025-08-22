@@ -24,7 +24,7 @@ export default defineConfig({
 	integrations: [mdx(), react(), sitemap()],
 	site: 'https://nabiltharwat.com',
 	image: {
-		sizes: [640, 1080, 1280, 2048],
+		breakpoints: [640, 768, 1024, 1280, 1536],
 		layout: 'full-width',
 		remotePatterns: [
 			{

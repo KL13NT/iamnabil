@@ -10,6 +10,7 @@ import { textLanguageMapping } from '@/messsages'
 import { formatDate, generateImageSizes } from '@/utils'
 import type { Lang } from '@/types'
 import type { BasePostType } from '@/types'
+import { Picture } from 'astro:assets'
 
 export type Props = {
 	lang: Lang
@@ -57,12 +58,14 @@ const { date, title, translation, cover } = data
 	{
 		cover ? (
 			<div>
-				<Image
+				<Picture
 					src={cover.path}
 					class='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
 					alt=''
 					layout='full-width'
 					inferSize
+					formats={['avif']}
+					fallbackFormat='avif'
 					{...generateImageSizes({
 						sm: 100,
 						md: 90,
