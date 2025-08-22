@@ -1,0 +1,22 @@
+---
+import { getNotes, getRelatedPosts } from '@/api'
+import Article from '@/components/Article.astro'
+
+export async function getStaticPaths() {
+	const posts = await getNotes()
+
+	return posts.map(post => ({
+		params: {
+			id: post.id.replace('notes/', '')
+		},
+		props: {
+			post: post
+		}
+	}))
+}
+
+const { post } = Astro.props
+const related = await getRelatedPosts(post, 'notes')
+---
+
+<Article post={post} related={related} lang='en' />

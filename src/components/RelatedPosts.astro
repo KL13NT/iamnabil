@@ -1,0 +1,26 @@
+---
+import PostList from './PostList.astro'
+import type { Lang } from '@/types'
+import type { CollectionEntry } from 'astro:content'
+
+type Props = {
+	related: CollectionEntry<'blog'>[]
+	lang: Lang
+}
+
+const { related, lang } = Astro.props
+
+const text = {
+	ar: 'المزيد من القراءة:',
+	en: 'If you found this article helpful, you will love these as well:'
+}
+
+const title = text[lang]
+---
+
+<div class='mx-auto mt-20'>
+	<h3>{title}</h3>
+	<div class='mt-6'>
+		<PostList posts={related} lang={lang} />
+	</div>
+</div>

@@ -1,0 +1,18 @@
+---
+layout: '@/layouts/Base.astro'
+thin: true
+title: Page not found
+---
+
+import { Image } from 'astro:assets'
+import dogeSad from '@/assets/doge_sad.jpg'
+
+<div class='text-center'>
+
+<Image src={dogeSad}  alt='doge sad' class='h-64 w-auto mx-auto' />
+
+# \<NOT_FOUND\>
+
+You just hit a route that doesn't exist... the sadness.<br/><a href="/">Go home</a>
+
+</div>

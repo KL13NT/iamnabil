@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets'
+import ArticleHeaderLink from './ArticleHeaderLink.astro'
+import {
+	getArticleGithubPath,
+	getTwitterPath,
+	getTwitterSearchPath
+} from '@/utils'
+import { textLanguageMapping } from '@/messsages'
+import { formatDate, generateImageSizes } from '@/utils'
+import type { Lang } from '@/types'
+import type { BasePostType } from '@/types'
+
+export type Props = {
+	lang: Lang
+	post: BasePostType
+}
+
+const { lang, post } = Astro.props
+const { id, data } = post
+const { date, title, translation, cover } = data
+---
+
+<div dir='auto' class='w-full md:w-5/6 xl:w-4/6 mx-auto'>
+	<div class='w-full'>
+		<div class='flex justify-between w-full'>
+			<p>{formatDate(date, lang)}</p>
+			<p class='flex'>
+				{
+					translation ? (
+						<ArticleHeaderLink
+							href={translation}
+							title={textLanguageMapping.translation[lang]}
+							icon='language-svgrepo-com'
+						/>
+					) : null
+				}
+				<ArticleHeaderLink
+					href={getArticleGithubPath(id)}
+					title={textLanguageMapping.github[lang]}
+					icon='github'
+				/>
+				<ArticleHeaderLink
+					href={getTwitterPath(title, id)}
+					title={textLanguageMapping.tweet[lang]}
+					icon='twitter-tweet'
+				/>
+				<ArticleHeaderLink
+					href={getTwitterSearchPath(id)}
+					title={textLanguageMapping.discuss[lang]}
+					icon='twitter-reply'
+				/>
+			</p>
+		</div>
+		<h1 class='mt-4 mb-4'>{title}</h1>
+	</div>
+	{
+		cover ? (
+			<div>
+				<Image
+					src={cover.path}
+					class='rounded-md h-auto lg:h-[600px] w-full object-cover mt-12'
+					alt=''
+					layout='full-width'
+					inferSize
+					{...generateImageSizes({
+						sm: 100,
+						md: 90,
+						lg: 70,
+						xxl: 50
+					})}
+				/>
+				{cover.credit && (
+					<p class='mt-2 text-lg text-gray-800 text-center'>
+						Photo by {cover.credit}
+					</p>
+				)}
+			</div>
+		) : null
+	}
+</div>

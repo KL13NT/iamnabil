@@ -1,0 +1,45 @@
+import { defineConfig } from 'astro/config'
+
+import mdx from '@astrojs/mdx'
+
+import react from '@astrojs/react'
+
+import tailwindcss from '@tailwindcss/vite'
+
+import sitemap from '@astrojs/sitemap'
+
+import rehypeRewrite from 'rehype-rewrite'
+
+/** @type {import('rehype-rewrite').RehypeRewriteOptions} */
+const rehypeRewriteOptions = {
+	rewrite: (node, index, parent) => {
+		if (node.type === 'element') {
+			node.properties.dir = 'auto'
+		}
+	}
+}
+
+// https://astro.build/config
+export default defineConfig({
+	integrations: [mdx(), react(), sitemap()],
+	site: 'https://nabiltharwat.com',
+	image: {
+		sizes: [640, 1080, 1280, 2048],
+		layout: 'full-width',
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'images.unsplash.com'
+			}
+		]
+	},
+	markdown: {
+		rehypePlugins: [[rehypeRewrite, rehypeRewriteOptions]]
+	},
+	vite: {
+		plugins: [tailwindcss()]
+	},
+	experimental: {
+		headingIdCompat: true
+	}
+})

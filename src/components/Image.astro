@@ -1,0 +1,11 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'img'>
+
+const { src, ...props } = Astro.props
+---
+
+<a href={src} target='_blank'>
+	<img src={src} {...props} loading='lazy' class='text-center mx-auto' />
+</a>

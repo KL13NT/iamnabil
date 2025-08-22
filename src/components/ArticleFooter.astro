@@ -1,0 +1,26 @@
+---
+import type { BasePostType, Lang } from '@/types'
+import Newsletter from './Newsletter.astro'
+import ArticleLinks from './ArticleLinks.astro'
+import { textLanguageMapping } from '@/messsages'
+
+type Props = {
+	lang: Lang
+	post: BasePostType
+}
+
+const { lang, post } = Astro.props
+---
+
+<ArticleLinks lang={lang} post={post} />
+<hr class='w-full mt-5 mx-auto border-gray-300' />
+<div class='mx-auto mt-10 lg:mt-20'>
+	<h3>{textLanguageMapping.articleFooterBioTitle[lang]}</h3>
+	<p>
+		{textLanguageMapping.articleFooterBioBody[lang]}
+	</p>
+	<p class='mt-4'>
+		<a href='/about'>{textLanguageMapping.articleFooterLinkTitle[lang]}</a>
+	</p>
+	<Newsletter />
+</div>

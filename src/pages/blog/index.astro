@@ -1,0 +1,20 @@
+---
+import { getEnglishBlog } from '@/api'
+import PostList from '@/components/PostList.astro'
+import Base from '@/layouts/Base.astro'
+
+const posts = await getEnglishBlog()
+---
+
+<Base title='Blog'>
+	<div>
+		<h1>Thoughts</h1>
+		<p>
+			These are not entirely thoughts. My Arabic articles can be found on the
+			Arabic blog page.
+		</p>
+	</div>
+	<div class='mt-12'>
+		<PostList posts={posts} lang='en' />
+	</div>
+</Base>

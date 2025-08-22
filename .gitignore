@@ -73,4 +73,6 @@ yarn-error.log
 
 out/
 
-.next
+.next/
+.astro/
+dist/

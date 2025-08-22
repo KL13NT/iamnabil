@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro'
+
+type Props = {
+	href: string
+	title: string
+	icon: string
+	classes?: string
+}
+
+const { href, title, icon, classes = '' } = Astro.props
+const hasText = Astro.slots.has('default')
+---
+
+<a
+	href={href}
+	title={title}
+	class={`bg-transparent mx-2 flex items-center w-full justify-between ${classes}`}
+>
+	{
+		hasText ? (
+			<span class='block me-2'>
+				<slot />
+			</span>
+		) : null
+	}
+	<Icon class='h-8' icon={icon} />
+</a>

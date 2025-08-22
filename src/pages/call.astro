@@ -1,0 +1,76 @@
+---
+import { XMLParser } from 'fast-xml-parser'
+import Rendezvous from '../components/Rendezvous'
+import RendezvousList from '../components/RendezvousList'
+import PostList from '@/components/PostList.astro'
+import Base from '@/layouts/Base.astro'
+import { site } from 'astro:config/client'
+import { getEnglishBlog } from '@/api'
+
+const parser = new XMLParser()
+
+async function loadRSSFeed() {
+	const res = await fetch('https://anchor.fm/s/f1886f84/podcast/rss')
+	const xml = await res.text()
+
+	const parsed = parser.parse(xml, {})
+
+	const { item } = parsed.rss.channel
+	const items = Array.isArray(item) ? item : [item]
+
+	const rss = {
+		...parsed.rss,
+		channel: {
+			...parsed.rss.channel,
+			item: items.map((item, index) => ({
+				...item,
+				id: index + 1,
+				season: item['itunes:summary']
+			}))
+		}
+	}
+
+	return rss
+}
+
+const rss = await loadRSSFeed()
+const posts = (await getEnglishBlog()).slice(0, 3)
+---
+
+<Base
+	description='البريد الصوتي الخاص بنبيل ثروت! 👀'
+	title='إتصّل بنبيل'
+	cover={{
+		path: `${site}/connect.jpg`
+	}}
+/>
+
+<section data-lang='ar' class='dir-rtl max-w-[650px]'>
+	<h1>اتّصل بنبيل!</h1>
+	<p>"اتّصل بنبيل" هو الفويس ميل بتاعي. ابعتولي أسئلتكوا وأفكاركوا بصوتكوا.</p>
+	<p>
+		دوس على "ابدأ التسجيل" واختار المايكروفون اللي عايز تستخدمه. قدم نفسك
+		(السلام, اسمي كذا) واسأل اللي تحبه. معاك ٩٠ ثانية.{' '}
+	</p>
+	<p>
+		لو الفورم معلقة إتأكد ان إعدادات الخصوصية في متصفحك مش حاجبة رمز التحقق من
+		البشرية وإنك مدي إذن لاستخدام الميكروفون الخاص بيك.
+	</p>
+
+	<Rendezvous />
+</section>
+
+<div class='w-full max-w-[1000px] mx-auto dir-rtl mt-32' data-lang='ar'>
+	<h2 class='mb-8'>
+		الأسئلة السابقة ({rss.channel.item.length.toLocaleString('ar-EG')})
+	</h2>
+	<RendezvousList items={rss.channel.item} />
+</div>
+
+<div
+	class='w-full xl:w-5/6 mx-auto lg:mt-16 max-w-screen-2xl dir-rtl py-8'
+	data-lang='ar'
+>
+	<h2 class='mb-8'>مهتم بقراءة مقال؟</h2>
+	<PostList posts={posts} lang='en' />
+</div>

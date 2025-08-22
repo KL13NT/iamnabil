@@ -1,0 +1,61 @@
+---
+import { Picture } from 'astro:assets'
+import { formatDate, generateImageSizes } from '../utils'
+import type { Lang } from '@/types'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+	lang: Lang
+	posts: CollectionEntry<'blog'>[]
+	singleRow?: boolean
+}
+
+const { posts, lang, singleRow } = Astro.props
+
+const dir = lang === 'ar' ? 'rtl' : 'ltr'
+---
+
+<ul
+	class:list={{
+		'dir-rtl': dir === 'rtl',
+		'p-0 mx-auto w-full max-w-7xl grid gap-8 grid-cols-1': true,
+		'md:grid-cols-2 lg:grid-cols-3 justify-items-center': !singleRow
+	}}
+	data-animation-parent
+	data-lang={lang}
+>
+	{
+		posts.map(({ data: { cover, date, title, path }, id }) => {
+			return (
+				<li class='list-none max-w-md mt-0' dir={dir}>
+					<a
+						href={path ?? `/${id}`}
+						class='group hover:no-underline bg-transparent block w-full h-full'
+					>
+						{cover && (
+							<Picture
+								src={cover?.thumb ?? cover.path}
+								class='motion-safe:transition-all rounded-md outline-0 outline-red-500 outline-offset-0 group-hover:outline-2 group-hover:outline-offset-4 w-full h-[580px] lg:h-[580px] object-cover m-0 overflow-hidden'
+								alt=''
+								loading='lazy'
+								formats={['avif', 'webp']}
+								{...generateImageSizes({
+									sm: 100,
+									md: 50,
+									lg: 30,
+									xl: 20
+								})}
+								inferSize
+							/>
+						)}
+						<span class='block text-lg mt-4'>{formatDate(date, lang)}</span>
+
+						<h2 class='mx-auto text-3xl inline mt-4 bg-gradient-to-r from-link to-link bg-[length:0px_10px] bg-left-bottom rtl:bg-right-bottom bg-no-repeat motion-safe:transition-[background-size] duration-500 group-hover:bg-[length:100%_10px]'>
+							{title}
+						</h2>
+					</a>
+				</li>
+			)
+		})
+	}
+</ul>

@@ -1,0 +1,22 @@
+---
+import { getEnglishBlog, getRelatedPosts } from '@/api'
+import Article from '@/components/Article.astro'
+
+export async function getStaticPaths() {
+	const posts = await getEnglishBlog()
+
+	return posts.map(post => ({
+		params: {
+			id: post.id.replace('blog/', '')
+		},
+		props: {
+			post: post
+		}
+	}))
+}
+
+const { post } = Astro.props
+const related = await getRelatedPosts(post, 'blog')
+---
+
+<Article post={post} related={related} lang='en' />

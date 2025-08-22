@@ -1,0 +1,23 @@
+---
+import { invariant } from '@/utils'
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = {
+	icon: string
+} & HTMLAttributes<'svg'>
+
+type ImportedIconType = { default: (_props: HTMLAttributes<'svg'>) => any }
+
+const icons = import.meta.glob<true, string, ImportedIconType>(
+	'@/assets/icons/*.svg',
+	{ eager: true }
+)
+
+const { icon, ...props } = Astro.props
+
+const IconComponent = icons[`/src/assets/icons/${icon}.svg`]?.default
+
+invariant(IconComponent, `Icon ${icon} not found`)
+---
+
+<IconComponent aria-hidden {...props} />

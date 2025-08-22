@@ -1,0 +1,19 @@
+---
+import { getNotes } from '@/api'
+import PostList from '@/components/PostList.astro'
+import Base from '@/layouts/Base.astro'
+
+const posts = await getNotes()
+---
+
+<Base title='Notes' description='Notes I write while learning.' thin>
+	<div>
+		<h1>Notes</h1>
+		<p>
+			Notes I use to prepare content I publish. May also include study notes.
+		</p>
+	</div>
+	<div class='mt-12'>
+		<PostList posts={posts} lang='en' singleRow />
+	</div>
+</Base>

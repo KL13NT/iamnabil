@@ -1,0 +1,39 @@
+---
+import type { Lang, BasePostType } from '@/types'
+import { render } from 'astro:content'
+import Base from '@/layouts/Base.astro'
+import ArticleFooter from './ArticleFooter.astro'
+import RelatedPosts from './RelatedPosts.astro'
+import ArticleHeader from './ArticleHeader.astro'
+
+type Props = {
+	post: BasePostType
+	lang: Lang
+	related?: BasePostType[]
+}
+
+const { post, lang, related } = Astro.props
+const { date, title, translation, description, cover, path } = post.data
+const { Content } = await render(post)
+---
+
+<Base
+	title={title}
+	lang={lang}
+	dir='auto'
+	description={description}
+	cover={cover}
+>
+	<div class='mx-auto mb-20'>
+		<ArticleHeader lang={lang} post={post} />
+		<article
+			data-lang={lang}
+			class='mt-14 w-full md:10/12 lg:max-w-[820px] mx-auto'
+			data-animation-parent
+		>
+			<Content />
+			<ArticleFooter lang={lang} post={post} />
+		</article>
+	</div>
+	{related && <RelatedPosts lang={lang} related={related} />}
+</Base>

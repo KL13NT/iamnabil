@@ -1,0 +1,22 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"baseUrl": "./",
+		"strictNullChecks": true, // add if using `base` template
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"verbatimModuleSyntax": true,
+		"noImplicitAny": true,
+		"allowJs": true, // required, and included with all Astro templates
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin"
+			}
+		]
+	},
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist", "out"]
+}

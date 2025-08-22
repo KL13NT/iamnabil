@@ -1,0 +1,47 @@
+---
+import { textLanguageMapping } from '@/messsages'
+import {
+	getTwitterPath,
+	getTwitterSearchPath,
+	getArticleGithubPath
+} from '@/utils'
+import ArticleHeaderLink from './ArticleHeaderLink.astro'
+import type { BasePostType, Lang } from '@/types'
+
+type Props = {
+	lang: Lang
+	post: BasePostType
+}
+
+const { lang, post } = Astro.props
+const { id, data } = post
+const { path, title } = data
+---
+
+<div
+	class='mx-auto mt-10 lg:mt-20 flex flex-col sm:flex-row justify-between w-full rtl:lg:flex-row-reverse'
+>
+	<div class='flex flex-col sm:flex-row w-full rtl:lg:flex-row-reverse'>
+		<ArticleHeaderLink
+			href={getTwitterPath(title, id ?? path)}
+			title={textLanguageMapping.tweet[lang]}
+			icon='twitter-tweet'
+		>
+			{textLanguageMapping.tweet[lang]}
+		</ArticleHeaderLink>
+		<ArticleHeaderLink
+			href={getTwitterSearchPath(id)}
+			title={textLanguageMapping.discuss[lang]}
+			icon='twitter-reply'
+		>
+			{textLanguageMapping.discuss[lang]}
+		</ArticleHeaderLink>
+	</div>
+	<ArticleHeaderLink
+		href={getArticleGithubPath(id)}
+		title={textLanguageMapping.github[lang]}
+		icon='github'
+	>
+		{textLanguageMapping.github[lang]}
+	</ArticleHeaderLink>
+</div>

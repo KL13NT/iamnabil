@@ -1,0 +1,199 @@
+---
+import Banner from '@/components/Banner.astro'
+import Navbar from '@/components/Navbar.astro'
+
+import { site } from 'astro:config/client'
+
+import '@/styles/global.css'
+import type { MarkdownLayoutProps, Props } from 'astro'
+
+type BaseProps = {
+	title?: string
+	lang?: string
+	description?: string
+	thin?: boolean
+	cover?: {
+		path: string
+		thumb: string
+		credit: string
+	}
+}
+
+type MarkdownProps = MarkdownLayoutProps<BaseProps>
+
+const isMarkdownProps = (props: unknown): props is MarkdownProps =>
+	typeof props === 'object' && 'frontmatter' in props!
+
+const link = 'https://ceasefiretoday.com/'
+const defaultTitle = 'Nabil Tharwat'
+const defaultDescription = 'Frontend Software Engineer, Blogger, Mentor'
+const defaultOGImagePath = '/og.png'
+
+const {
+	title,
+	lang = 'en',
+	description = defaultDescription,
+	cover,
+	thin
+} = isMarkdownProps(Astro.props)
+	? Astro.props.frontmatter
+	: (Astro.props as BaseProps)
+
+const ogImageUrl = cover ? cover.path : `${site}${defaultOGImagePath}`
+const url = `${site}/${Astro.url.pathname}`
+const finalTitle = title
+	? title + (lang === 'ar' ? ' | نبيل ثروت' : ' | Nabil Tharwat')
+	: defaultTitle
+const dir = lang === 'ar' ? 'rtl' : 'ltr'
+---
+
+<html lang={lang}>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel='sitemap' href='/sitemap-index.xml' />
+		<link rel='preconnect' href='https://fonts.googleapis.com' />
+		<link
+			rel='preconnect'
+			href='https://fonts.gstatic.com'
+			crossorigin='true'
+		/>
+		<link
+			href='https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap'
+			rel='stylesheet'
+		/>
+		<link
+			href='https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'
+			rel='stylesheet'
+		/>
+		<title>{finalTitle}</title>
+		<meta
+			name='google-site-verification'
+			content='Jwd5WF70ZzZgB0muYxnSlHsVh3allc411SZx25cGYTo'
+		/>
+		<meta content={finalTitle} property='og:title' />
+		<meta content='website' property='og:type' />
+		<meta content={description} name='description' />
+		<meta content={description} property='og:description' />
+		<meta content={url} property='og:url' />
+		<meta content='Nabil Tharwat' property='og:site_name' />
+		<meta content={ogImageUrl} property='og:image' />
+		<meta content={'image/jpeg'} property='og:image:type' />
+		<meta content={ogImageUrl} property='og:image:url' />
+		<meta content={ogImageUrl} property='og:image:secure_url' />
+		<meta content='summary_large_image' name='twitter:card' />
+		<meta content={finalTitle} property='twitter:title' />
+		<meta content={description} property='twitter:description' />
+		<meta content='@Nabil_Tharwat' property='twitter:creator' />
+		<meta content='@Nabil_Tharwat16' property='twitter:site' />
+		<meta content={ogImageUrl} property='twitter:image' />
+
+		<link
+			rel='apple-touch-icon'
+			sizes='180x180'
+			href='/icons/apple-touch-icon.png'
+		/>
+		<link
+			rel='icon'
+			type='image/png'
+			sizes='32x32'
+			href='/icons/favicon-32x32.png'
+		/>
+		<link
+			rel='icon'
+			type='image/png'
+			sizes='16x16'
+			href='/icons/favicon-16x16.png'
+		/>
+		<link rel='manifest' href='/icons/site.webmanifest' />
+		<link rel='mask-icon' href='/icons/safari-pinned-tab.svg' color='#5bbad5' />
+		<link rel='shortcut icon' href='/icons/favicon.ico' />
+		<meta name='msapplication-TileColor' content='#f3f7f9' />
+		<meta name='msapplication-TileImage' content='/icons/mstile-144x144.png' />
+		<meta name='msapplication-config' content='/icons/browserconfig.xml' />
+		<meta name='theme-color' content='#ffffff' />
+
+		<style>
+			@keyframes slide-enter {
+				from {
+					transform: translateY(10px);
+					opacity: 0;
+				}
+
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				:global([data-animation-parent] > *) {
+					--enter-stage: 0;
+					--enter-step: 90ms;
+					--enter-initial: 0ms;
+					animation: slide-enter 1s both 1;
+					animation-delay: calc(
+						var(--enter-initial) + var(--enter-stage) * var(--enter-step)
+					);
+				}
+			}
+
+			@for $i from 1 to 20 {
+				:global([data-animation-parent] > *:nth-child($(i))) {
+					--enter-stage: $i;
+				}
+			}
+		</style>
+	</head>
+
+	<Banner>
+		<a
+			href={link}
+			class='underline'
+			target='_blank'
+			rel='noreferrer'
+			referrerpolicy='no-referrer'
+		>
+			# CeasefireNow!{' '}
+			<span role='img' aria-label='palestine emoji'> 🇵🇸 </span>
+		</a>
+	</Banner>
+
+	<div class='font-display p-4 py-8 lg:p-8'>
+		<Navbar />
+		<main class='w-full xl:w-5/6 mx-auto lg:mt-16 max-w-screen-2xl'>
+			<div
+				class:list={{
+					'lg:w-3/6 mx-auto max-w-[650px]': thin,
+					'dir-rtl': dir === 'rtl'
+				}}
+				data-animation-parent
+			>
+				<slot />
+
+				<script
+					data-name='BMC-Widget'
+					data-cfasync='false'
+					src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
+					data-id='kl13nt'
+					data-description='Support me on Buy me a coffee!'
+					data-message=''
+					data-color='#ffdd00'
+					data-position='Right'
+					data-x_margin='18'
+					data-y_margin='18'></script>
+			</div>
+		</main>
+	</div>
+
+	<script
+		defer
+		src='https://static.cloudflareinsights.com/beacon.min.js'
+		data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'></script>
+
+	<script
+		src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
+		defer></script>
+
+
+</html>

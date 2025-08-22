@@ -1,0 +1,17 @@
+---
+import { getArabicBlog } from '@/api'
+import PostList from '@/components/PostList.astro'
+import Base from '@/layouts/Base.astro'
+
+const posts = await getArabicBlog()
+---
+
+<Base title='Blog' lang='ar'>
+	<div>
+		<h1>مقالاتي</h1>
+		<p>مقالاتي المكتوبة والمترجمة باللغة العربية الفصحى والعاميّة المصرية.</p>
+	</div>
+	<div class='mt-12'>
+		<PostList posts={posts} lang='ar' />
+	</div>
+</Base>

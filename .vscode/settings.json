@@ -1,6 +1,6 @@
 {
 	"[typescript]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"cSpell.words": ["blockquote", "remoteip"],
 	"deno.enable": true,
@@ -8,5 +8,6 @@
 	"deno.lint": true,
 	"deno.unstable": true,
 	"eslint.enable": true,
-	"dimmer.enabled": true
+	"dimmer.enabled": true,
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }

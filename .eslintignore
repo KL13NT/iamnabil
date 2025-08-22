@@ -4,3 +4,7 @@ data/*
 .next
 .vscode
 out
+.next/
+.astro/
+dist/
+public/

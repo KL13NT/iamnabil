@@ -1,0 +1,222 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-accent: #f3f3f3;
+	--color-shadow: #1f1f1f;
+	--color-link: #facf90;
+	--color-code: #2d2b57;
+	--color-primary: #000000;
+	--color-dark-700: #393939;
+
+	--max-width-min: min-content;
+	--max-width-max: max-content;
+
+	--font-family-display: Manrope, Comfortaa, Montserrat, -apple-system,
+		BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+	--font-family-rtl: Tajawal, Roboto, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@utility max-width-max {
+	max-width: theme(--max-width-max);
+}
+
+@utility max-width-min {
+	max-width: theme(--max-width-min);
+}
+
+@utility font-rtl {
+	font-family: theme(--font-family-rtl);
+}
+
+@layer base {
+	* {
+		font-feature-settings:
+			'salt' on,
+			'ss01' on,
+			'liga' off;
+	}
+
+	body,
+	html {
+		background-color: var(--color-accent);
+		font-optical-sizing: auto;
+		font-style: normal;
+		font-family: var(--font-family-display);
+	}
+
+	h1,
+	h2 {
+		@apply text-black font-black mt-8;
+	}
+
+	h3,
+	h4 {
+		@apply text-black font-bold mt-8 max-w-max;
+	}
+
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	h4 {
+		@apply text-xl;
+	}
+
+	p,
+	ul,
+	ol {
+		@apply text-2xl mt-4;
+		line-height: 1.7;
+	}
+
+	a {
+		background-color: var(--color-link);
+		max-width: var(--max-width-max);
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		@apply underline;
+	}
+
+	li {
+		@apply mt-4;
+	}
+
+	ul,
+	ol {
+		@apply p-0 mt-0;
+	}
+
+	ul li {
+		list-style-type: square;
+		list-style-position: inside;
+	}
+
+	ol li {
+		list-style-type: decimal-leading-zero;
+		list-style-position: inside;
+	}
+
+	img {
+		@apply max-h-screen m-auto;
+	}
+
+	blockquote {
+		@apply p-6 ps-4 pe-0 lg:p-12 border-solid border-l-2 border-black mt-4 lg:m-8;
+	}
+
+	blockquote p cite {
+		@apply text-lg font-normal;
+	}
+
+	blockquote p {
+		@apply text-xl font-bold;
+		line-height: 1.7;
+	}
+
+	.text-content {
+		@apply w-full lg:w-7/12;
+	}
+
+	.dir-rtl {
+		@apply font-rtl;
+		direction: rtl;
+	}
+
+	.dir-rtl h1,
+	.dir-rtl h2,
+	.dir-rtl h3,
+	.dir-rtl h4 {
+		@apply font-rtl;
+	}
+
+	pre {
+		@apply mt-4 p-0;
+	}
+
+	code {
+		@apply rounded text-white py-0 px-1 bg-code;
+	}
+
+	pre code {
+		@apply max-w-full overflow-auto block p-4;
+	}
+
+	[data-lang='ar'] {
+		@apply font-rtl;
+		text-decoration-skip-ink: skip;
+		letter-spacing: -1px;
+	}
+
+	[data-lang='ar'] h1,
+	[data-lang='ar'] h2,
+	[data-lang='ar'] h3,
+	[data-lang='ar'] h4 {
+		@apply font-rtl;
+	}
+
+	[data-lang='ar'] p {
+		@apply text-2xl mt-8;
+	}
+
+	[data-lang='ar'] ul,
+	[data-lang='ar'] ol {
+		@apply text-2xl mt-0;
+	}
+
+	[data-lang='ar'] h3,
+	[data-lang='ar'] h4 {
+		line-height: 2.2;
+	}
+
+	[data-lang='ar'] ol li {
+		list-style-type: arabic-indic;
+	}
+
+	[data-lang='ar'] h3,
+	[data-lang='ar'] h4 {
+		padding-bottom: 4px;
+	}
+
+	[data-lang='ar'] blockquote {
+		@apply border-l-0 border-r-2;
+	}
+
+	@media (min-width: 768px) {
+		h1 {
+			@apply text-5xl;
+		}
+
+		h2 {
+			@apply text-4xl;
+		}
+
+		h3 {
+			@apply text-2xl;
+		}
+
+		h4 {
+			@apply text-xl;
+		}
+	}
+
+	/* Newsletter MailChimp specific rules */
+	#mce-responses div:nth-child(1),
+	#mce-responses div:nth-child(2) {
+		display: none;
+	}
+}
