@@ -1,6 +1,5 @@
 ---
 const classes = 'text-xl lowercase no-underline bg-transparent'
-const home = Astro.url.pathname === '/'
 const currentPath = Astro.url.pathname
 const links = [
 	{
@@ -41,23 +40,25 @@ const links = [
 
 <nav class='flex w-full sm:justify-center flex-wrap flex-row gap-8'>
 	{
-		links.map(link => (
-			<a
-				href={link.href}
-				class:list={{
-					[classes]: true,
-					underline: currentPath === link.href
-				}}
-				data-lang={link.lang ?? 'en'}
-				{...(!link.href.startsWith('/')
-					? {
-							rel: 'noreferrer noopener',
-							target: '_blank'
-						}
-					: {})}
-			>
-				{link.title}
-			</a>
-		))
+		links.map(link => {
+			const siteLink = link.href.startsWith('/')
+			const extraAttrs = siteLink
+				? {}
+				: { rel: 'noreferrer noopener', target: '_blank' }
+
+			return (
+				<a
+					href={link.href}
+					class:list={{
+						[classes]: true,
+						underline: currentPath === link.href
+					}}
+					data-lang={link.lang ?? 'en'}
+					{...extraAttrs}
+				>
+					{link.title}
+				</a>
+			)
+		})
 	}
 </nav>

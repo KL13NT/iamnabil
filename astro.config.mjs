@@ -23,6 +23,10 @@ const rehypeRewriteOptions = {
 export default defineConfig({
 	integrations: [mdx(), react(), sitemap()],
 	site: 'https://nabiltharwat.com',
+	prefetch: {
+		defaultStrategy: 'hover',
+		prefetchAll: true
+	},
 	image: {
 		breakpoints: [640, 1024, 1536],
 		layout: 'full-width',
