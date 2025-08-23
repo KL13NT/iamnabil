@@ -174,6 +174,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 			<slot />
 
 			<script
+				is:inline
 				data-name='BMC-Widget'
 				data-cfasync='false'
 				src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
@@ -188,13 +189,10 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	</div>
 
 	<script
+		is:inline
 		defer
 		src='https://static.cloudflareinsights.com/beacon.min.js'
 		data-cf-beacon='{"token": "db338f8ae09f4d08ae1846d09464ae6f"}'></script>
-
-	<script
-		src='https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback'
-		defer></script>
 
 
 </html>
