@@ -17,6 +17,7 @@ type BaseProps = {
 		thumb: string
 		credit: string
 	}
+	wrapperClass?: string
 }
 
 type MarkdownProps = MarkdownLayoutProps<BaseProps>
@@ -161,28 +162,28 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 	<div class='font-display p-4 py-8 lg:p-8'>
 		<Navbar />
-		<main class='w-full xl:w-5/6 mx-auto lg:mt-16 max-w-screen-2xl'>
-			<div
-				class:list={{
-					'lg:w-3/6 mx-auto max-w-[650px]': thin,
-					'dir-rtl': dir === 'rtl'
-				}}
-				data-animation-parent
-			>
-				<slot />
+		<main
+			class:list={{
+				'w-full xl:w-5/6 mx-auto mt-16': true,
+				'mx-auto max-w-[650px]': thin,
+				'max-w-screen-2xl': !thin,
+				'dir-rtl': dir === 'rtl'
+			}}
+			data-animation-parent
+		>
+			<slot />
 
-				<script
-					data-name='BMC-Widget'
-					data-cfasync='false'
-					src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
-					data-id='kl13nt'
-					data-description='Support me on Buy me a coffee!'
-					data-message=''
-					data-color='#ffdd00'
-					data-position='Right'
-					data-x_margin='18'
-					data-y_margin='18'></script>
-			</div>
+			<script
+				data-name='BMC-Widget'
+				data-cfasync='false'
+				src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
+				data-id='kl13nt'
+				data-description='Support me on Buy me a coffee!'
+				data-message=''
+				data-color='#ffdd00'
+				data-position='Right'
+				data-x_margin='18'
+				data-y_margin='18'></script>
 		</main>
 	</div>
 

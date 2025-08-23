@@ -1,19 +1,27 @@
 ---
+import { Image } from 'astro:assets'
 import Sponsor from './Sponsor.astro'
+import portrait from '@/assets/nabil-4.jpg'
+import { generateImageSizes } from '@/utils'
 ---
 
 <div
-	class='flex flex-col items-center justify-between lg:flex-row gap-8 mb-10 mx-auto w-full max-w-full sm:max-w-[650px]'
+	class='flex flex-col items-center justify-between md:flex-row gap-8 mb-10 mx-auto w-full'
 >
 	<div class='w-full sm:w-auto'>
 		<h1>Nabil Tharwat</h1>
 		<p class='mt-2'>Accessibility, Performance, DX</p>
 		<Sponsor />
 	</div>
-	<img
-		src='/images/nabil-4.jpg'
-		alt='Me!'
+	<Image
+		src={portrait}
+		alt='A portrait of myself.'
 		class='w-3/4 aspect-square lg:w-60 rounded-full object-cover border-4 border-link m-0 max-w-[240px]'
-		loading='lazy'
+		loading='eager'
+		{...generateImageSizes({
+			sm: 90,
+			lg: 50,
+			xxl: 20
+		})}
 	/>
 </div>

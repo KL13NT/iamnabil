@@ -1,30 +1,63 @@
 ---
 const classes = 'text-xl lowercase no-underline bg-transparent'
 const home = Astro.url.pathname === '/'
+const currentPath = Astro.url.pathname
+const links = [
+	{
+		href: '/',
+		title: 'Home'
+	},
+	{
+		href: '/newsletter',
+		title: 'Newsletter'
+	},
+	{
+		href: '/blog',
+		title: 'Blog'
+	},
+	{
+		href: '/arabic',
+		title: 'بالعربية',
+		lang: 'ar'
+	},
+	{
+		href: '/notes',
+		title: 'Notes'
+	},
+	{
+		href: '/sponsor',
+		title: 'Sponsor'
+	},
+	{
+		href: '/uses',
+		title: '/uses'
+	},
+	{
+		href: 'https://flowcv.com/resume/uapuv7emin',
+		title: 'Resume'
+	}
+]
 ---
 
 <nav class='flex w-full sm:justify-center flex-wrap flex-row gap-8'>
 	{
-		!home && (
-			<a href='/' class={classes}>
-				Home
+		links.map(link => (
+			<a
+				href={link.href}
+				class:list={{
+					[classes]: true,
+					underline: currentPath === link.href
+				}}
+				data-lang={link.lang ?? 'en'}
+				{...(!link.href.startsWith('/')
+					? {
+							rel: 'noreferrer noopener',
+							target: '_blank'
+						}
+					: {})}
+			>
+				{link.title}
 			</a>
-		)
+		))
 	}
-
-	<a href='/newsletter' class={classes}>Newsletter</a>
-	<a href='/blog' class={classes}>Blog</a>
-	<a href='/arabic' class={classes} data-lang='ar'>بالعربية</a>
-	<a href='/notes' class={classes}>Notes</a>
-	<a href='/sponsor' class={classes}>Support</a>
-	<a href='/uses' class={classes}>/uses</a>
-
-	<a
-		class={classes}
-		href='https://flowcv.com/resume/uapuv7emin'
-		rel='noreferrer noopener'
-		target='_blank'
-	>
-		resume
-	</a>
 </nav>

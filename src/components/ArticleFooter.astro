@@ -14,9 +14,9 @@ const { lang, post } = Astro.props
 
 <ArticleLinks lang={lang} post={post} />
 <hr class='w-full mt-5 mx-auto border-gray-300' />
-<div class='mx-auto mt-10 lg:mt-20'>
-	<h3>{textLanguageMapping.articleFooterBioTitle[lang]}</h3>
-	<p>
+<div class='mx-auto mt-10 lg:mt-5'>
+	<h3 class='mt-0'>{textLanguageMapping.articleFooterBioTitle[lang]}</h3>
+	<p class='mt-0'>
 		{textLanguageMapping.articleFooterBioBody[lang]}
 	</p>
 	<p class='mt-4'>
