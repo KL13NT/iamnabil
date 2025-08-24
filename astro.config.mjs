@@ -24,7 +24,7 @@ export default defineConfig({
 	integrations: [mdx(), react(), sitemap()],
 	site: 'https://nabiltharwat.com',
 	prefetch: {
-		defaultStrategy: 'hover',
+		defaultStrategy: 'viewport',
 		prefetchAll: true
 	},
 	image: {
