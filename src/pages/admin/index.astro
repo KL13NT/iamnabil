@@ -1,0 +1,14 @@
+<script
+	is:inline
+	src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+
+<script>
+	// @ts-nocheck
+	import CMS from 'decap-cms-app'
+	import globalStyles from '@/styles/global.css?url'
+	import adminStyles from './admin.css?url'
+
+	CMS.init()
+	CMS.registerPreviewStyle(globalStyles)
+	CMS.registerPreviewStyle(adminStyles)
+</script>

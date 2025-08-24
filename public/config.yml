@@ -1,0 +1,142 @@
+publish_mode: editorial_workflow
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'content: Create “{{slug}}”'
+    update: 'content: Update “{{slug}}”'
+    delete: 'content: Delete “{{slug}}”'
+    uploadMedia: 'content: Upload “{{path}}”'
+    deleteMedia: 'content: Delete “{{path}}”'
+    openAuthoring: '{{message}}'
+localBackend: true
+load_config_file: false
+media_folder: public/images/
+public_folder: /images
+collections:
+  - label: English blog posts
+    name: blog
+    folder: content/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: string
+      - label: Cover (Unsplash URL &auto=format&fit=crop)
+        name: cover
+        required: false
+        widget: object
+        fields:
+          - label: Path
+            name: path
+            widget: string
+            required: true
+          - label: Credit
+            name: credit
+            widget: string
+            required: false
+          - label: Thumbnail
+            name: thumb
+            widget: string
+            required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        required: true
+      - label: Translation URL (if this article is translated)
+        name: translation
+        widget: markdown
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - label: Notes
+    name: notes
+    folder: content/notes
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: string
+      - label: Cover (Unsplash URL &auto=format&fit=crop)
+        name: cover
+        required: false
+        widget: object
+        fields:
+          - label: Path
+            name: path
+            widget: string
+            required: true
+          - label: Credit
+            name: credit
+            widget: string
+            required: false
+          - label: Thumbnail
+            name: thumb
+            widget: string
+            required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        required: true
+      - label: Translation URL (if this article is translated)
+        name: translation
+        widget: markdown
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - label: Arabic blog posts
+    name: arabic
+    folder: content/arabic
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Title (Make it catchy ;3)
+        name: title
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: string
+      - label: Cover (Unsplash URL &auto=format&fit=crop)
+        name: cover
+        required: false
+        widget: object
+        fields:
+          - label: Path
+            name: path
+            widget: string
+            required: true
+          - label: Credit
+            name: credit
+            widget: string
+            required: false
+          - label: Thumbnail
+            name: thumb
+            widget: string
+            required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        required: true
+      - label: Translation URL (if this article is translated)
+        name: translation
+        widget: markdown
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
