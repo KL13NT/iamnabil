@@ -21,7 +21,13 @@ const rehypeRewriteOptions = {
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [mdx(), react(), sitemap()],
+	integrations: [
+		mdx(),
+		react(),
+		sitemap({
+			filter: page => page !== 'https://nabiltharwat.com/admin/'
+		})
+	],
 	site: 'https://nabiltharwat.com',
 	prefetch: {
 		defaultStrategy: 'viewport',
