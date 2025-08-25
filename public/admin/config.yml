@@ -11,8 +11,8 @@ backend:
     openAuthoring: '{{message}}'
 localBackend: true
 load_config_file: false
-media_folder: public/images/
-public_folder: /images
+media_folder: assets/images/
+public_folder: /
 collections:
   - label: English blog posts
     name: blog

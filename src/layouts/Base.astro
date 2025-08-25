@@ -2,11 +2,11 @@
 import Banner from '@/components/Banner.astro'
 import Navbar from '@/components/Navbar.astro'
 
+import { ClientRouter } from 'astro:transitions'
 import { site } from 'astro:config/client'
+import type { MarkdownLayoutProps, Props } from 'astro'
 
 import '@/styles/global.css'
-import type { MarkdownLayoutProps, Props } from 'astro'
-import { ClientRouter } from 'astro:transitions'
 
 type BaseProps = {
 	title?: string
@@ -129,7 +129,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 			}
 
 			@media (prefers-reduced-motion: no-preference) {
-				:global([data-animation-parent] > *) {
+				:global(:not(data-disable-animation) > [data-animation-parent] > *) {
 					--enter-stage: 0;
 					--enter-step: 90ms;
 					--enter-initial: 0ms;
@@ -175,6 +175,13 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		>
 			<slot />
 
+			<script is:inline>
+				window.addEventListener('DOMContentLoaded', () => {
+					if (window.scrollY !== 0) {
+						document.documentElement.dataset['data-disable-animation'] = ''
+					}
+				})
+			</script>
 			<script
 				is:inline
 				data-name='BMC-Widget'

@@ -9,17 +9,8 @@ import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
 
 import rehypeRewrite from 'rehype-rewrite'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
-/** @type {import('rehype-rewrite').RehypeRewriteOptions} */
-const rehypeRewriteOptions = {
-	rewrite: (node, index, parent) => {
-		if (node.type === 'element') {
-			node.properties.dir = 'auto'
-		}
-	}
-}
-
-// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		mdx(),
@@ -44,7 +35,30 @@ export default defineConfig({
 		]
 	},
 	markdown: {
-		rehypePlugins: [[rehypeRewrite, rehypeRewriteOptions]]
+		shikiConfig: {
+			theme: 'gruvbox-dark-hard'
+		},
+		rehypePlugins: [
+			[
+				rehypeAutolinkHeadings,
+				{
+					behavior: 'wrap'
+				}
+			],
+			[
+				rehypeRewrite,
+				{
+					rewrite: node => {
+						if (
+							node.type === 'element' &&
+							!['ul', 'ol', 'li'].includes(node.tagName.toLowerCase())
+						) {
+							node.properties.dir = 'auto'
+						}
+					}
+				}
+			]
+		]
 	},
 	vite: {
 		plugins: [tailwindcss()]

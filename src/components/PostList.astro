@@ -1,6 +1,6 @@
 ---
 import { Picture } from 'astro:assets'
-import { formatDate, generateImageSizes } from '../utils'
+import { formatDate, generateImageSizes } from '@/utils'
 import type { Lang } from '@/types'
 import type { CollectionEntry } from 'astro:content'
 
@@ -18,7 +18,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 <ul
 	class:list={{
 		'dir-rtl': dir === 'rtl',
-		'p-0 mx-auto w-full max-w-7xl grid gap-8 grid-cols-1': true,
+		'p-0 mx-auto w-full max-w-[400px] md:max-w-7xl grid gap-8 grid-cols-1': true,
 		'md:grid-cols-2 lg:grid-cols-3 justify-items-center': !singleRow
 	}}
 	data-animation-parent
@@ -27,10 +27,10 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	{
 		posts.map(({ data: { cover, date, title, path }, id }) => {
 			return (
-				<li class='list-none max-w-md mt-0' dir={dir}>
+				<li class='list-none md:max-w-md mt-0 w-full' dir={dir}>
 					<a
 						href={path ?? `/${id}`}
-						class='group hover:no-underline bg-transparent block w-full h-full'
+						class='group bg-transparent block w-full h-full sm:max-w-full no-underline'
 					>
 						{cover && (
 							<Picture

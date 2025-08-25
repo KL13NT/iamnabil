@@ -4,7 +4,7 @@
 	--color-accent: #f3f3f3;
 	--color-shadow: #1f1f1f;
 	--color-link: #facf90;
-	--color-code: #2d2b57;
+	--color-code: #a60b00;
 	--color-primary: #000000;
 	--color-dark-700: #393939;
 
@@ -37,7 +37,7 @@
 		font-feature-settings:
 			'salt' on,
 			'ss01' on,
-			'liga' off;
+			'liga' on;
 	}
 
 	body,
@@ -46,6 +46,7 @@
 		font-optical-sizing: auto;
 		font-style: normal;
 		font-family: var(--font-family-display);
+		text-rendering: optimizeLegibility;
 	}
 
 	h1,
@@ -77,19 +78,23 @@
 	p,
 	ul,
 	ol {
-		@apply text-2xl mt-4;
-		line-height: 1.7;
+		@apply text-2xl mt-4 leading-relaxed;
 	}
 
 	a {
-		background-color: var(--color-link);
+		@apply transition-colors;
 		max-width: var(--max-width-max);
+		text-decoration-color: var(--color-link);
+		text-decoration-style: wavy;
+		text-decoration-line: underline;
+		text-decoration-skip-ink: all;
+		text-decoration-thickness: 2px;
 	}
 
 	a:hover,
 	a:active,
 	a:focus {
-		@apply underline;
+		@apply bg-link;
 	}
 
 	li {
@@ -119,6 +124,10 @@
 		@apply p-6 ps-4 pe-0 lg:p-12 border-solid border-l-2 border-black mt-4 lg:m-8;
 	}
 
+	blockquote p {
+		@apply m-0;
+	}
+
 	blockquote p cite {
 		@apply text-lg font-normal;
 	}
@@ -145,54 +154,54 @@
 	}
 
 	pre {
-		@apply mt-4 p-0;
+		@apply mt-4 p-0 rounded;
 	}
 
-	code {
-		@apply rounded text-white py-0 px-1 bg-code;
+	code:not(pre > code) {
+		@apply rounded py-0 px-1 text-code;
 	}
 
 	pre code {
-		@apply max-w-full overflow-auto block p-4;
+		@apply max-w-full overflow-auto block p-4 text-lg leading-[1.85];
 	}
 
-	[data-lang='ar'] {
+	[data-lang='ar'] > {
 		@apply font-rtl;
 		text-decoration-skip-ink: skip;
 		letter-spacing: -1px;
 	}
 
-	[data-lang='ar'] h1,
-	[data-lang='ar'] h2,
-	[data-lang='ar'] h3,
-	[data-lang='ar'] h4 {
+	[data-lang='ar'] > h1,
+	[data-lang='ar'] > h2,
+	[data-lang='ar'] > h3,
+	[data-lang='ar'] > h4 {
 		@apply font-rtl;
 	}
 
-	[data-lang='ar'] p {
+	[data-lang='ar'] > p {
 		@apply text-2xl mt-8;
 	}
 
-	[data-lang='ar'] ul,
-	[data-lang='ar'] ol {
+	[data-lang='ar'] > ul,
+	[data-lang='ar'] > ol {
 		@apply text-2xl mt-0;
 	}
 
-	[data-lang='ar'] h3,
-	[data-lang='ar'] h4 {
+	[data-lang='ar'] > h3,
+	[data-lang='ar'] > h4 {
 		line-height: 2.2;
 	}
 
-	[data-lang='ar'] ol li {
+	[data-lang='ar'] > ol li {
 		list-style-type: arabic-indic;
 	}
 
-	[data-lang='ar'] h3,
-	[data-lang='ar'] h4 {
+	[data-lang='ar'] > h3,
+	[data-lang='ar'] > h4 {
 		padding-bottom: 4px;
 	}
 
-	[data-lang='ar'] blockquote {
+	[data-lang='ar'] > blockquote {
 		@apply border-l-0 border-r-2;
 	}
 
