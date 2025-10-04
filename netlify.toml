@@ -15,8 +15,8 @@ package = "netlify-plugin-cache"
   force = true
 
 [[redirects]]
-  from = "https://iamnabil.netlify.app"
-  to = "https://nabiltharwat.com"
+  from = "https://iamnabil.netlify.app/*"
+  to = "https://nabiltharwat.com/:splat"
   status = 301
   force = true
 
