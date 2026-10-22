@@ -1,9 +1,9 @@
 ---
 title: Streamlining Courseware Maintenance as Code
 cover:
-  path: https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1606761568499-6d2451b23c66.jpg'
   credit: Dom Fou
-  thumb: https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  thumb: '@/assets/covers/photo-1606761568499-6d2451b23c66.jpg'
 date: 2023-01-21
 description: 'Courseware as Code is the process of producing courseware from
   code. In this article I talk about how I build the Courseware as Code Action.

@@ -1,9 +1,9 @@
 ---
 title: How I Leveraged Git to Get Accurate File Dates on CI/CD
 cover:
-  path: https://images.unsplash.com/photo-1456574808786-d2ba7a6aa654?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fFRpbWV8ZW58MHx8MHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1456574808786-d2ba7a6aa654.jpg'
   credit: Djim Loic
-  thumb: https://images.unsplash.com/photo-1456574808786-d2ba7a6aa654?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fFRpbWV8ZW58MHx8MHx8&auto=format&fit=crop
+  thumb: '@/assets/covers/photo-1456574808786-d2ba7a6aa654.jpg'
 date: 2023-02-06
 description: 'Git does not store filesystem metadata which causes Hive to lose file dates.'
 external: false

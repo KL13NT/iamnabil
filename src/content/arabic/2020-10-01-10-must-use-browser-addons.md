@@ -1,7 +1,7 @@
 ---
 date: 2020-10-01
 cover:
-  path: https://images.unsplash.com/photo-1554825959-e9a6670d4f18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1554825959-e9a6670d4f18.jpg'
   credit:
 
 title: 10 اضافات للمتصفحات لا غنى عنهم

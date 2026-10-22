@@ -1,7 +1,7 @@
 ---
 date: 2020-09-16
 cover:
-  path: https://images.unsplash.com/photo-1603422868789-3c008ba99df9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1603422868789-3c008ba99df9.jpg'
   credit:
 
 title: تَعَلَّم تطوير المواقع في ساعتين

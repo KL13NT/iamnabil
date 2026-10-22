@@ -1,7 +1,7 @@
 ---
 date: 2020-05-28
 cover:
-  path: https://images.unsplash.com/photo-1604187350414-5cd124389d93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1604187350414-5cd124389d93.jpg'
   credit:
 
 title: ملخص كتاب Design Systems Handbook

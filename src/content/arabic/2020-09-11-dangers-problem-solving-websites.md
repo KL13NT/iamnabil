@@ -1,7 +1,7 @@
 ---
 date: 2020-09-11
 cover:
-  path: https://images.unsplash.com/photo-1621539416345-aa8c28c6be77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1621539416345-aa8c28c6be77.jpg'
   credit:
 
 title: مخاطر مواقع الـ Problem Solving — اسباب وحلول

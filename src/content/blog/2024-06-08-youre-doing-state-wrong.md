@@ -3,7 +3,7 @@ title: You're doing state wrong
 external: false
 date: 2024-06-08
 cover:
-  path: https://nabiltharwat.com/_astro/photo-1494232410401-ad00d5433cfa_Z2g15El.avif
+  path: '@/assets/covers/photo-1494232410401-ad00d5433cfa.jpg'
   credit: Namroud Gorguis on Unsplash
 description: 'Boolean state variables are not always the answer. A platform-agnostic article about structuring UI state.'
 ---

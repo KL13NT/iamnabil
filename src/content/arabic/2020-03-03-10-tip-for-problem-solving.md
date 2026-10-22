@@ -1,7 +1,7 @@
 ---
 date: 2020-03-03
 cover:
-  path: https://images.unsplash.com/photo-1612611741189-a9b9eb01d515?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1612611741189-a9b9eb01d515.jpg'
   credit:
 
 title: 10 نصايح لل Problem Solving

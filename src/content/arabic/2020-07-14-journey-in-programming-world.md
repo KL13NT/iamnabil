@@ -1,7 +1,7 @@
 ---
 date: 2020-07-14
 cover:
-  path: https://images.unsplash.com/photo-1533561797500-4fad4750814e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1533561797500-4fad4750814e.jpg'
   credit:
 
 title: رحلتي في عالم البرمجة
@@ -44,7 +44,7 @@ description: حابب استرجع معاكوا طريقي في البرمجة, 
 
 ## بدايات اهتمامي بمجال تطوير المواقع 👨‍💻
 
-![Snippet from my 2015 google searches](../../assets/images/searches.png)
+![Snippet from my 2015 google searches](@/assets/images/searches.png)
 
 خلال تفرغي للبرمجة بدأت ادور على ازاي اعمل مواقع بنفسي, كنت زهقت من ووردبريس و شغل الـ templates و قولت اكيد في حاجة low-level اكتر من كده. وصلت ساعتها لتكنولوجيا الويب المختلفه. و زي ما موجود ف الصورة, بدأت اتعلم PHP و كنت بتعلم ساعتها C++, بجانب اني اتعلمت HTML و CSS و اساسيات JavaScript.
 

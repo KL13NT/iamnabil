@@ -3,7 +3,7 @@ title: Using Git Worktrees to Boost My Productivity
 external: false
 date: 2023-02-16
 cover:
-  path: https://unsplash.com/photos/uj3hvdfQujI/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8cm9ja2V0fGVufDB8fHx8MTcyNjA0OTQ3OHww&force=true&auto=format&fit=crop
+  path: '@/assets/covers/spacex-uj3hvdfQujI-unsplash.jpg'
   credit: SpaceX
 description: 'Git Worktrees are a way to manage multiple git working trees at
   the same time without the hassle of git stash. '

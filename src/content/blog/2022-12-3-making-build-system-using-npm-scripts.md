@@ -1,8 +1,8 @@
 ---
 date: 2022-12-02
 cover:
-  path: https://images.unsplash.com/photo-1539269071019-8bc6d57b0205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&fp-y=0
-  thumb: https://images.unsplash.com/photo-1539269071019-8bc6d57b0205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&fp-x=0.5
+  path: '@/assets/covers/photo-1539269071019-8bc6d57b0205.jpg'
+  thumb: '@/assets/covers/photo-1539269071019-8bc6d57b0205.jpg'
   credit: Guillaume TECHER
 external: false
 title: Making a Build System Using NPM Scripts

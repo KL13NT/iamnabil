@@ -1,7 +1,7 @@
 ---
 date: 2021-03-08
 cover:
-  path: https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+  path: '@/assets/covers/photo-1464802686167-b939a6910659.jpg'
   credit:
 translation: https://dev.to/kl13nt/how-to-protect-website-copyrighted-content-pck
 title: حماية المحتويات المدفوعة للمواقع
