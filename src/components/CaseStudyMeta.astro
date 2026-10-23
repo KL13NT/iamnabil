@@ -1,0 +1,23 @@
+---
+interface Props {
+	meta: [
+		{
+			title: string
+			description: string
+		}
+	]
+}
+
+const { meta } = Astro.props
+---
+
+<dl class='grid grid-cols-3 mb-14'>
+	{
+		meta.map(item => (
+			<div>
+				<dt>{item.title}</dt>
+				<dd>{item.description}</dd>
+			</div>
+		))
+	}
+</dl>

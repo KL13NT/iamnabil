@@ -121,20 +121,16 @@
 	}
 
 	blockquote {
-		@apply p-6 ps-4 pe-0 lg:p-12 border-solid border-l-2 border-black mt-4 lg:m-8;
+		@apply p-6 ps-4 pe-0 lg:p-12 mt-4 lg:m-8 pb-16 bg-white rounded-2xl;
 	}
 
-	blockquote p {
-		@apply m-0;
+	blockquote cite {
+		@apply text-lg text-center mx-auto block font-normal mt-6 w-fit px-1.5;
 	}
 
-	blockquote p cite {
-		@apply text-lg font-normal;
-	}
-
-	blockquote p {
-		@apply text-xl font-bold;
-		line-height: 1.7;
+	blockquote p:first-of-type::before {
+		@apply block mx-auto w-fit mt-3 scale-[6] pointer-events-none text-link;
+		content: '\275D';
 	}
 
 	.text-content {

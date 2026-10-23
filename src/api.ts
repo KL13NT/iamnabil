@@ -9,6 +9,14 @@ const getBlogPostsWithFilter = async (filter: string) => {
 	)
 }
 
+export const getCaseStudies = async () => {
+	const posts = await getCollection('work')
+
+	return posts.sort((post1, post2) =>
+		post1.data.date < post2.data.date ? 1 : -1
+	)
+}
+
 export const getRelatedPosts = async (
 	post: BasePostType,
 	filter: Collection

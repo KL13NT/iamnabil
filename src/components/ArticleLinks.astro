@@ -21,22 +21,7 @@ const { path, title } = data
 <div
 	class='mx-auto mt-10 lg:mt-20 flex flex-col sm:flex-row justify-between w-full rtl:lg:flex-row-reverse'
 >
-	<div class='flex flex-col sm:flex-row w-full rtl:lg:flex-row-reverse'>
-		<ArticleHeaderLink
-			href={getTwitterPath(title, id ?? path)}
-			title={textLanguageMapping.tweet[lang]}
-			icon='twitter-tweet'
-		>
-			{textLanguageMapping.tweet[lang]}
-		</ArticleHeaderLink>
-		<ArticleHeaderLink
-			href={getTwitterSearchPath(id)}
-			title={textLanguageMapping.discuss[lang]}
-			icon='twitter-reply'
-		>
-			{textLanguageMapping.discuss[lang]}
-		</ArticleHeaderLink>
-	</div>
+	<div class='flex flex-col sm:flex-row w-full rtl:lg:flex-row-reverse'></div>
 	<ArticleHeaderLink
 		href={getArticleGithubPath(id)}
 		title={textLanguageMapping.github[lang]}

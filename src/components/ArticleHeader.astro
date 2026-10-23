@@ -41,16 +41,6 @@ const { date, title, translation, cover } = data
 					title={textLanguageMapping.github[lang]}
 					icon='github'
 				/>
-				<ArticleHeaderLink
-					href={getTwitterPath(title, id)}
-					title={textLanguageMapping.tweet[lang]}
-					icon='twitter-tweet'
-				/>
-				<ArticleHeaderLink
-					href={getTwitterSearchPath(id)}
-					title={textLanguageMapping.discuss[lang]}
-					icon='twitter-reply'
-				/>
 			</p>
 		</div>
 		<h1 class='mt-4 mb-4'>{title}</h1>
