@@ -1,7 +1,7 @@
 ---
 date: 2026-10-22
 title: Documenting 50 years of history at zero cost
-description: The development process and architecture of an archive documenting 50 years of history of the Center for Contemporary Arab Studies at Georgetown University.
+description: 'Preserving the past, building for the future: the development process of the CCAS Archive, a remarkable achievement in preserving 50 years of history and scholarship.'
 cover:
   path: '@/assets/covers/photo-1681266180459-69308250997a.avif'
   credit: Kyle Lockett on Unsplash
@@ -20,7 +20,7 @@ import CastStudyMeta from '@/components/CaseStudyMeta.astro'
 		},
 		{
 			title: 'Stack',
-			description: 'AstroJS, SolidJS, FuseJS'
+			description: 'AstroJS, SolidJS, FuseJS, GSAP'
 		},
 		{
 			title: 'Focus',
@@ -86,14 +86,9 @@ the website rebuilds with the new data automatically.
 - Keep bundles under 400 kbs and images optimised
 - Near-instant navigation with Astro router prefetching
 
-> I know we still have some final tweaks to make but I just want to say a
-> HUUUUGE thanks from all of us here for all of your hard work, creative energy,
-> and patience with us! It's been amazing working with you three from the
-> earliest days of the design stage to us now inching towards the finish line.
-> You are amazing!
+> I just want to say a HUUUUGE thanks from all of us here for all of your hard work, creative energy, and patience with us! It's been amazing working with you three from the earliest days of the design stage to us now inching towards the finish line. You are amazing!
 >
-> Thanks so much, Nabil, for all of your support! It's been a wonderful
-> experience working with you, Roupen, and Laila.
+> Thanks so much, Nabil, for all of your support! It's been a wonderful experience working with you, Roupen, and Laila.
 >
 > <cite>Ryan Zohar, Middle East Studies Librarian</cite>
 
@@ -115,43 +110,68 @@ the website rebuilds with the new data automatically.
 
 ## Deep dive
 
-Adding a backend wasn’t ideal because it would start accruing costs over time. I opted
-for Storyblok’s free tier. Storyblok’s free tier was enough for our bandwidth
-and storage for the life of the project, and I liked that it uses component-like
-formats, which made it easy to compose things however I wanted.
+Adding a backend wasn't ideal because it would start accruing costs over time. I opted for Storyblok's free tier. Storyblok's free tier was enough for our bandwidth and storage for the life of the project, and I liked that it uses component-like formats, which made it easy to compose things however I wanted.
 
-I considered using Storyblok’s API and relying on its filtering capabilities, but that wasn't ideal because the API has a very high cost ceiling for live use.
+I considered using Storyblok's API and relying on its filtering capabilities, but that wasn't ideal because the API has a very high cost ceiling for live use.
 
-Instead, I chose Fuse.js. Fuse.js is a lightweight, performant fuzzy search library with zero dependencies. I used it in a previous project, Badeel, an ethical shopping website. It's an offline-capable, open-source PWA built with SolidJS and Fuse.js that has received over 200,000 page views to date. The main goal was to let users search for products instantly, anywhere, even without internet.
+Instead, I chose Fuse.js, which is a lightweight, performant fuzzy search library. I used it in [Badeel](https://badeel.wiki/), an ethical shopping website I worked on earlier. It's an offline-capable, open-source PWA built with Solid and Fuse that has received over 200,000 page views to date. The main goal was to let users search for products instantly, anywhere, even without internet.
 
-Fuse.js is nice because it lets you specify specific keys to use as the index in the dataset you supply. Then it'll just reference those objects back to you based on the search query you pass it.
+**Why Fuse**
+
+Fuse is nice because it lets you specify specific keys to use as the index in the dataset you supply. It uses that index and builds its search tree as references to the objects you pass.
 
 This lets me implement searching and filtering: when you don't supply a query, you get the entire dataset back, which you can filter like a normal JS array. The dataset had only 500 entries, so it was easy to share the same JSON between the build process and the live frontend site.
 
-This is essentially like using Next.js as a full-stack solution with static
-generation enabled. It lets pass the result of server-side operations to
-client-side components.
+This works by serialising component props into the HTML payload and then hydrating it on the client. Astro does this out of the box, which is why I love it so much.
 
-This works by serialising component props into the HTML payload and then
-hydrating it on the client. Astro does this out of the box which is why
-I love it so much.
+**Interactive, yet statically generated**
 
 Astro also supports what is known as the Islands architecture. This architecture lets you add fully interactive client-side components to completely static pages so that I can build filters and search components on static pages.
 
-The main HTML response for pages that require the full dataset contains the data embedded in the HTML. Other pages don’t include this inline data embedding since they’re static and don’t need it.
+The main HTML response for pages that require the full dataset contains the data embedded in the HTML. Other pages don't include this inline data embedding since they're static and don't need it.
+
+**Results**
 
 The following are the bundle sizes (uncompressed):
 
 - The biggest page on the website, the archive page, comes in at around 2.4 megabytes. That includes the shared bits of the bundle like Lenis for smooth scrolling, the Split Text GSAP plugin, Fuse, Astro client router code, and Solid.
-- Pages that don’t require the full dataset, like decades, come out to about half that.
+- Pages that don't require the full dataset, like decades, come out to about half that.
 - The timeline page fits in under 500 kilobytes.
-- Each subsequent navigation after the initial page load comes to around 100 kilobytes thanks to Astro’s client router navigation.
+- Each subsequent navigation after the initial page load comes to around 100 kilobytes thanks to Astro's client router navigation.
 - Links also have prefetching enabled, which enables near-instant navigation on click.
 
-Since each page template requires a different data shape, I used Astro’s Collections API, a brilliant system that lets you define data you can consume anywhere in your code. This approach is similar to Gatsby’s GraphQL layer, but without the hassle and flakiness.
+**How data flows**
 
-This let me create different data shapes to fit each page template's needs. I also passed all of this data through Astro’s Image optimisation API, letting me perform programmatic image optimisation before the pages even attempt rendering.
+Since each page template requires a different data shape, I used Astro's Collections API, a brilliant system that lets you define data you can consume anywhere in your code. This approach is similar to Gatsby's GraphQL layer, but without the hassle and flakiness.
+
+This let me create different data shapes to fit each page template's needs. I also passed all this data through Astro's Image optimisation API, letting me programmatically optimise images before the pages even attempt to render.
+
+**Accessibility**
 
 I also focused on accessibility and worked with Roupen to get the most out of the design. The website is fully functional with reduced animations, navigable and consumable without JavaScript, and content structured so screen reader users can make sense of the flow.
 
-This was honestly one of the most fun experiences I've had at my job in a long time, and I couldn't be happier with the result that we have today. I’m really proud of what I did on the project and really enjoyed working with the Georgetown team.
+**Smooth backlinks**
+
+One neat feature we wanted to add was the "View on Timeline" button on asset pages, which links from an asset's archive page back to its decade on the timeline. This was one of the biggest challenges in this project because of how lazy loading works.
+
+Each decade page has a huge set of assets, and therefore uses lazy loading. This presented a problem for the "View on Timeline" button present on asset pages. There's no way to guarantee the position of assets that exist anywhere below the fold. A lazy-loaded image doesn't have any box attributes unless they're hard-coded.
+
+This meant that when I clicked such assets to view them on their timeline pages, I often landed in the middle of nowhere. Not to mention, because it uses smooth scrolling, lazy images above the target asset would start loading and push the asset down, creating even more confusion.
+
+This is where Astro's Image API's beauty really shines. All processed photos get the final `width` and `height` values as part of their optimisation response. This lets me set the `width` and `height` on the rendered photos, ensuring they won't pop in and shift the page while loading.
+
+A trade-off of smooth scroll is that it loads more data as the page scrolls to the target asset, but I'd rather the user load more cached thumbnails that aren't large to start with than snap into place and get confused about their position on the page.
+
+An additional safeguard I could've added would've been a scroll-detection mechanism that only sets the `src` attribute on thumbnails when the user isn't scrolling too fast. Possibly through intersection observers and scroll events.
+
+**Related assets**
+
+Another feature we wanted was related items. Related items on inner asset pages. This was fairly straightforward to implement using Astro's Collections API.
+
+Since I had all the data in a simple array format in the Astro Collections API layer, I could filter the array to find assets in the same decade or category and cache the result.
+
+**Signing off**
+
+This was honestly one of the most fun experiences I've had at my job in a long time, and I couldn't be happier with the result that we have today. I'm really proud of what I did on the project and really enjoyed working with the Georgetown team.
+
+If you'd like to work with me, you can schedule a call through my [calendar](https://calendly.com/kl13nt/hello).
