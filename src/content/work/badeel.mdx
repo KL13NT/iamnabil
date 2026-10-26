@@ -1,0 +1,109 @@
+---
+date: 2026-10-22
+title: 'Badeel: 200,000 visits later'
+description: 'Looking back on one of my biggest sources of pride. Badeel is an ethical shopping app for Egyptians, listing over 800 products and alternatives.'
+cover:
+  path: '@/assets/covers/badeel.png'
+  credit:
+---
+
+import ccasVideo from '@/assets/videos/ccas.mp4'
+import ccasVideo2 from '@/assets/videos/ccas2.mp4'
+import CastStudyMeta from '@/components/CaseStudyMeta.astro'
+
+<CastStudyMeta
+	meta={[
+		{
+			title: 'Visits',
+			description: '200,000+'
+		},
+		{
+			title: 'Stack',
+			description: 'SolidJS, FuseJS'
+		},
+		{
+			title: 'Focus',
+			description: 'Transparency, Offline-Availability, Performance'
+		}
+	]}
+/>
+
+Badeel was a passion project started in response to the genocide in Gaza. The project's main goal was to offer alternatives to brands that supported the genocide or originate in economies that directly benefit the occupation and, where possible, promote local production.
+
+**Driving principles**
+
+I had three principles driving every decision:
+
+1. Transparency. I wanted to show the world how our methodology worked, how we collected the data, and how we categorised companies and products.
+2. Open & accessible. I wanted all of that information publicly accessible. This meant that whatever we do, people should be able to access it. The source code is open source. Anyone can deploy it to start their own version of Badeel. The data is open source on Google Spreadsheets. Anyone can use our data. We also have a community Discord server so everyone can chime in and tell us what they think.
+3. Maximum usability. This includes offline use of the app with full search and functionality, and allowing users to contribute to the data itself.
+
+These principles extended beyond the app and applied even to the smallest parts of the codebase.
+
+**Data storage and offline access**
+
+The main technical problem was how we store the data and how we position ourselves as a reliable tool. This meant we wanted people always to have access to the data, the product, and the app, whether they were online or not.
+
+The initial plan was to build a simple backend and database using something like Supabase. But we had a really tight budget at the time, so we couldn't just let people hammer a backend and risk rate limiting. And we also needed the app to work offline.
+
+Relying on a backend for querying and filtering meant users had to be online to use the app. The best we could've done is cache search results so users could access them offline, which would be a tiny subset of the entire dataset of 800+ products we had in the first two weeks of operation.
+
+Another idea was to have the backend create a JSON or CSV file every 24 hours, which would load on users' devices after the initial load. This would let people do full offline search and filtering on the entire dataset instead of relying on the backend.
+
+But again, I didn't want to deal with rate limiting and load balancing and all of the fun stuff of backend development, especially since I was in the army and had a part-time job back then, which meant that I had very limited time to maintain the project, and didn't even have the energy to plan anything.
+
+**Did someone say spreadsheets?!**
+
+We settled on using a Google Spreadsheet export URL as the main data entry point. And this achieved the following:
+
+1. Everyone could access the data and use it however they want.
+2. People could clone the spreadsheet, apply any edits they want, and send it back in the same format, which made copying the data into our dataset much easier.
+3. It meant we wouldn't hit any rate limits, since it was essentially a user accessing a random Google spreadsheet document.
+
+Now, obviously, there are a lot of reasons against using spreadsheets as databases, and I'm fully aware of those. But at the time, the pros vastly outweighed the cons.
+
+And this took us to the next step, which was how we're going to implement the filtering and sorting, how we're going to implement user journeys, and how we allow people to contribute openly to the codebase and to the data.
+
+**Efficient search**
+
+The first step was building the archive and building the search and filtering systems. Since we had a Google Doc that exported to CSV, all we needed to do on the client was load that CSV and parse it with D3 CSV, a performant CSV parsing library for the D3 framework.
+
+This let us get all the data on the client as a simple array of products. This allowed us to implement efficient filtering and sorting. I implemented search with Fuse.js, a performant fuzzy-search library I love because it's simple to use and highly efficient.
+
+This let us implement searching and filtering, since Fuse returns a list of options that match a query; if you don't have a query, it returns the entire dataset. And then whatever we have is always going to be a simple array, which we can then begin applying the filtering and sorting options to.
+
+**Sharing products is simpler than you think**
+
+Another feature we wanted to implement was sharing products. But since we didn't have a back end to start with, there weren't really any IDs for the products. So we came up with a hashing function that generated stable product IDs by combining things like name, type, producer, and evidence into a single string, then hashed it into a 32-bit integer.
+
+When the user clicks the "Share" button, the hash is coped as a URL query param, which we look for on load and use to focus the shared product.
+
+**Anyone can contribute**
+
+This brings us back to the product addition form. I didn't want to implement a backend that could get rate-limited. Instead, I used Google Scripts, which let us create an endpoint the frontend could call. That script adds the form submission to another view of the spreadsheet, which lets us see requests next to our data and easily check for duplicates.
+
+**User onboarding? Heck yeah!**
+
+I also used driver.js, a lightweight JavaScript library for product tours that lets you define a step-by-step onboarding flow. This meant users wouldn't be confused about how to use the app or what they needed to do, and if they had questions or suggestions, the journey would point them in the right direction.
+
+**And more!**
+
+Badeel had other tiny neat features like multiple views (cards and table), quick filters (by clicking a filter pill on the listing), a sliding focus effect on the tables, a typewriter effect for the intro text, an animated Palestine map, Solid view transitions, and loading skeletons. I also added a CodeTour tour to the codebase to make onboarding easier.
+
+We also reached out to [Pascal Zoghbi](https://www.29lt.com/designer/pascal-zoghbi), an amazing designer who's behind the amazing font we used, [Ada Sharp](https://www.29lt.com/product/29lt-ada-sharp).
+
+**Thanks**
+
+Many people helped us with the collection and processing of the data. So special thanks to (in no particular order):
+
+- Basmala Ismail,
+- [Omar Abdelaziz](https://github.com/omarabdelaz1z),
+- [Youssef Sayed](https://www.facebook.com/youssef.sayed.9887117),
+- [Mohamed Shaarawy](https://www.facebook.com/N1ffler),
+- and [Hagar Abdelzahir](https://www.facebook.com/hagar.abduzaher)
+
+The project wouldn't be what it is today without these people collecting and processing the data. I also want to thank [Mustafa Ismail](https://github.com/nightmodd) and [Karim Shalapy](https://karimshalapy.com) for helping me with data processing and programming for this project.
+
+Special thanks to [Roupen Jamgotchin](https://roupenjam.com), who designed the amazing UI that went through multiple phases to reach what we have today. Also, special thanks to 29 Letters Type Foundry for producing one of the prettiest fonts that I've ever seen
+
+This project was a massive passion project for me at the time, and I'm really proud of how it turned out and how many people have used it. So far, over 200,000 users have used the app, and I couldn't be prouder of what I built.
